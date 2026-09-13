@@ -1,0 +1,90 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TERRAFORM_VERSION: "1.10.0"
+  AWS_REGION: us-east-1
+  SITE_BUCKET: myvisausa-clinic-prototype-dev
+  WEBSITE_URL: http://myvisausa-clinic-prototype-dev.s3-website-us-east-1.amazonaws.com
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Terraform plan and apply
+        uses: austinibele/gh-actions/.github/plan-apply@main
+        with:
+          terraform_directory: infra
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+          aws_region: ${{ env.AWS_REGION }}
+          role_to_assume: arn:aws:iam::${{ vars.DEV_AWS_ACCOUNT_ID }}:role/github-ci-clinic-prototype-terraform-dev
+          tf_var_env: dev
+
+  deploy:
+    needs: terraform
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.DEV_AWS_ACCOUNT_ID }}:role/github-ci-clinic-prototype-deploy-dev
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build Next export
+        run: npm run build --workspace=web
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Assemble deploy tree
+        run: |
+          set -euo pipefail
+          mkdir -p deploy/site
+          cp -R apps/web/out/. deploy/site/
+          mkdir -p deploy/site/storybook
+          cp -R packages/ui/storybook-static/. deploy/site/storybook/
+
+      - name: Sync to S3
+        run: aws s3 sync deploy/site/ "s3://${SITE_BUCKET}/" --delete --cache-control "no-cache"
+
+      - name: Smoke test
+        run: |
+          set -euo pipefail
+          curl --fail -sS -o /dev/null "${WEBSITE_URL}/"
+          curl --fail -sS -o /dev/null "${WEBSITE_URL}/components/"
+          curl --fail -sS -o /dev/null "${WEBSITE_URL}/storybook/"
+          curl --fail -sS -o /dev/null "${WEBSITE_URL}/storybook/iframe.html"
+
+      - name: Summary
+        run: |
+          echo "Website: ${WEBSITE_URL}/"
+          echo "Storybook: ${WEBSITE_URL}/storybook/"

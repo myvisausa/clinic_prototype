@@ -18,6 +18,9 @@ export default function Home() {
       <Link href="/components" className="text-[13px] font-semibold underline" style={{ color: "var(--primary)" }}>
         Ver todos los componentes →
       </Link>
+      <a href="/storybook/" className="text-[13px] font-semibold underline" style={{ color: "var(--primary)" }}>
+        Storybook →
+      </a>
     </div>
   );
 }
