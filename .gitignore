@@ -14,7 +14,9 @@ coverage/
 
 # env files
 .env*
-!.env.example
+
+# assembled S3 tree
+deploy/
 
 # misc
 .DS_Store

@@ -10,9 +10,18 @@ Doble clic en `index.html` funciona. Para que el estado se comparta entre las tr
 conviene servirlas por HTTP (en `file://` algunos navegadores bloquean `localStorage`):
 
 ```bash
-cd design-prototypes/clinical-desktop
 python -m http.server 8080
 # abrir http://localhost:8080
+```
+
+Estas páginas HTML siguen en GitHub Pages. El app Next (`apps/web`) y Storybook (`packages/ui`) se despliegan a un bucket S3 público de **dev** (HTTP only). Ver [infra/README.md](infra/README.md) para el endpoint, OIDC/`DEV_AWS_ACCOUNT_ID`, y teardown. CI: `.github/workflows/deploy.yml` (push a `main` o `workflow_dispatch`).
+
+```bash
+npm install
+npm run dev              # Next en http://localhost:3000
+npm run storybook        # Storybook local en /
+npm run build --workspace=web
+npm run build-storybook
 ```
 
 ## Las tres opciones
