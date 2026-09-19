@@ -1,0 +1,212 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - radio "Hoja del día"
+    - radio "Horario del equipo"
+    - radio "Calendario" [checked]
+    - button "Mi disponibilidad"
+    - button "Hoy"
+    - button:
+    - button:
+    - button "septiembre de 2026"
+    - button "Día"
+    - button "Semana"
+    - button "Mes" [active]
+    - button "Agenda"
+    - button "Bloquear horario":
+      - text: Bloquear horario
+    - button "Nuevo Evento":
+      - text: Nuevo Evento
+    - button "Mi Calendario"
+    - button "Isabel Quintero"
+    - button "Natalia Vélez"
+    - button "Mateo Beltrán"
+    - button "Santiago Duque"
+    - grid:
+      - rowgroup:
+        - row "lunes martes miércoles jueves viernes sábado domingo":
+          - columnheader "lunes":
+            - generic "lunes": lun
+          - columnheader "martes":
+            - generic "martes": mar
+          - columnheader "miércoles":
+            - generic "miércoles": mié
+          - columnheader "jueves":
+            - generic "jueves": jue
+          - columnheader "viernes":
+            - generic "viernes": vie
+          - columnheader "sábado":
+            - generic "sábado": sáb
+          - columnheader "domingo":
+            - generic "domingo": dom
+      - rowgroup:
+        - row "31 de agosto de 2026 1 de septiembre de 2026 2 de septiembre de 2026 3 de septiembre de 2026 4 de septiembre de 2026 5 de septiembre de 2026 6 de septiembre de 2026":
+          - gridcell "31 de agosto de 2026":
+            - generic "31 de agosto de 2026": "31"
+          - gridcell "1 de septiembre de 2026":
+            - generic "1 de septiembre de 2026": "1"
+          - gridcell "2 de septiembre de 2026":
+            - generic "2 de septiembre de 2026": "2"
+          - gridcell "3 de septiembre de 2026":
+            - generic "3 de septiembre de 2026": "3"
+          - gridcell "4 de septiembre de 2026":
+            - generic "4 de septiembre de 2026": "4"
+          - gridcell "5 de septiembre de 2026":
+            - generic "5 de septiembre de 2026": "5"
+          - gridcell "6 de septiembre de 2026":
+            - generic "6 de septiembre de 2026": "6"
+        - row "7 de septiembre de 2026 8 de septiembre de 2026 9 de septiembre de 2026 10 de septiembre de 2026 11 de septiembre de 2026 12 de septiembre de 2026 13 de septiembre de 2026":
+          - gridcell "7 de septiembre de 2026":
+            - generic "7 de septiembre de 2026": "7"
+          - gridcell "8 de septiembre de 2026":
+            - generic "8 de septiembre de 2026": "8"
+          - gridcell "9 de septiembre de 2026":
+            - generic "9 de septiembre de 2026": "9"
+          - gridcell "10 de septiembre de 2026":
+            - generic "10 de septiembre de 2026": "10"
+          - gridcell "11 de septiembre de 2026":
+            - generic "11 de septiembre de 2026": "11"
+          - gridcell "12 de septiembre de 2026":
+            - generic "12 de septiembre de 2026": "12"
+          - gridcell "13 de septiembre de 2026":
+            - generic "13 de septiembre de 2026": "13"
+        - row "14 de septiembre de 2026 15 de septiembre de 2026 16 de septiembre de 2026 17 de septiembre de 2026 18 de septiembre de 2026 19 de septiembre de 2026 20 de septiembre de 2026":
+          - gridcell "14 de septiembre de 2026":
+            - generic "14 de septiembre de 2026": "14"
+          - gridcell "15 de septiembre de 2026":
+            - generic "15 de septiembre de 2026": "15"
+          - gridcell "16 de septiembre de 2026":
+            - generic "16 de septiembre de 2026": "16"
+          - gridcell "17 de septiembre de 2026":
+            - generic "17 de septiembre de 2026": "17"
+          - gridcell "18 de septiembre de 2026":
+            - generic "18 de septiembre de 2026": "18"
+          - gridcell "19 de septiembre de 2026":
+            - generic "19 de septiembre de 2026": "19"
+          - gridcell "20 de septiembre de 2026":
+            - generic "20 de septiembre de 2026": "20"
+        - row "21 de septiembre de 2026 22 de septiembre de 2026 23 de septiembre de 2026 24 de septiembre de 2026 25 de septiembre de 2026 26 de septiembre de 2026 27 de septiembre de 2026":
+          - gridcell "21 de septiembre de 2026":
+            - generic "21 de septiembre de 2026": "21"
+          - gridcell "22 de septiembre de 2026":
+            - generic "22 de septiembre de 2026": "22"
+          - gridcell "23 de septiembre de 2026":
+            - generic "23 de septiembre de 2026": "23"
+          - gridcell "24 de septiembre de 2026":
+            - generic "24 de septiembre de 2026": "24"
+          - gridcell "25 de septiembre de 2026":
+            - generic "25 de septiembre de 2026": "25"
+          - gridcell "26 de septiembre de 2026":
+            - generic "26 de septiembre de 2026": "26"
+          - gridcell "27 de septiembre de 2026":
+            - generic "27 de septiembre de 2026": "27"
+        - row "28 de septiembre de 2026 29 de septiembre de 2026 30 de septiembre de 2026 1 de octubre de 2026 2 de octubre de 2026 3 de octubre de 2026 4 de octubre de 2026":
+          - gridcell "28 de septiembre de 2026":
+            - generic "28 de septiembre de 2026": "28"
+          - gridcell "29 de septiembre de 2026":
+            - generic "29 de septiembre de 2026": "29"
+          - gridcell "30 de septiembre de 2026":
+            - generic "30 de septiembre de 2026": "30"
+          - gridcell "1 de octubre de 2026":
+            - generic "1 de octubre de 2026": "1"
+          - gridcell "2 de octubre de 2026":
+            - generic "2 de octubre de 2026": "2"
+          - gridcell "3 de octubre de 2026":
+            - generic "3 de octubre de 2026": "3"
+          - gridcell "4 de octubre de 2026":
+            - generic "4 de octubre de 2026": "4"
+        - row "5 de octubre de 2026 6 de octubre de 2026 7 de octubre de 2026 8 de octubre de 2026 9 de octubre de 2026 10 de octubre de 2026 11 de octubre de 2026":
+          - gridcell "5 de octubre de 2026":
+            - generic "5 de octubre de 2026": "5"
+          - gridcell "6 de octubre de 2026":
+            - generic "6 de octubre de 2026": "6"
+          - gridcell "7 de octubre de 2026":
+            - generic "7 de octubre de 2026": "7"
+          - gridcell "8 de octubre de 2026":
+            - generic "8 de octubre de 2026": "8"
+          - gridcell "9 de octubre de 2026":
+            - generic "9 de octubre de 2026": "9"
+          - gridcell "10 de octubre de 2026":
+            - generic "10 de octubre de 2026": "10"
+          - gridcell "11 de octubre de 2026":
+            - generic "11 de octubre de 2026": "11"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert

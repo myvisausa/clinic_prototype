@@ -1,0 +1,270 @@
+- button:
+- button:
+- button [disabled]:
+- button:
+- generic: Dental Implant Clinic Demo
+- button:
+  - generic: Buscar una página…
+  - generic: ⌘/Ctrl K
+- button:
+- button:
+- status:
+  - generic: No hay advertencias
+- status:
+  - generic: "Conexión del navegador: en línea"
+- navigation:
+  - link:
+    - /url: /es/settings/organization
+  - link:
+    - /url: /es/dashboard
+    - generic: "3"
+    - generic: Inicio
+  - link:
+    - /url: /es/clinical/schedule
+    - generic: Clínica
+  - link:
+    - /url: /es/communication/inbox
+    - generic: "3"
+    - generic: Conecta
+  - button:
+    - generic: Más
+  - link:
+    - /url: /es/settings/getting-started
+    - generic: Ajustes
+  - button:
+    - generic: Perfil
+- complementary:
+  - heading [level=2]: Clínica
+  - button [pressed]:
+  - navigation:
+    - list:
+      - link:
+        - /url: /es/clinical/schedule
+        - generic: Agenda
+      - button:
+      - link:
+        - /url: /es/clinical/pacientes
+        - generic: Pacientes
+      - button:
+      - link:
+        - /url: /es/clinical/catalogos
+        - generic: Referencia clínica
+      - button:
+      - link:
+        - /url: /es/clinical/configuracion
+        - generic: Configuración clínica
+      - button:
+      - link:
+        - /url: /es/clinical/servicios
+        - generic: Servicios y precios
+      - button:
+      - link:
+        - /url: /es/clinical/facturas
+        - generic: Facturas
+      - button:
+      - link:
+        - /url: /es/clinical/payers
+        - generic: Aseguradoras
+      - button:
+    - button:
+      - generic: Ver todas las páginas
+- main:
+  - heading [level=1]: Configuración clínica
+  - tablist:
+    - tab [selected]: Consultorio
+    - tab: Profesionales
+    - tab: Tipos de cita
+    - tab: Preferencias del odontograma
+  - tabpanel:
+    - heading [level=3]: Horario de oficina
+    - paragraph: Horario semanal de esta ubicación. Las métricas y los mensajes fuera de horario usan este calendario.
+    - generic: "Relleno rápido:"
+    - button: Días laborables 8–5
+    - button: Todos los días 8–5
+    - button: Borrar todo
+    - generic: Lun
+    - checkbox [checked]
+    - textbox: 08:00
+    - generic: –
+    - textbox: 17:00
+    - button:
+    - generic: Mar
+    - checkbox [checked]
+    - textbox: 08:00
+    - generic: –
+    - textbox: 17:00
+    - button:
+    - generic: Mié
+    - checkbox [checked]
+    - textbox: 08:00
+    - generic: –
+    - textbox: 17:00
+    - button:
+    - generic: Jue
+    - checkbox [checked]
+    - textbox: 08:00
+    - generic: –
+    - textbox: 17:00
+    - button:
+    - generic: Vie
+    - checkbox [checked]
+    - textbox: 08:00
+    - generic: –
+    - textbox: 17:00
+    - button:
+    - generic: Sáb
+    - checkbox [checked]
+    - textbox: 09:00
+    - generic: –
+    - textbox: 14:00
+    - button:
+    - generic: Dom
+    - checkbox
+    - generic: Cerrado
+    - paragraph: Horarios mostrados en America/New_York · El botón de copiar aplica el horario de un día a los otros días seleccionados
+    - button [disabled]: Guardar horario
+    - heading [level=2]: Reporte RIPS
+    - button:
+    - button: Guardar
+    - generic: Código de prestador RIPS
+    - textbox
+    - generic: Modalidad RIPS
+    - textbox: "01"
+    - heading [level=2]: Google Calendar
+    - paragraph: Conecta una cuenta de Google para asignar calendarios a los profesionales de este consultorio.
+    - note:
+      - paragraph: No hay una cuenta de Google conectada.
+      - paragraph:
+        - text: Al conectar, Avance puede leer y escribir eventos en los calendarios de esta cuenta.
+        - link:
+          - /url: https://avance.ai/privacy
+          - text: Política de privacidad
+    - button: Conectar Google Calendar
+- list
+- button "Open Next.js Dev Tools":
+- alert
+- dialog "Todas las páginas":
+  - heading "Todas las páginas" [level=2]
+  - paragraph: Busca una página o agrégala a tus accesos fijados.
+  - textbox "Buscar páginas…" [active]
+  - region "Inicio":
+    - heading "Inicio" [level=3]
+    - list:
+      - link "Resumen":
+        - /url: /es/dashboard
+        - generic: Resumen
+      - button "Fijar Resumen":
+      - link "Contactos":
+        - /url: /es/contacts
+        - generic: Contactos
+      - button "Fijar Contactos":
+  - region "Clínica":
+    - heading "Clínica" [level=3]
+    - list:
+      - link "Agenda":
+        - /url: /es/clinical/schedule
+        - generic: Agenda
+      - button "Fijar Agenda":
+      - link "Pacientes":
+        - /url: /es/clinical/pacientes
+        - generic: Pacientes
+      - button "Fijar Pacientes":
+      - link "Referencia clínica":
+        - /url: /es/clinical/catalogos
+        - generic: Referencia clínica
+      - button "Fijar Referencia clínica":
+      - link "Configuración clínica":
+        - /url: /es/clinical/configuracion
+        - generic: Configuración clínica
+      - button "Fijar Configuración clínica":
+      - link "Servicios y precios":
+        - /url: /es/clinical/servicios
+        - generic: Servicios y precios
+      - button "Fijar Servicios y precios":
+      - link "Facturas":
+        - /url: /es/clinical/facturas
+        - generic: Facturas
+      - button "Desfijar Facturas" [pressed]:
+      - link "Aseguradoras":
+        - /url: /es/clinical/payers
+        - generic: Aseguradoras
+      - button "Fijar Aseguradoras":
+  - region "Conecta":
+    - heading "Conecta" [level=3]
+    - list:
+      - link "Bandeja":
+        - /url: /es/communication/inbox
+        - generic: Bandeja
+      - button "Desfijar Bandeja" [pressed]:
+      - link "Plantillas":
+        - /url: /es/communication/templates
+        - generic: Plantillas
+      - button "Fijar Plantillas":
+      - link "WhatsApp":
+        - /url: /es/communication/whatsapp
+        - generic: WhatsApp
+      - button "Desfijar WhatsApp" [pressed]:
+      - link "Formularios":
+        - /url: /es/settings/forms
+        - generic: Formularios
+      - button "Fijar Formularios":
+  - region "Más":
+    - heading "Más" [level=3]
+    - list:
+      - link "Biblioteca":
+        - /url: /es/media
+        - generic: Biblioteca
+      - button "Fijar Biblioteca":
+  - region "Ajustes":
+    - heading "Ajustes" [level=3]
+    - list:
+      - link "Primeros pasos":
+        - /url: /es/settings/getting-started
+        - generic: Primeros pasos
+      - button "Fijar Primeros pasos":
+      - link "Mi perfil":
+        - /url: /es/settings/profile
+        - generic: Mi perfil
+      - button "Fijar Mi perfil":
+      - link "Organización":
+        - /url: /es/settings/organization
+        - generic: Organización
+      - button "Fijar Organización":
+      - link "Etiquetas":
+        - /url: /es/settings/tags
+        - generic: Etiquetas
+      - button "Fijar Etiquetas":
+      - link "Plantillas":
+        - /url: /es/settings/task-templates
+        - generic: Plantillas
+      - button "Fijar Plantillas":
+      - link "Facturación":
+        - /url: /es/settings/fiscal
+        - generic: Facturación
+      - button "Fijar Facturación":
+      - link "Precios":
+        - /url: /es/settings/prices
+        - generic: Precios
+      - button "Fijar Precios":
+      - link "Equipo":
+        - /url: /es/settings/team
+        - generic: Equipo
+      - button "Fijar Equipo":
+      - link "Metas de ventas":
+        - /url: /es/settings/sales-goals
+        - generic: Metas de ventas
+      - button "Fijar Metas de ventas":
+      - link "Integraciones":
+        - /url: /es/settings/integrations
+        - generic: Integraciones
+      - button "Fijar Integraciones":
+      - link "Legal":
+        - /url: /es/settings/legal
+        - generic: Legal
+      - button "Fijar Legal":
+      - link "Automatización":
+        - /url: /es/automation/settings
+        - generic: Automatización
+      - button "Fijar Automatización":
+  - button "Cerrar":
+    - generic: Cerrar

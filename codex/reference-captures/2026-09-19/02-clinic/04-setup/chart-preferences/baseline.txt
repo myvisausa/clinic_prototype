@@ -1,0 +1,147 @@
+- banner:
+  - button "☷"
+  - button "Back": ←
+  - button "Forward": →
+  - button "◷"
+  - generic: Dental Implant Clinic Demo
+  - button "⌕ Find a page… ⌘/Ctrl K"
+  - button "Open help": ⓘ
+  - button "Notifications": ♧
+- navigation "Application navigation":
+  - link "Dental Implant Clinic Demo logo":
+    - /url: "#page=organization"
+    - img "Dental Implant Clinic Demo logo"
+  - link "⌂ 3 Home":
+    - /url: "#page=home"
+    - generic: ⌂
+    - generic: "3"
+    - text: Home
+  - link "♧ Clinic":
+    - /url: "#page=schedule"
+    - generic: ♧
+    - text: Clinic
+  - link "☏ 3 Engage":
+    - /url: "#page=engage"
+    - generic: ☏
+    - generic: "3"
+    - text: Engage
+  - button "••• More":
+    - generic: •••
+    - text: More
+  - link "⚙ Setup":
+    - /url: "#page=get-started"
+    - generic: ⚙
+    - text: Setup
+  - 'button "Me: User Profile"':
+    - text: ◉
+    - text: Me
+- complementary:
+  - generic: Clinic
+  - generic: ☷
+  - navigation:
+    - link "▦ Schedule":
+      - /url: "#page=schedule"
+      - generic: ▦
+      - text: Schedule
+    - link "♧ Patients":
+      - /url: "#page=patients"
+      - generic: ♧
+      - text: Patients
+    - link "▤ Clinical reference":
+      - /url: "#page=reference"
+      - generic: ▤
+      - text: Clinical reference
+    - link "⚙ Clinic setup":
+      - /url: "#page=setup"
+      - generic: ⚙
+      - text: Clinic setup
+    - link "☷ Services and prices":
+      - /url: "#page=services"
+      - generic: ☷
+      - text: Services and prices
+    - link "$ Invoices":
+      - /url: "#page=invoices"
+      - generic: $
+      - text: Invoices
+    - link "▣ Insurers":
+      - /url: "#page=insurers"
+      - generic: ▣
+      - text: Insurers
+  - button "Browse all pages"
+- main:
+  - heading "Clinic setup" [level=1]
+  - navigation "Page tabs":
+    - link "Clinic":
+      - /url: "#page=setup&tab=Clinic"
+    - link "Providers":
+      - /url: "#page=setup&tab=Providers"
+    - link "Appointment types":
+      - /url: "#page=setup&tab=Appointment%20types"
+    - link "Chart preferences":
+      - /url: "#page=setup&tab=Chart%20preferences"
+  - heading "Chart preferences" [level=2]
+  - button "Reload"
+  - button "Save"
+  - paragraph: Values unavailable from the live service; fields and labels follow the application component.
+  - text: Primary procedure catalog
+  - combobox "Primary procedure catalog":
+    - option "Unknown" [selected]
+  - text: Primary diagnosis catalog
+  - combobox "Primary diagnosis catalog":
+    - option "Unknown" [selected]
+  - checkbox "Use a different color for this practice’s work"
+  - text: Use a different color for this practice’s work
+  - text: Completed
+  - textbox "Completed": "#888888"
+  - textbox "Completed value":
+    - /placeholder: Value unavailable
+  - text: Completed (light)
+  - textbox "Completed (light)": "#888888"
+  - textbox "Completed (light) value":
+    - /placeholder: Value unavailable
+  - text: Treatment planned
+  - textbox "Treatment planned": "#888888"
+  - textbox "Treatment planned value":
+    - /placeholder: Value unavailable
+  - text: Treatment planned (light)
+  - textbox "Treatment planned (light)": "#888888"
+  - textbox "Treatment planned (light) value":
+    - /placeholder: Value unavailable
+  - text: Existing — this practice
+  - textbox "Existing — this practice": "#888888"
+  - textbox "Existing — this practice value":
+    - /placeholder: Value unavailable
+  - text: Existing — this practice (light)
+  - textbox "Existing — this practice (light)": "#888888"
+  - textbox "Existing — this practice (light) value":
+    - /placeholder: Value unavailable
+  - text: Existing — other practice
+  - textbox "Existing — other practice": "#888888"
+  - textbox "Existing — other practice value":
+    - /placeholder: Value unavailable
+  - text: Existing — other practice (light)
+  - textbox "Existing — other practice (light)": "#888888"
+  - textbox "Existing — other practice (light) value":
+    - /placeholder: Value unavailable
+  - text: Referred out
+  - textbox "Referred out": "#888888"
+  - textbox "Referred out value":
+    - /placeholder: Value unavailable
+  - text: Referred out (light)
+  - textbox "Referred out (light)": "#888888"
+  - textbox "Referred out (light) value":
+    - /placeholder: Value unavailable
+  - text: Condition
+  - textbox "Condition": "#888888"
+  - textbox "Condition value":
+    - /placeholder: Value unavailable
+  - text: Condition (light)
+  - textbox "Condition (light)": "#888888"
+  - textbox "Condition (light) value":
+    - /placeholder: Value unavailable
+  - generic: Static navigable prototype · Clinical controls do not save or submit.
+- link "← Prototype gallery":
+  - /url: ../
+- link "View Care draft ↗":
+  - /url: ../care-draft/#page=setup&tab=Chart%20preferences
+- generic: Prototype · no data actions

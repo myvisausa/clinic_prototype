@@ -1,0 +1,1 @@
+export const medicationHistory = () => `<div class="history-block"><h3>Medicamentos</h3><p class="muted">Aún no hay antecedentes clínicos.</p><div class="toolbar"><input aria-label="Medicamento" placeholder="Medicamento"><input aria-label="Dosis" placeholder="Dosis"><button class="btn primary" disabled>Agregar medicamento</button></div></div>`;

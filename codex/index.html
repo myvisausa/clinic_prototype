@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clinic prototype gallery</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #15191f;
+        background: #f4f5f6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+      body {
+        min-width: 320px;
+      }
+      .gallery {
+        height: 100dvh;
+        min-height: 0;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        gap: 6px;
+        padding: 8px;
+      }
+      .head {
+        display: grid;
+        gap: 6px;
+      }
+      .title-row,
+      .tools,
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        min-width: 0;
+      }
+      .title-row h1 {
+        font-size: 16px;
+        line-height: 1.2;
+        margin: 0;
+        white-space: nowrap;
+      }
+      .selectors,
+      .sizes {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        min-width: 0;
+        flex-wrap: wrap;
+      }
+      .selectors button,
+      .sizes button,
+      .standalone,
+      .notes summary {
+        font: 12px/1.2 inherit;
+        border: 1px solid #d8dce0;
+        border-radius: 5px;
+        background: #fff;
+        color: #20252b;
+        padding: 5px 8px;
+        text-decoration: none;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .selectors button[aria-pressed="true"],
+      .sizes button[aria-pressed="true"] {
+        background: #2e5b9b;
+        border-color: #2e5b9b;
+        color: #fff;
+      }
+      .group-label {
+        font-size: 11px;
+        color: #616161;
+        margin-left: 6px;
+      }
+      .group-label:first-child {
+        margin-left: 0;
+      }
+      .static-label {
+        font-size: 10px;
+        opacity: 0.78;
+      }
+      .standalone {
+        color: #2e5b9b;
+        font-weight: 600;
+      }
+      .notes {
+        position: relative;
+        flex: none;
+      }
+      .notes summary {
+        list-style: none;
+        display: block;
+      }
+      .notes summary::-webkit-details-marker {
+        display: none;
+      }
+      .notes[open] summary {
+        background: #e8edf5;
+        color: #2e5b9b;
+      }
+      .notes-content {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 5px);
+        width: min(350px, 90vw);
+        z-index: 20;
+        background: #fff;
+        border: 1px solid #d8dce0;
+        border-radius: 7px;
+        padding: 12px;
+        box-shadow: 0 6px 20px #18212b33;
+      }
+      .notes-content h2 {
+        font-size: 13px;
+        margin: 0 0 5px;
+      }
+      .notes-content p {
+        font-size: 12px;
+        color: #555;
+        line-height: 1.4;
+        margin: 0 0 9px;
+      }
+      .notes-content p:last-child {
+        margin: 0;
+      }
+      .stage {
+        position: relative;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+        background: #e8eaed;
+        border: 1px solid #d8dce0;
+        border-radius: 6px;
+      }
+      .preview {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: top left;
+        background: #fff;
+        box-shadow: 0 1px 8px #18212b22;
+      }
+      .preview iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .status {
+        font-size: 11px;
+        color: #616161;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .footer {
+        min-height: 16px;
+      }
+      @media (max-width: 900px) {
+        .title-row {
+          flex-wrap: wrap;
+        }
+        .tools {
+          align-items: flex-start;
+          flex-wrap: wrap;
+        }
+        .group-label {
+          display: none;
+        }
+        .selectors button,
+        .sizes button {
+          font-size: 11px;
+          padding: 5px 7px;
+        }
+      }
+      @media (max-width: 650px) {
+        .gallery {
+          padding: 5px;
+          gap: 4px;
+        }
+        .title-row h1 {
+          font-size: 14px;
+        }
+        .standalone {
+          font-size: 11px;
+        }
+        .selectors,
+        .sizes {
+          gap: 3px;
+        }
+        .selectors button,
+        .sizes button,
+        .notes summary {
+          font-size: 10px;
+          padding: 4px 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="gallery">
+      <header class="head">
+        <div class="title-row">
+          <h1>Clinic prototype gallery</h1>
+          <a
+            class="standalone"
+            href="dynamic-baseline/#page=patients&amp;patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&amp;tab=Summary"
+            >Open selected full browser →</a
+          >
+        </div>
+        <nav class="selectors" aria-label="Choose a prototype">
+          <span class="group-label">Navigable</span>
+          <button type="button" data-variant="navigable" aria-pressed="true">
+            Current baseline
+          </button>
+          <button type="button" data-variant="care-draft" aria-pressed="false">
+            Care draft
+          </button>
+          <button type="button" data-variant="care-dense" aria-pressed="false">
+            Care dense
+          </button>
+          <span class="group-label">Static Summary</span>
+          <button
+            type="button"
+            data-variant="static-baseline"
+            aria-pressed="false"
+          >
+            Baseline <span class="static-label">static</span>
+          </button>
+          <button type="button" data-variant="static-a" aria-pressed="false">
+            A · Clinical first <span class="static-label">static</span>
+          </button>
+          <button type="button" data-variant="static-b" aria-pressed="false">
+            B · Care nav <span class="static-label">static</span>
+          </button>
+        </nav>
+        <div class="tools">
+          <div class="sizes" aria-label="Preview size">
+            <button type="button" data-width="fit" aria-pressed="true">
+              Fit window
+            </button>
+            <button type="button" data-width="1366" aria-pressed="false">
+              1366 × 768
+            </button>
+            <button type="button" data-width="1024" aria-pressed="false">
+              1024 × 576
+            </button>
+          </div>
+          <details class="notes">
+            <summary>About this version ▾</summary>
+            <div class="notes-content">
+              <h2>What this version shows</h2>
+              <p class="variant-note">
+                Current Clinic navigation, all clinical pages and tabs, approved
+                synthetic patient Summary.
+              </p>
+              <h2>Navigation membership</h2>
+              <p class="membership-note">
+                Clinic: Schedule · Patients · Clinical reference · Clinic setup
+                · Services and prices · Invoices · Insurers
+              </p>
+              <p class="interaction-note">
+                Pages and tabs navigate in this preview. Clinical data controls
+                are visual only; they do not save or submit.
+              </p>
+            </div>
+          </details>
+        </div>
+      </header>
+      <div class="stage" aria-label="Prototype preview area">
+        <div class="preview">
+          <iframe
+            title="Clinic prototype preview"
+            src="dynamic-baseline/#page=patients&amp;patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&amp;tab=Summary"
+          ></iframe>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="status" role="status"
+          >Current navigable baseline selected. Clinical controls do not
+          save.</span
+        >
+      </div>
+    </main>
+    <script>
+      (() => {
+        const variants = {
+          navigable: {
+            file: "dynamic-baseline/",
+            note: "Current Clinic navigation, all clinical pages and tabs, approved synthetic patient Summary.",
+            membership:
+              "Clinic: Schedule · Patients · Clinical reference · Clinic setup · Services and prices · Invoices · Insurers",
+            interaction:
+              "Pages and tabs navigate in this preview. Clinical data controls are visual only; they do not save or submit.",
+            dynamic: true,
+          },
+          "care-draft": {
+            file: "care-draft/",
+            note: "Care holds Schedule and Patients; Clinic holds the five administrative clinical pages. The Summary shows history and appointments early.",
+            membership:
+              "Care: Schedule · Patients. Clinic: Clinical reference · Clinic setup · Services and prices · Invoices · Insurers",
+            interaction:
+              "Pages and tabs navigate in this preview. Clinical data controls are visual only; they do not save or submit.",
+            dynamic: true,
+          },
+          "care-dense": {
+            file: "care-dense/",
+            note: "Compact Care layout for patients and schedule, retaining all captured navigation, static controls, and shared fixture data.",
+            membership:
+              "Care: Schedule · Patients. Clinic: Clinical reference · Clinic setup · Services and prices · Invoices · Insurers",
+            interaction:
+              "Pages and tabs navigate in this preview. Clinical data controls are visual only; they do not save or submit.",
+            dynamic: true,
+          },
+          "static-baseline": {
+            file: "clinic-live-baseline-browser.html",
+            note: "Approved light Summary sketch with current Clinic navigation and original section order.",
+            membership:
+              "Clinic: Schedule · Patients · Clinical reference · Clinic setup · Services and prices · Invoices · Insurers",
+            interaction:
+              "Static sketch. Its sidebar and patient tabs do not navigate; clinical controls do not save.",
+            dynamic: false,
+          },
+          "static-a": {
+            file: "clinic-clinical-first-browser.html",
+            note: "Earlier Summary sketch that places clinical history and the appointment before the medical form and demographics.",
+            membership:
+              "Clinic: Schedule · Patients · Clinical reference · Clinic setup · Services and prices · Invoices · Insurers",
+            interaction:
+              "Static sketch. Its sidebar and patient tabs do not navigate; clinical controls do not save.",
+            dynamic: false,
+          },
+          "static-b": {
+            file: "clinic-care-navigation-browser.html",
+            note: "Earlier static proposal showing a Care workspace and reordered Summary.",
+            membership:
+              "Care: Schedule · Patients. Clinic: Clinical reference · Clinic setup · Services and prices · Invoices · Insurers",
+            interaction:
+              "Static sketch. Its sidebar and patient tabs do not navigate; clinical controls do not save.",
+            dynamic: false,
+          },
+        };
+        const frame = document.querySelector("iframe");
+        const preview = document.querySelector(".preview");
+        const stage = document.querySelector(".stage");
+        const standalone = document.querySelector(".standalone");
+        const note = document.querySelector(".variant-note");
+        const membership = document.querySelector(".membership-note");
+        const interaction = document.querySelector(".interaction-note");
+        const status = document.querySelector(".status");
+        const buttons = [...document.querySelectorAll("[data-variant]")];
+        const widths = [...document.querySelectorAll("[data-width]")];
+        let selected = "navigable";
+        let size = "fit";
+        const currentHash = () => {
+          try {
+            return variants[selected].dynamic
+              ? frame.contentWindow.location.hash
+              : "";
+          } catch {
+            return "";
+          }
+        };
+        function layout() {
+          const availableWidth = stage.clientWidth,
+            availableHeight = stage.clientHeight;
+          if (!availableWidth || !availableHeight) return;
+          const logicalWidth = size === "fit" ? availableWidth : Number(size);
+          const logicalHeight =
+            size === "fit" ? availableHeight : size === "1366" ? 768 : 576;
+          const scale =
+            size === "fit"
+              ? 1
+              : Math.min(
+                  1,
+                  availableWidth / logicalWidth,
+                  availableHeight / logicalHeight,
+                );
+          preview.style.width = `${logicalWidth}px`;
+          preview.style.height = `${logicalHeight}px`;
+          preview.style.transform = `scale(${scale})`;
+          preview.style.left = `${Math.max(0, (availableWidth - logicalWidth * scale) / 2)}px`;
+          preview.style.top = `${Math.max(0, (availableHeight - logicalHeight * scale) / 2)}px`;
+        }
+        const setInfo = (key) => {
+          selected = key;
+          const v = variants[key];
+          buttons.forEach((b) =>
+            b.setAttribute("aria-pressed", String(b.dataset.variant === key)),
+          );
+          note.textContent = v.note;
+          membership.textContent = v.membership;
+          interaction.textContent = v.interaction;
+          standalone.href = v.file + (v.dynamic ? currentHash() : "");
+          status.textContent = `${buttons.find((b) => b.dataset.variant === key).textContent.trim()} selected. ${v.dynamic ? "Clinical controls do not save." : "Static sketch; page navigation is inert."}`;
+        };
+        buttons.forEach((button) =>
+          button.addEventListener("click", () => {
+            const key = button.dataset.variant;
+            const hash =
+              variants[key].dynamic && variants[selected].dynamic
+                ? currentHash()
+                : "";
+            setInfo(key);
+            frame.src = variants[key].file + hash;
+            standalone.href = variants[key].file + hash;
+          }),
+        );
+        widths.forEach((button) =>
+          button.addEventListener("click", () => {
+            size = button.dataset.width;
+            widths.forEach((b) =>
+              b.setAttribute("aria-pressed", String(b === button)),
+            );
+            layout();
+            status.textContent = `${button.textContent.trim()} preview selected.`;
+          }),
+        );
+        frame.addEventListener("load", () => {
+          try {
+            const path = frame.contentWindow.location.pathname;
+            const found = Object.entries(variants).find(
+              ([, v]) => new URL(v.file, location.href).pathname === path,
+            );
+            if (found) setInfo(found[0]);
+          } catch {}
+        });
+        standalone.addEventListener("click", () => {
+          standalone.href =
+            variants[selected].file +
+            (variants[selected].dynamic ? currentHash() : "");
+        });
+        new ResizeObserver(layout).observe(stage);
+        layout();
+      })();
+    </script>
+  </body>
+</html>

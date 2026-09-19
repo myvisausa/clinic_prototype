@@ -1,0 +1,2 @@
+import { button } from "../../ui.js";
+export const appointments = () => `<section class="panel appointments"><h2>Citas</h2><div class="record"><b>Limpieza / control — Ana García</b><p class="muted">13 de sept de 2026, 7:00 a. m. · Estado: Completada</p><p class="muted">Registrado: 1</p><div class="row">${button("Registrar evolución")}${button("Registrar trabajo realizado")}</div></div></section>`;

@@ -1,0 +1,139 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Configuración clínica" [level=1]
+    - tablist:
+      - tab "Consultorio"
+      - tab "Profesionales" [active] [selected]
+      - tab "Tipos de cita"
+      - tab "Preferencias del odontograma"
+    - tabpanel "Profesionales":
+      - heading "Identificación de profesionales" [level=2]
+      - paragraph: Documento de identidad de cada profesional tratante para RIPS.
+      - complementary:
+        - button "Dental Demo admin":
+          - generic: Dental Demo
+          - generic: admin
+        - button "Gabriela Patiño user":
+          - generic: Gabriela Patiño
+          - generic: user
+        - button "Isabel Quintero user":
+          - generic: Isabel Quintero
+          - generic: user
+        - button "Lorena Ospina user":
+          - generic: Lorena Ospina
+          - generic: user
+        - button "Mateo Beltrán user":
+          - generic: Mateo Beltrán
+          - generic: user
+        - button "Natalia Vélez user":
+          - generic: Natalia Vélez
+          - generic: user
+        - button "Patricia Mejía user":
+          - generic: Patricia Mejía
+          - generic: user
+        - button "Santiago Duque user":
+          - generic: Santiago Duque
+          - generic: user
+      - paragraph: Dental Demo
+      - generic: Especialidad
+      - combobox:
+        - generic: Ninguna
+      - generic: Tipo de documento
+      - combobox:
+      - generic: Número
+      - textbox
+      - generic: Registro profesional
+      - textbox
+      - button "Guardar" [disabled]
+      - paragraph: Conecta una cuenta de Google en la pestaña Consultorio para asignar calendarios.
+      - paragraph: Elige si este empleado sigue el horario de la ubicación o usa una semana personalizada.
+      - tablist:
+        - tab "Horas semanales" [selected]
+        - tab "Excepciones del día"
+      - tabpanel "Horas semanales":
+        - generic: Usar el horario de la ubicación
+        - switch "Usar el horario de la ubicación" [checked]
+        - paragraph: Este empleado sigue el horario de la ubicación.
+        - paragraph: Los horarios se interpretan en la zona horaria de la ubicación · El botón de copiar aplica el horario de un día a los otros días seleccionados
+        - button "Guardar"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Configuración clínica

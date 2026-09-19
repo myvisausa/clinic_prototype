@@ -1,0 +1,190 @@
+.dense-variant .schedule-dense {
+  min-height: 0;
+  padding: 12px !important;
+}
+.dense-variant .schedule-dense .schedule-tabs {
+  margin: 0 0 8px;
+  padding: 2px;
+}
+.dense-variant .schedule-dense .schedule-tabs a {
+  min-height: 34px;
+  padding: 7px 11px;
+}
+.dense-variant .schedule-dense .schedule-availability {
+  top: 14px;
+  right: 12px;
+  min-height: 32px;
+  padding: 7px 10px;
+  border: 1px solid #dce2e9;
+  border-radius: 5px;
+}
+.dense-variant .schedule-dense .schedule-day-layout {
+  grid-template-columns: 188px minmax(0, 1fr);
+  height: calc(100vh - 165px);
+  min-height: 350px;
+  border-top: 1px solid #e2e5ea;
+}
+.dense-variant .schedule-dense .schedule-date-rail {
+  padding: 0 8px 0 0;
+}
+.dense-variant .schedule-dense .schedule-date-rail header {
+  height: 40px;
+}
+.dense-variant .schedule-dense .schedule-dates a {
+  height: 34px;
+}
+.dense-variant .schedule-dense .schedule-date-right {
+  gap: 8px;
+}
+.dense-variant .schedule-dense .schedule-day-heading {
+  min-height: 51px;
+  padding: 5px 8px;
+  flex-wrap: wrap;
+}
+.dense-variant .schedule-dense .schedule-day-heading > div {
+  margin-right: auto;
+}
+.dense-variant .schedule-dense .schedule-day-heading button,
+.dense-variant .schedule-dense .schedule-day-heading select,
+.dense-variant .schedule-dense .schedule-day-heading .schedule-today {
+  min-height: 32px;
+  padding: 6px 9px;
+}
+.dense-variant .schedule-dense .schedule-day-heading select {
+  min-width: 170px;
+}
+.dense-variant .schedule-dense .schedule-provider-chips {
+  padding: 0 8px 6px;
+  overflow-x: auto;
+}
+.dense-variant .schedule-dense .schedule-provider-chips span {
+  padding: 5px 7px;
+}
+.dense-variant .schedule-dense .schedule-table-scroll {
+  height: calc(100% - 91px);
+  max-width: 100%;
+  overflow: auto;
+}
+.dense-variant .schedule-dense .schedule-day-table td {
+  height: 38px;
+}
+.dense-variant .schedule-dense .schedule-day-table .schedule-empty td {
+  height: 24px;
+}
+.dense-variant .schedule-dense .schedule-team-toolbar {
+  display: grid;
+  grid-template-columns: auto minmax(190px, 1fr) auto;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 2px 0 8px;
+}
+.dense-variant .schedule-dense .schedule-team-date {
+  margin: 0;
+  gap: 14px;
+  white-space: nowrap;
+}
+.dense-variant .schedule-dense .schedule-team-toolbar > input {
+  width: 100%;
+  min-width: 0;
+}
+.dense-variant .schedule-dense .schedule-team-toolbar nav {
+  white-space: nowrap;
+}
+.dense-variant .schedule-dense .schedule-team-toolbar nav a {
+  min-height: 34px;
+  padding: 7px 9px;
+}
+.dense-variant .schedule-dense .schedule-team-grid {
+  height: calc(100vh - 213px);
+  min-height: 330px;
+  border-top: 1px solid #e2e5ea;
+}
+.dense-variant .schedule-dense .schedule-team-resources {
+  min-width: 184px;
+}
+.dense-variant .schedule-dense .schedule-team-search {
+  height: 52px;
+  padding: 8px;
+}
+.dense-variant .schedule-dense .schedule-team-resource,
+.dense-variant .schedule-dense .schedule-team-track {
+  height: 94px;
+}
+.dense-variant .schedule-dense .schedule-team-resource {
+  padding: 16px 10px;
+}
+.dense-variant .schedule-dense .schedule-calendar-toolbar {
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 2px 0 8px;
+}
+.dense-variant .schedule-dense .schedule-calendar-toolbar button,
+.dense-variant .schedule-dense .schedule-calendar-toolbar nav a {
+  min-height: 34px;
+  padding: 7px 9px;
+}
+.dense-variant .schedule-dense .schedule-calendar-toolbar nav {
+  margin-left: auto;
+}
+.dense-variant .schedule-dense .schedule-calendar-selectors {
+  overflow-x: auto;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+.dense-variant .schedule-dense .schedule-calendar-selectors button {
+  min-height: 34px;
+  flex: none;
+  padding: 7px 10px;
+}
+.dense-variant .schedule-dense .schedule-calendar-month {
+  margin: 0;
+  min-width: 570px;
+}
+.dense-variant .schedule-dense .schedule-calendar-month b {
+  height: 42px;
+  padding: 11px 0;
+}
+.dense-variant .schedule-dense .schedule-calendar-month div {
+  height: 108px;
+  padding: 11px;
+}
+.dense-variant .schedule-dense .schedule-calendar-time {
+  min-width: 550px;
+  overflow-x: auto;
+}
+.dense-variant .schedule-dense .schedule-hour {
+  height: 42px;
+}
+.dense-variant .schedule-dense .schedule-agenda-empty {
+  padding: 65px 12px;
+}
+.dense-variant .schedule-dense .schedule-drawer {
+  width: min(400px, 100vw);
+  padding: 16px;
+}
+.dense-variant .schedule-dense .schedule-drawer-hint {
+  margin-top: 18px;
+}
+.dense-variant .schedule-dense .schedule-drawer nav {
+  margin-top: 12px;
+}
+.dense-variant .schedule-dense .schedule-availability-body {
+  min-height: 190px;
+}
+@media (max-width: 1100px) {
+  .dense-variant .schedule-dense .schedule-day-layout {
+    grid-template-columns: 156px minmax(0, 1fr);
+  }
+  .dense-variant .schedule-dense .schedule-day-heading > div {
+    flex-basis: 100%;
+  }
+  .dense-variant .schedule-dense .schedule-team-toolbar {
+    grid-template-columns: auto minmax(160px, 1fr);
+  }
+  .dense-variant .schedule-dense .schedule-team-toolbar nav {
+    grid-column: 1 / -1;
+  }
+  .dense-variant .schedule-dense .schedule-team-resources {
+    min-width: 160px;
+  }
+}

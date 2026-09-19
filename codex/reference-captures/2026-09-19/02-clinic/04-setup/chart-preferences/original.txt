@@ -1,0 +1,137 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Configuración clínica" [level=1]
+    - tablist:
+      - tab "Consultorio"
+      - tab "Profesionales"
+      - tab "Tipos de cita"
+      - tab "Preferencias del odontograma" [active] [selected]
+    - tabpanel "Preferencias del odontograma":
+      - heading "Preferencias del odontograma" [level=2]
+      - button "Recargar":
+      - button "Guardar"
+      - generic: Catálogo principal de procedimientos
+      - combobox:
+        - generic: CUPS
+      - generic: Catálogo principal de diagnósticos
+      - combobox:
+        - generic: CIE10
+      - checkbox "Usar otro color para el trabajo de este consultorio"
+      - generic: Usar otro color para el trabajo de este consultorio
+      - generic: Completado
+      - textbox "Completado": "#b40000"
+      - textbox: "#B40000"
+      - generic: Completado (claro)
+      - textbox "Completado (claro)": "#ff9696"
+      - textbox: "#FF9696"
+      - generic: Planificado
+      - textbox "Planificado": "#0000ff"
+      - textbox: "#0000FF"
+      - generic: Planificado (claro)
+      - textbox "Planificado (claro)": "#9696ff"
+      - textbox: "#9696FF"
+      - generic: Existente — este consultorio
+      - textbox "Existente — este consultorio": "#006400"
+      - textbox: "#006400"
+      - generic: Existente — este consultorio (claro)
+      - textbox "Existente — este consultorio (claro)": "#96ff96"
+      - textbox: "#96FF96"
+      - generic: Existente — otro consultorio
+      - textbox "Existente — otro consultorio": "#963232"
+      - textbox: "#963232"
+      - generic: Existente — otro consultorio (claro)
+      - textbox "Existente — otro consultorio (claro)": "#ffbebe"
+      - textbox: "#FFBEBE"
+      - generic: Remitido
+      - textbox "Remitido": "#006400"
+      - textbox: "#006400"
+      - generic: Remitido (claro)
+      - textbox "Remitido (claro)": "#96c896"
+      - textbox: "#96C896"
+      - generic: Condición
+      - textbox "Condición": "#808080"
+      - textbox: "#808080"
+      - generic: Condición (claro)
+      - textbox "Condición (claro)": "#c0c0c0"
+      - textbox: "#C0C0C0"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Avance

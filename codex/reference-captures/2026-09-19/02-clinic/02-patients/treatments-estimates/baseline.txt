@@ -1,0 +1,108 @@
+- banner:
+  - button "☷"
+  - button "Back": ←
+  - button "Forward": →
+  - button "◷"
+  - generic: Dental Implant Clinic Demo
+  - button "⌕ Find a page… ⌘/Ctrl K"
+  - button "Open help": ⓘ
+  - button "Notifications": ♧
+- navigation "Application navigation":
+  - link "Dental Implant Clinic Demo logo":
+    - /url: "#page=organization"
+    - img "Dental Implant Clinic Demo logo"
+  - link "⌂ 3 Home":
+    - /url: "#page=home"
+    - generic: ⌂
+    - generic: "3"
+    - text: Home
+  - link "♧ Clinic":
+    - /url: "#page=schedule"
+    - generic: ♧
+    - text: Clinic
+  - link "☏ 3 Engage":
+    - /url: "#page=engage"
+    - generic: ☏
+    - generic: "3"
+    - text: Engage
+  - button "••• More":
+    - generic: •••
+    - text: More
+  - link "⚙ Setup":
+    - /url: "#page=get-started"
+    - generic: ⚙
+    - text: Setup
+  - 'button "Me: User Profile"':
+    - text: ◉
+    - text: Me
+- complementary:
+  - generic: Clinic
+  - generic: ☷
+  - navigation:
+    - link "▦ Schedule":
+      - /url: "#page=schedule"
+      - generic: ▦
+      - text: Schedule
+    - link "♧ Patients":
+      - /url: "#page=patients"
+      - generic: ♧
+      - text: Patients
+    - link "▤ Clinical reference":
+      - /url: "#page=reference"
+      - generic: ▤
+      - text: Clinical reference
+    - link "⚙ Clinic setup":
+      - /url: "#page=setup"
+      - generic: ⚙
+      - text: Clinic setup
+    - link "☷ Services and prices":
+      - /url: "#page=services"
+      - generic: ☷
+      - text: Services and prices
+    - link "$ Invoices":
+      - /url: "#page=invoices"
+      - generic: $
+      - text: Invoices
+    - link "▣ Insurers":
+      - /url: "#page=insurers"
+      - generic: ▣
+      - text: Insurers
+  - button "Browse all pages"
+- main:
+  - strong: Ana García
+  - generic: Ana García · ID 0001
+  - link "Patient directory":
+    - /url: "#page=patients"
+  - button "PDF"
+  - button "Excel"
+  - button "Charge patient"
+  - navigation "Page tabs":
+    - link "Summary":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Summary"
+    - link "Dental chart":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Dental%20chart"
+    - link "Perio":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Perio"
+    - link "Notes":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Notes"
+    - link "Treatments":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Treatments"
+    - link "Prescriptions":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Prescriptions"
+    - link "Documents":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Documents"
+    - link "Account":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Account"
+  - navigation "Page tabs":
+    - link "Plans":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Treatments&sub=Plans"
+    - link "Estimates":
+      - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Treatments&sub=Estimates"
+  - heading "Estimates" [level=2]
+  - paragraph: Estimates are currently a placeholder in the live app.
+  - generic: Static navigable prototype · Clinical controls do not save or submit.
+- link "← Prototype gallery":
+  - /url: ../
+- link "View Care draft ↗":
+  - /url: ../care-draft/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Treatments&sub=Estimates
+- generic: Prototype · no data actions

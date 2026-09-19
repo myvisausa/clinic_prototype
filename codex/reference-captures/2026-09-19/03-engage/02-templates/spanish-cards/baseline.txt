@@ -1,0 +1,62 @@
+- banner:
+  - button "☷"
+  - button "Back": ←
+  - button "Forward": →
+  - button "◷"
+  - generic: Dental Implant Clinic Demo
+  - button "⌕ Find a page… ⌘/Ctrl K"
+  - button "Open help": ⓘ
+  - button "Notifications": ♧
+- navigation "Application navigation":
+  - link "Dental Implant Clinic Demo logo":
+    - /url: "#page=organization"
+    - img "Dental Implant Clinic Demo logo"
+  - link "⌂ 3 Home":
+    - /url: "#page=home"
+    - generic: ⌂
+    - generic: "3"
+    - text: Home
+  - link "♧ Clinic":
+    - /url: "#page=schedule"
+    - generic: ♧
+    - text: Clinic
+  - link "☏ 3 Engage":
+    - /url: "#page=engage"
+    - generic: ☏
+    - generic: "3"
+    - text: Engage
+  - button "••• More":
+    - generic: •••
+    - text: More
+  - link "⚙ Setup":
+    - /url: "#page=get-started"
+    - generic: ⚙
+    - text: Setup
+  - 'button "Me: User Profile"':
+    - text: ◉
+    - text: Me
+- complementary:
+  - generic: Engage
+  - generic: ☷
+  - navigation:
+    - link "✉ Inbox":
+      - /url: "#page=engage"
+      - generic: ✉
+      - text: Inbox
+  - button "Browse all pages"
+- main:
+  - heading "Inbox" [level=1]
+  - heading "Conversations" [level=2]
+  - textbox "Search conversations"
+  - combobox:
+    - option "All" [selected]
+  - generic: No conversation data included in this static clinical prototype.
+  - heading "Messages" [level=2]
+  - paragraph: Select a conversation.
+  - paragraph: Landing only; deeper messaging is outside this clinical baseline.
+  - generic: Static navigable prototype · Clinical controls do not save or submit.
+- link "← Prototype gallery":
+  - /url: ../
+- link "View Care draft ↗":
+  - /url: ../care-draft/#page=engage
+- generic: Prototype · no data actions

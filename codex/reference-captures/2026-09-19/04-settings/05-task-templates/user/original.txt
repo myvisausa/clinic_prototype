@@ -1,0 +1,120 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Ajustes" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - heading "Primeros pasos" [level=4]:
+        - generic: Primeros pasos
+      - list:
+        - link "Primeros pasos":
+          - /url: /es/settings/getting-started
+          - generic: Primeros pasos
+      - heading "Cuenta" [level=4]:
+        - generic: Cuenta
+      - list:
+        - link "Mi perfil":
+          - /url: /es/settings/profile
+          - generic: Mi perfil
+        - link "Organización":
+          - /url: /es/settings/organization
+          - generic: Organización
+        - link "Etiquetas":
+          - /url: /es/settings/tags
+          - generic: Etiquetas
+        - link "Plantillas":
+          - /url: /es/settings/task-templates
+          - generic: Plantillas
+      - heading "Finanzas" [level=4]:
+        - generic: Finanzas
+      - list:
+        - link "Facturación":
+          - /url: /es/settings/fiscal
+          - generic: Facturación
+        - link "Precios":
+          - /url: /es/settings/prices
+          - generic: Precios
+      - heading "Equipo" [level=4]:
+        - generic: Equipo
+      - list:
+        - link "Equipo":
+          - /url: /es/settings/team
+          - generic: Equipo
+        - link "Metas de ventas":
+          - /url: /es/settings/sales-goals
+          - generic: Metas de ventas
+      - heading "Integraciones" [level=4]:
+        - generic: Integraciones
+      - list:
+        - link "Integraciones":
+          - /url: /es/settings/integrations
+          - generic: Integraciones
+      - heading "Legal" [level=4]:
+        - generic: Legal
+      - list:
+        - link "Legal":
+          - /url: /es/settings/legal
+          - generic: Legal
+      - heading "Automatización" [level=3]:
+        - generic: Automatización
+      - list:
+        - link "Automatización":
+          - /url: /es/automation/settings
+          - generic: Automatización
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Plantillas de tareas" [level=2]
+    - paragraph: Administra las tareas guardadas desde las que el equipo puede empezar.
+    - tablist:
+      - tab "Plantillas de contacto"
+      - tab "Plantillas de usuario" [active] [selected]
+    - tabpanel "Plantillas de usuario":
+      - heading "Categorías" [level=3]
+      - button "Nueva categoría":
+        - text: Nueva categoría
+      - status: Aún no hay categorías.
+      - heading "Plantillas" [level=3]
+      - button "Nueva plantilla":
+        - text: Nueva plantilla
+      - status: Aún no hay plantillas.
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- alert

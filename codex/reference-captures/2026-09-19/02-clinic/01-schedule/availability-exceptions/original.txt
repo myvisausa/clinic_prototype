@@ -1,0 +1,637 @@
+- button:
+- button:
+- button [disabled]:
+- button:
+- generic: Dental Implant Clinic Demo
+- button:
+  - generic: Buscar una página…
+  - generic: ⌘/Ctrl K
+- button:
+- button:
+- status:
+  - generic: No hay advertencias
+- status:
+  - generic: "Conexión del navegador: en línea"
+- navigation:
+  - link:
+    - /url: /es/settings/organization
+  - link:
+    - /url: /es/dashboard
+    - generic: "3"
+    - generic: Inicio
+  - link:
+    - /url: /es/clinical/schedule
+    - generic: Clínica
+  - link:
+    - /url: /es/communication/inbox
+    - generic: "3"
+    - generic: Conecta
+  - button:
+    - generic: Más
+  - link:
+    - /url: /es/settings/getting-started
+    - generic: Ajustes
+  - button:
+    - generic: Perfil
+- complementary:
+  - heading [level=2]: Clínica
+  - button [pressed]:
+  - navigation:
+    - list:
+      - link:
+        - /url: /es/clinical/schedule
+        - generic: Agenda
+      - button:
+      - link:
+        - /url: /es/clinical/pacientes
+        - generic: Pacientes
+      - button:
+      - link:
+        - /url: /es/clinical/catalogos
+        - generic: Referencia clínica
+      - button:
+      - link:
+        - /url: /es/clinical/configuracion
+        - generic: Configuración clínica
+      - button:
+      - link:
+        - /url: /es/clinical/servicios
+        - generic: Servicios y precios
+      - button:
+      - link:
+        - /url: /es/clinical/facturas
+        - generic: Facturas
+      - button:
+      - link:
+        - /url: /es/clinical/payers
+        - generic: Aseguradoras
+      - button:
+    - button:
+      - generic: Ver todas las páginas
+- main:
+  - radio [checked]: Hoja del día
+  - radio: Horario del equipo
+  - radio: Calendario
+  - button [expanded]: Mi disponibilidad
+  - button:
+  - paragraph: sep 2026
+  - button:
+  - button:
+    - generic: 1 mar
+    - generic: "20"
+  - button:
+  - button:
+    - generic: 2 mié
+    - generic: "21"
+  - button:
+  - button:
+    - generic: 3 jue
+    - generic: "19"
+  - button:
+  - button:
+    - generic: 4 vie
+    - generic: "21"
+  - button:
+  - button:
+    - generic: 5 sáb
+    - generic: "9"
+  - button:
+  - button:
+    - generic: 6 dom
+  - button:
+  - button:
+    - generic: 7 lun
+    - generic: "20"
+  - button:
+  - button:
+    - generic: 8 mar
+    - generic: "17"
+  - button:
+  - button:
+    - generic: 9 mié
+    - generic: "22"
+  - button:
+  - button:
+    - generic: 10 jue
+    - generic: "20"
+  - button:
+  - button:
+    - generic: 11 vie
+    - generic: "19"
+  - button:
+  - button:
+    - generic: 12 sáb
+    - generic: "9"
+  - button:
+  - button:
+    - generic: 13 dom
+    - generic: "1"
+  - button:
+  - button:
+    - generic: 14 lun
+    - generic: "20"
+  - button:
+  - button:
+    - generic: 15 mar
+    - generic: "22"
+  - button:
+  - button:
+    - generic: 16 mié
+    - generic: "25"
+  - button:
+  - button:
+    - generic: 17 jue
+    - generic: "20"
+  - button:
+  - button:
+    - generic: 18 vie
+    - generic: "23"
+  - button:
+  - button:
+    - generic: 19 sáb
+    - generic: "15"
+  - button:
+  - button:
+    - generic: 20 dom
+    - generic: "1"
+  - button:
+  - button:
+    - generic: 21 lun
+    - generic: "27"
+  - button:
+  - button:
+    - generic: 22 mar
+    - generic: "26"
+  - button:
+  - button:
+    - generic: 23 mié
+    - generic: "28"
+  - button:
+  - button:
+    - generic: 24 jue
+    - generic: "27"
+  - button:
+  - button:
+    - generic: 25 vie
+    - generic: "24"
+  - button:
+  - button:
+    - generic: 26 sáb
+    - generic: "12"
+  - button:
+  - button:
+    - generic: 27 dom
+    - generic: "1"
+  - button:
+  - button:
+    - generic: 28 lun
+    - generic: "1"
+  - button:
+  - button:
+    - generic: 29 mar
+    - generic: "1"
+  - button:
+  - button:
+    - generic: 30 mié
+    - generic: "3"
+  - button:
+  - heading [level=1]: Hoja del día
+  - paragraph: sábado, 19 de septiembre de 2026
+  - button: Hoy
+  - combobox:
+    - generic: Todos los doctores
+  - button:
+    - text: Nueva cita
+  - list:
+    - generic: Isabel Quintero
+    - generic: Ortodoncia
+    - generic: Natalia Vélez
+    - generic: Periodoncia
+    - generic: Mateo Beltrán
+    - generic: Fisioterapia
+    - generic: Santiago Duque
+    - generic: Rehabilitación oral
+  - table:
+    - rowgroup:
+      - row:
+        - columnheader:
+          - generic: Detalles de la cita
+        - columnheader: Hora
+        - columnheader: Hist.
+        - columnheader: Paciente
+        - columnheader: Teléfono
+        - columnheader: Entidad
+        - columnheader: Est
+        - columnheader: Dr
+        - columnheader: T
+        - columnheader: Llega
+        - columnheader: Entra
+        - columnheader: Sale
+        - columnheader
+    - rowgroup:
+      - row:
+        - cell:
+          - button:
+        - cell: 09:00a
+        - cell: "0029"
+        - cell: Hugo Salazar
+        - cell: +57 300 0200029
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ○○○○
+          - generic: Programada
+        - cell:
+          - generic: MB
+        - cell: "30"
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 09:00a
+        - cell: "0002"
+        - cell: Carlos Rodríguez
+        - cell: +57 300 0200002
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ○○○○
+          - generic: Programada
+        - cell:
+          - generic: NV
+        - cell: 1h
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell
+        - cell: 09:00a
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+      - row:
+        - cell:
+          - button:
+        - cell: 09:30a
+        - cell: "0025"
+        - cell: Ricardo Navarro
+        - cell: +57 300 0200025
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ○○○○
+          - generic: Programada
+        - cell:
+          - generic: IQ
+        - cell: "30"
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell
+        - cell: 09:30a
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+      - row:
+        - cell:
+          - button:
+        - cell: 10:00a
+        - cell: "0030"
+        - cell: Emma Cárdenas
+        - cell: +57 300 0200030
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ●○○○
+          - generic: Confirmada
+        - cell:
+          - generic: MB
+        - cell: 1h
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 10:00a
+        - cell: "0004"
+        - cell: Juan Martínez
+        - cell: +57 300 0200004
+        - cell:
+          - generic: COLSANITAS
+        - cell:
+          - generic: ●○○○
+          - generic: Confirmada
+        - cell:
+          - generic: IQ
+        - cell: 1h
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell
+        - cell: 10:00a
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+      - row:
+        - cell:
+          - button:
+        - cell: 10:30a
+        - cell: "0023"
+        - cell: Gabriel Mendoza
+        - cell: +57 300 0200023
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ○○○○
+          - generic: Programada
+        - cell:
+          - generic: NV
+        - cell: 1h
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 11:00a
+        - cell: "0006"
+        - cell: Diego González
+        - cell: +57 300 0200006
+        - cell:
+          - generic: COLMEDICA
+        - cell:
+          - generic: ●●○○
+          - generic: Llegó
+        - cell:
+          - generic: MB
+        - cell: "30"
+        - cell: 10:50a
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 11:00a
+        - cell: "0026"
+        - cell: Carolina Silva
+        - cell: +57 300 0200026
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ●○○○
+          - generic: Confirmada
+        - cell:
+          - generic: IQ
+        - cell: "30"
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell
+        - cell: 11:30a
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+      - row:
+        - cell:
+          - button:
+        - cell: 12:00p
+        - cell: "0001"
+        - cell: Ana García
+        - cell: +57 300 0200001
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ●●○○
+          - generic: Llegó
+        - cell:
+          - generic: MB
+        - cell: "30"
+        - cell: 11:50a
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 12:00p
+        - cell: "0027"
+        - cell: Óscar Peña
+        - cell: +57 300 0200027
+        - cell:
+          - generic: SURA
+        - cell:
+          - generic: ●●○○
+          - generic: Llegó
+        - cell:
+          - generic: IQ
+        - cell: "30"
+        - cell: 11:50a
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 12:00p
+        - cell: "0024"
+        - cell: Elena Cortés
+        - cell: +57 300 0200024
+        - cell:
+          - generic: COLMEDICA
+        - cell:
+          - generic: ●○○○
+          - generic: Confirmada
+        - cell:
+          - generic: NV
+        - cell: 1h
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 12:30p
+        - cell: "0002"
+        - cell: Carlos Rodríguez
+        - cell: +57 300 0200002
+        - cell:
+          - generic: SURA
+        - cell:
+          - generic: ●●●○
+          - generic: En atención
+        - cell:
+          - generic: MB
+        - cell: "30"
+        - cell: 12:20p
+        - cell: 12:35p
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 12:30p
+        - cell: "0028"
+        - cell: Adriana Mora
+        - cell: +57 300 0200028
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ●●●○
+          - generic: En atención
+        - cell:
+          - generic: IQ
+        - cell: "30"
+        - cell: 12:20p
+        - cell: 12:35p
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell
+        - cell: 01:00p
+        - cell
+        - cell: Almuerzo
+        - cell
+        - cell:
+          - generic: MB, IQ, NV
+        - cell: 1h
+        - cell
+        - cell
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 02:00p
+        - cell: "0008"
+        - cell: Valeria Sánchez
+        - cell: +57 300 0200008
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ●●●○
+          - generic: En atención
+        - cell:
+          - generic: NV
+        - cell: 1h30
+        - cell: 01:50p
+        - cell: 02:05p
+        - cell
+        - cell:
+          - button:
+      - row:
+        - cell:
+          - button:
+        - cell: 03:00p
+        - cell: "0010"
+        - cell: Daniela Torres
+        - cell: +57 300 0200010
+        - cell:
+          - generic: PARTICULAR
+        - cell:
+          - generic: ●●●●
+          - generic: Completada
+        - cell:
+          - generic: SD
+        - cell: 1h
+        - cell: 02:50p
+        - cell: 03:05p
+        - cell: 04:00p
+        - cell:
+          - button:
+- list
+- button "Open Next.js Dev Tools":
+- alert
+- dialog "Mi disponibilidad":
+  - button "Cerrar":
+    - generic: Cerrar
+  - heading "Mi disponibilidad" [level=2]
+  - paragraph: Define tus horas semanales, excepciones del día y la conexión de tu calendario.
+  - paragraph: Elige si este empleado sigue el horario de la ubicación o usa una semana personalizada.
+  - tablist:
+    - tab "Horas semanales"
+    - tab "Excepciones del día" [active] [selected]
+  - tabpanel "Excepciones del día":
+    - paragraph: Excepciones para los próximos 30 días (tiempo libre u horas personalizadas para una fecha).
+    - text: Fecha
+    - textbox
+    - text: Tipo
+    - combobox:
+      - generic: Tiempo libre
+    - textbox "Notas (opcional)"
+    - button "Agregar excepción" [disabled]
+    - list:
+      - listitem: No hay excepciones en los próximos 30 días
+  - heading "Google Calendar" [level=2]
+  - note:
+    - paragraph:
+      - text: Conectar Google Calendar permite que Avance acceda a listas de calendarios, eventos y disponibilidad para sincronizar citas. Los datos de citas sincronizados pueden ser vistos por usuarios autorizados para esta ubicación de Avance y, por lo demás, son tratados únicamente para proporcionar la integración por Avance, Google y el proveedor de alojamiento de Avance; no se utilizan para publicidad.
+      - link "Privacidad":
+        - /url: https://avance.ai/privacy
+      - text: ·
+      - link "Eliminación de datos":
+        - /url: https://avance.ai/data-deletion
+  - generic: Conecta tu Google Calendar
+  - button "Conectar Calendar" [disabled]
+  - alert:
+    - generic: No se encontró un perfil de empleado. No se puede cambiar la sincronización del calendario.

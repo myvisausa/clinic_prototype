@@ -1,0 +1,100 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Ana García" [level=1]
+    - paragraph: Ana García · ID 0001
+    - button "Directorio de pacientes"
+    - button "PDF"
+    - button "Excel"
+    - link "Cobrar paciente":
+      - /url: /es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=account
+    - tablist "Historia clínica":
+      - tab "Resumen"
+      - tab "Odontograma"
+      - tab "Periodoncia"
+      - tab "Evoluciones"
+      - tab "Tratamientos" [selected]
+      - tab "Fórmulas"
+      - tab "Documentos"
+      - tab "Cuenta"
+    - tabpanel "Tratamientos":
+      - tablist "Tratamientos":
+        - tab "Planes"
+        - tab "Presupuestos" [active] [selected]
+      - tabpanel "Presupuestos":
+        - status: Presupuestos de facturación del paciente. Las propuestas clínicas y sus precios se conservan en Planes.
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- alert: Ana García

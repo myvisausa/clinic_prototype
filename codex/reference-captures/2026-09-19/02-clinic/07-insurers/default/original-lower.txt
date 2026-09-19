@@ -1,0 +1,171 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras" [active]:
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Aseguradoras" [level=1]
+    - paragraph: Aseguradoras y opciones particulares que factura la clínica. Se asigna una por paciente y por cita.
+    - heading "Directorio" [level=2]
+    - table:
+      - rowgroup:
+        - row "Nombre Tipo Activo":
+          - columnheader "Nombre"
+          - columnheader "Tipo"
+          - columnheader "Activo"
+      - rowgroup:
+        - row "ALLIANZ Renombrar Aseguradora Activo":
+          - cell "ALLIANZ Renombrar":
+            - generic: ALLIANZ
+            - button "Renombrar"
+          - cell "Aseguradora"
+          - cell "Activo":
+            - switch "Activo" [checked]
+        - row "COLMEDICA Renombrar Aseguradora Activo":
+          - cell "COLMEDICA Renombrar":
+            - generic: COLMEDICA
+            - button "Renombrar"
+          - cell "Aseguradora"
+          - cell "Activo":
+            - switch "Activo" [checked]
+        - row "COLSANITAS Renombrar Aseguradora Activo":
+          - cell "COLSANITAS Renombrar":
+            - generic: COLSANITAS
+            - button "Renombrar"
+          - cell "Aseguradora"
+          - cell "Activo":
+            - switch "Activo" [checked]
+        - row "COOMEVA Renombrar Aseguradora Activo":
+          - cell "COOMEVA Renombrar":
+            - generic: COOMEVA
+            - button "Renombrar"
+          - cell "Aseguradora"
+          - cell "Activo":
+            - switch "Activo" [checked]
+        - row "MEDPLUS Renombrar Aseguradora Activo":
+          - cell "MEDPLUS Renombrar":
+            - generic: MEDPLUS
+            - button "Renombrar"
+          - cell "Aseguradora"
+          - cell "Activo":
+            - switch "Activo" [checked]
+        - row "PARTICULAR Renombrar Particular Activo":
+          - cell "PARTICULAR Renombrar":
+            - generic: PARTICULAR
+            - button "Renombrar"
+          - cell "Particular"
+          - cell "Activo":
+            - switch "Activo" [checked]
+        - row "SEGUROS BOLIVAR Renombrar Aseguradora Activo":
+          - cell "SEGUROS BOLIVAR Renombrar":
+            - generic: SEGUROS BOLIVAR
+            - button "Renombrar"
+          - cell "Aseguradora"
+          - cell "Activo":
+            - switch "Activo" [checked]
+        - row "SURA Renombrar Aseguradora Activo":
+          - cell "SURA Renombrar":
+            - generic: SURA
+            - button "Renombrar"
+          - cell "Aseguradora"
+          - cell "Activo":
+            - switch "Activo" [checked]
+    - heading "Agregar aseguradora" [level=3]
+    - text: Nombre
+    - textbox "Nombre"
+    - text: Tipo de identificación
+    - combobox "Tipo de identificación":
+    - combobox
+    - text: Número de identificación
+    - textbox "Número de identificación"
+    - text: Tipo
+    - combobox "Tipo":
+      - generic: Aseguradora
+    - combobox
+    - paragraph: Color
+    - button "Azul"
+    - button "Verde"
+    - button "Rojo"
+    - button "Morado"
+    - button "Naranja"
+    - button "Cian"
+    - button "Índigo"
+    - button "Rosa"
+    - button "Agregar aseguradora"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Avance

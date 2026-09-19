@@ -1,0 +1,60 @@
+- banner:
+  - button "☷"
+  - button "Back": ←
+  - button "Forward": →
+  - button "◷"
+  - generic: Dental Implant Clinic Demo
+  - button "⌕ Find a page… ⌘/Ctrl K"
+  - button "Open help": ⓘ
+  - button "Notifications": ♧
+- navigation "Application navigation":
+  - link "Dental Implant Clinic Demo logo":
+    - /url: "#page=organization"
+    - img "Dental Implant Clinic Demo logo"
+  - link "⌂ 3 Home":
+    - /url: "#page=home"
+    - generic: ⌂
+    - generic: "3"
+    - text: Home
+  - link "♧ Clinic":
+    - /url: "#page=schedule"
+    - generic: ♧
+    - text: Clinic
+  - link "☏ 3 Engage":
+    - /url: "#page=engage"
+    - generic: ☏
+    - generic: "3"
+    - text: Engage
+  - button "••• More":
+    - generic: •••
+    - text: More
+  - link "⚙ Setup":
+    - /url: "#page=get-started"
+    - generic: ⚙
+    - text: Setup
+  - 'button "Me: User Profile"':
+    - text: ◉
+    - text: Me
+- complementary:
+  - generic: Setup
+  - generic: ☷
+  - navigation:
+    - link "◉ Getting Started":
+      - /url: "#page=get-started"
+      - generic: ◉
+      - text: Getting Started
+    - link "▣ Organization":
+      - /url: "#page=organization"
+      - generic: ▣
+      - text: Organization
+  - button "Browse all pages"
+- main:
+  - heading "Organization" [level=1]
+  - heading "Dental Implant Clinic Demo" [level=2]
+  - paragraph: Organization settings landing
+  - generic: Static navigable prototype · Clinical controls do not save or submit.
+- link "← Prototype gallery":
+  - /url: ../
+- link "View Care draft ↗":
+  - /url: ../care-draft/#page=organization
+- generic: Prototype · no data actions

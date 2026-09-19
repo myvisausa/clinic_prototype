@@ -1,0 +1,154 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica" [active]:
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Configuración clínica" [level=1]
+    - tablist:
+      - tab "Consultorio" [selected]
+      - tab "Profesionales"
+      - tab "Tipos de cita"
+      - tab "Preferencias del odontograma"
+    - tabpanel "Consultorio":
+      - generic "Horario de oficina":
+        - heading "Horario de oficina" [level=3]
+        - paragraph: Horario semanal de esta ubicación. Las métricas y los mensajes fuera de horario usan este calendario.
+        - generic: "Relleno rápido:"
+        - button "Días laborables 8–5"
+        - button "Todos los días 8–5"
+        - button "Borrar todo"
+        - generic: Lun
+        - checkbox "Marcar Lunes como abierto" [checked]
+        - textbox "Hora de apertura del Lunes": 08:00
+        - generic: –
+        - textbox "Hora de cierre del Lunes": 17:00
+        - button "Copiar horario a otros días":
+        - generic: Mar
+        - checkbox "Marcar Martes como abierto" [checked]
+        - textbox "Hora de apertura del Martes": 08:00
+        - generic: –
+        - textbox "Hora de cierre del Martes": 17:00
+        - button "Copiar horario a otros días":
+        - generic: Mié
+        - checkbox "Marcar Miércoles como abierto" [checked]
+        - textbox "Hora de apertura del Miércoles": 08:00
+        - generic: –
+        - textbox "Hora de cierre del Miércoles": 17:00
+        - button "Copiar horario a otros días":
+        - generic: Jue
+        - checkbox "Marcar Jueves como abierto" [checked]
+        - textbox "Hora de apertura del Jueves": 08:00
+        - generic: –
+        - textbox "Hora de cierre del Jueves": 17:00
+        - button "Copiar horario a otros días":
+        - generic: Vie
+        - checkbox "Marcar Viernes como abierto" [checked]
+        - textbox "Hora de apertura del Viernes": 08:00
+        - generic: –
+        - textbox "Hora de cierre del Viernes": 17:00
+        - button "Copiar horario a otros días":
+        - generic: Sáb
+        - checkbox "Marcar Sábado como abierto" [checked]
+        - textbox "Hora de apertura del Sábado": 09:00
+        - generic: –
+        - textbox "Hora de cierre del Sábado": 14:00
+        - button "Copiar horario a otros días":
+        - generic: Dom
+        - checkbox "Marcar Domingo como abierto"
+        - generic: Cerrado
+        - paragraph: Horarios mostrados en America/New_York · El botón de copiar aplica el horario de un día a los otros días seleccionados
+        - button "Guardar horario" [disabled]
+      - heading "Reporte RIPS" [level=2]
+      - button "Recargar":
+      - button "Guardar"
+      - generic: Código de prestador RIPS
+      - textbox
+      - generic: Modalidad RIPS
+      - textbox: "01"
+      - heading "Google Calendar" [level=2]
+      - paragraph: Conecta una cuenta de Google para asignar calendarios a los profesionales de este consultorio.
+      - note:
+        - paragraph: No hay una cuenta de Google conectada.
+        - paragraph:
+          - text: Al conectar, Avance puede leer y escribir eventos en los calendarios de esta cuenta.
+          - link "Política de privacidad":
+            - /url: https://avance.ai/privacy
+      - button "Conectar Google Calendar"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Avance

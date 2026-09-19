@@ -1,0 +1,137 @@
+<div id="clinic-clinical-first" aria-label="Clinic Summary variation A: clinical first" data-layout="clinical-first">
+<style>
+#clinic-clinical-first{--c-bg:light-dark(#fff,#202329);--c-top:light-dark(#ecedef,#25282e);--c-side:light-dark(#f4f5f6,#292d33);--c-ink:light-dark(#212529,#eceef1);--c-muted:light-dark(#656970,#b4b8bf);--c-border:light-dark(#dedfe2,#464b53);--c-blue:light-dark(#2e5b9b,#2e5b9b);--c-soft:light-dark(#edf1f7,#344050);font:14px/1.45 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--c-ink);background:var(--c-bg);container-type:inline-size;border:1px solid var(--c-border)}
+#clinic-clinical-first *{box-sizing:border-box}
+#clinic-clinical-first button,#clinic-clinical-first input,#clinic-clinical-first select,#clinic-clinical-first textarea{font:inherit;color:inherit;background:var(--c-bg);border:1px solid var(--c-border);border-radius:6px;padding:7px 10px;max-width:100%;min-width:0}
+#clinic-clinical-first button{font-weight:500;box-shadow:0 1px 2px light-dark(#00000010,#00000030)}
+#clinic-clinical-first .blue{background:var(--c-blue);color:#fff;border-color:var(--c-blue)}
+#clinic-clinical-first button:disabled{opacity:.55}
+#clinic-clinical-first .quiet{color:var(--c-muted);font-size:12px}
+#clinic-clinical-first strong{font-weight:600}
+#clinic-clinical-first .topbar{min-height:40px;background:var(--c-top);display:flex;gap:13px;align-items:center;padding:5px 12px;border-bottom:1px solid var(--c-border);flex-wrap:wrap}
+#clinic-clinical-first .topbar .tools{display:flex;gap:16px;align-items:center}
+#clinic-clinical-first .topbar button{border:0;padding:0;box-shadow:none;background:transparent}
+#clinic-clinical-first .topbar .find{margin-left:auto;background:light-dark(#dfe2e6,#363c44);padding:4px 10px;font-size:12px;color:var(--c-muted);min-width:150px;display:flex;gap:8px;align-items:center;border-radius:6px}
+#clinic-clinical-first svg{width:17px;height:17px;flex:none}
+#clinic-clinical-first .frame{display:grid;grid-template-columns:48px 157px minmax(0,1fr);min-height:740px}
+#clinic-clinical-first .outer{background:var(--c-top);border-right:1px solid var(--c-border);display:flex;flex-direction:column;align-items:stretch;padding-top:8px;gap:5px}
+#clinic-clinical-first .outer button{border:0;background:transparent;box-shadow:none;border-radius:0;font-size:11px;padding:9px 2px;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
+#clinic-clinical-first .outer button.active{color:light-dark(#2e5b9b,#a8c6ef);background:var(--c-soft);border-left:3px solid var(--c-blue)}
+#clinic-clinical-first .outer svg{width:20px;height:20px}
+#clinic-clinical-first .badge{position:absolute;right:2px;top:2px;background:var(--c-blue);color:#fff;border-radius:10px;padding:0 4px;font-size:10px}
+#clinic-clinical-first .logo{align-self:center;background:var(--c-bg);border-radius:7px;padding:2px 5px;font-size:21px;font-weight:400;margin-bottom:2px}
+#clinic-clinical-first .bottom{margin-top:auto;padding-top:30px}
+#clinic-clinical-first .inner{background:var(--c-side);border-right:1px solid var(--c-border);min-width:0}
+#clinic-clinical-first .inner-head{height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 9px;font-size:12px}
+#clinic-clinical-first .inner-head button{border:0;background:var(--c-top);padding:5px;box-shadow:none}
+#clinic-clinical-first .inner-links{padding:6px 4px 13px;border-bottom:1px solid var(--c-border)}
+#clinic-clinical-first .inner-links button{display:flex;width:100%;gap:9px;align-items:center;text-align:left;border:0;box-shadow:none;background:transparent;font-size:12px;padding:9px 7px;margin:1px 0;border-radius:22px;white-space:normal}
+#clinic-clinical-first .inner-links button.active{background:var(--c-blue);color:#fff}
+#clinic-clinical-first .browse{border:0;background:transparent;box-shadow:none;font-size:11px;color:var(--c-muted);margin:6px 4px;padding:6px}
+#clinic-clinical-first .main{min-width:0}
+#clinic-clinical-first .patient-head{min-height:46px;padding:5px 9px;border-bottom:1px solid var(--c-border);display:flex;justify-content:space-between;gap:7px;align-items:center;flex-wrap:wrap}
+#clinic-clinical-first .patient-head .actions{display:flex;gap:5px;flex-wrap:wrap}
+#clinic-clinical-first .patient-head button{padding:6px 9px;font-size:12px}
+#clinic-clinical-first .body{padding:10px}
+#clinic-clinical-first .alerts{font-size:12px;padding:8px;background:light-dark(#f3f3f3,#30343a);border:1px solid var(--c-border);border-radius:5px;margin-bottom:10px}
+#clinic-clinical-first .tabs{display:flex;flex-wrap:wrap;gap:3px;border-bottom:1px solid var(--c-border);padding-bottom:2px;margin-bottom:12px}
+#clinic-clinical-first .tabs button{border:0;border-radius:0;background:transparent;box-shadow:none;padding:7px 8px;font-size:12px}
+#clinic-clinical-first .tabs button.selected{color:light-dark(#2e5b9b,#a8c6ef);border-bottom:2px solid var(--c-blue)}
+#clinic-clinical-first .sections{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:12px;align-items:start}
+#clinic-clinical-first section{min-width:0}
+#clinic-clinical-first h3,#clinic-clinical-first h4{font-size:14px;font-weight:600;margin:0 0 5px}
+#clinic-clinical-first p{margin:4px 0 8px}
+#clinic-clinical-first .medical{grid-column:1;grid-row:1}
+#clinic-clinical-first .appointments{grid-column:2;grid-row:1}
+#clinic-clinical-first .general{grid-column:1/-1;border-top:1px solid var(--c-border);padding-top:11px}
+#clinic-clinical-first .medical-grid{display:flex;flex-direction:column;gap:11px}
+#clinic-clinical-first .history-lists{order:0}
+#clinic-clinical-first .background-form{order:1;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+#clinic-clinical-first label{display:flex;flex-direction:column;gap:3px;font-size:12px}
+#clinic-clinical-first label.wide{grid-column:1/-1}
+#clinic-clinical-first textarea{width:100%;resize:vertical;min-height:54px;font-size:12px}
+#clinic-clinical-first .background-form input,#clinic-clinical-first .background-form select{width:100%;font-size:12px;padding:5px 6px}
+#clinic-clinical-first .background-form button{justify-self:start;font-size:12px;padding:5px 12px}
+#clinic-clinical-first .history-block{margin-bottom:10px}
+#clinic-clinical-first .record{border:1px solid var(--c-border);border-radius:6px;padding:8px;margin:4px 0;font-size:12px}
+#clinic-clinical-first .record-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+#clinic-clinical-first .record-actions button{font-size:12px;padding:4px 7px}
+#clinic-clinical-first .add{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+#clinic-clinical-first .add input{flex:1 1 80px;width:80px;padding:5px 6px;font-size:12px}
+#clinic-clinical-first .add button{font-size:12px;padding:5px 7px}
+#clinic-clinical-first .general-head{display:flex;justify-content:space-between;align-items:start;gap:6px;flex-wrap:wrap;margin-bottom:7px}
+#clinic-clinical-first .general-head button{font-size:12px;padding:5px 8px}
+#clinic-clinical-first .fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+#clinic-clinical-first .field{border:1px solid var(--c-border);border-radius:6px;padding:7px 9px;overflow-wrap:anywhere}
+#clinic-clinical-first .field dt{font-size:11px;color:var(--c-muted);margin-bottom:2px}
+#clinic-clinical-first .field dd{font-size:12px;margin:0}
+#clinic-clinical-first [hidden]{display:none!important}
+#clinic-clinical-first[data-layout="current"] .sections{display:flex;flex-direction:column}
+#clinic-clinical-first[data-layout="current"] .sections>section{width:100%}
+#clinic-clinical-first[data-layout="current"] .general{order:0;border:0;padding:0}
+#clinic-clinical-first[data-layout="current"] .medical{order:1}
+#clinic-clinical-first[data-layout="current"] .appointments{order:2}
+#clinic-clinical-first[data-layout="current"] .history-lists{order:1}
+#clinic-clinical-first[data-layout="current"] .background-form{order:0}
+#clinic-clinical-first[data-layout="current"] .fields{grid-template-columns:1fr 1fr}
+#clinic-clinical-first[data-layout="current"] .field{padding:11px}
+@container(max-width:850px){#clinic-clinical-first .sections{grid-template-columns:1fr}#clinic-clinical-first .medical,#clinic-clinical-first .appointments{grid-column:1;grid-row:auto}#clinic-clinical-first .fields{grid-template-columns:1fr 1fr}}
+@container(max-width:520px){#clinic-clinical-first .frame{grid-template-columns:48px 118px minmax(0,1fr)}#clinic-clinical-first .inner-links button{padding:7px 4px;gap:4px;font-size:11px}#clinic-clinical-first .inner-links svg{width:13px}#clinic-clinical-first .fields,#clinic-clinical-first[data-layout="current"] .fields,#clinic-clinical-first .background-form{grid-template-columns:1fr}#clinic-clinical-first .topbar .find{min-width:0;margin-left:0}#clinic-clinical-first .body{padding:7px}#clinic-clinical-first .patient-head .actions{flex-direction:column;align-items:start}#clinic-clinical-first .tabs button{padding:5px 3px}#clinic-clinical-first .background-form label{grid-column:1}}
+/* Desktop viewport: preserve content and scroll it inside the existing shell. */
+#clinic-clinical-first{width:100%;max-width:1366px;aspect-ratio:16/9;min-height:480px;max-height:768px;margin:0 auto;display:grid;grid-template-rows:40px minmax(0,1fr);overflow:hidden}
+#clinic-clinical-first .topbar{min-height:0;flex-wrap:nowrap;gap:10px}
+#clinic-clinical-first .topbar>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#clinic-clinical-first .topbar .find{flex-shrink:0}
+#clinic-clinical-first .frame{min-height:0;overflow:hidden}
+#clinic-clinical-first .main{min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr)}
+#clinic-clinical-first .body{min-height:0;overflow:auto}
+#clinic-clinical-first .outer,#clinic-clinical-first .inner{min-height:0;overflow:auto}
+@container(max-width:650px){#clinic-clinical-first .topbar .find{display:none}}
+
+/* Fixed light appearance and measurements sampled from the live app. */
+#clinic-clinical-first{color-scheme:light;--c-bg:#ffffff;--c-top:#ecedef;--c-side:#f4f5f6;--c-ink:#0a0a0a;--c-muted:#616161;--c-border:#e5e5e5;--c-blue:#2e5b9b;--c-soft:#e8edf5}
+#clinic-clinical-first .topbar,#clinic-clinical-first .outer{color:#1a1d2b;border-color:#dadee2}
+#clinic-clinical-first .inner{color:#353940;border-color:#e2e4e7}
+#clinic-clinical-first .body{margin:10px 4px 0;padding:14px;border:1px solid #e5e5e5;border-radius:6px;background:#fff}
+#clinic-clinical-first .tabs{margin-bottom:20px;gap:0}
+#clinic-clinical-first .tabs button{font-size:14px;padding:8px 16px;color:#616161}
+#clinic-clinical-first .tabs button.selected{color:#2e5b9b}
+#clinic-clinical-first .alerts{background:#f5f5f5;border-color:#e5e5e5;padding:8px;margin-bottom:16px}
+#clinic-clinical-first .sections{gap:16px}
+#clinic-clinical-first .fields{gap:8px;margin:12px 0 0}
+#clinic-clinical-first[data-layout="current"] .field{padding:8px 12px}
+#clinic-clinical-first .field dt{font-size:12px;line-height:16px;font-weight:600;color:#616161}
+#clinic-clinical-first .field dd{font-size:14px;line-height:20px}
+#clinic-clinical-first .general-head button,#clinic-clinical-first .patient-head button{font-size:14px;padding:8px 16px}
+#clinic-clinical-first .background-form{gap:8px}
+#clinic-clinical-first label{font-size:14px}
+#clinic-clinical-first .background-form input,#clinic-clinical-first .background-form select{font-size:14px;padding:8px 12px}
+#clinic-clinical-first textarea{font-size:14px;min-height:64px;padding:8px 12px}
+#clinic-clinical-first .background-form button{font-size:14px;padding:8px 16px}
+#clinic-clinical-first .record,#clinic-clinical-first .record-actions button,#clinic-clinical-first .add input,#clinic-clinical-first .add button{font-size:14px}
+#clinic-clinical-first .record-actions button{padding:8px 16px}
+#clinic-clinical-first .inner-links button{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Variation A: surface clinical history and the existing appointment first. */
+#clinic-clinical-first[data-layout="clinical-first"] .sections{display:flex;flex-direction:column;gap:16px}
+#clinic-clinical-first[data-layout="clinical-first"] .medical,#clinic-clinical-first[data-layout="clinical-first"] .appointments,#clinic-clinical-first[data-layout="clinical-first"] .medical-form,#clinic-clinical-first[data-layout="clinical-first"] .general{width:100%}
+#clinic-clinical-first[data-layout="clinical-first"] .medical-grid{display:flex;flex-direction:column}
+#clinic-clinical-first[data-layout="clinical-first"] .background-form{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#clinic-clinical-first[data-layout="clinical-first"] .general{border-top:1px solid var(--c-border);padding-top:11px}
+#clinic-clinical-first[data-layout="clinical-first"] .fields{grid-template-columns:repeat(3,minmax(0,1fr))}
+@container(max-width:850px){#clinic-clinical-first[data-layout="clinical-first"] .fields{grid-template-columns:1fr 1fr}}
+</style>
+<header class="topbar"><div class="tools"><button aria-label="Collapse sidebar"><i data-lucide="panel-left-close"></i></button><button aria-label="Back"><i data-lucide="arrow-left"></i></button><button aria-label="Forward"><i data-lucide="arrow-right"></i></button><button aria-label="History"><i data-lucide="history"></i></button></div><span>Dental Implant Clinic Demo</span><button class="find"><i data-lucide="search"></i>Find a page…</button><button aria-label="Open help"><i data-lucide="circle-help"></i></button></header>
+<div class="frame"><nav class="outer" aria-label="Primary sidebar"><span class="logo" aria-label="Avance logo approximation">ap</span><button><i data-lucide="house"></i><span class="badge">3</span>Home</button><button class="active" data-clinic><i data-lucide="stethoscope"></i>Clinic</button><button data-care hidden><i data-lucide="heart-pulse"></i>Care</button><button><i data-lucide="message-circle"></i><span class="badge">3</span>Engage</button><button><i data-lucide="ellipsis"></i>More</button><div class="bottom"><button aria-label="Setup: Settings"><i data-lucide="settings"></i>Setup</button><button aria-label="Me: User Profile"><i data-lucide="circle-user-round"></i>Me</button></div></nav>
+<aside class="inner" aria-label="Inner sidebar"><div class="inner-head"><span data-workspace>CLINIC</span><button aria-label="Collapse sidebar"><i data-lucide="panel-left-close"></i></button></div><div class="inner-links"><button><i data-lucide="calendar-days"></i>Schedule</button><button class="active"><i data-lucide="users"></i>Patients</button><button data-admin><i data-lucide="book-open"></i>Clinical reference</button><button data-admin><i data-lucide="settings"></i>Clinic setup</button><button data-admin><i data-lucide="list"></i>Services and prices</button><button data-invoices><i data-lucide="dollar-sign"></i>Invoices</button><button data-admin><i data-lucide="contact"></i>Insurers</button></div><button class="browse">Browse all pages</button></aside>
+<main class="main"><header class="patient-head"><div><strong>Ana García</strong><div class="quiet">Ana García · ID 0001</div></div><div class="actions"><button>Patient directory</button><button>PDF</button><button>Excel</button><button>Charge patient</button></div></header>
+<div class="body"><div data-above-tabs></div><nav class="tabs" aria-label="Clinical history"><button class="selected">Summary</button><button>Dental chart</button><button>Perio</button><button>Notes</button><button>Treatments</button><button>Prescriptions</button><button>Documents</button><button>Account</button></nav><div data-below-tabs><div class="alerts" data-alerts><strong>Allergies:</strong> Penicilina &nbsp; <strong>Smoking status:</strong> Never</div></div>
+<div class="sections"><section class="medical"><h3>Medical background</h3><p class="quiet">Allergies, medical and dental history, general notes.</p><div class="medical-grid"><div class="history-lists"><div class="history-block"><h4>Allergies</h4><div class="record"><strong>Penicilina</strong> · DEMO · Erupción cutánea referida. · Active<div class="record-actions"><button>Mark inactive</button><button>Mark resolved</button></div></div><div class="add"><input aria-label="Allergen" placeholder="Allergen"><input aria-label="Reaction" placeholder="Reaction"><button class="blue" disabled>Add allergy</button></div></div>
+<div class="history-block"><h4>Medications</h4><p class="quiet">No clinical history yet.</p><div class="add"><input aria-label="Medication" placeholder="Medication"><input aria-label="Dose" placeholder="Dose"><button class="blue" disabled>Add medication</button></div></div>
+<div class="history-block"><h4>Conditions</h4><div class="record"><strong>Hipertensión arterial controlada</strong> · DEMO · Dato sintético de control. · Active<div class="record-actions"><button>Mark inactive</button><button>Mark resolved</button></div></div><div class="add"><input aria-label="Condition" placeholder="Condition"><button class="blue" disabled>Add condition</button></div></div></div></div></section>
+<section class="appointments"><h3>Appointments</h3><div class="record"><strong>Limpieza / control — Ana García</strong><p class="quiet">Sep 13, 2026, 7:00 AM · Status: Completed</p><p class="quiet">Recorded: 1</p><div class="record-actions"><button>Record encounter note</button><button>Record performed work</button></div></div></section>
+<section class="medical-form" aria-label="Medical background form"><div class="background-form"><label>Smoking status<select><option>Unknown</option><option selected>Never</option><option>Former</option><option>Current</option></select></label><label>Cigarettes per day<input></label><label>Pregnancy<select><option>Unknown</option><option>Not pregnant</option><option>Pregnant</option></select></label><label class="wide">Dental history<textarea rows="2">DEMO · Bruxismo referido.</textarea></label><label class="wide">Notes<textarea rows="2">DEMO · Antecedentes sintéticos. Sin validez clínica.</textarea></label><button class="blue">Save</button></div></section>
+<section class="general"><div class="general-head"><div><h3>General information</h3><p class="quiet">Basic clinical history summary.</p></div><button>Edit general information</button></div><dl class="fields"><div class="field"><dt>Full name</dt><dd>Ana García</dd></div><div class="field"><dt>Email</dt><dd>ana.garcia@demo-dental.local</dd></div><div class="field"><dt>Phone</dt><dd>573000200001</dd></div><div class="field"><dt>Document</dt><dd>—</dd></div><div class="field"><dt>Date of birth</dt><dd>Mar 12, 1988</dd></div><div class="field"><dt>Address</dt><dd>—</dd></div><div class="field"><dt>Emergency contact</dt><dd>—</dd></div><div class="field"><dt>Emergency phone</dt><dd>—</dd></div><div class="field"><dt>Residence municipality (DIVIPOLA)</dt><dd>—</dd></div><div class="field"><dt>Country of origin (ISO numeric)</dt><dd>—</dd></div></dl></section>
+</div></div></main></div>
+
+</div>

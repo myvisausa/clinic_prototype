@@ -1,0 +1,81 @@
+- banner:
+  - button "☷"
+  - button "Back": ←
+  - button "Forward": →
+  - button "◷"
+  - generic: Dental Implant Clinic Demo
+  - button "⌕ Find a page… ⌘/Ctrl K"
+  - button "Open help": ⓘ
+  - button "Notifications": ♧
+- navigation "Application navigation":
+  - link "Dental Implant Clinic Demo logo":
+    - /url: "#page=organization"
+    - img "Dental Implant Clinic Demo logo"
+  - link "⌂ 3 Home":
+    - /url: "#page=home"
+    - generic: ⌂
+    - generic: "3"
+    - text: Home
+  - link "♧ Clinic":
+    - /url: "#page=schedule"
+    - generic: ♧
+    - text: Clinic
+  - link "☏ 3 Engage":
+    - /url: "#page=engage"
+    - generic: ☏
+    - generic: "3"
+    - text: Engage
+  - button "••• More":
+    - generic: •••
+    - text: More
+  - link "⚙ Setup":
+    - /url: "#page=get-started"
+    - generic: ⚙
+    - text: Setup
+  - 'button "Me: User Profile"':
+    - text: ◉
+    - text: Me
+- complementary:
+  - generic: Home
+  - generic: ☷
+  - navigation:
+    - link "⌂ Dashboard":
+      - /url: "#page=home"
+      - generic: ⌂
+      - text: Dashboard
+  - button "Browse all pages"
+- main:
+  - heading "Home" [level=1]
+  - generic: Saturday, September 19, 2026
+  - generic: Appointments today
+  - generic: —
+  - generic: Unconfirmed
+  - generic: —
+  - generic: In office
+  - generic: —
+  - generic: Messages
+  - generic: —
+  - generic: Collected today
+  - generic: —
+  - generic: Quick actions
+  - button "Appointment"
+  - button "Check-in"
+  - button "Take payment"
+  - button "Block time"
+  - button "Day sheet"
+  - heading "Inbox" [level=2]
+  - link "Open inbox →":
+    - /url: "#page=engage"
+  - paragraph: No recent conversations.
+  - heading "Insights" [level=2]
+  - paragraph: No live dashboard data in this fixture.
+  - heading "Day sheet" [level=2]
+  - link "Open day sheet →":
+    - /url: "#page=schedule"
+  - paragraph: Clinical dashboard structure from DashboardV2; values unavailable.
+  - generic: Static navigable prototype · Clinical controls do not save or submit.
+- link "← Prototype gallery":
+  - /url: ../
+- link "View Care draft ↗":
+  - /url: ../care-draft/#page=home
+- generic: Prototype · no data actions

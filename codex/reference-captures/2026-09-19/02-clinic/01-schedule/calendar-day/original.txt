@@ -1,0 +1,208 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - radio "Hoja del día"
+    - radio "Horario del equipo"
+    - radio "Calendario" [checked]
+    - button "Mi disponibilidad"
+    - button "Hoy"
+    - button:
+    - button:
+    - button "19 de septiembre de 2026"
+    - button "Día" [active]
+    - button "Semana"
+    - button "Mes"
+    - button "Agenda"
+    - button "Bloquear horario":
+      - text: Bloquear horario
+    - button "Nuevo Evento":
+      - text: Nuevo Evento
+    - button "Mi Calendario"
+    - button "Isabel Quintero"
+    - button "Natalia Vélez"
+    - button "Mateo Beltrán"
+    - button "Santiago Duque"
+    - grid:
+      - rowgroup:
+        - row "sábado":
+          - columnheader "sábado":
+            - generic: sábado
+      - rowgroup:
+        - row:
+          - generic: Todo el día
+          - gridcell
+        - table:
+          - rowgroup:
+            - row:
+              - cell:
+                - generic: "6"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "7"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "8"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "9"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "10"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "11"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "12"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "13"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "14"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "15"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "16"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "17"
+              - cell
+            - row:
+              - cell
+              - cell
+            - row:
+              - cell:
+                - generic: "18"
+              - cell
+            - row:
+              - cell
+              - cell
+        - row:
+          - gridcell
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert

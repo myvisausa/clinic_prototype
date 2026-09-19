@@ -1,0 +1,108 @@
+/* Care draft changes membership and Summary hierarchy while sharing page widgets. */
+.patienttop {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 3;
+}
+.patientbody > .tabs {
+  position: sticky;
+  top: 57px;
+  background: #fff;
+  z-index: 2;
+}
+.summary-overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  align-items: start;
+}
+.summary-overview > .panel {
+  min-width: 0;
+  margin: 0;
+  padding: 10px 12px;
+}
+.summary-overview h2,
+.summary-overview h3 {
+  margin-bottom: 4px;
+}
+.summary-overview p {
+  margin: 3px 0 6px;
+}
+.summary-overview .record {
+  margin: 5px 0;
+  padding: 7px;
+}
+.summary-overview .toolbar {
+  margin: 6px 0 0;
+  gap: 5px;
+}
+.summary-overview .toolbar input {
+  min-width: 0;
+  flex: 1 1 110px;
+}
+.summary-overview .toolbar button {
+  flex: 0 0 auto;
+}
+.summary-overview .record .row {
+  gap: 5px;
+}
+.summary-overview .btn {
+  font-size: 12px;
+  padding: 6px 9px;
+}
+.summary-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  margin-top: 12px;
+}
+.summary-details > .panel {
+  margin: 0;
+}
+.summary-details .general-info {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 16px;
+}
+.summary-details .general-info .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.summary-details .formgrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.summary-details .medical-form .toolbar {
+  margin-bottom: 0;
+}
+.summary-overview .btn,
+.summary-details .btn {
+  white-space: normal;
+}
+@media (max-width: 1100px) {
+  .summary-overview {
+    grid-template-columns: 1fr 1fr;
+  }
+  .summary-details {
+    grid-template-columns: 1fr;
+  }
+  .summary-details .general-info .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .patienttop .row {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 800px) {
+  .summary-overview {
+    grid-template-columns: 1fr;
+  }
+  .summary-details .formgrid,
+  .summary-details .general-info .grid {
+    grid-template-columns: 1fr;
+  }
+  .patientbody > .tabs {
+    top: 74px;
+  }
+}

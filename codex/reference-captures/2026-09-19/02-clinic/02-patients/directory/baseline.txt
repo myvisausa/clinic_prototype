@@ -1,0 +1,100 @@
+- banner:
+  - button "☷"
+  - button "Back": ←
+  - button "Forward": →
+  - button "◷"
+  - generic: Dental Implant Clinic Demo
+  - button "⌕ Find a page… ⌘/Ctrl K"
+  - button "Open help": ⓘ
+  - button "Notifications": ♧
+- navigation "Application navigation":
+  - link "Dental Implant Clinic Demo logo":
+    - /url: "#page=organization"
+    - img "Dental Implant Clinic Demo logo"
+  - link "⌂ 3 Home":
+    - /url: "#page=home"
+    - generic: ⌂
+    - generic: "3"
+    - text: Home
+  - link "♧ Clinic":
+    - /url: "#page=schedule"
+    - generic: ♧
+    - text: Clinic
+  - link "☏ 3 Engage":
+    - /url: "#page=engage"
+    - generic: ☏
+    - generic: "3"
+    - text: Engage
+  - button "••• More":
+    - generic: •••
+    - text: More
+  - link "⚙ Setup":
+    - /url: "#page=get-started"
+    - generic: ⚙
+    - text: Setup
+  - 'button "Me: User Profile"':
+    - text: ◉
+    - text: Me
+- complementary:
+  - generic: Clinic
+  - generic: ☷
+  - navigation:
+    - link "▦ Schedule":
+      - /url: "#page=schedule"
+      - generic: ▦
+      - text: Schedule
+    - link "♧ Patients":
+      - /url: "#page=patients"
+      - generic: ♧
+      - text: Patients
+    - link "▤ Clinical reference":
+      - /url: "#page=reference"
+      - generic: ▤
+      - text: Clinical reference
+    - link "⚙ Clinic setup":
+      - /url: "#page=setup"
+      - generic: ⚙
+      - text: Clinic setup
+    - link "☷ Services and prices":
+      - /url: "#page=services"
+      - generic: ☷
+      - text: Services and prices
+    - link "$ Invoices":
+      - /url: "#page=invoices"
+      - generic: $
+      - text: Invoices
+    - link "▣ Insurers":
+      - /url: "#page=insurers"
+      - generic: ▣
+      - text: Insurers
+  - button "Browse all pages"
+- main:
+  - heading "Patients" [level=1]
+  - paragraph: 30 patients (approved fixture snapshot)
+  - button "New"
+  - textbox "Search by name, email, or phone…"
+  - button "Search"
+  - table:
+    - rowgroup:
+      - row "Name Email Phone Date of birth":
+        - columnheader
+        - columnheader "Name"
+        - columnheader "Email"
+        - columnheader "Phone"
+        - columnheader "Date of birth"
+    - rowgroup:
+      - row "AG Ana García ana.garcia@demo-dental.local 573000200001 Mar 12, 1988":
+        - cell "AG"
+        - cell "Ana García":
+          - link "Ana García":
+            - /url: "#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Summary"
+        - cell "ana.garcia@demo-dental.local"
+        - cell "573000200001"
+        - cell "Mar 12, 1988"
+  - paragraph: Only the approved synthetic example row is included; the original directory had more rows.
+  - generic: Static navigable prototype · Clinical controls do not save or submit.
+- link "← Prototype gallery":
+  - /url: ../
+- link "View Care draft ↗":
+  - /url: ../care-draft/#page=patients
+- generic: Prototype · no data actions

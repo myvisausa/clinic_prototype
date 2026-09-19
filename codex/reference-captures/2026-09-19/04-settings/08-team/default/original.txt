@@ -1,0 +1,256 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Ajustes" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - heading "Primeros pasos" [level=4]:
+        - generic: Primeros pasos
+      - list:
+        - link "Primeros pasos":
+          - /url: /es/settings/getting-started
+          - generic: Primeros pasos
+      - heading "Cuenta" [level=4]:
+        - generic: Cuenta
+      - list:
+        - link "Mi perfil":
+          - /url: /es/settings/profile
+          - generic: Mi perfil
+        - link "Organización":
+          - /url: /es/settings/organization
+          - generic: Organización
+        - link "Etiquetas":
+          - /url: /es/settings/tags
+          - generic: Etiquetas
+        - link "Plantillas":
+          - /url: /es/settings/task-templates
+          - generic: Plantillas
+      - heading "Finanzas" [level=4]:
+        - generic: Finanzas
+      - list:
+        - link "Facturación":
+          - /url: /es/settings/fiscal
+          - generic: Facturación
+        - link "Precios":
+          - /url: /es/settings/prices
+          - generic: Precios
+      - heading "Equipo" [level=4]:
+        - generic: Equipo
+      - list:
+        - link "Equipo":
+          - /url: /es/settings/team
+          - generic: Equipo
+        - link "Metas de ventas":
+          - /url: /es/settings/sales-goals
+          - generic: Metas de ventas
+      - heading "Integraciones" [level=4]:
+        - generic: Integraciones
+      - list:
+        - link "Integraciones":
+          - /url: /es/settings/integrations
+          - generic: Integraciones
+      - heading "Legal" [level=4]:
+        - generic: Legal
+      - list:
+        - link "Legal":
+          - /url: /es/settings/legal
+          - generic: Legal
+      - heading "Automatización" [level=3]:
+        - generic: Automatización
+      - list:
+        - link "Automatización":
+          - /url: /es/automation/settings
+          - generic: Automatización
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main [active]:
+    - heading "Equipo" [level=2]
+    - paragraph: Gestiona los miembros de tu equipo, roles y permisos de acceso.
+    - generic: Clinic Team
+    - generic: — Dental demo clinic team
+    - button "Editar":
+      - generic: Editar
+    - heading "Miembros del equipo" [level=2]
+    - button "Roles":
+      - generic: Roles
+    - button "Invitar miembro":
+      - generic: Invitar miembro
+    - textbox "Buscar"
+    - button "Filtros":
+      - text: Filtros
+    - button "Mostrar":
+      - text: Mostrar
+    - button "Acciones masivas":
+      - text: Acciones masivas
+    - button "Página anterior" [disabled]:
+    - combobox "Seleccionar página":
+      - option "1" [selected]
+      - option "2"
+    - generic: /
+    - generic: "2"
+    - button "Página siguiente":
+    - table:
+      - rowgroup:
+        - row "Seleccionar todo Nombre Rol Cargo Correo electrónico Teléfono Estado Acceso":
+          - columnheader "Seleccionar todo":
+            - checkbox "Seleccionar todo"
+          - columnheader "Nombre"
+          - columnheader "Rol"
+          - columnheader "Cargo"
+          - columnheader "Correo electrónico"
+          - columnheader "Teléfono"
+          - columnheader "Estado"
+          - columnheader "Acceso"
+      - rowgroup:
+        - row "Seleccionar fila IQ Isabel Quintero Activo isabel.quintero@demo-dental.local 573001110003 Not invited Acceso":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "IQ Isabel Quintero Activo":
+            - generic: IQ
+            - paragraph: Isabel Quintero
+            - paragraph: Activo
+          - cell:
+            - combobox "Rol":
+              - generic: Recepción / Personal clínico
+          - cell:
+            - combobox "Cargo":
+              - generic: —
+          - cell "isabel.quintero@demo-dental.local"
+          - cell "573001110003"
+          - cell "Not invited":
+            - generic: Not invited
+          - cell "Acceso":
+            - button "Acceso"
+        - row "Seleccionar fila SD Santiago Duque Activo santiago.duque@demo-dental.local 573001110001 Not invited Acceso":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "SD Santiago Duque Activo":
+            - generic: SD
+            - paragraph: Santiago Duque
+            - paragraph: Activo
+          - cell:
+            - combobox "Rol":
+              - generic: Recepción / Personal clínico
+          - cell:
+            - combobox "Cargo":
+              - generic: —
+          - cell "santiago.duque@demo-dental.local"
+          - cell "573001110001"
+          - cell "Not invited":
+            - generic: Not invited
+          - cell "Acceso":
+            - button "Acceso"
+        - row "Seleccionar fila PM Patricia Mejía Activo patricia.mejia@demo-dental.local 573001110007 Not invited Acceso":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "PM Patricia Mejía Activo":
+            - generic: PM
+            - paragraph: Patricia Mejía
+            - paragraph: Activo
+          - cell:
+            - combobox "Rol":
+              - generic: Recepción / Personal clínico
+          - cell:
+            - combobox "Cargo":
+              - generic: —
+          - cell "patricia.mejia@demo-dental.local"
+          - cell "573001110007"
+          - cell "Not invited":
+            - generic: Not invited
+          - cell "Acceso":
+            - button "Acceso"
+        - row "Seleccionar fila MB Mateo Beltrán Activo mateo.beltran@demo-dental.local 573001110004 Not invited Acceso":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "MB Mateo Beltrán Activo":
+            - generic: MB
+            - paragraph: Mateo Beltrán
+            - paragraph: Activo
+          - cell:
+            - combobox "Rol":
+              - generic: Recepción / Personal clínico
+          - cell:
+            - combobox "Cargo":
+              - generic: —
+          - cell "mateo.beltran@demo-dental.local"
+          - cell "573001110004"
+          - cell "Not invited":
+            - generic: Not invited
+          - cell "Acceso":
+            - button "Acceso"
+        - row "Seleccionar fila GP Gabriela Patiño Activo gabriela.patino@demo-dental.local 573001110005 Not invited Acceso":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "GP Gabriela Patiño Activo":
+            - generic: GP
+            - paragraph: Gabriela Patiño
+            - paragraph: Activo
+          - cell:
+            - combobox "Rol":
+              - generic: Recepción / Personal clínico
+          - cell:
+            - combobox "Cargo":
+              - generic: —
+          - cell "gabriela.patino@demo-dental.local"
+          - cell "573001110005"
+          - cell "Not invited":
+            - generic: Not invited
+          - cell "Acceso":
+            - button "Acceso"
+    - heading "Invitaciones" [level=2]
+    - status: No hay invitaciones.
+    - heading "Estructura del equipo" [level=2]
+    - button "Ajustar gráfico"
+    - button "Expandir todo"
+    - button "Contraer todo"
+    - paragraph: "Consejo: Haz clic en los nodos del equipo para expandir o colapsar su estructura."
+    - heading "Cargos" [level=2]
+    - button "Nuevo Cargo":
+      - text: Nuevo Cargo
+    - status: Aún no hay cargos.
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "1"
+  - generic: "2"
+  - text: Issue
+  - generic: s
+- button "Collapse issues badge":
+- alert

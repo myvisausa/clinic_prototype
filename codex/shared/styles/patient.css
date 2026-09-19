@@ -1,0 +1,102 @@
+.patient-view .patienttop { min-height: 54px; }
+.patient-view .patientbody { margin: 14px; }
+.patient-view .tabs { gap: 3px; }
+.patient-view .tabs a { padding: 10px 14px; }
+.patient-view .general-info { padding: 12px 0 20px; }
+.patient-view .general-info .grid { gap: 8px; }
+.patient-view .medical { margin-top: 0; }
+.patient-view .history-block { border-top: 1px solid #e5e5e5; padding-top: 14px; margin-top: 14px; }
+.patient-view .history-block h3 { margin-bottom: 10px; }
+.patient-view .history-block .toolbar input { min-width: 160px; }
+.patient-view .appointments { margin-top: 18px; }
+.patient-view .patient-section { padding: 8px 4px 20px; }
+.patient-view .patient-section h3 { margin: 22px 0 10px; }
+.patient-view .patient-section .tablewrap { margin-top: 18px; }
+.patient-view .patient-empty { border: 1px solid #e5e5e5; border-radius: 6px; padding: 18px; margin-top: 14px; color: #616161; }
+.patient-view .account-totals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0; }
+.patient-view .account-totals > div { border: 1px solid #e5e5e5; border-radius: 6px; padding: 16px; }
+.patient-view .account-totals dt { color: #616161; }
+.patient-view .account-totals dd { font-size: 20px; font-weight: 600; margin: 5px 0 0; }
+.patient-view .plan-card { border: 1px solid #e5e5e5; border-radius: 7px; padding: 16px; display: flex; align-items: flex-start; gap: 18px; margin-bottom: 14px; }
+.patient-view .plan-card > div { flex: 1; }
+.patient-view .plan-card p { margin: 5px 0; color: #616161; }
+.patient-view .plan-status { background: #edf7ef; border-radius: 4px; color: #27633b; padding: 4px 8px; }
+.patient-directory .patient-search { display: flex; gap: 8px; margin: 16px 0 20px; }
+.patient-directory .patient-search input { width: min(440px, 100%); }
+.patient-directory .patient-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(265px, 1fr)); gap: 12px; }
+.patient-directory .patient-card { border: 1px solid #dfe2e6; border-radius: 8px; padding: 14px; display: flex; align-items: flex-start; gap: 6px; min-width: 0; box-shadow: 0 1px 2px #0001; }
+.patient-directory .patient-card a { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 0; }
+.patient-directory .patient-card a:hover strong { color: #2e5b9b; }
+.patient-directory .patient-card small { color: #616161; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.patient-directory .patient-card-actions { display: flex; }
+.patient-directory .patient-card-actions button { border: 0; background: none; color: #616161; padding: 3px; }
+.patient-view .chart-filter { min-height: 58px; }
+.patient-view .chart-filter label { font-size: 12px; }
+.patient-view .chart-workspace { grid-template-columns: minmax(0, 1fr) minmax(285px, 340px); align-items: start; }
+.patient-view .chart-rail { max-height: none; overflow: visible; min-width: 0; }
+.patient-view .chart-rail .tabs { display: flex; }
+.patient-view .chart-rail .tabs a { flex: 1; font-size: 12px; padding: 8px 6px; }
+.patient-view .chart-entry > label { display: flex; flex-direction: column; gap: 4px; }
+.patient-view .chart-entry > div { margin: 12px 0; }
+.patient-view .catalogue { height: 185px; overflow: auto; border-bottom: 1px solid #e5e5e5; }
+.patient-view .catalogue button { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.patient-view .surface-buttons { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+.patient-view .surface-buttons button { padding: 6px 9px; }
+.patient-view .toothchart { padding: 0; border-radius: 14px; }
+.patient-view .tooth-heading { padding: 15px; border-bottom: 1px solid #e5e5e5; display: flex; justify-content: space-between; gap: 10px; }
+.patient-view .tooth-heading p { color: #616161; font-size: 12px; margin: 5px 0 0; }
+.patient-view .tooth-controls { display: flex; gap: 4px; align-items: start; }
+.patient-view .tooth-controls button { font-size: 10px; padding: 5px; max-width: 70px; }
+.patient-view .toothrow { justify-content: space-around; gap: 2px; min-width: 680px; margin: 14px 6px 0; }
+.patient-view .tooth { width: 40px; }
+.patient-view .tooth span { display: block; height: 23px; }
+.patient-view .tooth-image { border: 1px solid #d7dfea; border-radius: 11px; height: 125px; display: flex; align-items: center; justify-content: center; }
+.patient-view .tooth img { width: 35px; height: 70px; }
+.patient-view .toothrow.lower { margin-top: 16px; }
+.patient-view .dental-report { border-top: 1px solid #e5e5e5; padding: 16px; margin-top: 18px; }
+.patient-view .dental-report table { min-width: 0; }
+.patient-view .dental-report td { white-space: normal; }
+.patient-view .dental-report p { line-height: 1.5; }
+@media (max-width: 1150px) { .patient-view .chart-workspace { grid-template-columns: 1fr; } }
+/* The source directory is a vertical list, while general information uses three columns. */
+.patient-directory .patient-cards { grid-template-columns: 1fr; }
+.patient-directory .patient-card { min-height: 104px; align-items: center; }
+.patient-directory .patient-search { display: grid; grid-template-columns: 44px 44px 1fr; }
+.patient-directory .patient-search input { width: 100%; grid-column: 1 / -1; }
+.patient-directory .patient-search .btn { padding: 7px; }
+.patient-view .general-info .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 800px) { .patient-view .general-info .grid { grid-template-columns: 1fr; } }
+.patient-view .patient-section { border: 1px solid #e5e5e5; border-radius: 6px; padding: 16px; margin-top: 12px; }
+.patient-view .patient-section .patient-empty { border: 0; padding: 22px 0; margin: 0; }
+.patient-view .patient-section:has([role="status"]) [role="status"],
+.patient-view > .patientbody > [role="status"] { text-align: center; padding: 50px 18px; border: 0; }
+.patient-view .account-totals > div { border: 0; padding: 0; }
+.patient-view .account-totals dd { font-size: 14px; font-weight: 400; }
+/* Baseline Summary follows the original single outer panel. */
+.patient-view.baseline-variant .notice { margin: 4px 0 12px; padding: 8px; }
+.patient-view.baseline-variant .general-info { padding: 0 0 14px; }
+.patient-view.baseline-variant .general-info .row { align-items: start; }
+.patient-view.baseline-variant .general-info h2 { margin: 0 0 3px; font-size: 15px; }
+.patient-view.baseline-variant .general-info p { margin: 0 0 13px; }
+.patient-view.baseline-variant .general-info .field { min-height: 58px; }
+.patient-view.baseline-variant .medical { border: 0; border-radius: 0; box-shadow: none; padding: 0; margin: 0; }
+.patient-view.baseline-variant .medical h2 { margin: 0 0 3px; font-size: 15px; }
+.patient-view.baseline-variant .medical > p { margin: 0 0 10px; }
+.patient-view.baseline-variant .appointments { border: 0; padding: 0; }
+/* Four static tooth rows use the source SVG anatomy and captured tooth-16 finding. */
+.patient-view .tooth-controls button { width: 45px; height: 45px; padding: 4px; border-color: #bed2e7; background: #e8d5fc; }
+.patient-view .tooth-controls button:last-child { background: #f6f7fa; }
+.patient-view .tooth-controls img { width: 100%; height: 100%; object-fit: contain; }
+.patient-view .toothrow { margin: 2px 6px; }
+.patient-view .toothrow.side.upper { margin-top: 12px; }
+.patient-view .toothrow.side.lower { margin-bottom: 12px; }
+.patient-view .toothrow.occlusal .tooth-image { height: 88px; }
+.patient-view .toothrow.occlusal .tooth img { width: 31px; height: 43px; }
+.patient-view .toothrow.side.lower .tooth { display: flex; flex-direction: column-reverse; }
+.patient-view .toothrow.side.lower img { transform: rotate(180deg); }
+.patient-view .toothrow.side.upper img.mirror { transform: scaleX(-1); }
+.patient-view .toothrow.side.lower img.mirror { transform: rotate(180deg) scaleX(-1); }
+.patient-view .toothrow.occlusal.lower img { transform: rotate(180deg); }
+.patient-view .toothrow.occlusal.upper img.mirror { transform: scaleX(-1); }
+.patient-view .toothrow.occlusal.lower img.mirror { transform: rotate(180deg) scaleX(-1); }
+.patient-view .toothrow .tooth.restored img { filter: brightness(0) saturate(100%) invert(14%) sepia(86%) saturate(5107%) hue-rotate(349deg) brightness(91%) contrast(111%); }

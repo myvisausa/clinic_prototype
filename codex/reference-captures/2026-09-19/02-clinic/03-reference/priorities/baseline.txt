@@ -1,0 +1,95 @@
+- banner:
+  - button "☷"
+  - button "Back": ←
+  - button "Forward": →
+  - button "◷"
+  - generic: Dental Implant Clinic Demo
+  - button "⌕ Find a page… ⌘/Ctrl K"
+  - button "Open help": ⓘ
+  - button "Notifications": ♧
+- navigation "Application navigation":
+  - link "Dental Implant Clinic Demo logo":
+    - /url: "#page=organization"
+    - img "Dental Implant Clinic Demo logo"
+  - link "⌂ 3 Home":
+    - /url: "#page=home"
+    - generic: ⌂
+    - generic: "3"
+    - text: Home
+  - link "♧ Clinic":
+    - /url: "#page=schedule"
+    - generic: ♧
+    - text: Clinic
+  - link "☏ 3 Engage":
+    - /url: "#page=engage"
+    - generic: ☏
+    - generic: "3"
+    - text: Engage
+  - button "••• More":
+    - generic: •••
+    - text: More
+  - link "⚙ Setup":
+    - /url: "#page=get-started"
+    - generic: ⚙
+    - text: Setup
+  - 'button "Me: User Profile"':
+    - text: ◉
+    - text: Me
+- complementary:
+  - generic: Clinic
+  - generic: ☷
+  - navigation:
+    - link "▦ Schedule":
+      - /url: "#page=schedule"
+      - generic: ▦
+      - text: Schedule
+    - link "♧ Patients":
+      - /url: "#page=patients"
+      - generic: ♧
+      - text: Patients
+    - link "▤ Clinical reference":
+      - /url: "#page=reference"
+      - generic: ▤
+      - text: Clinical reference
+    - link "⚙ Clinic setup":
+      - /url: "#page=setup"
+      - generic: ⚙
+      - text: Clinic setup
+    - link "☷ Services and prices":
+      - /url: "#page=services"
+      - generic: ☷
+      - text: Services and prices
+    - link "$ Invoices":
+      - /url: "#page=invoices"
+      - generic: $
+      - text: Invoices
+    - link "▣ Insurers":
+      - /url: "#page=insurers"
+      - generic: ▣
+      - text: Insurers
+  - button "Browse all pages"
+- main:
+  - heading "Clinical reference" [level=1]
+  - navigation "Page tabs":
+    - link "Codes":
+      - /url: "#page=reference&tab=Codes"
+    - link "Formulas":
+      - /url: "#page=reference&tab=Formulas"
+    - link "Documents":
+      - /url: "#page=reference&tab=Documents"
+    - link "Priorities":
+      - /url: "#page=reference&tab=Priorities"
+    - link "Prognoses":
+      - /url: "#page=reference&tab=Prognoses"
+  - heading "Priorities" [level=2]
+  - heading "Add priority" [level=3]
+  - textbox "Name"
+  - textbox "Order": "1"
+  - button "Add priority"
+  - paragraph: No priorities yet.
+  - generic: Static navigable prototype · Clinical controls do not save or submit.
+- link "← Prototype gallery":
+  - /url: ../
+- link "View Care draft ↗":
+  - /url: ../care-draft/#page=reference&tab=Priorities
+- generic: Prototype · no data actions

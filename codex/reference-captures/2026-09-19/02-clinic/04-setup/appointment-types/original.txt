@@ -1,0 +1,169 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Configuración clínica" [level=1]
+    - tablist:
+      - tab "Consultorio"
+      - tab "Profesionales"
+      - tab "Tipos de cita" [active] [selected]
+      - tab "Preferencias del odontograma"
+    - tabpanel "Tipos de cita":
+      - heading "Tipos de reunión" [level=2]
+      - paragraph: Gestiona los tipos de reunión, duraciones y enlaces de cita para tu equipo.
+      - button "Agregar Tipo de Reunión":
+        - text: Agregar Tipo de Reunión
+      - table:
+        - rowgroup:
+          - row "Nombre Duración Tiempo de Margen Anfitriones Estado Acciones":
+            - columnheader "Nombre"
+            - columnheader "Duración"
+            - columnheader "Tiempo de Margen"
+            - columnheader "Anfitriones"
+            - columnheader "Estado"
+            - columnheader "Acciones"
+        - rowgroup:
+          - row "Consulta de urgencia 30 min 0 min 4 anfitriones Activo Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+            - cell "Consulta de urgencia":
+              - generic: Consulta de urgencia
+            - cell "30 min"
+            - cell "0 min"
+            - cell "4 anfitriones"
+            - cell "Activo":
+              - generic: Activo
+            - cell "Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+              - button "Enlaces de cita":
+              - button "Desactivar":
+              - button "Editar Tipo de Reunión":
+              - button "Eliminar":
+          - row "Examen de paciente nuevo 60 min 5 min 4 anfitriones Activo Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+            - cell "Examen de paciente nuevo":
+              - generic: Examen de paciente nuevo
+            - cell "60 min"
+            - cell "5 min"
+            - cell "4 anfitriones"
+            - cell "Activo":
+              - generic: Activo
+            - cell "Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+              - button "Enlaces de cita":
+              - button "Desactivar":
+              - button "Editar Tipo de Reunión":
+              - button "Eliminar":
+          - row "Limpieza / control 60 min 10 min 4 anfitriones Activo Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+            - cell "Limpieza / control":
+              - generic: Limpieza / control
+            - cell "60 min"
+            - cell "10 min"
+            - cell "4 anfitriones"
+            - cell "Activo":
+              - generic: Activo
+            - cell "Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+              - button "Enlaces de cita":
+              - button "Desactivar":
+              - button "Editar Tipo de Reunión":
+              - button "Eliminar":
+          - row "Tiempo bloqueado 30 min 0 min Sin anfitriones asignados Activo Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+            - cell "Tiempo bloqueado":
+              - generic: Tiempo bloqueado
+            - cell "30 min"
+            - cell "0 min"
+            - cell "Sin anfitriones asignados"
+            - cell "Activo":
+              - generic: Activo
+            - cell "Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+              - button "Enlaces de cita":
+              - button "Desactivar":
+              - button "Editar Tipo de Reunión":
+              - button "Eliminar":
+          - row "Tratamiento restaurador 90 min 10 min 4 anfitriones Activo Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+            - cell "Tratamiento restaurador":
+              - generic: Tratamiento restaurador
+            - cell "90 min"
+            - cell "10 min"
+            - cell "4 anfitriones"
+            - cell "Activo":
+              - generic: Activo
+            - cell "Enlaces de cita Desactivar Editar Tipo de Reunión Eliminar":
+              - button "Enlaces de cita":
+              - button "Desactivar":
+              - button "Editar Tipo de Reunión":
+              - button "Eliminar":
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Configuración clínica

@@ -1,0 +1,134 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios" [active]:
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Servicios y precios" [level=1]
+    - tablist:
+      - tab "Categorías" [selected]
+      - tab "Servicios"
+      - tab "Paquetes"
+    - tabpanel "Categorías":
+      - heading "Categorías" [level=2]
+      - paragraph: Categorías dentales compartidas y filas del consultorio que quedaron de antes de la lista compartida.
+      - table:
+        - rowgroup:
+          - row "Nombre Orden Categoría":
+            - columnheader "Nombre"
+            - columnheader "Orden"
+            - columnheader "Categoría"
+        - rowgroup:
+          - row "Consulta 10 Compartidas":
+            - cell "Consulta"
+            - cell "10"
+            - cell "Compartidas"
+          - row "Diagnóstica 20 Compartidas":
+            - cell "Diagnóstica"
+            - cell "20"
+            - cell "Compartidas"
+          - row "Preventiva 30 Compartidas":
+            - cell "Preventiva"
+            - cell "30"
+            - cell "Compartidas"
+          - row "Restauradora 40 Compartidas":
+            - cell "Restauradora"
+            - cell "40"
+            - cell "Compartidas"
+          - row "Cirugía oral 50 Compartidas":
+            - cell "Cirugía oral"
+            - cell "50"
+            - cell "Compartidas"
+          - row "Endodoncia 60 Compartidas":
+            - cell "Endodoncia"
+            - cell "60"
+            - cell "Compartidas"
+          - row "Periodoncia 70 Compartidas":
+            - cell "Periodoncia"
+            - cell "70"
+            - cell "Compartidas"
+          - row "Educación en salud 80 Compartidas":
+            - cell "Educación en salud"
+            - cell "80"
+            - cell "Compartidas"
+          - row "Insumos 90 Compartidas":
+            - cell "Insumos"
+            - cell "90"
+            - cell "Compartidas"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Avance

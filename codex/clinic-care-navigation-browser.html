@@ -1,0 +1,2021 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Clinic Care Navigation</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe id="codex-visualization" sandbox="allow-scripts" referrerpolicy="no-referrer" title="Clinic Care Navigation" data-srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Clinic Care Navigation&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+.cursor-interaction {
+  cursor: var(--cursor-interaction, pointer);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: var(--cursor-interaction, pointer);
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;application/json&quot; id=&quot;codex-visualization-widget-state&quot;&gt;__CODEX_VISUALIZATION_WIDGET_STATE__&lt;/script&gt;
+&lt;script&gt;(() =&gt; {
+  const root = document.documentElement;
+  const mediaQuery = globalThis.matchMedia(&quot;(prefers-color-scheme: dark)&quot;);
+  const apply = Reflect.apply;
+  const isArray = Array.isArray;
+  const hasOwn = Object.hasOwn;
+  const parentWindow = globalThis.parent;
+  const stringify = JSON.stringify;
+  const parse = JSON.parse;
+  const encode = TextEncoder.prototype.encode.bind(new TextEncoder());
+  const initialStateElement = document.getElementById(
+    &quot;codex-visualization-widget-state&quot;,
+  );
+  const initialGlobals = parse(initialStateElement?.textContent ?? &quot;{}&quot;);
+  initialStateElement?.remove();
+  /** @type {Record&lt;string, unknown&gt; | null} */
+  let state = initialGlobals.widgetState ?? null;
+  const statePersistence = initialGlobals.statePersistence ?? &quot;none&quot;;
+  let nextStateRequestId = 0;
+  /** @type {Map&lt;number, { resolve: () =&gt; void; reject: (error: Error) =&gt; void; timeout: ReturnType&lt;typeof globalThis.setTimeout&gt;; serializedState: string }&gt;} */
+  const pendingStateWrites = new Map();
+  const persistenceError = () =&gt;
+    Object.assign(
+      new Error(&quot;The host could not persist the widget state update&quot;),
+      {
+        code: -32000,
+        data: { code: &quot;widget_state_persistence_failed&quot;, retryable: false },
+      },
+    );
+  /**
+   * @param {object} prototype
+   * @param {string} property
+   */
+  const getPrototypeGetter = (prototype, property) =&gt; {
+    // oxlint-disable-next-line typescript/unbound-method -- invoked through captured Reflect.apply
+    const getter = Object.getOwnPropertyDescriptor(prototype, property)?.get;
+    if (getter == null) {
+      throw new Error(`Missing ${property} getter`);
+    }
+    return getter;
+  };
+  const getMessageData = getPrototypeGetter(MessageEvent.prototype, &quot;data&quot;);
+  const getMessagePorts = getPrototypeGetter(MessageEvent.prototype, &quot;ports&quot;);
+  const getMessageSource = getPrototypeGetter(MessageEvent.prototype, &quot;source&quot;);
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const addHostMessageListener = MessagePort.prototype.addEventListener;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const postHostMessage = MessagePort.prototype.postMessage;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const startHostPort = MessagePort.prototype.start;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const stopMessagePropagation = Event.prototype.stopImmediatePropagation;
+  /** @type {MessagePort | null} */
+  let hostPort = null;
+  const postToHost = (type, payload) =&gt; {
+    if (hostPort != null) {
+      apply(postHostMessage, hostPort, [{ type, ...payload }]);
+    }
+  };
+  const openExternal = ({ href }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;open-external&quot;, { href });
+    }
+  };
+  const sendFollowUpMessage = ({ context, prompt, title }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;follow-up&quot;, { context, prompt, title });
+    }
+    return Promise.resolve();
+  };
+  /**
+   * @param {Record&lt;string, unknown&gt; | ((previous: Record&lt;string, unknown&gt; | null) =&gt; Record&lt;string, unknown&gt;)} next
+   * @returns {Promise&lt;void&gt;}
+   */
+  const setWidgetState = async (next) =&gt; {
+    const nextState = typeof next === &quot;function&quot; ? next(state) : next;
+    if (
+      nextState == null ||
+      typeof nextState !== &quot;object&quot; ||
+      isArray(nextState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const inputState = stringify(
+      nextState,
+      (_key, /** @type {unknown} */ value) =&gt; {
+        if (
+          typeof value === &quot;undefined&quot; ||
+          typeof value === &quot;function&quot; ||
+          typeof value === &quot;symbol&quot; ||
+          (typeof value === &quot;number&quot; &amp;&amp; !Number.isFinite(value))
+        ) {
+          throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+        }
+        return value;
+      },
+    );
+    const parsedState = parse(inputState);
+    if (
+      parsedState == null ||
+      typeof parsedState !== &quot;object&quot; ||
+      isArray(parsedState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const storedState = {
+      modelContent: null,
+      privateContent: null,
+      ...parsedState,
+    };
+    const serializedState = stringify(storedState);
+    if (encode(serializedState).length &gt; 16 * 1024) {
+      throw new TypeError(
+        &quot;Widget state must be a JSON object of at most 16 KiB&quot;,
+      );
+    }
+    if (
+      hasOwn(storedState, &quot;imageIds&quot;) &amp;&amp;
+      (!isArray(storedState.imageIds) ||
+        storedState.imageIds.some(
+          (/** @type {unknown} */ id) =&gt; typeof id !== &quot;string&quot;,
+        ))
+    ) {
+      throw new TypeError(&quot;Widget state imageIds must be an array of strings&quot;);
+    }
+    if (storedState.imageIds?.length &gt; 0) {
+      throw Object.assign(
+        new TypeError(&quot;Visualization state does not support image attachments&quot;),
+        { code: -32602, data: { code: &quot;images_unsupported&quot; } },
+      );
+    }
+    state = storedState;
+    globalThis.openai.widgetState = state;
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: { widgetState: state } },
+      }),
+    );
+    if (statePersistence === &quot;none&quot;) {
+      throw persistenceError();
+    }
+    const id = ++nextStateRequestId;
+    return new Promise((resolve, reject) =&gt; {
+      const timeout = globalThis.setTimeout(() =&gt; {
+        pendingStateWrites.delete(id);
+        reject(persistenceError());
+      }, 30_000);
+      pendingStateWrites.set(id, { resolve, reject, timeout, serializedState });
+      postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+    });
+  };
+  const syncTheme = () =&gt; {
+    const theme = mediaQuery.matches ? &quot;dark&quot; : &quot;light&quot;;
+    root.dataset.theme = theme;
+    globalThis.openai = {
+      ...globalThis.openai,
+      openExternal,
+      sendFollowUpMessage,
+      setWidgetState,
+      theme,
+      visualizationStyleVariables: {},
+      visualizationTheme: theme,
+      widgetState: state,
+      statePersistence,
+      stateModelContext: &quot;none&quot;,
+    };
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: globalThis.openai },
+      }),
+    );
+  };
+  const sendHeight = () =&gt; {
+    postToHost(&quot;height&quot;, {
+      height: Math.ceil(
+        Math.max(
+          document.body.scrollHeight,
+          document.body.getBoundingClientRect().height,
+        ),
+      ),
+    });
+  };
+
+  globalThis.addEventListener(
+    &quot;message&quot;,
+    (event) =&gt; {
+      const data = apply(getMessageData, event, []);
+      const ports = apply(getMessagePorts, event, []);
+      const source = apply(getMessageSource, event, []);
+      if (
+        hostPort != null ||
+        source !== parentWindow ||
+        typeof data !== &quot;object&quot; ||
+        data?.type !== &quot;codex-visualization-initialize&quot; ||
+        !isArray(ports) ||
+        ports.length !== 1
+      ) {
+        return;
+      }
+      apply(stopMessagePropagation, event, []);
+      const nextHostPort = ports[0];
+      try {
+        apply(addHostMessageListener, nextHostPort, [
+          &quot;message&quot;,
+          (event) =&gt; {
+            const data = apply(getMessageData, event, []);
+            if (typeof data === &quot;object&quot; &amp;&amp; data?.type === &quot;measure&quot;) {
+              sendHeight();
+            } else if (
+              typeof data === &quot;object&quot; &amp;&amp;
+              data?.type === &quot;widget-state-result&quot;
+            ) {
+              /** @type {unknown} */
+              const id = data.id;
+              if (typeof id !== &quot;number&quot;) {
+                return;
+              }
+              const pending = pendingStateWrites.get(id);
+              if (pending != null) {
+                pendingStateWrites.delete(id);
+                globalThis.clearTimeout(pending.timeout);
+                if (data.ok === true) {
+                  pending.resolve();
+                } else {
+                  pending.reject(persistenceError());
+                }
+              }
+            }
+          },
+        ]);
+        apply(startHostPort, nextHostPort, []);
+      } catch {
+        return;
+      }
+      hostPort = nextHostPort;
+      for (const [id, { serializedState }] of pendingStateWrites) {
+        postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+      }
+      sendHeight();
+    },
+    { capture: true },
+  );
+  document.currentScript?.remove();
+  mediaQuery.addEventListener(&quot;change&quot;, syncTheme);
+  globalThis.addEventListener(&quot;click&quot;, (event) =&gt; {
+    if (event.defaultPrevented) {
+      return;
+    }
+    let element = null;
+    if (event.target instanceof globalThis.Element) {
+      element = event.target;
+    } else if (event.target instanceof globalThis.Node) {
+      element = event.target.parentElement;
+    }
+    const link = element?.closest(&quot;a[href]&quot;);
+    const href = link?.getAttribute(&quot;href&quot;);
+    if (href == null) {
+      return;
+    }
+    if (href.startsWith(&quot;#&quot;)) {
+      let id;
+      try {
+        id = decodeURIComponent(href.slice(1));
+      } catch {
+        return;
+      }
+      const target = id.length === 0 ? root : document.getElementById(id);
+      if (
+        target == null ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      event.preventDefault();
+      postToHost(&quot;scroll-to&quot;, {
+        top: target.getBoundingClientRect().top + globalThis.scrollY,
+      });
+      return;
+    }
+    event.preventDefault();
+    openExternal({ href });
+  });
+  new ResizeObserver(sendHeight).observe(document.body);
+  syncTheme();
+})();
+&lt;/script&gt;
+&lt;div id=&quot;clinic-care-navigation&quot; aria-label=&quot;Clinic Summary variation B: Care navigation&quot; data-layout=&quot;clinical-first&quot;&gt;
+&lt;style&gt;
+#clinic-care-navigation{--c-bg:light-dark(#fff,#202329);--c-top:light-dark(#ecedef,#25282e);--c-side:light-dark(#f4f5f6,#292d33);--c-ink:light-dark(#212529,#eceef1);--c-muted:light-dark(#656970,#b4b8bf);--c-border:light-dark(#dedfe2,#464b53);--c-blue:light-dark(#2e5b9b,#2e5b9b);--c-soft:light-dark(#edf1f7,#344050);font:14px/1.45 -apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,sans-serif;color:var(--c-ink);background:var(--c-bg);container-type:inline-size;border:1px solid var(--c-border)}
+#clinic-care-navigation *{box-sizing:border-box}
+#clinic-care-navigation button,#clinic-care-navigation input,#clinic-care-navigation select,#clinic-care-navigation textarea{font:inherit;color:inherit;background:var(--c-bg);border:1px solid var(--c-border);border-radius:6px;padding:7px 10px;max-width:100%;min-width:0}
+#clinic-care-navigation button{font-weight:500;box-shadow:0 1px 2px light-dark(#00000010,#00000030)}
+#clinic-care-navigation .blue{background:var(--c-blue);color:#fff;border-color:var(--c-blue)}
+#clinic-care-navigation button:disabled{opacity:.55}
+#clinic-care-navigation .quiet{color:var(--c-muted);font-size:12px}
+#clinic-care-navigation strong{font-weight:600}
+#clinic-care-navigation .topbar{min-height:40px;background:var(--c-top);display:flex;gap:13px;align-items:center;padding:5px 12px;border-bottom:1px solid var(--c-border);flex-wrap:wrap}
+#clinic-care-navigation .topbar .tools{display:flex;gap:16px;align-items:center}
+#clinic-care-navigation .topbar button{border:0;padding:0;box-shadow:none;background:transparent}
+#clinic-care-navigation .topbar .find{margin-left:auto;background:light-dark(#dfe2e6,#363c44);padding:4px 10px;font-size:12px;color:var(--c-muted);min-width:150px;display:flex;gap:8px;align-items:center;border-radius:6px}
+#clinic-care-navigation svg{width:17px;height:17px;flex:none}
+#clinic-care-navigation .frame{display:grid;grid-template-columns:48px 157px minmax(0,1fr);min-height:740px}
+#clinic-care-navigation .outer{background:var(--c-top);border-right:1px solid var(--c-border);display:flex;flex-direction:column;align-items:stretch;padding-top:8px;gap:5px}
+#clinic-care-navigation .outer button{border:0;background:transparent;box-shadow:none;border-radius:0;font-size:11px;padding:9px 2px;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
+#clinic-care-navigation .outer button.active{color:light-dark(#2e5b9b,#a8c6ef);background:var(--c-soft);border-left:3px solid var(--c-blue)}
+#clinic-care-navigation .outer svg{width:20px;height:20px}
+#clinic-care-navigation .badge{position:absolute;right:2px;top:2px;background:var(--c-blue);color:#fff;border-radius:10px;padding:0 4px;font-size:10px}
+#clinic-care-navigation .logo{align-self:center;background:var(--c-bg);border-radius:7px;padding:2px 5px;font-size:21px;font-weight:400;margin-bottom:2px}
+#clinic-care-navigation .bottom{margin-top:auto;padding-top:30px}
+#clinic-care-navigation .inner{background:var(--c-side);border-right:1px solid var(--c-border);min-width:0}
+#clinic-care-navigation .inner-head{height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 9px;font-size:12px}
+#clinic-care-navigation .inner-head button{border:0;background:var(--c-top);padding:5px;box-shadow:none}
+#clinic-care-navigation .inner-links{padding:6px 4px 13px;border-bottom:1px solid var(--c-border)}
+#clinic-care-navigation .inner-links button{display:flex;width:100%;gap:9px;align-items:center;text-align:left;border:0;box-shadow:none;background:transparent;font-size:12px;padding:9px 7px;margin:1px 0;border-radius:22px;white-space:normal}
+#clinic-care-navigation .inner-links button.active{background:var(--c-blue);color:#fff}
+#clinic-care-navigation .browse{border:0;background:transparent;box-shadow:none;font-size:11px;color:var(--c-muted);margin:6px 4px;padding:6px}
+#clinic-care-navigation .main{min-width:0}
+#clinic-care-navigation .patient-head{min-height:46px;padding:5px 9px;border-bottom:1px solid var(--c-border);display:flex;justify-content:space-between;gap:7px;align-items:center;flex-wrap:wrap}
+#clinic-care-navigation .patient-head .actions{display:flex;gap:5px;flex-wrap:wrap}
+#clinic-care-navigation .patient-head button{padding:6px 9px;font-size:12px}
+#clinic-care-navigation .body{padding:10px}
+#clinic-care-navigation .alerts{font-size:12px;padding:8px;background:light-dark(#f3f3f3,#30343a);border:1px solid var(--c-border);border-radius:5px;margin-bottom:10px}
+#clinic-care-navigation .tabs{display:flex;flex-wrap:wrap;gap:3px;border-bottom:1px solid var(--c-border);padding-bottom:2px;margin-bottom:12px}
+#clinic-care-navigation .tabs button{border:0;border-radius:0;background:transparent;box-shadow:none;padding:7px 8px;font-size:12px}
+#clinic-care-navigation .tabs button.selected{color:light-dark(#2e5b9b,#a8c6ef);border-bottom:2px solid var(--c-blue)}
+#clinic-care-navigation .sections{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:12px;align-items:start}
+#clinic-care-navigation section{min-width:0}
+#clinic-care-navigation h3,#clinic-care-navigation h4{font-size:14px;font-weight:600;margin:0 0 5px}
+#clinic-care-navigation p{margin:4px 0 8px}
+#clinic-care-navigation .medical{grid-column:1;grid-row:1}
+#clinic-care-navigation .appointments{grid-column:2;grid-row:1}
+#clinic-care-navigation .general{grid-column:1/-1;border-top:1px solid var(--c-border);padding-top:11px}
+#clinic-care-navigation .medical-grid{display:flex;flex-direction:column;gap:11px}
+#clinic-care-navigation .history-lists{order:0}
+#clinic-care-navigation .background-form{order:1;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+#clinic-care-navigation label{display:flex;flex-direction:column;gap:3px;font-size:12px}
+#clinic-care-navigation label.wide{grid-column:1/-1}
+#clinic-care-navigation textarea{width:100%;resize:vertical;min-height:54px;font-size:12px}
+#clinic-care-navigation .background-form input,#clinic-care-navigation .background-form select{width:100%;font-size:12px;padding:5px 6px}
+#clinic-care-navigation .background-form button{justify-self:start;font-size:12px;padding:5px 12px}
+#clinic-care-navigation .history-block{margin-bottom:10px}
+#clinic-care-navigation .record{border:1px solid var(--c-border);border-radius:6px;padding:8px;margin:4px 0;font-size:12px}
+#clinic-care-navigation .record-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+#clinic-care-navigation .record-actions button{font-size:12px;padding:4px 7px}
+#clinic-care-navigation .add{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+#clinic-care-navigation .add input{flex:1 1 80px;width:80px;padding:5px 6px;font-size:12px}
+#clinic-care-navigation .add button{font-size:12px;padding:5px 7px}
+#clinic-care-navigation .general-head{display:flex;justify-content:space-between;align-items:start;gap:6px;flex-wrap:wrap;margin-bottom:7px}
+#clinic-care-navigation .general-head button{font-size:12px;padding:5px 8px}
+#clinic-care-navigation .fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+#clinic-care-navigation .field{border:1px solid var(--c-border);border-radius:6px;padding:7px 9px;overflow-wrap:anywhere}
+#clinic-care-navigation .field dt{font-size:11px;color:var(--c-muted);margin-bottom:2px}
+#clinic-care-navigation .field dd{font-size:12px;margin:0}
+#clinic-care-navigation [hidden]{display:none!important}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .sections{display:flex;flex-direction:column}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .sections&gt;section{width:100%}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .general{order:0;border:0;padding:0}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .medical{order:1}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .appointments{order:2}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .history-lists{order:1}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .background-form{order:0}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .fields{grid-template-columns:1fr 1fr}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .field{padding:11px}
+@container(max-width:850px){#clinic-care-navigation .sections{grid-template-columns:1fr}#clinic-care-navigation .medical,#clinic-care-navigation .appointments{grid-column:1;grid-row:auto}#clinic-care-navigation .fields{grid-template-columns:1fr 1fr}}
+@container(max-width:520px){#clinic-care-navigation .frame{grid-template-columns:48px 118px minmax(0,1fr)}#clinic-care-navigation .inner-links button{padding:7px 4px;gap:4px;font-size:11px}#clinic-care-navigation .inner-links svg{width:13px}#clinic-care-navigation .fields,#clinic-care-navigation[data-layout=&quot;current&quot;] .fields,#clinic-care-navigation .background-form{grid-template-columns:1fr}#clinic-care-navigation .topbar .find{min-width:0;margin-left:0}#clinic-care-navigation .body{padding:7px}#clinic-care-navigation .patient-head .actions{flex-direction:column;align-items:start}#clinic-care-navigation .tabs button{padding:5px 3px}#clinic-care-navigation .background-form label{grid-column:1}}
+/* Desktop viewport: preserve content and scroll it inside the existing shell. */
+#clinic-care-navigation{width:100%;max-width:1366px;aspect-ratio:16/9;min-height:480px;max-height:768px;margin:0 auto;display:grid;grid-template-rows:40px minmax(0,1fr);overflow:hidden}
+#clinic-care-navigation .topbar{min-height:0;flex-wrap:nowrap;gap:10px}
+#clinic-care-navigation .topbar&gt;span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#clinic-care-navigation .topbar .find{flex-shrink:0}
+#clinic-care-navigation .frame{min-height:0;overflow:hidden}
+#clinic-care-navigation .main{min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr)}
+#clinic-care-navigation .body{min-height:0;overflow:auto}
+#clinic-care-navigation .outer,#clinic-care-navigation .inner{min-height:0;overflow:auto}
+@container(max-width:650px){#clinic-care-navigation .topbar .find{display:none}}
+
+/* Fixed light appearance and measurements sampled from the live app. */
+#clinic-care-navigation{color-scheme:light;--c-bg:#ffffff;--c-top:#ecedef;--c-side:#f4f5f6;--c-ink:#0a0a0a;--c-muted:#616161;--c-border:#e5e5e5;--c-blue:#2e5b9b;--c-soft:#e8edf5}
+#clinic-care-navigation .topbar,#clinic-care-navigation .outer{color:#1a1d2b;border-color:#dadee2}
+#clinic-care-navigation .inner{color:#353940;border-color:#e2e4e7}
+#clinic-care-navigation .body{margin:10px 4px 0;padding:14px;border:1px solid #e5e5e5;border-radius:6px;background:#fff}
+#clinic-care-navigation .tabs{margin-bottom:20px;gap:0}
+#clinic-care-navigation .tabs button{font-size:14px;padding:8px 16px;color:#616161}
+#clinic-care-navigation .tabs button.selected{color:#2e5b9b}
+#clinic-care-navigation .alerts{background:#f5f5f5;border-color:#e5e5e5;padding:8px;margin-bottom:16px}
+#clinic-care-navigation .sections{gap:16px}
+#clinic-care-navigation .fields{gap:8px;margin:12px 0 0}
+#clinic-care-navigation[data-layout=&quot;current&quot;] .field{padding:8px 12px}
+#clinic-care-navigation .field dt{font-size:12px;line-height:16px;font-weight:600;color:#616161}
+#clinic-care-navigation .field dd{font-size:14px;line-height:20px}
+#clinic-care-navigation .general-head button,#clinic-care-navigation .patient-head button{font-size:14px;padding:8px 16px}
+#clinic-care-navigation .background-form{gap:8px}
+#clinic-care-navigation label{font-size:14px}
+#clinic-care-navigation .background-form input,#clinic-care-navigation .background-form select{font-size:14px;padding:8px 12px}
+#clinic-care-navigation textarea{font-size:14px;min-height:64px;padding:8px 12px}
+#clinic-care-navigation .background-form button{font-size:14px;padding:8px 16px}
+#clinic-care-navigation .record,#clinic-care-navigation .record-actions button,#clinic-care-navigation .add input,#clinic-care-navigation .add button{font-size:14px}
+#clinic-care-navigation .record-actions button{padding:8px 16px}
+#clinic-care-navigation .inner-links button{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Variation B keeps the clinical-first Summary and separates Care navigation. */
+#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .sections{display:flex;flex-direction:column;gap:16px}
+#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .medical,#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .appointments,#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .medical-form,#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .general{width:100%}
+#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .medical-grid{display:flex;flex-direction:column}
+#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .background-form{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .general{border-top:1px solid var(--c-border);padding-top:11px}
+#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .fields{grid-template-columns:repeat(3,minmax(0,1fr))}
+#clinic-care-navigation .care-links[hidden],#clinic-care-navigation .clinic-links[hidden]{display:none}
+@container(max-width:850px){#clinic-care-navigation[data-layout=&quot;clinical-first&quot;] .fields{grid-template-columns:1fr 1fr}}
+&lt;/style&gt;
+&lt;header class=&quot;topbar&quot;&gt;&lt;div class=&quot;tools&quot;&gt;&lt;button aria-label=&quot;Collapse sidebar&quot;&gt;&lt;i data-lucide=&quot;panel-left-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;button aria-label=&quot;Back&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;button aria-label=&quot;Forward&quot;&gt;&lt;i data-lucide=&quot;arrow-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;button aria-label=&quot;History&quot;&gt;&lt;i data-lucide=&quot;history&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;&lt;span&gt;Dental Implant Clinic Demo&lt;/span&gt;&lt;button class=&quot;find&quot;&gt;&lt;i data-lucide=&quot;search&quot;&gt;&lt;/i&gt;Find a page…&lt;/button&gt;&lt;button aria-label=&quot;Open help&quot;&gt;&lt;i data-lucide=&quot;circle-help&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/header&gt;
+&lt;div class=&quot;frame&quot;&gt;&lt;nav class=&quot;outer&quot; aria-label=&quot;Primary sidebar&quot;&gt;&lt;span class=&quot;logo&quot; aria-label=&quot;Avance logo approximation&quot;&gt;ap&lt;/span&gt;&lt;button&gt;&lt;i data-lucide=&quot;house&quot;&gt;&lt;/i&gt;&lt;span class=&quot;badge&quot;&gt;3&lt;/span&gt;Home&lt;/button&gt;&lt;button data-clinic&gt;&lt;i data-lucide=&quot;stethoscope&quot;&gt;&lt;/i&gt;Clinic&lt;/button&gt;&lt;button class=&quot;active&quot; data-care&gt;&lt;i data-lucide=&quot;heart-pulse&quot;&gt;&lt;/i&gt;Care&lt;/button&gt;&lt;button&gt;&lt;i data-lucide=&quot;message-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;badge&quot;&gt;3&lt;/span&gt;Engage&lt;/button&gt;&lt;button&gt;&lt;i data-lucide=&quot;ellipsis&quot;&gt;&lt;/i&gt;More&lt;/button&gt;&lt;div class=&quot;bottom&quot;&gt;&lt;button aria-label=&quot;Setup: Settings&quot;&gt;&lt;i data-lucide=&quot;settings&quot;&gt;&lt;/i&gt;Setup&lt;/button&gt;&lt;button aria-label=&quot;Me: User Profile&quot;&gt;&lt;i data-lucide=&quot;circle-user-round&quot;&gt;&lt;/i&gt;Me&lt;/button&gt;&lt;/div&gt;&lt;/nav&gt;
+&lt;aside class=&quot;inner&quot; aria-label=&quot;Workspace sidebar&quot;&gt;&lt;div class=&quot;inner-head&quot;&gt;&lt;span data-workspace&gt;CARE&lt;/span&gt;&lt;button aria-label=&quot;Collapse sidebar&quot;&gt;&lt;i data-lucide=&quot;panel-left-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;inner-links clinic-links&quot; hidden&gt;&lt;button data-admin&gt;&lt;i data-lucide=&quot;book-open&quot;&gt;&lt;/i&gt;Clinical reference&lt;/button&gt;&lt;button data-admin&gt;&lt;i data-lucide=&quot;settings&quot;&gt;&lt;/i&gt;Clinic setup&lt;/button&gt;&lt;button data-admin&gt;&lt;i data-lucide=&quot;list&quot;&gt;&lt;/i&gt;Services and prices&lt;/button&gt;&lt;button data-invoices&gt;&lt;i data-lucide=&quot;dollar-sign&quot;&gt;&lt;/i&gt;Invoices&lt;/button&gt;&lt;button data-admin&gt;&lt;i data-lucide=&quot;contact&quot;&gt;&lt;/i&gt;Insurers&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;inner-links care-links&quot;&gt;&lt;button&gt;&lt;i data-lucide=&quot;calendar-days&quot;&gt;&lt;/i&gt;Schedule&lt;/button&gt;&lt;button class=&quot;active&quot;&gt;&lt;i data-lucide=&quot;users&quot;&gt;&lt;/i&gt;Patients&lt;/button&gt;&lt;/div&gt;&lt;button class=&quot;browse&quot;&gt;Browse all pages&lt;/button&gt;&lt;/aside&gt;
+&lt;main class=&quot;main&quot;&gt;&lt;header class=&quot;patient-head&quot;&gt;&lt;div&gt;&lt;strong&gt;Ana García&lt;/strong&gt;&lt;div class=&quot;quiet&quot;&gt;Ana García · ID 0001&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;actions&quot;&gt;&lt;button&gt;Patient directory&lt;/button&gt;&lt;button&gt;PDF&lt;/button&gt;&lt;button&gt;Excel&lt;/button&gt;&lt;button&gt;Charge patient&lt;/button&gt;&lt;/div&gt;&lt;/header&gt;
+&lt;div class=&quot;body&quot;&gt;&lt;div data-above-tabs&gt;&lt;/div&gt;&lt;nav class=&quot;tabs&quot; aria-label=&quot;Clinical history&quot;&gt;&lt;button class=&quot;selected&quot;&gt;Summary&lt;/button&gt;&lt;button&gt;Dental chart&lt;/button&gt;&lt;button&gt;Perio&lt;/button&gt;&lt;button&gt;Notes&lt;/button&gt;&lt;button&gt;Treatments&lt;/button&gt;&lt;button&gt;Prescriptions&lt;/button&gt;&lt;button&gt;Documents&lt;/button&gt;&lt;button&gt;Account&lt;/button&gt;&lt;/nav&gt;&lt;div data-below-tabs&gt;&lt;div class=&quot;alerts&quot; data-alerts&gt;&lt;strong&gt;Allergies:&lt;/strong&gt; Penicilina &amp;nbsp; &lt;strong&gt;Smoking status:&lt;/strong&gt; Never&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;sections&quot;&gt;&lt;section class=&quot;medical&quot;&gt;&lt;h3&gt;Medical background&lt;/h3&gt;&lt;p class=&quot;quiet&quot;&gt;Allergies, medical and dental history, general notes.&lt;/p&gt;&lt;div class=&quot;medical-grid&quot;&gt;&lt;div class=&quot;history-lists&quot;&gt;&lt;div class=&quot;history-block&quot;&gt;&lt;h4&gt;Allergies&lt;/h4&gt;&lt;div class=&quot;record&quot;&gt;&lt;strong&gt;Penicilina&lt;/strong&gt; · DEMO · Erupción cutánea referida. · Active&lt;div class=&quot;record-actions&quot;&gt;&lt;button&gt;Mark inactive&lt;/button&gt;&lt;button&gt;Mark resolved&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;add&quot;&gt;&lt;input aria-label=&quot;Allergen&quot; placeholder=&quot;Allergen&quot;&gt;&lt;input aria-label=&quot;Reaction&quot; placeholder=&quot;Reaction&quot;&gt;&lt;button class=&quot;blue&quot; disabled&gt;Add allergy&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;history-block&quot;&gt;&lt;h4&gt;Medications&lt;/h4&gt;&lt;p class=&quot;quiet&quot;&gt;No clinical history yet.&lt;/p&gt;&lt;div class=&quot;add&quot;&gt;&lt;input aria-label=&quot;Medication&quot; placeholder=&quot;Medication&quot;&gt;&lt;input aria-label=&quot;Dose&quot; placeholder=&quot;Dose&quot;&gt;&lt;button class=&quot;blue&quot; disabled&gt;Add medication&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;history-block&quot;&gt;&lt;h4&gt;Conditions&lt;/h4&gt;&lt;div class=&quot;record&quot;&gt;&lt;strong&gt;Hipertensión arterial controlada&lt;/strong&gt; · DEMO · Dato sintético de control. · Active&lt;div class=&quot;record-actions&quot;&gt;&lt;button&gt;Mark inactive&lt;/button&gt;&lt;button&gt;Mark resolved&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;add&quot;&gt;&lt;input aria-label=&quot;Condition&quot; placeholder=&quot;Condition&quot;&gt;&lt;button class=&quot;blue&quot; disabled&gt;Add condition&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;appointments&quot;&gt;&lt;h3&gt;Appointments&lt;/h3&gt;&lt;div class=&quot;record&quot;&gt;&lt;strong&gt;Limpieza / control — Ana García&lt;/strong&gt;&lt;p class=&quot;quiet&quot;&gt;Sep 13, 2026, 7:00 AM · Status: Completed&lt;/p&gt;&lt;p class=&quot;quiet&quot;&gt;Recorded: 1&lt;/p&gt;&lt;div class=&quot;record-actions&quot;&gt;&lt;button&gt;Record encounter note&lt;/button&gt;&lt;button&gt;Record performed work&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;medical-form&quot; aria-label=&quot;Medical background form&quot;&gt;&lt;div class=&quot;background-form&quot;&gt;&lt;label&gt;Smoking status&lt;select&gt;&lt;option&gt;Unknown&lt;/option&gt;&lt;option selected&gt;Never&lt;/option&gt;&lt;option&gt;Former&lt;/option&gt;&lt;option&gt;Current&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;&lt;label&gt;Cigarettes per day&lt;input&gt;&lt;/label&gt;&lt;label&gt;Pregnancy&lt;select&gt;&lt;option&gt;Unknown&lt;/option&gt;&lt;option&gt;Not pregnant&lt;/option&gt;&lt;option&gt;Pregnant&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;&lt;label class=&quot;wide&quot;&gt;Dental history&lt;textarea rows=&quot;2&quot;&gt;DEMO · Bruxismo referido.&lt;/textarea&gt;&lt;/label&gt;&lt;label class=&quot;wide&quot;&gt;Notes&lt;textarea rows=&quot;2&quot;&gt;DEMO · Antecedentes sintéticos. Sin validez clínica.&lt;/textarea&gt;&lt;/label&gt;&lt;button class=&quot;blue&quot;&gt;Save&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;general&quot;&gt;&lt;div class=&quot;general-head&quot;&gt;&lt;div&gt;&lt;h3&gt;General information&lt;/h3&gt;&lt;p class=&quot;quiet&quot;&gt;Basic clinical history summary.&lt;/p&gt;&lt;/div&gt;&lt;button&gt;Edit general information&lt;/button&gt;&lt;/div&gt;&lt;dl class=&quot;fields&quot;&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Full name&lt;/dt&gt;&lt;dd&gt;Ana García&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Email&lt;/dt&gt;&lt;dd&gt;ana.garcia@demo-dental.local&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Phone&lt;/dt&gt;&lt;dd&gt;573000200001&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Document&lt;/dt&gt;&lt;dd&gt;—&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Date of birth&lt;/dt&gt;&lt;dd&gt;Mar 12, 1988&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Address&lt;/dt&gt;&lt;dd&gt;—&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Emergency contact&lt;/dt&gt;&lt;dd&gt;—&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Emergency phone&lt;/dt&gt;&lt;dd&gt;—&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Residence municipality (DIVIPOLA)&lt;/dt&gt;&lt;dd&gt;—&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;dt&gt;Country of origin (ISO numeric)&lt;/dt&gt;&lt;dd&gt;—&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/section&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+<script>(() => {
+  const frame = document.getElementById("codex-visualization");
+  if (!(frame instanceof HTMLIFrameElement)) {
+    return;
+  }
+  let viewportHeight = globalThis.innerHeight;
+  const storageKey = `codex:visualization-widget-state-v2:${JSON.stringify([
+    globalThis.location.pathname,
+    globalThis.location.search,
+  ])}`;
+  const parseState = (serializedState) => {
+    if (
+      typeof serializedState !== "string" ||
+      new TextEncoder().encode(serializedState).length > 16 * 1024
+    ) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    /** @type {unknown} */
+    const state = JSON.parse(serializedState);
+    if (
+      state == null ||
+      typeof state !== "object" ||
+      Array.isArray(state) ||
+      ("imageIds" in state &&
+        (!Array.isArray(state.imageIds) || state.imageIds.length > 0))
+    ) {
+      throw new TypeError("Widget state must be a JSON object");
+    }
+    const storedState = { modelContent: null, privateContent: null, ...state };
+    const canonicalState = JSON.stringify(
+      storedState,
+      (_key, /** @type {unknown} */ value) => {
+        if (typeof value === "number" && !Number.isFinite(value)) {
+          throw new TypeError("Widget state must contain finite numbers");
+        }
+        return value;
+      },
+    );
+    if (new TextEncoder().encode(canonicalState).length > 16 * 1024) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    return storedState;
+  };
+  let storage = null;
+  let state = null;
+  try {
+    const localStorage = globalThis.localStorage;
+    const probeKey = `${storageKey}:probe`;
+    localStorage.setItem(probeKey, "1");
+    localStorage.removeItem(probeKey);
+    storage = localStorage;
+    const savedState = storage.getItem(storageKey);
+    if (savedState != null) {
+      try {
+        state = parseState(savedState);
+      } catch {
+        // Invalid saved state does not disable future writes.
+      }
+    }
+  } catch {
+    storage = null;
+  }
+  const initialGlobals = {
+    widgetState: state,
+    statePersistence: storage == null ? "none" : "local",
+  };
+
+  const channel = new MessageChannel();
+  channel.port1.addEventListener("message", (event) => {
+    const data = event.data;
+    if (typeof data !== "object" || data == null) {
+      return;
+    }
+    if (data.type === "widget-state-write") {
+      if (!Number.isSafeInteger(data.id) || data.id <= 0) {
+        return;
+      }
+      let ok = false;
+      try {
+        if (storage != null) {
+          const state = parseState(data.state);
+          storage.setItem(storageKey, JSON.stringify(state));
+          ok = true;
+        }
+      } catch {
+        // Storage denial, quota limits, and invalid state return a failed receipt.
+      }
+      channel.port1.postMessage({
+        type: "widget-state-result",
+        id: data.id,
+        ok,
+      });
+      return;
+    }
+    if (data.type === "height") {
+      const height = data.height;
+      if (
+        typeof height === "number" &&
+        Number.isFinite(height) &&
+        height >= 0 &&
+        height <= 10_000
+      ) {
+        frame.style.height = Math.ceil(height) + "px";
+      }
+      return;
+    }
+    if (data.type === "scroll-to") {
+      const top = data.top;
+      if (
+        typeof top === "number" &&
+        Number.isFinite(top) &&
+        top >= 0 &&
+        globalThis.navigator.userActivation?.isActive === true
+      ) {
+        globalThis.scrollTo({
+          top: Math.ceil(
+            globalThis.scrollY + frame.getBoundingClientRect().top + top,
+          ),
+        });
+      }
+      return;
+    }
+    if (data.type === "open-external") {
+      const rawHref = data.href;
+      if (typeof rawHref !== "string") {
+        return;
+      }
+      let href;
+      try {
+        const url = new URL(rawHref, document.baseURI);
+        if (url.protocol !== "https:") {
+          return;
+        }
+        href = url.href;
+      } catch {
+        return;
+      }
+      if (globalThis.navigator.userActivation?.isActive === true) {
+        const anchor = document.createElement("a");
+        anchor.href = href;
+        anchor.rel = "noopener noreferrer";
+        anchor.target = "_blank";
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+      }
+      return;
+    }
+    if (data.type === "follow-up") {
+      const prompt = data.prompt;
+      if (
+        typeof prompt !== "string" ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      const title = data.title;
+      globalThis.prompt(typeof title === "string" ? title : prompt, prompt);
+    }
+  });
+  channel.port1.start();
+  const srcdoc = frame.dataset.srcdoc;
+  if (srcdoc == null) {
+    return;
+  }
+  globalThis.addEventListener("resize", () => {
+    const height = Number.parseFloat(frame.style.height);
+    if (!Number.isFinite(height) || height <= viewportHeight) {
+      frame.style.removeProperty("height");
+    }
+    viewportHeight = globalThis.innerHeight;
+    channel.port1.postMessage({ type: "measure" });
+  });
+  frame.addEventListener(
+    "load",
+    () => {
+      frame.contentWindow?.postMessage(
+        { type: "codex-visualization-initialize" },
+        "*",
+        [channel.port2],
+      );
+    },
+    { once: true },
+  );
+  // Match the trusted bootstrap element, not the same text in an authored title.
+  frame.srcdoc = srcdoc.replace(
+    '<script type="application/json" id="codex-visualization-widget-state">__CODEX_VISUALIZATION_WIDGET_STATE__<\/script>',
+    () =>
+      '<script type="application/json" id="codex-visualization-widget-state">' +
+      JSON.stringify(initialGlobals).replaceAll("<", "\\u003c") +
+      "<\/script>",
+  );
+  delete frame.dataset.srcdoc;
+})();
+</script>
+</body>
+</html>

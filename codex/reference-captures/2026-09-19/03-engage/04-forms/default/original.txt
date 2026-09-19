@@ -1,0 +1,85 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Conecta" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Bandeja 3":
+          - /url: /es/communication/inbox
+          - generic: Bandeja
+          - generic: "3"
+        - button "Más opciones para Bandeja":
+        - link "Plantillas":
+          - /url: /es/communication/templates
+          - generic: Plantillas
+        - button "Más opciones para Plantillas":
+        - link "WhatsApp":
+          - /url: /es/communication/whatsapp
+          - generic: WhatsApp
+        - button "Más opciones para WhatsApp":
+        - link "Formularios" [active]:
+          - /url: /es/settings/forms
+          - generic: Formularios
+        - button "Más opciones para Formularios":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+      - link "Integraciones":
+        - /url: /es/settings/integrations
+        - generic: Integraciones
+  - main:
+    - heading "Formularios" [level=2]
+    - paragraph: Crea formularios que tu equipo y tus clientes completan.
+    - button "Nuevo Formulario":
+      - text: Nuevo Formulario
+    - status:
+      - paragraph: Aún no hay formularios
+      - paragraph: Crea tu primer formulario para comenzar
+      - button "Crear Formulario":
+        - text: Crear Formulario
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "2"
+  - generic: "3"
+  - text: Issue
+  - generic: s
+- button "Collapse issues badge":
+- alert: Avance

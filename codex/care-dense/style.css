@@ -1,0 +1,7 @@
+@import url("../dynamic-baseline/style.css");
+@import url("../care-draft/style.css");
+@import url("patient.css");
+@import url("schedule.css");
+
+/* All dense adjustments belong below .dense-variant. The phase-two owners
+   supply patient and schedule rules in their own files. */

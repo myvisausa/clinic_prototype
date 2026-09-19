@@ -1,0 +1,8 @@
+import { button, table } from "../../ui.js";
+import { nav } from "../../routes.js";
+
+export const perio = () => `<section class="patient-section"><div class="row between"><h2>Examen periodontal</h2>${button("Examen nuevo", true)}</div><p class="patient-empty">Aún no hay exámenes periodontales.</p></section>`;
+export const notes = () => `<section class="patient-section"><div class="row between"><div><h2>Evoluciones</h2><p>1 evolución</p></div>${button("Nuevo", true)}</div>${table(["Fecha", "Título", "Contenido", "Acciones"], [["3 de sept de 2026, 8:00 a. m.", "Evolución<br><small>Consulta inicial · Finalizado</small>", "DEMO · Completar obturación de resina en 16 O.", `${button("Ver evolución")}${button("Registrar como ingresada por error")}`]])}</section>`;
+export const prescriptions = () => `<section class="patient-section"><div class="row between"><div><h2>Fórmulas médicas</h2><p>0 fórmulas</p></div>${button("Nueva fórmula médica", true)}</div><div class="patient-empty" role="status">Aún no hay fórmulas médicas.</div></section>`;
+export const documents = () => `<section class="patient-section"><div class="row between"><div><h2>Documentos</h2><p>0 documentos</p></div>${button("Nuevo documento", true)}</div><div class="patient-empty" role="status">Aún no hay documentos registrados.</div></section>`;
+export const account = () => `<section class="patient-section"><div class="row between"><h2>Cuenta</h2><a class="btn" href="${nav("invoices", "", true)}">Abrir facturación</a></div><dl class="account-totals"><div><dt>Borradores</dt><dd>0 COP</dd></div><div><dt>Pendiente de cobro</dt><dd>180.000 COP</dd></div></dl>${table(["Número de documento", "Total"], [[`${button("DEMO-INV-0001")}<p class="muted">Emitida</p>`, "180.000 COP"]])}</section>`;

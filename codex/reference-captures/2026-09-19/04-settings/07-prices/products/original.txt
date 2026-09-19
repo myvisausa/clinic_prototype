@@ -1,0 +1,267 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Ajustes" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - heading "Primeros pasos" [level=4]:
+        - generic: Primeros pasos
+      - list:
+        - link "Primeros pasos":
+          - /url: /es/settings/getting-started
+          - generic: Primeros pasos
+      - heading "Cuenta" [level=4]:
+        - generic: Cuenta
+      - list:
+        - link "Mi perfil":
+          - /url: /es/settings/profile
+          - generic: Mi perfil
+        - link "Organización":
+          - /url: /es/settings/organization
+          - generic: Organización
+        - link "Etiquetas":
+          - /url: /es/settings/tags
+          - generic: Etiquetas
+        - link "Plantillas":
+          - /url: /es/settings/task-templates
+          - generic: Plantillas
+      - heading "Finanzas" [level=4]:
+        - generic: Finanzas
+      - list:
+        - link "Facturación":
+          - /url: /es/settings/fiscal
+          - generic: Facturación
+        - link "Precios" [active]:
+          - /url: /es/settings/prices
+          - generic: Precios
+      - heading "Equipo" [level=4]:
+        - generic: Equipo
+      - list:
+        - link "Equipo":
+          - /url: /es/settings/team
+          - generic: Equipo
+        - link "Metas de ventas":
+          - /url: /es/settings/sales-goals
+          - generic: Metas de ventas
+      - heading "Integraciones" [level=4]:
+        - generic: Integraciones
+      - list:
+        - link "Integraciones":
+          - /url: /es/settings/integrations
+          - generic: Integraciones
+      - heading "Legal" [level=4]:
+        - generic: Legal
+      - list:
+        - link "Legal":
+          - /url: /es/settings/legal
+          - generic: Legal
+      - heading "Automatización" [level=3]:
+        - generic: Automatización
+      - list:
+        - link "Automatización":
+          - /url: /es/automation/settings
+          - generic: Automatización
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Precios" [level=2]
+    - paragraph: Administra tus servicios, precios y costos asociados (no se cobran).
+    - button "Nuevo Producto":
+      - text: Nuevo Producto
+    - tablist:
+      - tab "Productos" [selected]
+      - tab "Reglas de Precios"
+      - tab "Grupos"
+      - tab "Promos"
+    - tabpanel "Productos":
+      - textbox "Buscar productos..."
+      - combobox:
+        - generic: Todas las Categorías
+      - combobox:
+        - generic: Todos los Estados
+      - 'button "Rango de precio: Precio Base / Cualquiera"'
+      - button "Título Alternativo":
+        - text: Título Alternativo
+      - generic: "0 Con seleccionados:"
+      - button "Archivar" [disabled]:
+        - text: Archivar
+      - table:
+        - rowgroup:
+          - row "Destacado Producto Precio Base Precio Actual Estado Acciones":
+            - columnheader:
+              - checkbox
+            - columnheader "Destacado":
+              - generic: Destacado
+            - columnheader "Producto"
+            - columnheader "Precio Base"
+            - columnheader "Precio Actual"
+            - columnheader "Estado"
+            - columnheader "Acciones"
+      - table:
+        - rowgroup:
+          - row "Destacar producto Producto sin título Producto sin título Editar DEMO-DENTAL-232101 180.000 COP Editar 180.000 COP Activo Editar Acciones":
+            - cell:
+              - checkbox
+            - cell "Destacar producto":
+              - button "Destacar producto":
+            - cell "Producto sin título Producto sin título Editar DEMO-DENTAL-232101":
+              - button "Producto sin título":
+              - generic: Producto sin título
+              - button "Editar":
+              - generic: DEMO-DENTAL-232101
+            - cell "180.000 COP Editar":
+              - generic: 180.000 COP
+              - button "Editar":
+            - cell "180.000 COP"
+            - cell "Activo":
+              - generic: Activo
+            - cell "Editar Acciones":
+              - button "Editar":
+              - button "Acciones":
+          - row "Destacar producto Producto sin título Producto sin título Editar DEMO-DENTAL-237201 420.000 COP Editar 420.000 COP Activo Editar Acciones":
+            - cell:
+              - checkbox
+            - cell "Destacar producto":
+              - button "Destacar producto":
+            - cell "Producto sin título Producto sin título Editar DEMO-DENTAL-237201":
+              - button "Producto sin título":
+              - generic: Producto sin título
+              - button "Editar":
+              - generic: DEMO-DENTAL-237201
+            - cell "420.000 COP Editar":
+              - generic: 420.000 COP
+              - button "Editar":
+            - cell "420.000 COP"
+            - cell "Activo":
+              - generic: Activo
+            - cell "Editar Acciones":
+              - button "Editar":
+              - button "Acciones":
+          - row "Destacar producto Producto sin título Producto sin título Editar DEMO-DENTAL-890203 80.000 COP Editar 80.000 COP Activo Editar Acciones":
+            - cell:
+              - checkbox
+            - cell "Destacar producto":
+              - button "Destacar producto":
+            - cell "Producto sin título Producto sin título Editar DEMO-DENTAL-890203":
+              - button "Producto sin título":
+              - generic: Producto sin título
+              - button "Editar":
+              - generic: DEMO-DENTAL-890203
+            - cell "80.000 COP Editar":
+              - generic: 80.000 COP
+              - button "Editar":
+            - cell "80.000 COP"
+            - cell "Activo":
+              - generic: Activo
+            - cell "Editar Acciones":
+              - button "Editar":
+              - button "Acciones":
+          - row "Destacar producto Producto sin título Producto sin título Editar dental-denture-concerns Sin precio Editar Sin precio Borrador Editar Acciones":
+            - cell:
+              - checkbox
+            - cell "Destacar producto":
+              - button "Destacar producto":
+            - cell "Producto sin título Producto sin título Editar dental-denture-concerns":
+              - button "Producto sin título":
+              - generic: Producto sin título
+              - button "Editar":
+              - generic: dental-denture-concerns
+            - cell "Sin precio Editar":
+              - generic: Sin precio
+              - button "Editar":
+            - cell "Sin precio":
+              - generic: Sin precio
+            - cell "Borrador":
+              - generic: Borrador
+            - cell "Editar Acciones":
+              - button "Editar":
+              - button "Acciones":
+          - row "Destacar producto Producto sin título Producto sin título Editar dental-implant-consultation Sin precio Editar Sin precio Borrador Editar Acciones":
+            - cell:
+              - checkbox
+            - cell "Destacar producto":
+              - button "Destacar producto":
+            - cell "Producto sin título Producto sin título Editar dental-implant-consultation":
+              - button "Producto sin título":
+              - generic: Producto sin título
+              - button "Editar":
+              - generic: dental-implant-consultation
+            - cell "Sin precio Editar":
+              - generic: Sin precio
+              - button "Editar":
+            - cell "Sin precio":
+              - generic: Sin precio
+            - cell "Borrador":
+              - generic: Borrador
+            - cell "Editar Acciones":
+              - button "Editar":
+              - button "Acciones":
+          - row "Destacar producto Producto sin título Producto sin título Editar dental-missing-or-failing-teeth Sin precio Editar Sin precio Borrador Editar Acciones":
+            - cell:
+              - checkbox
+            - cell "Destacar producto":
+              - button "Destacar producto":
+            - cell "Producto sin título Producto sin título Editar dental-missing-or-failing-teeth":
+              - button "Producto sin título":
+              - generic: Producto sin título
+              - button "Editar":
+              - generic: dental-missing-or-failing-teeth
+            - cell "Sin precio Editar":
+              - generic: Sin precio
+              - button "Editar":
+            - cell "Sin precio":
+              - generic: Sin precio
+            - cell "Borrador":
+              - generic: Borrador
+            - cell "Editar Acciones":
+              - button "Editar":
+              - button "Acciones":
+      - generic: Mostrando 6 de 6 productos
+      - button "Anterior" [disabled]
+      - button "Siguiente" [disabled]
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "1"
+  - generic: "2"
+  - text: Issue
+  - generic: s
+- button "Collapse issues badge":
+- alert

@@ -1,0 +1,628 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - radio "Hoja del día" [checked] [active]
+    - radio "Horario del equipo"
+    - radio "Calendario"
+    - button "Mi disponibilidad"
+    - button "Mes anterior":
+    - paragraph: sep 2026
+    - button "Mes siguiente":
+    - button "1 mar 20":
+      - generic: 1 mar
+      - generic: "20"
+    - button "Nueva cita el 1 sep":
+    - button "2 mié 21":
+      - generic: 2 mié
+      - generic: "21"
+    - button "Nueva cita el 2 sep":
+    - button "3 jue 19":
+      - generic: 3 jue
+      - generic: "19"
+    - button "Nueva cita el 3 sep":
+    - button "4 vie 21":
+      - generic: 4 vie
+      - generic: "21"
+    - button "Nueva cita el 4 sep":
+    - button "5 sáb 9":
+      - generic: 5 sáb
+      - generic: "9"
+    - button "Nueva cita el 5 sep":
+    - button "6 dom":
+      - generic: 6 dom
+    - button "Nueva cita el 6 sep":
+    - button "7 lun 20":
+      - generic: 7 lun
+      - generic: "20"
+    - button "Nueva cita el 7 sep":
+    - button "8 mar 17":
+      - generic: 8 mar
+      - generic: "17"
+    - button "Nueva cita el 8 sep":
+    - button "9 mié 22":
+      - generic: 9 mié
+      - generic: "22"
+    - button "Nueva cita el 9 sep":
+    - button "10 jue 20":
+      - generic: 10 jue
+      - generic: "20"
+    - button "Nueva cita el 10 sep":
+    - button "11 vie 19":
+      - generic: 11 vie
+      - generic: "19"
+    - button "Nueva cita el 11 sep":
+    - button "12 sáb 9":
+      - generic: 12 sáb
+      - generic: "9"
+    - button "Nueva cita el 12 sep":
+    - button "13 dom 1":
+      - generic: 13 dom
+      - generic: "1"
+    - button "Nueva cita el 13 sep":
+    - button "14 lun 20":
+      - generic: 14 lun
+      - generic: "20"
+    - button "Nueva cita el 14 sep":
+    - button "15 mar 22":
+      - generic: 15 mar
+      - generic: "22"
+    - button "Nueva cita el 15 sep":
+    - button "16 mié 25":
+      - generic: 16 mié
+      - generic: "25"
+    - button "Nueva cita el 16 sep":
+    - button "17 jue 20":
+      - generic: 17 jue
+      - generic: "20"
+    - button "Nueva cita el 17 sep":
+    - button "18 vie 23":
+      - generic: 18 vie
+      - generic: "23"
+    - button "Nueva cita el 18 sep":
+    - button "19 sáb 15":
+      - generic: 19 sáb
+      - generic: "15"
+    - button "Nueva cita el 19 sep":
+    - button "20 dom 1":
+      - generic: 20 dom
+      - generic: "1"
+    - button "Nueva cita el 20 sep":
+    - button "21 lun 27":
+      - generic: 21 lun
+      - generic: "27"
+    - button "Nueva cita el 21 sep":
+    - button "22 mar 26":
+      - generic: 22 mar
+      - generic: "26"
+    - button "Nueva cita el 22 sep":
+    - button "23 mié 28":
+      - generic: 23 mié
+      - generic: "28"
+    - button "Nueva cita el 23 sep":
+    - button "24 jue 27":
+      - generic: 24 jue
+      - generic: "27"
+    - button "Nueva cita el 24 sep":
+    - button "25 vie 24":
+      - generic: 25 vie
+      - generic: "24"
+    - button "Nueva cita el 25 sep":
+    - button "26 sáb 12":
+      - generic: 26 sáb
+      - generic: "12"
+    - button "Nueva cita el 26 sep":
+    - button "27 dom 1":
+      - generic: 27 dom
+      - generic: "1"
+    - button "Nueva cita el 27 sep":
+    - button "28 lun 1":
+      - generic: 28 lun
+      - generic: "1"
+    - button "Nueva cita el 28 sep":
+    - button "29 mar 1":
+      - generic: 29 mar
+      - generic: "1"
+    - button "Nueva cita el 29 sep":
+    - button "30 mié 3":
+      - generic: 30 mié
+      - generic: "3"
+    - button "Nueva cita el 30 sep":
+    - heading "Hoja del día" [level=1]
+    - paragraph: sábado, 19 de septiembre de 2026
+    - button "Hoy"
+    - combobox:
+      - generic: Todos los doctores
+    - button "Nueva cita":
+      - text: Nueva cita
+    - list "Doctores de este día":
+      - generic: Isabel Quintero
+      - generic: Ortodoncia
+      - generic: Natalia Vélez
+      - generic: Periodoncia
+      - generic: Mateo Beltrán
+      - generic: Fisioterapia
+      - generic: Santiago Duque
+      - generic: Rehabilitación oral
+    - table:
+      - rowgroup:
+        - row "Detalles de la cita Hora Hist. Paciente Teléfono Entidad Est Dr T Llega Entra Sale":
+          - columnheader "Detalles de la cita":
+            - generic: Detalles de la cita
+          - columnheader "Hora"
+          - columnheader "Hist."
+          - columnheader "Paciente"
+          - columnheader "Teléfono"
+          - columnheader "Entidad"
+          - columnheader "Est"
+          - columnheader "Dr"
+          - columnheader "T"
+          - columnheader "Llega"
+          - columnheader "Entra"
+          - columnheader "Sale"
+          - columnheader
+      - rowgroup:
+        - row "Mostrar detalles de la cita de Hugo Salazar 09:00a 0029 Hugo Salazar +57 300 0200029 PARTICULAR Programada MB 30 Cancelar cita":
+          - cell "Mostrar detalles de la cita de Hugo Salazar":
+            - button "Mostrar detalles de la cita de Hugo Salazar":
+          - cell "09:00a"
+          - cell "0029"
+          - cell "Hugo Salazar"
+          - cell "+57 300 0200029"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "Programada":
+            - generic "Programada":
+              - generic: ○○○○
+              - generic: Programada
+          - cell "MB":
+            - generic: MB
+          - cell "30"
+          - cell
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Carlos Rodríguez 09:00a 0002 Carlos Rodríguez +57 300 0200002 PARTICULAR Programada NV 1h Cancelar cita":
+          - cell "Mostrar detalles de la cita de Carlos Rodríguez":
+            - button "Mostrar detalles de la cita de Carlos Rodríguez":
+          - cell "09:00a"
+          - cell "0002"
+          - cell "Carlos Rodríguez"
+          - cell "+57 300 0200002"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "Programada":
+            - generic "Programada":
+              - generic: ○○○○
+              - generic: Programada
+          - cell "NV":
+            - generic: NV
+          - cell "1h"
+          - cell
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Nueva cita a las 09:00a":
+          - cell
+          - cell "09:00a"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+        - row "Mostrar detalles de la cita de Ricardo Navarro 09:30a 0025 Ricardo Navarro +57 300 0200025 PARTICULAR Programada IQ 30 Cancelar cita":
+          - cell "Mostrar detalles de la cita de Ricardo Navarro":
+            - button "Mostrar detalles de la cita de Ricardo Navarro":
+          - cell "09:30a"
+          - cell "0025"
+          - cell "Ricardo Navarro"
+          - cell "+57 300 0200025"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "Programada":
+            - generic "Programada":
+              - generic: ○○○○
+              - generic: Programada
+          - cell "IQ":
+            - generic: IQ
+          - cell "30"
+          - cell
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Nueva cita a las 09:30a":
+          - cell
+          - cell "09:30a"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+        - row "Mostrar detalles de la cita de Emma Cárdenas 10:00a 0030 Emma Cárdenas +57 300 0200030 PARTICULAR Confirmada MB 1h Cancelar cita":
+          - cell "Mostrar detalles de la cita de Emma Cárdenas":
+            - button "Mostrar detalles de la cita de Emma Cárdenas":
+          - cell "10:00a"
+          - cell "0030"
+          - cell "Emma Cárdenas"
+          - cell "+57 300 0200030"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "Confirmada":
+            - generic "Confirmada":
+              - generic: ●○○○
+              - generic: Confirmada
+          - cell "MB":
+            - generic: MB
+          - cell "1h"
+          - cell
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Juan Martínez 10:00a 0004 Juan Martínez +57 300 0200004 COLSANITAS Confirmada IQ 1h Cancelar cita":
+          - cell "Mostrar detalles de la cita de Juan Martínez":
+            - button "Mostrar detalles de la cita de Juan Martínez":
+          - cell "10:00a"
+          - cell "0004"
+          - cell "Juan Martínez"
+          - cell "+57 300 0200004"
+          - cell "COLSANITAS":
+            - generic: COLSANITAS
+          - cell "Confirmada":
+            - generic "Confirmada":
+              - generic: ●○○○
+              - generic: Confirmada
+          - cell "IQ":
+            - generic: IQ
+          - cell "1h"
+          - cell
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Nueva cita a las 10:00a":
+          - cell
+          - cell "10:00a"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+        - row "Mostrar detalles de la cita de Gabriel Mendoza 10:30a 0023 Gabriel Mendoza +57 300 0200023 PARTICULAR Programada NV 1h Cancelar cita":
+          - cell "Mostrar detalles de la cita de Gabriel Mendoza":
+            - button "Mostrar detalles de la cita de Gabriel Mendoza":
+          - cell "10:30a"
+          - cell "0023"
+          - cell "Gabriel Mendoza"
+          - cell "+57 300 0200023"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "Programada":
+            - generic "Programada":
+              - generic: ○○○○
+              - generic: Programada
+          - cell "NV":
+            - generic: NV
+          - cell "1h"
+          - cell
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Diego González 11:00a 0006 Diego González +57 300 0200006 COLMEDICA Llegó MB 30 10:50a Cancelar cita":
+          - cell "Mostrar detalles de la cita de Diego González":
+            - button "Mostrar detalles de la cita de Diego González":
+          - cell "11:00a"
+          - cell "0006"
+          - cell "Diego González"
+          - cell "+57 300 0200006"
+          - cell "COLMEDICA":
+            - generic: COLMEDICA
+          - cell "Llegó":
+            - generic "Llegó":
+              - generic: ●●○○
+              - generic: Llegó
+          - cell "MB":
+            - generic: MB
+          - cell "30"
+          - cell "10:50a"
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Carolina Silva 11:00a 0026 Carolina Silva +57 300 0200026 PARTICULAR Confirmada IQ 30 Cancelar cita":
+          - cell "Mostrar detalles de la cita de Carolina Silva":
+            - button "Mostrar detalles de la cita de Carolina Silva":
+          - cell "11:00a"
+          - cell "0026"
+          - cell "Carolina Silva"
+          - cell "+57 300 0200026"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "Confirmada":
+            - generic "Confirmada":
+              - generic: ●○○○
+              - generic: Confirmada
+          - cell "IQ":
+            - generic: IQ
+          - cell "30"
+          - cell
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Nueva cita a las 11:30a":
+          - cell
+          - cell "11:30a"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell
+        - row "Mostrar detalles de la cita de Ana García 12:00p 0001 Ana García +57 300 0200001 PARTICULAR Llegó MB 30 11:50a Cancelar cita":
+          - cell "Mostrar detalles de la cita de Ana García":
+            - button "Mostrar detalles de la cita de Ana García":
+          - cell "12:00p"
+          - cell "0001"
+          - cell "Ana García"
+          - cell "+57 300 0200001"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "Llegó":
+            - generic "Llegó":
+              - generic: ●●○○
+              - generic: Llegó
+          - cell "MB":
+            - generic: MB
+          - cell "30"
+          - cell "11:50a"
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Óscar Peña 12:00p 0027 Óscar Peña +57 300 0200027 SURA Llegó IQ 30 11:50a Cancelar cita":
+          - cell "Mostrar detalles de la cita de Óscar Peña":
+            - button "Mostrar detalles de la cita de Óscar Peña":
+          - cell "12:00p"
+          - cell "0027"
+          - cell "Óscar Peña"
+          - cell "+57 300 0200027"
+          - cell "SURA":
+            - generic: SURA
+          - cell "Llegó":
+            - generic "Llegó":
+              - generic: ●●○○
+              - generic: Llegó
+          - cell "IQ":
+            - generic: IQ
+          - cell "30"
+          - cell "11:50a"
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Elena Cortés 12:00p 0024 Elena Cortés +57 300 0200024 COLMEDICA Confirmada NV 1h Cancelar cita":
+          - cell "Mostrar detalles de la cita de Elena Cortés":
+            - button "Mostrar detalles de la cita de Elena Cortés":
+          - cell "12:00p"
+          - cell "0024"
+          - cell "Elena Cortés"
+          - cell "+57 300 0200024"
+          - cell "COLMEDICA":
+            - generic: COLMEDICA
+          - cell "Confirmada":
+            - generic "Confirmada":
+              - generic: ●○○○
+              - generic: Confirmada
+          - cell "NV":
+            - generic: NV
+          - cell "1h"
+          - cell
+          - cell
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Carlos Rodríguez 12:30p 0002 Carlos Rodríguez +57 300 0200002 SURA En atención MB 30 12:20p 12:35p Cancelar cita":
+          - cell "Mostrar detalles de la cita de Carlos Rodríguez":
+            - button "Mostrar detalles de la cita de Carlos Rodríguez":
+          - cell "12:30p"
+          - cell "0002"
+          - cell "Carlos Rodríguez"
+          - cell "+57 300 0200002"
+          - cell "SURA":
+            - generic: SURA
+          - cell "En atención":
+            - generic "En atención":
+              - generic: ●●●○
+              - generic: En atención
+          - cell "MB":
+            - generic: MB
+          - cell "30"
+          - cell "12:20p"
+          - cell "12:35p"
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Adriana Mora 12:30p 0028 Adriana Mora +57 300 0200028 PARTICULAR En atención IQ 30 12:20p 12:35p Cancelar cita":
+          - cell "Mostrar detalles de la cita de Adriana Mora":
+            - button "Mostrar detalles de la cita de Adriana Mora":
+          - cell "12:30p"
+          - cell "0028"
+          - cell "Adriana Mora"
+          - cell "+57 300 0200028"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "En atención":
+            - generic "En atención":
+              - generic: ●●●○
+              - generic: En atención
+          - cell "IQ":
+            - generic: IQ
+          - cell "30"
+          - cell "12:20p"
+          - cell "12:35p"
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "01:00p Almuerzo MB, IQ, NV 1h Quitar estos bloqueos":
+          - cell
+          - cell "01:00p"
+          - cell
+          - cell "Almuerzo"
+          - cell
+          - cell "MB, IQ, NV":
+            - generic: MB, IQ, NV
+          - cell "1h"
+          - cell
+          - cell
+          - cell
+          - cell "Quitar estos bloqueos":
+            - button "Quitar estos bloqueos":
+        - row "Mostrar detalles de la cita de Valeria Sánchez 02:00p 0008 Valeria Sánchez +57 300 0200008 PARTICULAR En atención NV 1h30 01:50p 02:05p Cancelar cita":
+          - cell "Mostrar detalles de la cita de Valeria Sánchez":
+            - button "Mostrar detalles de la cita de Valeria Sánchez":
+          - cell "02:00p"
+          - cell "0008"
+          - cell "Valeria Sánchez"
+          - cell "+57 300 0200008"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "En atención":
+            - generic "En atención":
+              - generic: ●●●○
+              - generic: En atención
+          - cell "NV":
+            - generic: NV
+          - cell "1h30"
+          - cell "01:50p"
+          - cell "02:05p"
+          - cell
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+        - row "Mostrar detalles de la cita de Daniela Torres 03:00p 0010 Daniela Torres +57 300 0200010 PARTICULAR Completada SD 1h 02:50p 03:05p 04:00p Cancelar cita":
+          - cell "Mostrar detalles de la cita de Daniela Torres":
+            - button "Mostrar detalles de la cita de Daniela Torres":
+          - cell "03:00p"
+          - cell "0010"
+          - cell "Daniela Torres"
+          - cell "+57 300 0200010"
+          - cell "PARTICULAR":
+            - generic: PARTICULAR
+          - cell "Completada":
+            - generic "Completada":
+              - generic: ●●●●
+              - generic: Completada
+          - cell "SD":
+            - generic: SD
+          - cell "1h"
+          - cell "02:50p"
+          - cell "03:05p"
+          - cell "04:00p"
+          - cell "Cancelar cita":
+            - button "Cancelar cita":
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Hoja del día

@@ -1,0 +1,2 @@
+import { button } from "../../ui.js";
+export const conditionHistory = () => `<div class="history-block"><h3>Condiciones</h3><div class="record"><strong>Hipertensión arterial controlada</strong> · DEMO · Dato sintético de control. · Activo<div class="row">${button("Marcar inactivo")}${button("Marcar resuelto")}</div></div><div class="toolbar"><input aria-label="Condición" placeholder="Condición"><button class="btn primary" disabled>Agregar condición</button></div></div>`;

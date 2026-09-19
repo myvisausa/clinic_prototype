@@ -1,0 +1,1262 @@
+[
+  {
+    "slug": "01-home/contacts",
+    "note": "Original Contacts is a populated table with search, column/filter/sort/archive/reset controls, selection and pagination. Baseline has no Contacts page; Home screenshot records the missing navigation, not an equivalent view.",
+    "original": {
+      "url": "http://localhost:3001/es/contacts",
+      "capturedAt": "2026-09-19T21:35:09.944Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=home",
+      "capturedAt": "2026-09-19T21:35:13.675Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "01-home/dashboard",
+    "note": "Original has greeting, populated KPI counts, conversation cards and day-sheet provider filters/table. Baseline substitutes empty cards, omits Contacts and pinned navigation, and adds an Insights placeholder.",
+    "original": {
+      "url": "http://localhost:3001/es/dashboard",
+      "capturedAt": "2026-09-19T21:34:56.130Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=home",
+      "capturedAt": "2026-09-19T21:34:58.650Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/availability-exceptions",
+    "note": "Original My availability has Day exceptions tab with date/type/note controls; baseline lacks dialog and both tabs.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule",
+      "capturedAt": "2026-09-19T21:38:07.862Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule",
+      "capturedAt": "2026-09-19T21:38:10.587Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/availability-weekly",
+    "note": "Original My availability dialog includes weekly/location hours and Google Calendar connection with missing-employee error; baseline lacks this dialog.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule",
+      "capturedAt": "2026-09-19T21:38:01.706Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule",
+      "capturedAt": "2026-09-19T21:38:04.531Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/calendar-agenda",
+    "note": "Original Agenda is separate list presentation with date-range toolbar/calendar selection. Baseline has no Agenda view.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule?view=grid",
+      "capturedAt": "2026-09-19T21:16:23.488Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule&tab=Calendar",
+      "capturedAt": "2026-09-19T21:16:26.517Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/calendar-day",
+    "note": "Original day mode with time grid and calendar/provider controls; baseline lacks day mode.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule?view=grid",
+      "capturedAt": "2026-09-19T21:15:53.846Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule&tab=Calendar",
+      "capturedAt": "2026-09-19T21:15:57.716Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/calendar-month",
+    "note": "Original full calendar month incl adjacent month days and toolbar/provider controls. Baseline static September dates only.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule?view=grid",
+      "capturedAt": "2026-09-19T21:16:01.357Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule&tab=Calendar",
+      "capturedAt": "2026-09-19T21:16:09.035Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/calendar-week",
+    "note": "Original default week calendar: Day/Week/Month/Agenda views, calendar/provider chips, block/new event controls and all-day row. Baseline only month grid, none of these view switches.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule?view=grid",
+      "capturedAt": "2026-09-19T21:15:45.574Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule&tab=Calendar",
+      "capturedAt": "2026-09-19T21:15:49.915Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/day-sheet",
+    "note": "Original vertical day list with counts/add actions; populated15 appointments, doctor chips/statuses/insurers/expansion/time gaps. Baseline generic mini-calendar and empty table.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule",
+      "capturedAt": "2026-09-19T21:15:12.984Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule&tab=Day%20sheet",
+      "capturedAt": "2026-09-19T21:15:18.986Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/team-day",
+    "note": "Original default daily horizontal provider timeline/search/availability cards versus baseline generic empty7-day grid.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule?view=team",
+      "capturedAt": "2026-09-19T21:14:47.515Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule&tab=Team%20schedule",
+      "capturedAt": "2026-09-19T21:14:50.233Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/team-month",
+    "note": "Original resource timeline has month mode and provider rows; baseline lacks month mode/resource rows.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule?view=team",
+      "capturedAt": "2026-09-19T21:14:38.568Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule&tab=Team%20schedule",
+      "capturedAt": "2026-09-19T21:14:42.453Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/01-schedule/team-week",
+    "note": "Original weekly provider timeline with availability/events and resource search; baseline has no nested view switch and substitutes generic weekly time grid.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/schedule?view=team",
+      "capturedAt": "2026-09-19T21:14:12.186Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=schedule&tab=Team%20schedule",
+      "capturedAt": "2026-09-19T21:14:17.664Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/account",
+    "note": "Original Account has Open billing link, Drafts 0 COP, outstanding 180,000 COP and issued DEMO-INV-0001 row. Baseline must reproduce these summary blocks and invoice row rather than an empty account. No financial action taken.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=account",
+      "capturedAt": "2026-09-19T21:48:12.447Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Account",
+      "capturedAt": "2026-09-19T21:48:16.817Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/chart-enter",
+    "note": "Original uses an anatomical chart plus dental-information report, visibility controls, Settings/Export, populated procedure catalog, surface buttons and price. Baseline reuses tooth SVGs but omits the report and several toolbar controls, uses a surface text input, and lacks the catalog results and price display.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=chart",
+      "capturedAt": "2026-09-19T21:44:38.347Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Dental%20chart",
+      "capturedAt": "2026-09-19T21:44:41.075Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/chart-initial",
+    "note": "Original initial-state panel shows no initial states, tooth-selection prompt, Type default Missing and disabled Add. Baseline must match these controls, wording and disabled state; dental-information report remains absent.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=chart",
+      "capturedAt": "2026-09-19T21:45:25.743Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Dental%20chart&sub=Tooth%20initials",
+      "capturedAt": "2026-09-19T21:45:29.477Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/chart-progress",
+    "note": "Original procedure progress table contains three demo rows, date/tooth/surface/procedure/status/provider/price and per-row state, notes, invoice and delete controls. Baseline placeholder misses populated rows and actions.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=chart",
+      "capturedAt": "2026-09-19T21:45:03.100Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Dental%20chart&sub=Progress%20notes",
+      "capturedAt": "2026-09-19T21:45:05.659Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/directory",
+    "note": "Original directory has 30 patient cards with IDs, contact details and edit/delete controls. Baseline uses a one-row table, adds Date of birth, and omits card actions. Ana was explicitly confirmed fictional; her clinical tabs are now captured in sibling folders.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes",
+      "capturedAt": "2026-09-19T21:35:42.357Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients",
+      "capturedAt": "2026-09-19T21:35:45.176Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/documents",
+    "note": "Original Documents shows count 0, New document action and empty status. Preserve this simple hierarchy; no registered documents in this demo record.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=documents",
+      "capturedAt": "2026-09-19T21:47:50.049Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Documents",
+      "capturedAt": "2026-09-19T21:47:53.303Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/notes",
+    "note": "Original notes table has one finalized consultation note with date, title, content, View and entered-in-error action. Baseline empty-state approximation omits this row and actions.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=evolutions",
+      "capturedAt": "2026-09-19T21:46:12.228Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Notes",
+      "capturedAt": "2026-09-19T21:46:14.870Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/perio",
+    "note": "Original and baseline both have an exam heading, New exam action and no exam grid. Replace baseline fixture-unavailable wording with the actual empty-state message.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=perio",
+      "capturedAt": "2026-09-19T21:45:51.254Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Perio",
+      "capturedAt": "2026-09-19T21:45:54.184Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/prescriptions",
+    "note": "Original prescriptions shows count 0, New prescription button and an empty status. Baseline should preserve this compact empty-state hierarchy and count.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=prescriptions",
+      "capturedAt": "2026-09-19T21:47:27.240Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Prescriptions",
+      "capturedAt": "2026-09-19T21:47:30.071Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/summary",
+    "note": "Original and baseline share populated demo history and appointment details. Original allergy/medication/condition Add buttons are disabled for blank inputs; baseline displays enabled buttons. Match alert strip, general-information grid, form spacing and card placement against the paired screenshots.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=summary",
+      "capturedAt": "2026-09-19T21:43:57.067Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Summary",
+      "capturedAt": "2026-09-19T21:44:02.199Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/treatments-estimates",
+    "note": "Original Estimates tab contains only explanatory status text distinguishing billing estimates from clinical proposals retained in Plans. Baseline instead displays an Estimates heading and generic placeholder explanation.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=treatments&view=estimates",
+      "capturedAt": "2026-09-19T21:47:04.846Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Treatments&sub=Estimates",
+      "capturedAt": "2026-09-19T21:47:07.567Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/02-patients/treatments-plans",
+    "note": "Original separates Active, Inactive and Saved plans; demo active and signed saved plan cards include WhatsApp actions. Baseline only an empty message and New plan, omitting the three sections and card metadata.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=treatments",
+      "capturedAt": "2026-09-19T21:46:40.819Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=patients&patient=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&tab=Treatments",
+      "capturedAt": "2026-09-19T21:46:44.149Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/03-reference/codes",
+    "note": "Original284 rows; columns Code+system badge,Description,Specialties,Paint,Area,RIPS group,Actions(add priced service). Baseline wrong columns Service/System/Status and no paint/area/RIPS/actions; empty placeholder row.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/catalogos",
+      "capturedAt": "2026-09-19T21:17:51.380Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=reference",
+      "capturedAt": "2026-09-19T21:17:54.909Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/03-reference/documents",
+    "note": "Original template title/category/code/status/actions with populated template and Edit. Baseline lacks template code/actions and record count, uses3column placeholder.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/catalogos?tab=documents",
+      "capturedAt": "2026-09-19T21:18:51.131Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=reference&tab=Documents",
+      "capturedAt": "2026-09-19T21:18:55.374Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/03-reference/formulas",
+    "note": "Original has product catalog6 columns, include inactive checkbox, separate Category/Product buttons, populated2 fictional products and separate categories section. Baseline single New formula and3-column empty table omits categories/presentation/indication/actions.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/catalogos?tab=formulas",
+      "capturedAt": "2026-09-19T21:18:18.929Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=reference&tab=Formulas",
+      "capturedAt": "2026-09-19T21:18:23.769Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/03-reference/priorities",
+    "note": "Structure mostly matches empty original: Name,Order1,disabled Add and empty status. Baseline Add appears enabled, grouping/padding/icons and language differ.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/catalogos?tab=priorities",
+      "capturedAt": "2026-09-19T21:19:22.258Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=reference&tab=Priorities",
+      "capturedAt": "2026-09-19T21:19:25.089Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/03-reference/prognoses",
+    "note": "Original empty prognosis form Name/Order/Add disabled. Baseline same basic controls but enabled Add, visual grouping and language differ.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/catalogos?tab=prognoses",
+      "capturedAt": "2026-09-19T21:19:38.856Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=reference&tab=Prognoses",
+      "capturedAt": "2026-09-19T21:19:42.411Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/04-setup/appointment-types",
+    "note": "Original5 appointment types in table with duration/buffer/hosts/status/action icons booking/toggle/edit/delete. Baseline falsely empty, table absent.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/configuracion?tab=appointment-types",
+      "capturedAt": "2026-09-19T21:21:19.502Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=setup&tab=Appointment%20types",
+      "capturedAt": "2026-09-19T21:21:23.623Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/04-setup/chart-preferences",
+    "note": "Original CUPS/CIE10 selections and12 populated status-color swatches/hex fields. Baseline controls now similar but all gray/unknown,2column rather than live responsive3column, large forms. Capture exact settings labels/layout and colors.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/configuracion?tab=chart-preferences",
+      "capturedAt": "2026-09-19T21:21:42.869Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=setup&tab=Chart%20preferences",
+      "capturedAt": "2026-09-19T21:21:49.306Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/04-setup/clinic",
+    "note": "Original weekday8\u201317 vs baseline9\u201318, Sunday closed without time inputs. Real RIPS provider+modality inputs and Google connection note/button missing baseline. Save office hours initially disabled; baseline enabled.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/configuracion",
+      "capturedAt": "2026-09-19T21:20:08.967Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=setup",
+      "capturedAt": "2026-09-19T21:20:12.123Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/04-setup/providers-exceptions",
+    "note": "Original nested Day exceptions panel; missing baseline entirely (baseline Providers placeholder retained as absence evidence).",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/configuracion?tab=providers",
+      "capturedAt": "2026-09-19T21:20:55.988Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=setup&tab=Providers",
+      "capturedAt": "2026-09-19T21:20:58.942Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/04-setup/providers-weekly",
+    "note": "Original staff picker8 people, specialty/document/registry form, Save, Google mapping note and nested Weekly hours/Day exceptions. Weekly panel has inherit-location switch. Baseline unrelated empty4column table; all forms/nestedtabs missing.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/configuracion?tab=providers",
+      "capturedAt": "2026-09-19T21:20:47.497Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=setup&tab=Providers",
+      "capturedAt": "2026-09-19T21:20:51.842Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/05-services/categories",
+    "note": "Original9 shared dental categories populated with order and shared type. Baseline empty3column table; headings/category naming and density differ.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/servicios",
+      "capturedAt": "2026-09-19T21:22:10.551Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=services",
+      "capturedAt": "2026-09-19T21:22:14.080Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/05-services/offerings",
+    "note": "Original Packages shows an empty-state message and new-package action, without a search field or table. Baseline invents a search field and empty table.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/servicios?tab=offerings",
+      "capturedAt": "2026-09-19T21:22:54.909Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=services&tab=Offerings",
+      "capturedAt": "2026-09-19T21:22:58.952Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/05-services/services",
+    "note": "Original Add from templates,Import,Export,New service toolbar;2 rows pricesCOP/CUPS/category/REPS/edit. Baseline omits templates/import, rows and edit controls.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/servicios?tab=services",
+      "capturedAt": "2026-09-19T21:22:36.712Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=services&tab=Services",
+      "capturedAt": "2026-09-19T21:22:41.968Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/06-invoices/default",
+    "note": "Original default unselected-patient state mostly matches baseline hierarchy (New invoice + patient invoice empty state); typography/spacing/icons/language differ. No invoice/patient detail opened.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/facturas",
+      "capturedAt": "2026-09-19T21:23:16.573Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=invoices",
+      "capturedAt": "2026-09-19T21:23:20.971Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "02-clinic/07-insurers/default",
+    "note": "Original colored insurer dots, type labels, active switches and full Add insurer form(name,IDtype/number,type,color palette). Baseline8names+Rename but type/status dashes and missing Add form.",
+    "original": {
+      "url": "http://localhost:3001/es/clinical/payers",
+      "capturedAt": "2026-09-19T21:23:48.413Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=insurers",
+      "capturedAt": "2026-09-19T21:23:57.010Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "03-engage/01-inbox/whatsapp",
+    "note": "Original multi-column inbox: filter chips/search/order, conversation cards, contact side panel, transcript, channel composer tabs and patient link context. Baseline only two empty panels/search; missing most workspace. Auto-selected demo conversation, no send performed. Disabled Messenger/Instagram tabs recorded, not enabled.",
+    "original": {
+      "url": "http://localhost:3001/es/communication/inbox",
+      "capturedAt": "2026-09-19T21:24:20.199Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=engage",
+      "capturedAt": "2026-09-19T21:24:30.276Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "03-engage/01-inbox/whatsapp-api",
+    "note": "Original composer channel WhatsApp API selectable; baseline no channel tabs/composer. Disabled Messenger/Instagram unavailable, not treated as captured working tabs.",
+    "original": {
+      "url": "http://localhost:3001/es/communication/inbox",
+      "capturedAt": "2026-09-19T21:24:35.991Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=engage",
+      "capturedAt": "2026-09-19T21:24:41.275Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "03-engage/02-templates/english-cards",
+    "note": "Missing baseline; original English Cards mode.",
+    "original": {
+      "url": "http://localhost:3001/es/communication/templates",
+      "capturedAt": "2026-09-19T21:26:08.538Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=engage",
+      "capturedAt": "2026-09-19T21:26:11.564Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "03-engage/02-templates/english-table",
+    "note": "Missing baseline; original English Table mode.",
+    "original": {
+      "url": "http://localhost:3001/es/communication/templates",
+      "capturedAt": "2026-09-19T21:26:01.560Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=engage",
+      "capturedAt": "2026-09-19T21:26:04.302Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "03-engage/02-templates/spanish-cards",
+    "note": "MISSING baseline Templates page; baseline Inbox retained as absence evidence. Original language tabs EN/ES, Cards/Table modes, Sync/Create controls and empty selected-language state.",
+    "original": {
+      "url": "http://localhost:3001/es/communication/templates",
+      "capturedAt": "2026-09-19T21:25:04.263Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=engage",
+      "capturedAt": "2026-09-19T21:25:08.743Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "03-engage/02-templates/spanish-table",
+    "note": "Missing baseline; original Spanish Table mode.",
+    "original": {
+      "url": "http://localhost:3001/es/communication/templates",
+      "capturedAt": "2026-09-19T21:25:52.623Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=engage",
+      "capturedAt": "2026-09-19T21:25:58.329Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "03-engage/03-whatsapp/default",
+    "note": "MISSING baseline WhatsApp lines/user-defaults management. Original visible server errors; error state documented, not a clean empty state. Tour closed only; no connection changes.",
+    "original": {
+      "url": "http://localhost:3001/es/communication/whatsapp",
+      "capturedAt": "2026-09-19T21:26:35.873Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=engage",
+      "capturedAt": "2026-09-19T21:26:39.059Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "03-engage/04-forms/default",
+    "note": "MISSING baseline Forms page. Original new-form button and empty onboarding call-to-action. No tabs.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/forms",
+      "capturedAt": "2026-09-19T21:26:54.070Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=engage",
+      "capturedAt": "2026-09-19T21:26:57.434Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/01-getting-started/default",
+    "note": "Original onboarding progress3of5, required/optional checklist, Avance-managed setup checklist. Baseline generic Setup card/link omits all checklists/progress.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/getting-started",
+      "capturedAt": "2026-09-19T21:28:00.193Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:28:02.816Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/02-profile/default",
+    "note": "MISSING baseline Profile. Original personal details/avatar/timezone/emergency contact, communication consent and password form(no fields entered, no reveal).",
+    "original": {
+      "url": "http://localhost:3001/es/settings/profile",
+      "capturedAt": "2026-09-19T21:28:20.486Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:28:24.343Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/03-organization/default",
+    "note": "Original organization name/timezone/language/logo/favicon, CRM theme settings, and location/address/contact form. Baseline one organization-name card; virtually entire page omitted.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/organization",
+      "capturedAt": "2026-09-19T21:28:48.558Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=organization",
+      "capturedAt": "2026-09-19T21:28:51.570Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/04-tags/default",
+    "note": "MISSING baseline Tags page. Original group selector, payer group bilingual tags, descriptions and create/edit/delete actions.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/tags",
+      "capturedAt": "2026-09-19T21:29:14.897Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:29:17.518Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/05-task-templates/contact",
+    "note": "MISSING baseline task templates. Original Contact templates tab has Categories/New category and Templates/New template empty sections.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/task-templates",
+      "capturedAt": "2026-09-19T21:29:33.850Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:29:36.977Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/05-task-templates/user",
+    "note": "MISSING baseline user task-template tab; paired with Setup absence evidence.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/task-templates",
+      "capturedAt": "2026-09-19T21:29:40.642Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:29:45.588Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/06-billing/default",
+    "note": "MISSING baseline Fiscal billing. Original error loading electronic billing/provider evaluation + Coming soon; no successful settings state available.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/fiscal",
+      "capturedAt": "2026-09-19T21:29:59.727Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:30:02.247Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/07-prices/groups",
+    "note": "MISSING baseline Groups tab; original ordered public/private product groups with Edit/Delete, new group controls.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/prices",
+      "capturedAt": "2026-09-19T21:30:45.840Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:30:49.972Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/07-prices/products",
+    "note": "MISSING baseline CRM Prices. Distinct from Clinical Services: Products/Price rules/Groups/Promos tabs. Product toolbar/filter/bulk archive table with6rows and pagination.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/prices",
+      "capturedAt": "2026-09-19T21:30:21.438Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:30:24.506Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/07-prices/promos",
+    "note": "Original Promos shows a load error, New promo action, search/status filters and immutable-code information. This is an error state, not verified empty data. Baseline has no corresponding tab.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/prices",
+      "capturedAt": "2026-09-19T21:30:54.760Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:30:57.278Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/07-prices/rules",
+    "note": "MISSING baseline Price rules tab. See original screenshot/DOM for rule controls and state.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/prices",
+      "capturedAt": "2026-09-19T21:30:28.749Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:30:31.473Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/08-team/default",
+    "note": "Original has team name, members table with filters/pagination, invitations, team structure, and job titles. Baseline has no Team page; its Getting started view is absence evidence only.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/team",
+      "capturedAt": "2026-09-19T21:33:31.256Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:33:36.852Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/09-sales-goals/default",
+    "note": "Original contains daily/weekly location defaults and per-person goals for messages, contacts, leads and sales, with inheritance hints. No corresponding baseline page.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/sales-goals",
+      "capturedAt": "2026-09-19T21:33:51.256Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:33:54.183Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/10-integrations/default",
+    "note": "MISSING baseline Integrations page. Original Meta/Google connection health, Calendar settings link, Ads/GTM diagnostics. Only read, no connect actions. Baseline Setup landing is absence evidence.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/integrations",
+      "capturedAt": "2026-09-19T21:27:41.212Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:27:43.762Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/11-legal/default",
+    "note": "Original contains links to Terms, Privacy, and Data deletion policies. Baseline has no Legal page. External policy sites are not prototype tabs and were not traversed.",
+    "original": {
+      "url": "http://localhost:3001/es/settings/legal",
+      "capturedAt": "2026-09-19T21:34:05.979Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:34:08.605Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/12-automation/assignment",
+    "note": "Original Assignment tab includes line strategy, default client owner, two auto-assignment switches and inactivity-hours input. Baseline has no Automation page.",
+    "original": {
+      "url": "http://localhost:3001/es/automation/settings",
+      "capturedAt": "2026-09-19T21:34:22.153Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:34:24.472Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "04-settings/12-automation/chatbot",
+    "note": "Original Chatbot tab has automated outgoing-message and legacy WhatsApp chatbot switches with explanations. Baseline has no counterpart.",
+    "original": {
+      "url": "http://localhost:3001/es/automation/settings",
+      "capturedAt": "2026-09-19T21:34:32.553Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=get-started",
+      "capturedAt": "2026-09-19T21:34:35.082Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "05-more/library/all",
+    "note": "Original Library has upload/drop area, search, six category filters and an asset card. Baseline has no Library page.",
+    "original": {
+      "url": "http://localhost:3001/es/media",
+      "capturedAt": "2026-09-19T21:36:21.780Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=home",
+      "capturedAt": "2026-09-19T21:36:24.537Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "05-more/library/brand",
+    "note": "Original Library category Marca selected; baseline has no Library or category views. See saved DOM for visible assets or empty state.",
+    "original": {
+      "url": "http://localhost:3001/es/media",
+      "capturedAt": "2026-09-19T21:36:27.353Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=home",
+      "capturedAt": "2026-09-19T21:36:30.079Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "05-more/library/documents",
+    "note": "Original Library category Documentos selected; baseline has no Library or category views. See saved DOM for visible assets or empty state.",
+    "original": {
+      "url": "http://localhost:3001/es/media",
+      "capturedAt": "2026-09-19T21:36:45.220Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=home",
+      "capturedAt": "2026-09-19T21:36:47.653Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "05-more/library/marketing",
+    "note": "Original Library category Marketing selected; baseline has no Library or category views. See saved DOM for visible assets or empty state.",
+    "original": {
+      "url": "http://localhost:3001/es/media",
+      "capturedAt": "2026-09-19T21:36:32.901Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=home",
+      "capturedAt": "2026-09-19T21:36:35.119Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "05-more/library/promotional",
+    "note": "Original Library category Promocional selected; baseline has no Library or category views. See saved DOM for visible assets or empty state.",
+    "original": {
+      "url": "http://localhost:3001/es/media",
+      "capturedAt": "2026-09-19T21:36:38.558Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=home",
+      "capturedAt": "2026-09-19T21:36:41.587Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  },
+  {
+    "slug": "05-more/library/stickers",
+    "note": "Original Library category Stickers selected; baseline has no Library or category views. See saved DOM for visible assets or empty state.",
+    "original": {
+      "url": "http://localhost:3001/es/media",
+      "capturedAt": "2026-09-19T21:36:50.580Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "es"
+    },
+    "baseline": {
+      "url": "http://127.0.0.1:8765/dynamic-baseline/#page=home",
+      "capturedAt": "2026-09-19T21:36:53.404Z",
+      "viewportOverride": "1366x768",
+      "zoom": "original90%;baseline100%",
+      "language": "en"
+    }
+  }
+]

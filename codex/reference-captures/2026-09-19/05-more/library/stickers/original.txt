@@ -1,0 +1,77 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Más" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - heading "Avanzado" [level=3]:
+        - generic: Avanzado
+      - list:
+        - link "Biblioteca":
+          - /url: /es/media
+          - generic: Biblioteca
+        - button "Más opciones para Biblioteca":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+      - link "Automatización":
+        - /url: /es/automation/settings
+        - generic: Automatización
+  - main:
+    - heading "Biblioteca de medios" [level=1]
+    - button "Subir":
+      - text: Subir
+    - radio "Cuenta" [checked]
+    - radio "Esta ubicación"
+    - radio "Solo yo"
+    - button "Arrastra y suelta archivos aqui o haz clic para buscarlos":
+      - generic: Arrastra y suelta archivos aqui o haz clic para buscarlos
+    - button "Todos"
+    - button "Marca"
+    - button "Marketing"
+    - button "Promocional"
+    - button "Documentos"
+    - button "Stickers" [active]
+    - textbox "Buscar por nombre"
+    - paragraph: Todavía no hay activos
+    - paragraph: Sube un archivo para que quede disponible aquí y puedas reutilizarlo.
+    - button "Subir archivo"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- alert

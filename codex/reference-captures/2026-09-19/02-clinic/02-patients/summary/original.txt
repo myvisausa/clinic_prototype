@@ -1,0 +1,172 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Ana García" [level=1]
+    - paragraph: Ana García · ID 0001
+    - button "Directorio de pacientes"
+    - button "PDF"
+    - button "Excel"
+    - link "Cobrar paciente":
+      - /url: /es/clinical/pacientes?contactId=57d31fd8-e7d7-55a9-b9bf-3d0251b601b1&section=account
+    - tablist "Historia clínica":
+      - tab "Resumen" [selected]
+      - tab "Odontograma"
+      - tab "Periodoncia"
+      - tab "Evoluciones"
+      - tab "Tratamientos"
+      - tab "Fórmulas"
+      - tab "Documentos"
+      - tab "Cuenta"
+    - tabpanel "Resumen":
+      - note:
+        - strong: "Alergias:"
+        - text: Penicilina
+        - strong: "Tabaquismo:"
+        - text: Nunca
+      - heading "Información general" [level=3]
+      - paragraph: Resumen base de la historia clínica.
+      - button "Editar información general"
+      - term: Nombre completo
+      - definition: Ana García
+      - term: Email
+      - definition: ana.garcia@demo-dental.local
+      - term: Teléfono
+      - definition: "573000200001"
+      - term: Documento
+      - definition: —
+      - term: Fecha de nacimiento
+      - definition: 12 de mar de 1988
+      - term: Dirección
+      - definition: —
+      - term: Contacto de emergencia
+      - definition: —
+      - term: Teléfono de emergencia
+      - definition: —
+      - term: Municipio de residencia (DIVIPOLA)
+      - definition: —
+      - term: País de origen (ISO numérico)
+      - definition: —
+      - heading "Antecedentes" [level=4]
+      - paragraph: Alergias, antecedentes médicos y odontológicos, notas generales.
+      - generic: Tabaquismo
+      - combobox "Tabaquismo":
+        - option "Desconocido"
+        - option "Nunca" [selected]
+        - option "Exfumador"
+        - option "Actual"
+      - generic: Cigarrillos al día
+      - textbox "Cigarrillos al día"
+      - generic: Embarazo
+      - combobox "Embarazo":
+        - option "Desconocido" [selected]
+        - option "No embarazada"
+        - option "Embarazada"
+      - generic: Antecedentes odontológicos
+      - textbox "Antecedentes odontológicos": DEMO · Bruxismo referido.
+      - generic: Notas
+      - textbox "Notas": DEMO · Antecedentes sintéticos. Sin validez clínica.
+      - button "Guardar"
+      - heading "Alergias" [level=5]
+      - list:
+        - strong: Penicilina
+        - text: · DEMO · Erupción cutánea referida. · Activo
+        - button "Marcar inactivo"
+        - button "Marcar resuelto"
+      - textbox "Alérgeno"
+      - textbox "Reacción"
+      - button "Agregar alergia" [disabled]
+      - heading "Medicamentos" [level=5]
+      - paragraph: Aún no hay antecedentes clínicos.
+      - textbox "Medicamento"
+      - textbox "Dosis"
+      - button "Agregar medicamento" [disabled]
+      - heading "Condiciones" [level=5]
+      - list:
+        - strong: Hipertensión arterial controlada
+        - text: · DEMO · Dato sintético de control. · Activo
+        - button "Marcar inactivo"
+        - button "Marcar resuelto"
+      - textbox "Condición"
+      - button "Agregar condición" [disabled]
+      - heading "Citas" [level=3]
+      - list:
+        - paragraph: Limpieza / control — Ana García
+        - paragraph: "13 de sept de 2026, 7:00 a. m. · Estado: Completada"
+        - paragraph: "Registrado: 1"
+        - button "Registrar evolución"
+        - button "Registrar trabajo realizado"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- alert: Ana García

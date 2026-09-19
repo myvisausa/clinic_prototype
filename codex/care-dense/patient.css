@@ -1,0 +1,95 @@
+/* Dense patient work stays inside the third preview. */
+.dense-variant .patient-view { min-width: 0; }
+.dense-variant .dense-patient-header { position: sticky; top: 0; z-index: 4; background: #fff; border-bottom: 1px solid #e0e4e8; }
+.dense-variant .dense-patient-header .patienttop { position: static; min-height: 0; border: 0; padding: 7px 12px 4px; gap: 6px; }
+.dense-variant .dense-patient-header .patienttop strong { font-size: 15px; }
+.dense-variant .dense-patient-header .patienttop .row { gap: 5px; }
+.dense-variant .dense-patient-header .patienttop .btn { min-height: 32px; padding: 6px 9px; }
+.dense-variant .dense-patient-header .notice { margin: 0 12px 3px; padding: 5px 8px; border-radius: 4px; font-size: 12px; }
+.dense-variant .dense-patient-header > .tabs { position: static; margin: 0 12px; overflow-x: auto; white-space: nowrap; scrollbar-width: thin; }
+.dense-variant .dense-patient-header > .tabs a { padding: 7px 12px; min-height: 32px; }
+.dense-variant .dense-patient-view .patientbody { border: 0; border-radius: 0; margin: 0; padding: 12px; }
+.dense-variant .dense-patient-view .patientbody > .subtabs { position: static; margin: 0 0 10px; }
+.dense-variant .dense-patient-view .patientbody > .subtabs a { padding: 7px 12px; }
+.dense-variant .dense-patient-view .patient-section { margin: 0; padding: 10px 12px; border-radius: 5px; }
+.dense-variant .dense-patient-view .patient-section h2 { margin: 0; font-size: 15px; }
+.dense-variant .dense-patient-view .patient-section .row p { margin: 3px 0 0; }
+.dense-variant .dense-patient-view .patient-section .tablewrap { margin: 8px 0 0; }
+.dense-variant .dense-patient-view .patient-section .patient-empty { padding: 16px 0; }
+.dense-variant .dense-patient-view .patient-section h3 { margin: 12px 0 5px; font-size: 13px; text-transform: uppercase; color: #616161; }
+.dense-variant .dense-patient-view .patient-section .plan-card { padding: 9px 10px; margin: 0 0 6px; }
+.dense-variant .dense-patient-view .patient-section .account-totals { margin: 12px 0; gap: 8px; }
+.dense-variant .dense-patient-view .patient-section .account-totals > div { border: 1px solid #e5e5e5; padding: 8px 10px; }
+.dense-variant .dense-patient-view .patient-section .account-totals dd { font-weight: 600; }
+.dense-variant .dense-summary-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; align-items: stretch; }
+.dense-variant .dense-summary-group { border: 1px solid #e1e5e9; border-radius: 5px; padding: 10px 12px; min-width: 0; }
+.dense-variant .dense-summary-group .history-block { border: 0; margin: 0; padding: 0; }
+.dense-variant .dense-summary-group h2, .dense-variant .dense-summary-group h3 { font-size: 15px; margin: 0 0 6px; }
+.dense-variant .dense-summary-group .appointments { border: 0; padding: 0; margin: 0; }
+.dense-variant .dense-summary-group .record { padding: 7px; margin: 5px 0; }
+.dense-variant .dense-summary-group .record .row { margin-top: 5px; }
+.dense-variant .dense-summary-group .toolbar { margin: 7px 0 0; gap: 5px; }
+.dense-variant .dense-summary-group .toolbar input { min-width: 0; flex: 1 1 125px; }
+.dense-variant .dense-summary-group .toolbar .btn { min-height: 32px; }
+.dense-variant .dense-summary-details { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin-top: 8px; align-items: start; }
+.dense-variant .dense-summary-details > * { border: 1px solid #e1e5e9; border-radius: 5px; padding: 10px 12px; min-width: 0; }
+.dense-variant .dense-summary-details h2 { margin: 0 0 4px; font-size: 15px; }
+.dense-variant .dense-summary-details p { margin: 0 0 8px; }
+.dense-variant .dense-summary-details .general-info .grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px; }
+.dense-variant .dense-summary-details .field { padding: 6px 8px; }
+.dense-variant .dense-summary-details .formgrid { gap: 6px; }
+.dense-variant .dense-summary-details .medical-form .toolbar { margin-bottom: 0; }
+.dense-variant .chart-filter { padding: 6px 0; border: 0; border-bottom: 1px solid #e1e5e9; min-height: 0; }
+.dense-variant .chart-filter .row { margin: 0; gap: 6px; }
+.dense-variant .chart-filter .btn, .dense-variant .chart-filter select, .dense-variant .chart-filter input { min-height: 32px; padding: 5px 8px; }
+.dense-variant .chart-filter label { display: flex; align-items: center; gap: 4px; }
+.dense-variant .chart-filter label input[type="checkbox"] { min-height: 0; }
+.dense-variant .chart-filter + .subtabs { margin: 2px 0 8px; overflow-x: auto; }
+.dense-variant .chart-filter + .subtabs a { min-height: 32px; padding: 7px 10px; }
+.dense-variant .dense-chart-workspace { display: grid; grid-template-columns: minmax(680px,1fr) 300px; gap: 10px; margin-top: 0; align-items: start; }
+.dense-variant .dense-chart-workspace:has(+ .dense-chart-progress) { grid-template-columns: minmax(0,1fr); }
+.dense-variant .dense-chart-workspace .dense-chart-anatomy { min-width: 0; overflow-x: auto; }
+.dense-variant .dense-chart-workspace .toothchart { min-width: 680px; }
+.dense-variant .dense-chart-workspace .chart-rail { min-width: 0; padding: 8px; border-radius: 5px; }
+.dense-variant .dense-chart-entry > .btn { width: 100%; min-height: 32px; }
+.dense-variant .dense-chart-entry label { display: flex; flex-direction: column; gap: 3px; }
+.dense-variant .dense-chart-entry input, .dense-variant .dense-chart-entry select { width: 100%; min-height: 32px; padding: 5px 7px; }
+.dense-variant .dense-chart-entry .catalogue { height: 150px; margin-top: 4px; }
+.dense-variant .dense-chart-entry .catalogue button { padding: 5px; }
+.dense-variant .dense-chart-tooth { border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 6px 0; }
+.dense-variant .dense-chart-tooth > div { margin: 4px 0; }
+.dense-variant .dense-chart-tooth p, .dense-variant .dense-chart-fields p { margin: 3px 0; }
+.dense-variant .dense-chart-tooth .surface-buttons { margin-top: 4px; gap: 3px; }
+.dense-variant .dense-chart-tooth .surface-buttons button { min-width: 31px; min-height: 32px; padding: 5px; }
+.dense-variant .dense-chart-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; padding: 8px 0; }
+.dense-variant .dense-chart-fields > div { align-self: center; }
+.dense-variant .dense-chart-progress .tablewrap { margin: 8px 0 0; }
+.dense-variant .dense-chart-progress th, .dense-variant .dense-chart-progress td { white-space: normal; vertical-align: top; }
+.dense-variant .dense-chart-progress td:last-child { min-width: 210px; }
+.dense-variant .dense-chart-progress .btn { padding: 5px 7px; margin: 2px; }
+.dense-variant .page:has(.dense-directory) { padding: 12px; }
+.dense-variant .dense-directory-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.dense-variant .dense-directory-heading h1 { font-size: 21px; margin: 0; }
+.dense-variant .dense-directory-heading p { margin: 2px 0 0; color: #616161; }
+.dense-variant .dense-directory .patient-search { display: flex; align-items: center; margin: 9px 0; gap: 6px; }
+.dense-variant .dense-directory .patient-search input { width: min(450px,100%); min-height: 34px; }
+.dense-variant .dense-directory .patient-search .btn { min-height: 34px; }
+.dense-variant .dense-directory .patient-cards { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+.dense-variant .dense-directory .patient-card { min-height: 88px; padding: 9px 10px; align-items: start; }
+.dense-variant .dense-directory .patient-card a { gap: 2px; }
+.dense-variant .dense-directory .patient-card small { white-space: normal; overflow-wrap: anywhere; line-height: 1.35; }
+.dense-variant .dense-directory .patient-card-actions button { min-width: 28px; min-height: 32px; }
+@media (max-width: 1290px) {
+  .dense-variant .dense-chart-workspace { grid-template-columns: minmax(0,1fr); }
+  .dense-variant .dense-chart-workspace .chart-rail { width: 100%; }
+  .dense-variant .dense-directory .patient-cards { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 1150px) {
+  .dense-variant .dense-summary-grid, .dense-variant .dense-summary-details { grid-template-columns: minmax(0,1fr); }
+  .dense-variant .dense-summary-details .general-info .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dense-variant .dense-patient-header .patienttop .row { width: 100%; }
+}
+@media (max-width: 740px) {
+  .dense-variant .dense-directory .patient-cards, .dense-variant .dense-summary-details .general-info .grid, .dense-variant .dense-chart-fields { grid-template-columns: 1fr; }
+  .dense-variant .dense-patient-header .patienttop .btn { padding: 5px 7px; }
+}

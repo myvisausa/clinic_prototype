@@ -1,0 +1,160 @@
+- banner:
+  - button "☷"
+  - button "Back": ←
+  - button "Forward": →
+  - button "◷"
+  - generic: Dental Implant Clinic Demo
+  - button "⌕ Find a page… ⌘/Ctrl K"
+  - button "Open help": ⓘ
+  - button "Notifications": ♧
+- navigation "Application navigation":
+  - link "Dental Implant Clinic Demo logo":
+    - /url: "#page=organization"
+    - img "Dental Implant Clinic Demo logo"
+  - link "⌂ 3 Home":
+    - /url: "#page=home"
+    - generic: ⌂
+    - generic: "3"
+    - text: Home
+  - link "♧ Clinic":
+    - /url: "#page=schedule"
+    - generic: ♧
+    - text: Clinic
+  - link "☏ 3 Engage":
+    - /url: "#page=engage"
+    - generic: ☏
+    - generic: "3"
+    - text: Engage
+  - button "••• More":
+    - generic: •••
+    - text: More
+  - link "⚙ Setup":
+    - /url: "#page=get-started"
+    - generic: ⚙
+    - text: Setup
+  - 'button "Me: User Profile"':
+    - text: ◉
+    - text: Me
+- complementary:
+  - generic: Clinic
+  - generic: ☷
+  - navigation:
+    - link "▦ Schedule":
+      - /url: "#page=schedule"
+      - generic: ▦
+      - text: Schedule
+    - link "♧ Patients":
+      - /url: "#page=patients"
+      - generic: ♧
+      - text: Patients
+    - link "▤ Clinical reference":
+      - /url: "#page=reference"
+      - generic: ▤
+      - text: Clinical reference
+    - link "⚙ Clinic setup":
+      - /url: "#page=setup"
+      - generic: ⚙
+      - text: Clinic setup
+    - link "☷ Services and prices":
+      - /url: "#page=services"
+      - generic: ☷
+      - text: Services and prices
+    - link "$ Invoices":
+      - /url: "#page=invoices"
+      - generic: $
+      - text: Invoices
+    - link "▣ Insurers":
+      - /url: "#page=insurers"
+      - generic: ▣
+      - text: Insurers
+  - button "Browse all pages"
+- main:
+  - navigation "Page tabs":
+    - link "Day sheet":
+      - /url: "#page=schedule&tab=Day%20sheet"
+    - link "Team schedule":
+      - /url: "#page=schedule&tab=Team%20schedule"
+    - link "Calendar":
+      - /url: "#page=schedule&tab=Calendar"
+  - button "My availability"
+  - button "‹"
+  - strong: Sep 2026
+  - button "›"
+  - generic: S
+  - generic: M
+  - generic: T
+  - generic: W
+  - generic: T
+  - generic: F
+  - generic: S
+  - generic: "1"
+  - generic: "2"
+  - generic: "3"
+  - generic: "4"
+  - generic: "5"
+  - generic: "6"
+  - generic: "7"
+  - generic: "8"
+  - generic: "9"
+  - generic: "10"
+  - generic: "11"
+  - generic: "12"
+  - generic: "13"
+  - generic: "14"
+  - generic: "15"
+  - generic: "16"
+  - generic: "17"
+  - generic: "18"
+  - generic: "19"
+  - generic: "20"
+  - generic: "21"
+  - generic: "22"
+  - generic: "23"
+  - generic: "24"
+  - generic: "25"
+  - generic: "26"
+  - generic: "27"
+  - generic: "28"
+  - generic: "29"
+  - generic: "30"
+  - heading "Day sheet" [level=1]
+  - paragraph: Saturday, September 19, 2026
+  - button "Today"
+  - combobox:
+    - option "All doctors" [selected]
+  - button "New appointment"
+  - table:
+    - rowgroup:
+      - row "Appointment details Time Chart Patient Phone Insurer St Dr T Arr. In Out":
+        - columnheader "Appointment details"
+        - columnheader "Time"
+        - columnheader "Chart"
+        - columnheader "Patient"
+        - columnheader "Phone"
+        - columnheader "Insurer"
+        - columnheader "St"
+        - columnheader "Dr"
+        - columnheader "T"
+        - columnheader "Arr."
+        - columnheader "In"
+        - columnheader "Out"
+    - rowgroup:
+      - row "No appointments on this day.":
+        - cell "No appointments on this day."
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+        - cell
+  - generic: Static navigable prototype · Clinical controls do not save or submit.
+- link "← Prototype gallery":
+  - /url: ../
+- link "View Care draft ↗":
+  - /url: ../care-draft/#page=schedule
+- generic: Prototype · no data actions

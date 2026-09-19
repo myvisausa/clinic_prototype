@@ -1,0 +1,264 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Pacientes" [level=1]
+    - paragraph: 30 pacientes
+    - button "Nuevo"
+    - textbox "Buscar por nombre, email o teléfono..."
+    - button "Limpiar":
+    - button "Buscar":
+    - button "Emma Cárdenas ID 0030 emma.cardenas@demo-dental.local · 573000200030":
+      - generic: Emma Cárdenas
+      - generic: ID 0030
+      - generic: emma.cardenas@demo-dental.local · 573000200030
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Tomás Castro ID 0021 tomas.castro@demo-dental.local · 573000200021":
+      - generic: Tomás Castro
+      - generic: ID 0021
+      - generic: tomas.castro@demo-dental.local · 573000200021
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Elena Cortés ID 0024 elena.cortes@demo-dental.local · 573000200024":
+      - generic: Elena Cortés
+      - generic: ID 0024
+      - generic: elena.cortes@demo-dental.local · 573000200024
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Mateo Cruz ID 0015 mateo.cruz@demo-dental.local · 573000200015":
+      - generic: Mateo Cruz
+      - generic: ID 0015
+      - generic: mateo.cruz@demo-dental.local · 573000200015
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Isabella Díaz ID 0014 isabella.diaz@demo-dental.local · 573000200014":
+      - generic: Isabella Díaz
+      - generic: ID 0014
+      - generic: isabella.diaz@demo-dental.local · 573000200014
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Valentina Duarte ID 0012 valentina.duarte@demo-dental.local · 573000200012":
+      - generic: Valentina Duarte
+      - generic: ID 0012
+      - generic: valentina.duarte@demo-dental.local · 573000200012
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Andrés Flores ID 0011 andres.flores@demo-dental.local · 573000200011":
+      - generic: Andrés Flores
+      - generic: ID 0011
+      - generic: andres.flores@demo-dental.local · 573000200011
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Ana García ID 0001 ana.garcia@demo-dental.local · 573000200001":
+      - generic: Ana García
+      - generic: ID 0001
+      - generic: ana.garcia@demo-dental.local · 573000200001
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Sebastián Gómez ID 0013 sebastian.gomez@demo-dental.local · 573000200013":
+      - generic: Sebastián Gómez
+      - generic: ID 0013
+      - generic: sebastian.gomez@demo-dental.local · 573000200013
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Diego González ID 0006 diego.gonzalez@demo-dental.local · 573000200006":
+      - generic: Diego González
+      - generic: ID 0006
+      - generic: diego.gonzalez@demo-dental.local · 573000200006
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Nicolás Gutierrez ID 0019 nicolas.gutierrez@demo-dental.local · 573000200019":
+      - generic: Nicolás Gutierrez
+      - generic: ID 0019
+      - generic: nicolas.gutierrez@demo-dental.local · 573000200019
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "María Hernández ID 0003 maria.hernandez@demo-dental.local · 573000200003":
+      - generic: María Hernández
+      - generic: ID 0003
+      - generic: maria.hernandez@demo-dental.local · 573000200003
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Lucía López ID 0005 lucia.lopez@demo-dental.local · 573000200005":
+      - generic: Lucía López
+      - generic: ID 0005
+      - generic: lucia.lopez@demo-dental.local · 573000200005
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Juan Martínez ID 0004 juan.martinez@demo-dental.local · 573000200004":
+      - generic: Juan Martínez
+      - generic: ID 0004
+      - generic: juan.martinez@demo-dental.local · 573000200004
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Gabriel Mendoza ID 0023 gabriel.mendoza@demo-dental.local · 573000200023":
+      - generic: Gabriel Mendoza
+      - generic: ID 0023
+      - generic: gabriel.mendoza@demo-dental.local · 573000200023
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Adriana Mora ID 0028 adriana.mora@demo-dental.local · 573000200028":
+      - generic: Adriana Mora
+      - generic: ID 0028
+      - generic: adriana.mora@demo-dental.local · 573000200028
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Mariana Morales ID 0016 mariana.morales@demo-dental.local · 573000200016":
+      - generic: Mariana Morales
+      - generic: ID 0016
+      - generic: mariana.morales@demo-dental.local · 573000200016
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Ricardo Navarro ID 0025 ricardo.navarro@demo-dental.local · 573000200025":
+      - generic: Ricardo Navarro
+      - generic: ID 0025
+      - generic: ricardo.navarro@demo-dental.local · 573000200025
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Santiago Ortiz ID 0017 santiago.ortiz@demo-dental.local · 573000200017":
+      - generic: Santiago Ortiz
+      - generic: ID 0017
+      - generic: santiago.ortiz@demo-dental.local · 573000200017
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Óscar Peña ID 0027 oscar.pena@demo-dental.local · 573000200027":
+      - generic: Óscar Peña
+      - generic: ID 0027
+      - generic: oscar.pena@demo-dental.local · 573000200027
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Sofía Pérez ID 0007 sofia.perez@demo-dental.local · 573000200007":
+      - generic: Sofía Pérez
+      - generic: ID 0007
+      - generic: sofia.perez@demo-dental.local · 573000200007
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Felipe Ramírez ID 0009 felipe.ramirez@demo-dental.local · 573000200009":
+      - generic: Felipe Ramírez
+      - generic: ID 0009
+      - generic: felipe.ramirez@demo-dental.local · 573000200009
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Natalia Reyes ID 0018 natalia.reyes@demo-dental.local · 573000200018":
+      - generic: Natalia Reyes
+      - generic: ID 0018
+      - generic: natalia.reyes@demo-dental.local · 573000200018
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Carlos Rodríguez ID 0002 carlos.rodriguez@demo-dental.local · 573000200002":
+      - generic: Carlos Rodríguez
+      - generic: ID 0002
+      - generic: carlos.rodriguez@demo-dental.local · 573000200002
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Juliana Rojas ID 0020 juliana.rojas@demo-dental.local · 573000200020":
+      - generic: Juliana Rojas
+      - generic: ID 0020
+      - generic: juliana.rojas@demo-dental.local · 573000200020
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Hugo Salazar ID 0029 hugo.salazar@demo-dental.local · 573000200029":
+      - generic: Hugo Salazar
+      - generic: ID 0029
+      - generic: hugo.salazar@demo-dental.local · 573000200029
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Valeria Sánchez ID 0008 valeria.sanchez@demo-dental.local · 573000200008":
+      - generic: Valeria Sánchez
+      - generic: ID 0008
+      - generic: valeria.sanchez@demo-dental.local · 573000200008
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Carolina Silva ID 0026 carolina.silva@demo-dental.local · 573000200026":
+      - generic: Carolina Silva
+      - generic: ID 0026
+      - generic: carolina.silva@demo-dental.local · 573000200026
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Daniela Torres ID 0010 daniela.torres@demo-dental.local · 573000200010":
+      - generic: Daniela Torres
+      - generic: ID 0010
+      - generic: daniela.torres@demo-dental.local · 573000200010
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+    - button "Paula Vargas ID 0022 paula.vargas@demo-dental.local · 573000200022":
+      - generic: Paula Vargas
+      - generic: ID 0022
+      - generic: paula.vargas@demo-dental.local · 573000200022
+    - button "Editar paciente":
+    - button "Eliminar paciente":
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- alert

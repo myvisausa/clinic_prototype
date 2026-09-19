@@ -1,0 +1,2 @@
+import { button } from "../../ui.js";
+export const allergyHistory = () => `<div class="history-block"><h3>Alergias</h3><div class="record"><strong>Penicilina</strong> · DEMO · Erupción cutánea referida. · Activo<div class="row">${button("Marcar inactivo")}${button("Marcar resuelto")}</div></div><div class="toolbar"><input aria-label="Alérgeno" placeholder="Alérgeno"><input aria-label="Reacción" placeholder="Reacción"><button class="btn primary" disabled>Agregar alergia</button></div></div>`;

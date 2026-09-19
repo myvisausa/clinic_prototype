@@ -1,0 +1,3263 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica" [active]:
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Referencia clínica" [level=1]
+    - tablist:
+      - tab "Códigos" [selected]
+      - tab "Fórmulas"
+      - tab "Documentos"
+      - tab "Prioridades"
+      - tab "Pronósticos"
+    - tabpanel "Códigos":
+      - heading "Códigos de procedimiento" [level=2]
+      - paragraph: Se incluyen los códigos ocultos.
+      - textbox "Buscar por código, descripción o servicio…"
+      - combobox:
+        - generic: Todas las especialidades
+      - combobox:
+        - generic: Todos los sistemas
+      - checkbox "Condiciones"
+      - generic: Condiciones
+      - button "Recargar":
+      - button "Nuevo código del consultorio":
+        - text: Nuevo código del consultorio
+      - paragraph: 284 registros
+      - table:
+        - rowgroup:
+          - row "Código Descripción Especialidades Pintura Área Grupo RIPS Acciones":
+            - columnheader "Código"
+            - columnheader "Descripción"
+            - columnheader "Especialidades"
+            - columnheader "Pintura"
+            - columnheader "Área"
+            - columnheader "Grupo RIPS"
+            - columnheader "Acciones"
+        - rowgroup:
+          - row "230101 CUPS EXODONCIA DE DIENTE PERMANENTE UNIRRADICULAR Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "230101 CUPS":
+              - generic: "230101"
+              - generic: CUPS
+            - cell "EXODONCIA DE DIENTE PERMANENTE UNIRRADICULAR"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "230102 CUPS EXODONCIA DE DIENTE PERMANENTE MULTIRRADICULAR Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "230102 CUPS":
+              - generic: "230102"
+              - generic: CUPS
+            - cell "EXODONCIA DE DIENTE PERMANENTE MULTIRRADICULAR"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "230103 CUPS EXODONCIA DE DIENTES PERMANENTES Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "230103 CUPS":
+              - generic: "230103"
+              - generic: CUPS
+            - cell "EXODONCIA DE DIENTES PERMANENTES"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "230201 CUPS EXODONCIA DE DIENTE TEMPORAL UNIRRADICULAR Odontología general, Odontopediatría, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "230201 CUPS":
+              - generic: "230201"
+              - generic: CUPS
+            - cell "EXODONCIA DE DIENTE TEMPORAL UNIRRADICULAR"
+            - cell "Odontología general, Odontopediatría, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "230202 CUPS EXODONCIA DE DIENTE TEMPORAL MULTIRRADICULAR Odontología general, Odontopediatría, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "230202 CUPS":
+              - generic: "230202"
+              - generic: CUPS
+            - cell "EXODONCIA DE DIENTE TEMPORAL MULTIRRADICULAR"
+            - cell "Odontología general, Odontopediatría, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "230203 CUPS EXODONCIA DE DIENTES TEMPORALES Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "230203 CUPS":
+              - generic: "230203"
+              - generic: CUPS
+            - cell "EXODONCIA DE DIENTES TEMPORALES"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "231101 CUPS EXODONCIA QUIRURGICA UNIRRADICULAR Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "231101 CUPS":
+              - generic: "231101"
+              - generic: CUPS
+            - cell "EXODONCIA QUIRURGICA UNIRRADICULAR"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "231201 CUPS EXODONCIA QUIRURGICA MULTIRRADICULAR Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "231201 CUPS":
+              - generic: "231201"
+              - generic: CUPS
+            - cell "EXODONCIA QUIRURGICA MULTIRRADICULAR"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "231301 CUPS EXODONCIA DE INCLUIDO EN POSICION ECTOPICA CON ABORDAJE INTRAORAL Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "231301 CUPS":
+              - generic: "231301"
+              - generic: CUPS
+            - cell "EXODONCIA DE INCLUIDO EN POSICION ECTOPICA CON ABORDAJE INTRAORAL"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "231302 CUPS EXODONCIA DE INCLUIDO EN POSICION ECTOPICA CON ABORDAJE EXTRAORAL Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "231302 CUPS":
+              - generic: "231302"
+              - generic: CUPS
+            - cell "EXODONCIA DE INCLUIDO EN POSICION ECTOPICA CON ABORDAJE EXTRAORAL"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "231303 CUPS EXODONCIA DE DIENTE INCLUIDO Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "231303 CUPS":
+              - generic: "231303"
+              - generic: CUPS
+            - cell "EXODONCIA DE DIENTE INCLUIDO"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "231401 CUPS EXODONCIAS MULTIPLES CON ALVEOLOPLASTIA, POR CUADRANTE Odontología general, Cirugía oral Extracción Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "231401 CUPS":
+              - generic: "231401"
+              - generic: CUPS
+            - cell "EXODONCIAS MULTIPLES CON ALVEOLOPLASTIA, POR CUADRANTE"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Extracción"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "231501 CUPS COLGAJO DESPLAZADO PARA ABORDAJE DE DIENTE RETENIDO (VENTANA QUIRURGICA) Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "231501 CUPS":
+              - generic: "231501"
+              - generic: CUPS
+            - cell "COLGAJO DESPLAZADO PARA ABORDAJE DE DIENTE RETENIDO (VENTANA QUIRURGICA)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "232101 CUPS OBTURACION DENTAL CON AMALGAMA Odontología general Obturación (oscura) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "232101 CUPS":
+              - generic: "232101"
+              - generic: CUPS
+            - cell "OBTURACION DENTAL CON AMALGAMA"
+            - cell "Odontología general"
+            - cell "Obturación (oscura)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "232102 CUPS OBTURACION DENTAL CON RESINA DE FOTOCURADO Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio Visibilidad en el catálogo":
+            - cell "232102 CUPS":
+              - generic: "232102"
+              - generic: CUPS
+            - cell "OBTURACION DENTAL CON RESINA DE FOTOCURADO"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio Visibilidad en el catálogo":
+              - button "Agregar servicio con precio"
+              - button "Visibilidad en el catálogo"
+          - row "232103 CUPS OBTURACION DENTAL CON IONOMERO DE VIDRIO Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "232103 CUPS":
+              - generic: "232103"
+              - generic: CUPS
+            - cell "OBTURACION DENTAL CON IONOMERO DE VIDRIO"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "232104 CUPS OBTURACION DENTAL Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "232104 CUPS":
+              - generic: "232104"
+              - generic: CUPS
+            - cell "OBTURACION DENTAL"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "232201 CUPS OBTURACION TEMPORAL POR DIENTE Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "232201 CUPS":
+              - generic: "232201"
+              - generic: CUPS
+            - cell "OBTURACION TEMPORAL POR DIENTE"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "232301 CUPS COLOCACION DE PIN MILIMETRICO Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "232301 CUPS":
+              - generic: "232301"
+              - generic: CUPS
+            - cell "COLOCACION DE PIN MILIMETRICO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "232401 CUPS RECONSTRUCCION DE ANGULO INCISAL CON RESINA DE FOTOCURADO Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "232401 CUPS":
+              - generic: "232401"
+              - generic: CUPS
+            - cell "RECONSTRUCCION DE ANGULO INCISAL CON RESINA DE FOTOCURADO"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "232402 CUPS RECONSTRUCCION TERCIO INCISAL CON RESINA DE FOTOCURADO Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "232402 CUPS":
+              - generic: "232402"
+              - generic: CUPS
+            - cell "RECONSTRUCCION TERCIO INCISAL CON RESINA DE FOTOCURADO"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "232403 CUPS RECONSTRUCCION DENTAL Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "232403 CUPS":
+              - generic: "232403"
+              - generic: CUPS
+            - cell "RECONSTRUCCION DENTAL"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "233101 CUPS RESTAURACION DE DIENTES MEDIANTE INCRUSTACION METALICA Odontología general, Rehabilitación oral Obturación (oscura) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "233101 CUPS":
+              - generic: "233101"
+              - generic: CUPS
+            - cell "RESTAURACION DE DIENTES MEDIANTE INCRUSTACION METALICA"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Obturación (oscura)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "233201 CUPS RESTAURACION DE DIENTES MEDIANTE INCRUSTACION NO METALICA Odontología general, Rehabilitación oral Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "233201 CUPS":
+              - generic: "233201"
+              - generic: CUPS
+            - cell "RESTAURACION DE DIENTES MEDIANTE INCRUSTACION NO METALICA"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234101 CUPS COLOCACION O APLICACION DE CORONA EN ACERO INOXIDABLE (PARA DIENTES TEMPORALES) Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234101 CUPS":
+              - generic: "234101"
+              - generic: CUPS
+            - cell "COLOCACION O APLICACION DE CORONA EN ACERO INOXIDABLE (PARA DIENTES TEMPORALES)"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234102 CUPS COLOCACION O APLICACION DE CORONA EN POLICARBOXILATO (PARA DIENTES TEMPORALES) Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234102 CUPS":
+              - generic: "234102"
+              - generic: CUPS
+            - cell "COLOCACION O APLICACION DE CORONA EN POLICARBOXILATO (PARA DIENTES TEMPORALES)"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234103 CUPS COLOCACION O APLICACION DE CORONA EN FORMA PLASTICA Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234103 CUPS":
+              - generic: "234103"
+              - generic: CUPS
+            - cell "COLOCACION O APLICACION DE CORONA EN FORMA PLASTICA"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234104 CUPS COLOCACION O APLICACION DE CORONA ACRILICA TERMOCURADA Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234104 CUPS":
+              - generic: "234104"
+              - generic: CUPS
+            - cell "COLOCACION O APLICACION DE CORONA ACRILICA TERMOCURADA"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234105 CUPS INSERCION O APLICACION DE CORONA Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234105 CUPS":
+              - generic: "234105"
+              - generic: CUPS
+            - cell "INSERCION O APLICACION DE CORONA"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234106 CUPS COLOCACION O APLICACION DE CORONA PROVISIONAL Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234106 CUPS":
+              - generic: "234106"
+              - generic: CUPS
+            - cell "COLOCACION O APLICACION DE CORONA PROVISIONAL"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234201 CUPS COLOCACION O INSERCION DE PROTESIS FIJA CADA UNIDAD (PILAR Y PONTICOS) Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234201 CUPS":
+              - generic: "234201"
+              - generic: CUPS
+            - cell "COLOCACION O INSERCION DE PROTESIS FIJA CADA UNIDAD (PILAR Y PONTICOS)"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234202 CUPS RECONSTRUCCION DE MUNONES Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234202 CUPS":
+              - generic: "234202"
+              - generic: CUPS
+            - cell "RECONSTRUCCION DE MUNONES"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234203 CUPS PATRON DE NUCLEO Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234203 CUPS":
+              - generic: "234203"
+              - generic: CUPS
+            - cell "PATRON DE NUCLEO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234204 CUPS REPARACION DE PROTESIS FIJA Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234204 CUPS":
+              - generic: "234204"
+              - generic: CUPS
+            - cell "REPARACION DE PROTESIS FIJA"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234205 CUPS INSERCION DE RETENEDOR INTRARADICULAR Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234205 CUPS":
+              - generic: "234205"
+              - generic: CUPS
+            - cell "INSERCION DE RETENEDOR INTRARADICULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234301 CUPS COLOCACION O INSERCION DE PROTESIS REMOVIBLE (SUPERIOR O INFERIOR) MUCOSOPORTADA Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234301 CUPS":
+              - generic: "234301"
+              - generic: CUPS
+            - cell "COLOCACION O INSERCION DE PROTESIS REMOVIBLE (SUPERIOR O INFERIOR) MUCOSOPORTADA"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234302 CUPS COLOCACION O INSERCION DE PROTESIS REMOVIBLE (SUPERIOR O INFERIOR) DENTOMUCOSOPORTADA Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234302 CUPS":
+              - generic: "234302"
+              - generic: CUPS
+            - cell "COLOCACION O INSERCION DE PROTESIS REMOVIBLE (SUPERIOR O INFERIOR) DENTOMUCOSOPORTADA"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234303 CUPS REPARACION DE PROTESIS REMOVIBLE Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234303 CUPS":
+              - generic: "234303"
+              - generic: CUPS
+            - cell "REPARACION DE PROTESIS REMOVIBLE"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234401 CUPS COLOCACION O INSERCION DE PROTESIS TOTAL MEDIO CASO (SUPERIOR O INFERIOR) Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234401 CUPS":
+              - generic: "234401"
+              - generic: CUPS
+            - cell "COLOCACION O INSERCION DE PROTESIS TOTAL MEDIO CASO (SUPERIOR O INFERIOR)"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234402 CUPS COLOCACION O INSERCION DE PROTESIS TOTAL (SUPERIOR E INFERIOR) Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234402 CUPS":
+              - generic: "234402"
+              - generic: CUPS
+            - cell "COLOCACION O INSERCION DE PROTESIS TOTAL (SUPERIOR E INFERIOR)"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234403 CUPS INSERCION, ADAPTACION Y CONTROL DE PROTESIS IMPLANTOASISTIDA TOTAL MEDIO CASO SUPERIOR O INFERIOR Odontología general, Rehabilitación oral, Implantología Implante Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234403 CUPS":
+              - generic: "234403"
+              - generic: CUPS
+            - cell "INSERCION, ADAPTACION Y CONTROL DE PROTESIS IMPLANTOASISTIDA TOTAL MEDIO CASO SUPERIOR O INFERIOR"
+            - cell "Odontología general, Rehabilitación oral, Implantología"
+            - cell "Implante"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "234404 CUPS INSERCION, ADAPTACION Y CONTROL DE PROTESIS IMPLANTOASISTIDA TOTAL SUPERIOR E INFERIOR Odontología general, Rehabilitación oral, Implantología Implante Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "234404 CUPS":
+              - generic: "234404"
+              - generic: CUPS
+            - cell "INSERCION, ADAPTACION Y CONTROL DE PROTESIS IMPLANTOASISTIDA TOTAL SUPERIOR E INFERIOR"
+            - cell "Odontología general, Rehabilitación oral, Implantología"
+            - cell "Implante"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "235101 CUPS REIMPLANTE DE DIENTE Odontología general, Cirugía oral, Implantología Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "235101 CUPS":
+              - generic: "235101"
+              - generic: CUPS
+            - cell "REIMPLANTE DE DIENTE"
+            - cell "Odontología general, Cirugía oral, Implantología"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "235201 CUPS TRASPLANTE DE DIENTE (INTENCIONAL) Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "235201 CUPS":
+              - generic: "235201"
+              - generic: CUPS
+            - cell "TRASPLANTE DE DIENTE (INTENCIONAL)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "236101 CUPS IMPLANTE ALOPLASTICO CERAMICO Odontología general, Implantología Implante Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "236101 CUPS":
+              - generic: "236101"
+              - generic: CUPS
+            - cell "IMPLANTE ALOPLASTICO CERAMICO"
+            - cell "Odontología general, Implantología"
+            - cell "Implante"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "236201 CUPS IMPLANTE ALOPLASTICO METALICO Odontología general, Implantología Implante Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "236201 CUPS":
+              - generic: "236201"
+              - generic: CUPS
+            - cell "IMPLANTE ALOPLASTICO METALICO"
+            - cell "Odontología general, Implantología"
+            - cell "Implante"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "236301 CUPS IMPLANTE ALOPLASTICO (OSEOINTEGRACION) Odontología general, Implantología Implante Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "236301 CUPS":
+              - generic: "236301"
+              - generic: CUPS
+            - cell "IMPLANTE ALOPLASTICO (OSEOINTEGRACION)"
+            - cell "Odontología general, Implantología"
+            - cell "Implante"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237101 CUPS PULPOTOMIA CON PULPECTOMIA Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237101 CUPS":
+              - generic: "237101"
+              - generic: CUPS
+            - cell "PULPOTOMIA CON PULPECTOMIA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237102 CUPS PULPOTOMIA Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237102 CUPS":
+              - generic: "237102"
+              - generic: CUPS
+            - cell "PULPOTOMIA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237103 CUPS PULPECTOMIA Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237103 CUPS":
+              - generic: "237103"
+              - generic: CUPS
+            - cell "PULPECTOMIA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237201 CUPS APEXIFICACION (INDUCCION DE APEXOGENESIS) Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237201 CUPS":
+              - generic: "237201"
+              - generic: CUPS
+            - cell "APEXIFICACION (INDUCCION DE APEXOGENESIS)"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237202 CUPS REVASCULARIZACION PULPAR Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237202 CUPS":
+              - generic: "237202"
+              - generic: CUPS
+            - cell "REVASCULARIZACION PULPAR"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237203 CUPS RECUBRIMIENTO PULPAR DIRECTO Odontología general, Endodoncia Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237203 CUPS":
+              - generic: "237203"
+              - generic: CUPS
+            - cell "RECUBRIMIENTO PULPAR DIRECTO"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237204 CUPS RECUBRIMIENTO PULPAR INDIRECTO Odontología general, Endodoncia Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237204 CUPS":
+              - generic: "237204"
+              - generic: CUPS
+            - cell "RECUBRIMIENTO PULPAR INDIRECTO"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237301 CUPS TERAPIA DE CONDUCTO RADICULAR EN DIENTE UNIRRADICULAR Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237301 CUPS":
+              - generic: "237301"
+              - generic: CUPS
+            - cell "TERAPIA DE CONDUCTO RADICULAR EN DIENTE UNIRRADICULAR"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237302 CUPS TERAPIA DE CONDUCTO RADICULAR EN DIENTE BIRRADICULAR Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237302 CUPS":
+              - generic: "237302"
+              - generic: CUPS
+            - cell "TERAPIA DE CONDUCTO RADICULAR EN DIENTE BIRRADICULAR"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237303 CUPS TERAPIA DE CONDUCTO RADICULAR EN DIENTE MULTIRRADICULAR Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237303 CUPS":
+              - generic: "237303"
+              - generic: CUPS
+            - cell "TERAPIA DE CONDUCTO RADICULAR EN DIENTE MULTIRRADICULAR"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237304 CUPS TERAPIA DE CONDUCTO RADICULAR EN DIENTE TEMPORAL UNIRRADICULAR Odontología general, Endodoncia, Odontopediatría Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237304 CUPS":
+              - generic: "237304"
+              - generic: CUPS
+            - cell "TERAPIA DE CONDUCTO RADICULAR EN DIENTE TEMPORAL UNIRRADICULAR"
+            - cell "Odontología general, Endodoncia, Odontopediatría"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237305 CUPS TERAPIA DE CONDUCTO RADICULAR EN DIENTE TEMPORAL MULTIRRADICULAR Odontología general, Endodoncia, Odontopediatría Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237305 CUPS":
+              - generic: "237305"
+              - generic: CUPS
+            - cell "TERAPIA DE CONDUCTO RADICULAR EN DIENTE TEMPORAL MULTIRRADICULAR"
+            - cell "Odontología general, Endodoncia, Odontopediatría"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237306 CUPS TERAPIA DE CONDUCTO RADICULAR Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237306 CUPS":
+              - generic: "237306"
+              - generic: CUPS
+            - cell "TERAPIA DE CONDUCTO RADICULAR"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237307 CUPS DESOBTURACION DE CONDUCTO RADICULAR Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237307 CUPS":
+              - generic: "237307"
+              - generic: CUPS
+            - cell "DESOBTURACION DE CONDUCTO RADICULAR"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237401 CUPS CURETAJE APICAL CON APICECTOMIA Y OBTURACION RETROGADA [CIRUGIA PERIRRADICULAR] Odontología general, Periodoncia Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237401 CUPS":
+              - generic: "237401"
+              - generic: CUPS
+            - cell "CURETAJE APICAL CON APICECTOMIA Y OBTURACION RETROGADA [CIRUGIA PERIRRADICULAR]"
+            - cell "Odontología general, Periodoncia"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237501 CUPS PROCEDIMIENTO CORRECTIVO EN RESORCION RADICULAR (INTERNA Y EXTERNA) Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237501 CUPS":
+              - generic: "237501"
+              - generic: CUPS
+            - cell "PROCEDIMIENTO CORRECTIVO EN RESORCION RADICULAR (INTERNA Y EXTERNA)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237502 CUPS PROCEDIMIENTOS CORRECTIVOS EN FRACTURAS RADICULARES Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237502 CUPS":
+              - generic: "237502"
+              - generic: CUPS
+            - cell "PROCEDIMIENTOS CORRECTIVOS EN FRACTURAS RADICULARES"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237503 CUPS SELLADO QUIRURGICO DE PERFORACION ENDODONTICA Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237503 CUPS":
+              - generic: "237503"
+              - generic: CUPS
+            - cell "SELLADO QUIRURGICO DE PERFORACION ENDODONTICA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237504 CUPS SELLADO NO QUIRURGICO DE PERFORACION ENDODONTICA Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237504 CUPS":
+              - generic: "237504"
+              - generic: CUPS
+            - cell "SELLADO NO QUIRURGICO DE PERFORACION ENDODONTICA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237505 CUPS REMOCION DE RETENEDOR INTRARADICULAR Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237505 CUPS":
+              - generic: "237505"
+              - generic: CUPS
+            - cell "REMOCION DE RETENEDOR INTRARADICULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237601 CUPS FISTULIZACION ENDODONTICA POR TREPANACION Y DRENAJE Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237601 CUPS":
+              - generic: "237601"
+              - generic: CUPS
+            - cell "FISTULIZACION ENDODONTICA POR TREPANACION Y DRENAJE"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237602 CUPS FISTULIZACION ENDODONTICA POR INCISION Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237602 CUPS":
+              - generic: "237602"
+              - generic: CUPS
+            - cell "FISTULIZACION ENDODONTICA POR INCISION"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237603 CUPS FISTULIZACION ENDODONTICA Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237603 CUPS":
+              - generic: "237603"
+              - generic: CUPS
+            - cell "FISTULIZACION ENDODONTICA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237604 CUPS FISTULIZACION ENDODONTICA POR DESCOMPRESION Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237604 CUPS":
+              - generic: "237604"
+              - generic: CUPS
+            - cell "FISTULIZACION ENDODONTICA POR DESCOMPRESION"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237701 CUPS RADECTOMIA (AMPUTACION RADICULAR) UNICA Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237701 CUPS":
+              - generic: "237701"
+              - generic: CUPS
+            - cell "RADECTOMIA (AMPUTACION RADICULAR) UNICA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237702 CUPS RADECTOMIA (AMPUTACION RADICULAR) MULTIPLE Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237702 CUPS":
+              - generic: "237702"
+              - generic: CUPS
+            - cell "RADECTOMIA (AMPUTACION RADICULAR) MULTIPLE"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237703 CUPS RADECTOMIA (AMPUTACION RADICULAR) Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237703 CUPS":
+              - generic: "237703"
+              - generic: CUPS
+            - cell "RADECTOMIA (AMPUTACION RADICULAR)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237801 CUPS HEMISECCION DEL DIENTE Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237801 CUPS":
+              - generic: "237801"
+              - generic: CUPS
+            - cell "HEMISECCION DEL DIENTE"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237901 CUPS BLANQUEAMIENTO DE DIENTE [INTRINSECO] POR CAUSAS ENDODONTICAS Odontología general, Endodoncia Endodoncia Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237901 CUPS":
+              - generic: "237901"
+              - generic: CUPS
+            - cell "BLANQUEAMIENTO DE DIENTE [INTRINSECO] POR CAUSAS ENDODONTICAS"
+            - cell "Odontología general, Endodoncia"
+            - cell "Endodoncia"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237902 CUPS EXPLORACION Y MOVILIZACION DE NERVIO DENTARIO INFERIOR Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237902 CUPS":
+              - generic: "237902"
+              - generic: CUPS
+            - cell "EXPLORACION Y MOVILIZACION DE NERVIO DENTARIO INFERIOR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "237903 CUPS BLANQUEAMIENTO DENTAL EXTRINSECO Odontología general Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "237903 CUPS":
+              - generic: "237903"
+              - generic: CUPS
+            - cell "BLANQUEAMIENTO DENTAL EXTRINSECO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "240201 CUPS DETARTRAJE SUBGINGIVAL Odontología general, Periodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "240201 CUPS":
+              - generic: "240201"
+              - generic: CUPS
+            - cell "DETARTRAJE SUBGINGIVAL"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "240301 CUPS ALISADO RADICULAR, CAMPO CERRADO Odontología general, Periodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "240301 CUPS":
+              - generic: "240301"
+              - generic: CUPS
+            - cell "ALISADO RADICULAR, CAMPO CERRADO"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "240401 CUPS DRENAJE DE COLECCION PERIODONTAL (CERRADO CON ALISADO RADICULAR) Odontología general, Periodoncia Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "240401 CUPS":
+              - generic: "240401"
+              - generic: CUPS
+            - cell "DRENAJE DE COLECCION PERIODONTAL (CERRADO CON ALISADO RADICULAR)"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "241101 CUPS BIOPSIA INCISIONAL DE ENCIA Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "241101 CUPS":
+              - generic: "241101"
+              - generic: CUPS
+            - cell "BIOPSIA INCISIONAL DE ENCIA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "241102 CUPS BIOPSIA ESCISIONAL DE ENCIA CON CIERRE PRIMARIO Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "241102 CUPS":
+              - generic: "241102"
+              - generic: CUPS
+            - cell "BIOPSIA ESCISIONAL DE ENCIA CON CIERRE PRIMARIO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "241103 CUPS BIOPSIA ESCISIONAL DE ENCIA Y RECUBRIMIENTO CON COLGAJO O INJERTO Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "241103 CUPS":
+              - generic: "241103"
+              - generic: CUPS
+            - cell "BIOPSIA ESCISIONAL DE ENCIA Y RECUBRIMIENTO CON COLGAJO O INJERTO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "241104 CUPS BIOPSIA DE ENCIA Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "241104 CUPS":
+              - generic: "241104"
+              - generic: CUPS
+            - cell "BIOPSIA DE ENCIA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "241201 CUPS BIOPSIA DE PARED ALVEOLAR Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "241201 CUPS":
+              - generic: "241201"
+              - generic: CUPS
+            - cell "BIOPSIA DE PARED ALVEOLAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242101 CUPS PLASTIA MUCOGINGIVAL CON INJERTOS PEDICULADOS (COLGAJOS PEDICULADOS) Odontología general, Periodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242101 CUPS":
+              - generic: "242101"
+              - generic: CUPS
+            - cell "PLASTIA MUCOGINGIVAL CON INJERTOS PEDICULADOS (COLGAJOS PEDICULADOS)"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242102 CUPS PLASTIA MUCOGINGIVAL CON INJERTO GINGIVAL LIBRE Odontología general, Periodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242102 CUPS":
+              - generic: "242102"
+              - generic: CUPS
+            - cell "PLASTIA MUCOGINGIVAL CON INJERTO GINGIVAL LIBRE"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242103 CUPS PLASTIA MUCOGINGIVAL Odontología general, Periodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242103 CUPS":
+              - generic: "242103"
+              - generic: CUPS
+            - cell "PLASTIA MUCOGINGIVAL"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242201 CUPS CURETAJE A CAMPO ABIERTO Odontología general, Periodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242201 CUPS":
+              - generic: "242201"
+              - generic: CUPS
+            - cell "CURETAJE A CAMPO ABIERTO"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242202 CUPS CIRUGIA A COLGAJO CON RESECCION RADICULAR (AMPUTACION HEMISECCION) Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242202 CUPS":
+              - generic: "242202"
+              - generic: CUPS
+            - cell "CIRUGIA A COLGAJO CON RESECCION RADICULAR (AMPUTACION HEMISECCION)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242204 CUPS AUMENTO DE REBORDE PARCIALMENTE EDENTULO (SIN MATERIAL) Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242204 CUPS":
+              - generic: "242204"
+              - generic: CUPS
+            - cell "AUMENTO DE REBORDE PARCIALMENTE EDENTULO (SIN MATERIAL)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242205 CUPS AUMENTO DE REBORDE PARCIALMENTE EDENTULO (CON MATERIAL) Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242205 CUPS":
+              - generic: "242205"
+              - generic: CUPS
+            - cell "AUMENTO DE REBORDE PARCIALMENTE EDENTULO (CON MATERIAL)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242301 CUPS PLASTIAS PREPROTESICAS (AUMENTO DE CORONA CLINICA) Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242301 CUPS":
+              - generic: "242301"
+              - generic: CUPS
+            - cell "PLASTIAS PREPROTESICAS (AUMENTO DE CORONA CLINICA)"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "242401 CUPS REPARACION O PLASTIA PERIODONTAL REGENERATIVA (INJERTOS, MEMBRANAS) Odontología general, Periodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "242401 CUPS":
+              - generic: "242401"
+              - generic: CUPS
+            - cell "REPARACION O PLASTIA PERIODONTAL REGENERATIVA (INJERTOS, MEMBRANAS)"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243101 CUPS ESCISION DE LESION BENIGNA ENCAPSULADA EN ENCIA HASTA DE TRES CENTIMETROS Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243101 CUPS":
+              - generic: "243101"
+              - generic: CUPS
+            - cell "ESCISION DE LESION BENIGNA ENCAPSULADA EN ENCIA HASTA DE TRES CENTIMETROS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243102 CUPS ESCISION DE LESION BENIGNA ENCAPSULADA EN ENCIA DE MAS DE TRES CENTIMETROS Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243102 CUPS":
+              - generic: "243102"
+              - generic: CUPS
+            - cell "ESCISION DE LESION BENIGNA ENCAPSULADA EN ENCIA DE MAS DE TRES CENTIMETROS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243103 CUPS ESCISION DE LESION BENIGNA NO ENCAPSULADA EN ENCIA HASTA DE TRES CENTIMETROS Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243103 CUPS":
+              - generic: "243103"
+              - generic: CUPS
+            - cell "ESCISION DE LESION BENIGNA NO ENCAPSULADA EN ENCIA HASTA DE TRES CENTIMETROS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243104 CUPS ESCISION DE LESION BENIGNA NO ENCAPSULADA EN ENCIA DE MAS DE TRES CENTIMETROS Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243104 CUPS":
+              - generic: "243104"
+              - generic: CUPS
+            - cell "ESCISION DE LESION BENIGNA NO ENCAPSULADA EN ENCIA DE MAS DE TRES CENTIMETROS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243105 CUPS ESCISION DE LESION MALIGNA DE ENCIA SIN VACIAMIENTO GANGLIONAR NI RESECCION DE ESTRUCTURAS VECINAS U OSEAS Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243105 CUPS":
+              - generic: "243105"
+              - generic: CUPS
+            - cell "ESCISION DE LESION MALIGNA DE ENCIA SIN VACIAMIENTO GANGLIONAR NI RESECCION DE ESTRUCTURAS VECINAS U OSEAS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243106 CUPS ESCISION DE LESION MALIGNA DE ENCIA CON VACIAMIENTO GANGLIONAR PISO DE BOCA Y/O LENGUA CON CIERRE PRIMARIO Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243106 CUPS":
+              - generic: "243106"
+              - generic: CUPS
+            - cell "ESCISION DE LESION MALIGNA DE ENCIA CON VACIAMIENTO GANGLIONAR PISO DE BOCA Y/O LENGUA CON CIERRE PRIMARIO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243107 CUPS ESCISION DE LESION MALIGNA DE ENCIA CON VACIAMIENTO GANGLIONAR PISO DE BOCA Y/O LENGUA Y RECONSTRUCCION CON COLGAJO PEDICULADO Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243107 CUPS":
+              - generic: "243107"
+              - generic: CUPS
+            - cell "ESCISION DE LESION MALIGNA DE ENCIA CON VACIAMIENTO GANGLIONAR PISO DE BOCA Y/O LENGUA Y RECONSTRUCCION CON COLGAJO PEDICULADO"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243108 CUPS ESCISION DE LESION MALIGNA DE ENCIA CON VACIAMIENTO GANGLIONAR RESECCION OSEA Y RECONSTRUCCION CON PLACA Y COLGAJO PEDICULADO Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243108 CUPS":
+              - generic: "243108"
+              - generic: CUPS
+            - cell "ESCISION DE LESION MALIGNA DE ENCIA CON VACIAMIENTO GANGLIONAR RESECCION OSEA Y RECONSTRUCCION CON PLACA Y COLGAJO PEDICULADO"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243109 CUPS ESCISION DE LESION MALIGNA DE ENCIA CON VACIAMIENTO GANGLIONAR RESECCION OSEA Y RECONSTRUCCION CON PLACA Y COLGAJO LIBRE Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243109 CUPS":
+              - generic: "243109"
+              - generic: CUPS
+            - cell "ESCISION DE LESION MALIGNA DE ENCIA CON VACIAMIENTO GANGLIONAR RESECCION OSEA Y RECONSTRUCCION CON PLACA Y COLGAJO LIBRE"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243110 CUPS RESECCION DE LESION DE ENCIA Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243110 CUPS":
+              - generic: "243110"
+              - generic: CUPS
+            - cell "RESECCION DE LESION DE ENCIA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243201 CUPS SUTURA DE LACERACION DE ENCIA MENOR DE TRES CENTIMETROS Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243201 CUPS":
+              - generic: "243201"
+              - generic: CUPS
+            - cell "SUTURA DE LACERACION DE ENCIA MENOR DE TRES CENTIMETROS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243202 CUPS SUTURA DE LACERACION DE ENCIA MAYOR DE TRES CENTIMETROS Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243202 CUPS":
+              - generic: "243202"
+              - generic: CUPS
+            - cell "SUTURA DE LACERACION DE ENCIA MAYOR DE TRES CENTIMETROS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243203 CUPS SUTURA DE LACERACION DE ENCIA Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243203 CUPS":
+              - generic: "243203"
+              - generic: CUPS
+            - cell "SUTURA DE LACERACION DE ENCIA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243301 CUPS ENUCLEACION DE QUISTE EPIDERMOIDE VIA INTRAORAL Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243301 CUPS":
+              - generic: "243301"
+              - generic: CUPS
+            - cell "ENUCLEACION DE QUISTE EPIDERMOIDE VIA INTRAORAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243302 CUPS ENUCLEACION DE QUISTE EPIDERMOIDE VIA EXTRAORAL Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243302 CUPS":
+              - generic: "243302"
+              - generic: CUPS
+            - cell "ENUCLEACION DE QUISTE EPIDERMOIDE VIA EXTRAORAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243303 CUPS ENUCLEACION DE QUISTE EPIDERMOIDE Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243303 CUPS":
+              - generic: "243303"
+              - generic: CUPS
+            - cell "ENUCLEACION DE QUISTE EPIDERMOIDE"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243401 CUPS GINGIVECTOMIA Odontología general, Periodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243401 CUPS":
+              - generic: "243401"
+              - generic: CUPS
+            - cell "GINGIVECTOMIA"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243500 CUPS OPERCULECTOMIA NCOC Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243500 CUPS":
+              - generic: "243500"
+              - generic: CUPS
+            - cell "OPERCULECTOMIA NCOC"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243501 CUPS CUNA DISTAL Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243501 CUPS":
+              - generic: "243501"
+              - generic: CUPS
+            - cell "CUNA DISTAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "243502 CUPS OPERCULECTOMIA Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "243502 CUPS":
+              - generic: "243502"
+              - generic: CUPS
+            - cell "OPERCULECTOMIA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "244101 CUPS ENUCLEACION DE QUISTE ODONTOGENICO HASTA DE TRES CENTIMETROS DE DIAMETRO Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "244101 CUPS":
+              - generic: "244101"
+              - generic: CUPS
+            - cell "ENUCLEACION DE QUISTE ODONTOGENICO HASTA DE TRES CENTIMETROS DE DIAMETRO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "244102 CUPS ENUCLEACION DE QUISTE ODONTOGENICO DE MAS DE TRES CENTIMETROS DE DIAMETRO Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "244102 CUPS":
+              - generic: "244102"
+              - generic: CUPS
+            - cell "ENUCLEACION DE QUISTE ODONTOGENICO DE MAS DE TRES CENTIMETROS DE DIAMETRO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "244103 CUPS RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "244103 CUPS":
+              - generic: "244103"
+              - generic: CUPS
+            - cell "RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "244104 CUPS RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Y RECONSTRUCCION INMEDIATA CON INJERTO OSEO LIBRE Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "244104 CUPS":
+              - generic: "244104"
+              - generic: CUPS
+            - cell "RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Y RECONSTRUCCION INMEDIATA CON INJERTO OSEO LIBRE"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "244105 CUPS RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Y RECONSTRUCCION CON COLGAJO OSEO PEDICULADO Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "244105 CUPS":
+              - generic: "244105"
+              - generic: CUPS
+            - cell "RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Y RECONSTRUCCION CON COLGAJO OSEO PEDICULADO"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "244106 CUPS RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Y RECONSTRUCCION CON COLGAJO OSEO LIBRE Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "244106 CUPS":
+              - generic: "244106"
+              - generic: CUPS
+            - cell "RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Y RECONSTRUCCION CON COLGAJO OSEO LIBRE"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "244107 CUPS RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Y RECONSTRUCCION CON PLACA Odontología general Obturación (clara) Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "244107 CUPS":
+              - generic: "244107"
+              - generic: CUPS
+            - cell "RESECCION DE TUMOR BENIGNO O MALIGNO ODONTOGENICO Y RECONSTRUCCION CON PLACA"
+            - cell "Odontología general"
+            - cell "Obturación (clara)"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "244108 CUPS MARSUPIALIZACION DE QUISTE ODONTOGENICO Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "244108 CUPS":
+              - generic: "244108"
+              - generic: CUPS
+            - cell "MARSUPIALIZACION DE QUISTE ODONTOGENICO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "245101 CUPS REGULARIZACION DE REBORDES Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "245101 CUPS":
+              - generic: "245101"
+              - generic: CUPS
+            - cell "REGULARIZACION DE REBORDES"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "245201 CUPS ALVEOLECTOMIA Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "245201 CUPS":
+              - generic: "245201"
+              - generic: CUPS
+            - cell "ALVEOLECTOMIA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "247001 CUPS COLOCACION DE ANCLAJE TEMPORAL ESQUELETICO Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "247001 CUPS":
+              - generic: "247001"
+              - generic: CUPS
+            - cell "COLOCACION DE ANCLAJE TEMPORAL ESQUELETICO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "247101 CUPS COLOCACION DE APARATOLOGIA FIJA PARA ORTODONCIA (ARCADA) Odontología general, Ortodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "247101 CUPS":
+              - generic: "247101"
+              - generic: CUPS
+            - cell "COLOCACION DE APARATOLOGIA FIJA PARA ORTODONCIA (ARCADA)"
+            - cell "Odontología general, Ortodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "247201 CUPS COLOCACION DE APARATOLOGIA REMOVIBLE INTRAORAL PARA ORTODONCIA (ARCADA) Odontología general, Ortodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "247201 CUPS":
+              - generic: "247201"
+              - generic: CUPS
+            - cell "COLOCACION DE APARATOLOGIA REMOVIBLE INTRAORAL PARA ORTODONCIA (ARCADA)"
+            - cell "Odontología general, Ortodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "247202 CUPS COLOCACION DE APARATOLOGIA REMOVIBLE EXTRAORAL PARA ORTODONCIA (ARCADA) Odontología general, Ortodoncia Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "247202 CUPS":
+              - generic: "247202"
+              - generic: CUPS
+            - cell "COLOCACION DE APARATOLOGIA REMOVIBLE EXTRAORAL PARA ORTODONCIA (ARCADA)"
+            - cell "Odontología general, Ortodoncia"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "247301 CUPS COLOCACION DE APARATOS DE RETENCION Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "247301 CUPS":
+              - generic: "247301"
+              - generic: CUPS
+            - cell "COLOCACION DE APARATOS DE RETENCION"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "247401 CUPS FERULIZACION RIGIDA (SUPERIOR Y/O INFERIOR) Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "247401 CUPS":
+              - generic: "247401"
+              - generic: CUPS
+            - cell "FERULIZACION RIGIDA (SUPERIOR Y/O INFERIOR)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "247402 CUPS FERULIZACION SEMIRIGIDA (SUPERIOR Y/O INFERIOR) Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "247402 CUPS":
+              - generic: "247402"
+              - generic: CUPS
+            - cell "FERULIZACION SEMIRIGIDA (SUPERIOR Y/O INFERIOR)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "247403 CUPS FERULIZACION Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "247403 CUPS":
+              - generic: "247403"
+              - generic: CUPS
+            - cell "FERULIZACION"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "248101 CUPS CIERRE DE DIASTEMA (ALVEOLAR, DENTAL) Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "248101 CUPS":
+              - generic: "248101"
+              - generic: CUPS
+            - cell "CIERRE DE DIASTEMA (ALVEOLAR, DENTAL)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "248201 CUPS AJUSTAMIENTO OCLUSAL Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "248201 CUPS":
+              - generic: "248201"
+              - generic: CUPS
+            - cell "AJUSTAMIENTO OCLUSAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "248401 CUPS REPARACION DE APARATOLOGIA FIJA O REMOVIBLE Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "248401 CUPS":
+              - generic: "248401"
+              - generic: CUPS
+            - cell "REPARACION DE APARATOLOGIA FIJA O REMOVIBLE"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "248801 CUPS COLOCACION DE MASCARA FACIAL TERAPEUTICA Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "248801 CUPS":
+              - generic: "248801"
+              - generic: CUPS
+            - cell "COLOCACION DE MASCARA FACIAL TERAPEUTICA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "249101 CUPS CONTROL DE HEMORRAGIA DENTAL POSQUIRURGICA Odontología general Ninguno Cuadrante PROCEDIMIENTO Agregar servicio con precio":
+            - cell "249101 CUPS":
+              - generic: "249101"
+              - generic: CUPS
+            - cell "CONTROL DE HEMORRAGIA DENTAL POSQUIRURGICA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Cuadrante"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "255903 CUPS PLASTIA DE FRENILLO LINGUAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "255903 CUPS":
+              - generic: "255903"
+              - generic: CUPS
+            - cell "PLASTIA DE FRENILLO LINGUAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "270101 CUPS INCISION Y DRENAJE INTRAORAL EN CAVIDAD BUCAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "270101 CUPS":
+              - generic: "270101"
+              - generic: CUPS
+            - cell "INCISION Y DRENAJE INTRAORAL EN CAVIDAD BUCAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "270102 CUPS INCISION Y DRENAJE EXTRAORAL EN CAVIDAD BUCAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "270102 CUPS":
+              - generic: "270102"
+              - generic: CUPS
+            - cell "INCISION Y DRENAJE EXTRAORAL EN CAVIDAD BUCAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "270103 CUPS INCISION Y DRENAJE EN CAVIDAD BUCAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "270103 CUPS":
+              - generic: "270103"
+              - generic: CUPS
+            - cell "INCISION Y DRENAJE EN CAVIDAD BUCAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "272401 CUPS BIOPSIA POR ASPIRACION CON AGUJA FINA EN CAVIDAD ORAL [BACAF] Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "272401 CUPS":
+              - generic: "272401"
+              - generic: CUPS
+            - cell "BIOPSIA POR ASPIRACION CON AGUJA FINA EN CAVIDAD ORAL [BACAF]"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "272402 CUPS BIOPSIA DE PARED DE CAVIDAD BUCAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "272402 CUPS":
+              - generic: "272402"
+              - generic: CUPS
+            - cell "BIOPSIA DE PARED DE CAVIDAD BUCAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "274301 CUPS RESECCION DE LESION BENIGNA DE LA MUCOSA ORAL HASTA DE DOS CENTIMETROS DE DIAMETRO Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "274301 CUPS":
+              - generic: "274301"
+              - generic: CUPS
+            - cell "RESECCION DE LESION BENIGNA DE LA MUCOSA ORAL HASTA DE DOS CENTIMETROS DE DIAMETRO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "274302 CUPS RESECCION DE LESION BENIGNA DE LA MUCOSA ORAL MAYOR DE DOS CENTIMETROS DE DIAMETRO Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "274302 CUPS":
+              - generic: "274302"
+              - generic: CUPS
+            - cell "RESECCION DE LESION BENIGNA DE LA MUCOSA ORAL MAYOR DE DOS CENTIMETROS DE DIAMETRO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "274305 CUPS RESECCION DE LESION EN MUCOSA ORAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "274305 CUPS":
+              - generic: "274305"
+              - generic: CUPS
+            - cell "RESECCION DE LESION EN MUCOSA ORAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "274902 CUPS RESECCION DE BRIDAS INTRAORALES Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "274902 CUPS":
+              - generic: "274902"
+              - generic: CUPS
+            - cell "RESECCION DE BRIDAS INTRAORALES"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "275201 CUPS ESTOMATORRAFIA (SUTURA DE HERIDA EN MUCOSA ORAL) DE MENOS DE CINCO CENTIMETROS Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "275201 CUPS":
+              - generic: "275201"
+              - generic: CUPS
+            - cell "ESTOMATORRAFIA (SUTURA DE HERIDA EN MUCOSA ORAL) DE MENOS DE CINCO CENTIMETROS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "275202 CUPS ESTOMATORRAFIA (SUTURA DE HERIDA EN MUCOSA ORAL) DE MASDE CINCO CENTIMETROS Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "275202 CUPS":
+              - generic: "275202"
+              - generic: CUPS
+            - cell "ESTOMATORRAFIA (SUTURA DE HERIDA EN MUCOSA ORAL) DE MASDE CINCO CENTIMETROS"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "275301 CUPS RESECCION INTRAORAL DE FISTULA DE BOCA Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "275301 CUPS":
+              - generic: "275301"
+              - generic: CUPS
+            - cell "RESECCION INTRAORAL DE FISTULA DE BOCA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "275303 CUPS CIERRE DE FISTULA OROSINUSAL U ORONASAL CON COLGAJO PALATINO LINGUAL O BUCAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "275303 CUPS":
+              - generic: "275303"
+              - generic: CUPS
+            - cell "CIERRE DE FISTULA OROSINUSAL U ORONASAL CON COLGAJO PALATINO LINGUAL O BUCAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "278201 CUPS INCISION DE ESTRUCTURA NO ESPECIFICADA EN CAVIDAD BUCAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "278201 CUPS":
+              - generic: "278201"
+              - generic: CUPS
+            - cell "INCISION DE ESTRUCTURA NO ESPECIFICADA EN CAVIDAD BUCAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "760101 CUPS SECUESTRECTOMIA INTRAORAL CON FIJACION INTERNA [DISPOSITIVOS DE FIJACION U OSTEOSINTESIS] Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "760101 CUPS":
+              - generic: "760101"
+              - generic: CUPS
+            - cell "SECUESTRECTOMIA INTRAORAL CON FIJACION INTERNA [DISPOSITIVOS DE FIJACION U OSTEOSINTESIS]"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "760103 CUPS SECUESTRECTOMIA INTRAORAL O EXTRAORAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "760103 CUPS":
+              - generic: "760103"
+              - generic: CUPS
+            - cell "SECUESTRECTOMIA INTRAORAL O EXTRAORAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "760901 CUPS OSTEOTOMIA MAXILAR PARA EXTRACCION DE CUERPO EXTRANO Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "760901 CUPS":
+              - generic: "760901"
+              - generic: CUPS
+            - cell "OSTEOTOMIA MAXILAR PARA EXTRACCION DE CUERPO EXTRANO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "761101 CUPS BIOPSIA DE HUESOS MAXILARES Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "761101 CUPS":
+              - generic: "761101"
+              - generic: CUPS
+            - cell "BIOPSIA DE HUESOS MAXILARES"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "761201 CUPS ARTROCENTESIS DIAGNOSTICA DE ARTICULACION TEMPOROMANDIBULAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "761201 CUPS":
+              - generic: "761201"
+              - generic: CUPS
+            - cell "ARTROCENTESIS DIAGNOSTICA DE ARTICULACION TEMPOROMANDIBULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "761301 CUPS ARTROSCOPIA DIAGNOSTICA DE ARTICULACION TEMPOROMANDIBULAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "761301 CUPS":
+              - generic: "761301"
+              - generic: CUPS
+            - cell "ARTROSCOPIA DIAGNOSTICA DE ARTICULACION TEMPOROMANDIBULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "762101 CUPS ENUCLEACION RESECCION Y CURETAJE DE LESIONES BENIGNAS EN MAXILAR SUPERIOR O INFERIOR DE MENOS DE TRES CMS VIA TRANSMUCOSA Odontología general, Periodoncia Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "762101 CUPS":
+              - generic: "762101"
+              - generic: CUPS
+            - cell "ENUCLEACION RESECCION Y CURETAJE DE LESIONES BENIGNAS EN MAXILAR SUPERIOR O INFERIOR DE MENOS DE TRES CMS VIA TRANSMUCOSA"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "762102 CUPS ENUCLEACION RESECCION Y CURETAJE DE LESIONES BENIGNAS EN MAXILAR SUPERIOR O INFERIOR DE MENOS DE TRES CMS VIA TRANSCUTANEA Odontología general, Periodoncia Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "762102 CUPS":
+              - generic: "762102"
+              - generic: CUPS
+            - cell "ENUCLEACION RESECCION Y CURETAJE DE LESIONES BENIGNAS EN MAXILAR SUPERIOR O INFERIOR DE MENOS DE TRES CMS VIA TRANSCUTANEA"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "762103 CUPS ENUCLEACION RESECCION Y CURETAJE DE LESIONES BENIGNAS EN MAXILAR SUPERIOR O INFERIOR DE MAS DE TRES CMS VIA TRANSMUCOSA Odontología general, Periodoncia Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "762103 CUPS":
+              - generic: "762103"
+              - generic: CUPS
+            - cell "ENUCLEACION RESECCION Y CURETAJE DE LESIONES BENIGNAS EN MAXILAR SUPERIOR O INFERIOR DE MAS DE TRES CMS VIA TRANSMUCOSA"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "762104 CUPS ENUCLEACION RESECCION Y CURETAJE DE LESIONES BENIGNAS EN MAXILAR SUPERIOR O INFERIOR DE MAS DE TRES CMS VIA TRANSCUTANEA Odontología general, Periodoncia Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "762104 CUPS":
+              - generic: "762104"
+              - generic: CUPS
+            - cell "ENUCLEACION RESECCION Y CURETAJE DE LESIONES BENIGNAS EN MAXILAR SUPERIOR O INFERIOR DE MAS DE TRES CMS VIA TRANSCUTANEA"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "762105 CUPS ELIMINACION DE EXOSTOSIS Y/O TUBEROSIDADES FIBROSAS EN MAXILAR SUPERIOR O INFERIOR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "762105 CUPS":
+              - generic: "762105"
+              - generic: CUPS
+            - cell "ELIMINACION DE EXOSTOSIS Y/O TUBEROSIDADES FIBROSAS EN MAXILAR SUPERIOR O INFERIOR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "762301 CUPS ESCLEROSIS DE REBORDE DE MAXILAR SUPERIOR O INFERIOR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "762301 CUPS":
+              - generic: "762301"
+              - generic: CUPS
+            - cell "ESCLEROSIS DE REBORDE DE MAXILAR SUPERIOR O INFERIOR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "766401 CUPS OSTEOTOMIA SUBAPICAL MANDIBULAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "766401 CUPS":
+              - generic: "766401"
+              - generic: CUPS
+            - cell "OSTEOTOMIA SUBAPICAL MANDIBULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "766402 CUPS CORTICOTOMIA MANDIBULAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "766402 CUPS":
+              - generic: "766402"
+              - generic: CUPS
+            - cell "CORTICOTOMIA MANDIBULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "767701 CUPS REDUCCION ABIERTA DE FRACTURAS DENTOALVEOLARES CON FIJACION Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "767701 CUPS":
+              - generic: "767701"
+              - generic: CUPS
+            - cell "REDUCCION ABIERTA DE FRACTURAS DENTOALVEOLARES CON FIJACION"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "767702 CUPS REDUCCION ABIERTA DE FRACTURAS DENTOALVEOLARES CON REIMPLANTE HASTA TRES DIENTES CON FIJACION Odontología general, Cirugía oral, Implantología Implante Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "767702 CUPS":
+              - generic: "767702"
+              - generic: CUPS
+            - cell "REDUCCION ABIERTA DE FRACTURAS DENTOALVEOLARES CON REIMPLANTE HASTA TRES DIENTES CON FIJACION"
+            - cell "Odontología general, Cirugía oral, Implantología"
+            - cell "Implante"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "767703 CUPS REDUCCION ABIERTA DE FRACTURAS DENTOALVEOLARES CON REIMPLANTE DE MAS DE TRES DIENTES CON FIJACION Odontología general, Cirugía oral, Implantología Implante Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "767703 CUPS":
+              - generic: "767703"
+              - generic: CUPS
+            - cell "REDUCCION ABIERTA DE FRACTURAS DENTOALVEOLARES CON REIMPLANTE DE MAS DE TRES DIENTES CON FIJACION"
+            - cell "Odontología general, Cirugía oral, Implantología"
+            - cell "Implante"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "767705 CUPS REDUCCION Y FIJACION DE LUXACION DENTO ALVEOLAR QUE COMPROMETE HASTA TRES DIENTES Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "767705 CUPS":
+              - generic: "767705"
+              - generic: CUPS
+            - cell "REDUCCION Y FIJACION DE LUXACION DENTO ALVEOLAR QUE COMPROMETE HASTA TRES DIENTES"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "767706 CUPS REDUCCION Y FIJACION DE LUXACION DENTO ALVEOLAR QUE COMPROMETE MAS DE TRES DIENTES Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "767706 CUPS":
+              - generic: "767706"
+              - generic: CUPS
+            - cell "REDUCCION Y FIJACION DE LUXACION DENTO ALVEOLAR QUE COMPROMETE MAS DE TRES DIENTES"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "767802 CUPS REDUCCION CERRADA DE FRACTURAS ALVEOLARES CON REIMPLANTE DENTAL Y FIJACION Odontología general, Cirugía oral, Implantología Implante Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "767802 CUPS":
+              - generic: "767802"
+              - generic: CUPS
+            - cell "REDUCCION CERRADA DE FRACTURAS ALVEOLARES CON REIMPLANTE DENTAL Y FIJACION"
+            - cell "Odontología general, Cirugía oral, Implantología"
+            - cell "Implante"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "768110 CUPS INJERTO OSEO AUTOLOGO O HETEROLOGO POR REBORDE ALVEOLAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "768110 CUPS":
+              - generic: "768110"
+              - generic: CUPS
+            - cell "INJERTO OSEO AUTOLOGO O HETEROLOGO POR REBORDE ALVEOLAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "768301 CUPS REDUCCION CERRADA DE LUXACION ARTICULACION TEMPORO MANDIBULAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "768301 CUPS":
+              - generic: "768301"
+              - generic: CUPS
+            - cell "REDUCCION CERRADA DE LUXACION ARTICULACION TEMPORO MANDIBULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "768302 CUPS REDUCCION CERRADA DE LUXACION ARTICULACION TEMPORO MANDIBULAR CON FIJACION INTERMAXILAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "768302 CUPS":
+              - generic: "768302"
+              - generic: CUPS
+            - cell "REDUCCION CERRADA DE LUXACION ARTICULACION TEMPORO MANDIBULAR CON FIJACION INTERMAXILAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "768601 CUPS INYECCION DE SUSTANCIA TERAPEUTICA EN ARTICULACION TEMPOROMANDIBULAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "768601 CUPS":
+              - generic: "768601"
+              - generic: CUPS
+            - cell "INYECCION DE SUSTANCIA TERAPEUTICA EN ARTICULACION TEMPOROMANDIBULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870101 CUPS RADIOGRAFIA DE CARA (PERFILOGRAMA) Odontología general, Radiología oral Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870101 CUPS":
+              - generic: "870101"
+              - generic: CUPS
+            - cell "RADIOGRAFIA DE CARA (PERFILOGRAMA)"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870112 CUPS RADIOGRAFIA DE MAXILAR SUPERIOR Odontología general, Radiología oral Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870112 CUPS":
+              - generic: "870112"
+              - generic: CUPS
+            - cell "RADIOGRAFIA DE MAXILAR SUPERIOR"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870113 CUPS RADIOGRAFIA DE MAXILAR INFERIOR Odontología general, Radiología oral Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870113 CUPS":
+              - generic: "870113"
+              - generic: CUPS
+            - cell "RADIOGRAFIA DE MAXILAR INFERIOR"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870114 CUPS RADIOGRAFIA PANORAMICA DE MAXILARES SUPERIOR E INFERIOR (ORTOPANTOMOGRAFIA) Odontología general, Radiología oral Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870114 CUPS":
+              - generic: "870114"
+              - generic: CUPS
+            - cell "RADIOGRAFIA PANORAMICA DE MAXILARES SUPERIOR E INFERIOR (ORTOPANTOMOGRAFIA)"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870131 CUPS RADIOGRAFIA DE ARTICULACION TEMPOROMAXILAR (ATM) Odontología general, Radiología oral Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870131 CUPS":
+              - generic: "870131"
+              - generic: CUPS
+            - cell "RADIOGRAFIA DE ARTICULACION TEMPOROMAXILAR (ATM)"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870440 CUPS RADIOGRAFIAS INTRAORALES OCLUSALES Odontología general, Radiología oral Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870440 CUPS":
+              - generic: "870440"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES OCLUSALES"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870450 CUPS RADIOGRAFIAS INTRAORALES PERIAPICALES MILIMETRADAS Odontología general, Radiología oral Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870450 CUPS":
+              - generic: "870450"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES PERIAPICALES MILIMETRADAS"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870451 CUPS RADIOGRAFIAS INTRAORALES PERIAPICALES DIENTES ANTERIORES SUPERIORES Odontología general, Radiología oral Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870451 CUPS":
+              - generic: "870451"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES PERIAPICALES DIENTES ANTERIORES SUPERIORES"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870452 CUPS RADIOGRAFIAS INTRAORALES PERIAPICALES DIENTES ANTERIORES INFERIORES Odontología general, Radiología oral Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870452 CUPS":
+              - generic: "870452"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES PERIAPICALES DIENTES ANTERIORES INFERIORES"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870453 CUPS RADIOGRAFIAS INTRAORALES PERIAPICALES ZONA DE CANINOS Odontología general, Radiología oral Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870453 CUPS":
+              - generic: "870453"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES PERIAPICALES ZONA DE CANINOS"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870454 CUPS RADIOGRAFIAS INTRAORALES PERIAPICALES PREMOLARES Odontología general, Radiología oral Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870454 CUPS":
+              - generic: "870454"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES PERIAPICALES PREMOLARES"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870455 CUPS RADIOGRAFIAS INTRAORALES PERIAPICALES MOLARES Odontología general, Radiología oral Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870455 CUPS":
+              - generic: "870455"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES PERIAPICALES MOLARES"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870456 CUPS RADIOGRAFIAS INTRAORALES PERIAPICALES JUEGO COMPLETO Odontología general, Radiología oral Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870456 CUPS":
+              - generic: "870456"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES PERIAPICALES JUEGO COMPLETO"
+            - cell "Odontología general, Radiología oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "870460 CUPS RADIOGRAFIAS INTRAORALES CORONALES Odontología general, Rehabilitación oral, Radiología oral Ninguno Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "870460 CUPS":
+              - generic: "870460"
+              - generic: CUPS
+            - cell "RADIOGRAFIAS INTRAORALES CORONALES"
+            - cell "Odontología general, Rehabilitación oral, Radiología oral"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "874510 CUPS ARTROGRAFIA DE ARTICULACION TEMPORO MANDIBULAR Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "874510 CUPS":
+              - generic: "874510"
+              - generic: CUPS
+            - cell "ARTROGRAFIA DE ARTICULACION TEMPORO MANDIBULAR"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "879141 CUPS TOMOGRAFIA AXIAL COMPUTADA DE MAXILARES [ESTUDIO IMPLANTOLOGIA] Odontología general, Implantología, Radiología oral Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "879141 CUPS":
+              - generic: "879141"
+              - generic: CUPS
+            - cell "TOMOGRAFIA AXIAL COMPUTADA DE MAXILARES [ESTUDIO IMPLANTOLOGIA]"
+            - cell "Odontología general, Implantología, Radiología oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890103 CUPS ATENCION [VISITA] DOMICILIARIA POR ODONTOLOGIA GENERAL Odontología general Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890103 CUPS":
+              - generic: "890103"
+              - generic: CUPS
+            - cell "ATENCION [VISITA] DOMICILIARIA POR ODONTOLOGIA GENERAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890203 CUPS CONSULTA DE PRIMERA VEZ POR ODONTOLOGIA GENERAL Odontología general Ninguno Boca CONSULTA Agregar servicio con precio Visibilidad en el catálogo":
+            - cell "890203 CUPS":
+              - generic: "890203"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ODONTOLOGIA GENERAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio Visibilidad en el catálogo":
+              - button "Agregar servicio con precio"
+              - button "Visibilidad en el catálogo"
+          - row "890204 CUPS CONSULTA DE PRIMERA VEZ POR ODONTOLOGIA ESPECIALIZADA Odontología general Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890204 CUPS":
+              - generic: "890204"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ODONTOLOGIA ESPECIALIZADA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890217 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN CIRUGIA ORAL Odontología general, Cirugía oral Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890217 CUPS":
+              - generic: "890217"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN CIRUGIA ORAL"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890218 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN ENDODONCIA Odontología general, Endodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890218 CUPS":
+              - generic: "890218"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN ENDODONCIA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890219 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN ESTOMATOLOGIA Y CIRUGIA ORAL Odontología general, Cirugía oral, Estomatología Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890219 CUPS":
+              - generic: "890219"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN ESTOMATOLOGIA Y CIRUGIA ORAL"
+            - cell "Odontología general, Cirugía oral, Estomatología"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890220 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN ODONTOPEDIATRIA Odontología general, Odontopediatría Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890220 CUPS":
+              - generic: "890220"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN ODONTOPEDIATRIA"
+            - cell "Odontología general, Odontopediatría"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890221 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN PERIODONCIA Odontología general, Periodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890221 CUPS":
+              - generic: "890221"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN PERIODONCIA"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890222 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN ORTODONCIA Odontología general, Ortodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890222 CUPS":
+              - generic: "890222"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN ORTODONCIA"
+            - cell "Odontología general, Ortodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890223 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN RADIOLOGIA ORAL Y MAXILOFACIAL Odontología general, Cirugía maxilofacial Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890223 CUPS":
+              - generic: "890223"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN RADIOLOGIA ORAL Y MAXILOFACIAL"
+            - cell "Odontología general, Cirugía maxilofacial"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890224 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN REHABILITACION ORAL Odontología general, Rehabilitación oral Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890224 CUPS":
+              - generic: "890224"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN REHABILITACION ORAL"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890236 CUPS CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN CIRUGIA MAXILOFACIAL Odontología general, Cirugía maxilofacial Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890236 CUPS":
+              - generic: "890236"
+              - generic: CUPS
+            - cell "CONSULTA DE PRIMERA VEZ POR ESPECIALISTA EN CIRUGIA MAXILOFACIAL"
+            - cell "Odontología general, Cirugía maxilofacial"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890303 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ODONTOLOGIA GENERAL Odontología general Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890303 CUPS":
+              - generic: "890303"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ODONTOLOGIA GENERAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890304 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ODONTOLOGIA ESPECIALIZADA Odontología general Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890304 CUPS":
+              - generic: "890304"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ODONTOLOGIA ESPECIALIZADA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890317 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN CIRUGIA ORAL Odontología general, Cirugía oral Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890317 CUPS":
+              - generic: "890317"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN CIRUGIA ORAL"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890318 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN ENDODONCIA Odontología general, Endodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890318 CUPS":
+              - generic: "890318"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN ENDODONCIA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890319 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN ESTOMATOLOGIA Y CIRUGIA ORAL Estomatología, Odontología general, Cirugía oral Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890319 CUPS":
+              - generic: "890319"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN ESTOMATOLOGIA Y CIRUGIA ORAL"
+            - cell "Estomatología, Odontología general, Cirugía oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890320 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN ODONTOPEDIATRIA Odontología general, Odontopediatría Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890320 CUPS":
+              - generic: "890320"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN ODONTOPEDIATRIA"
+            - cell "Odontología general, Odontopediatría"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890321 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN PERIODONCIA Odontología general, Periodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890321 CUPS":
+              - generic: "890321"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN PERIODONCIA"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890322 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN ORTODONCIA Odontología general, Ortodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890322 CUPS":
+              - generic: "890322"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN ORTODONCIA"
+            - cell "Odontología general, Ortodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890323 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN RADIOLOGIA ORAL Y MAXILOFACIAL Odontología general, Cirugía maxilofacial Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890323 CUPS":
+              - generic: "890323"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN RADIOLOGIA ORAL Y MAXILOFACIAL"
+            - cell "Odontología general, Cirugía maxilofacial"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890324 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN REHABILITACION ORAL Odontología general, Rehabilitación oral Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890324 CUPS":
+              - generic: "890324"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN REHABILITACION ORAL"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890336 CUPS CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN CIRUGIA MAXILOFACIAL Odontología general, Cirugía maxilofacial Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890336 CUPS":
+              - generic: "890336"
+              - generic: CUPS
+            - cell "CONSULTA DE CONTROL O DE SEGUIMIENTO POR ESPECIALISTA EN CIRUGIA MAXILOFACIAL"
+            - cell "Odontología general, Cirugía maxilofacial"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890403 CUPS INTERCONSULTA POR ODONTOLOGIA GENERAL Odontología general Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890403 CUPS":
+              - generic: "890403"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ODONTOLOGIA GENERAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890404 CUPS INTERCONSULTA POR ODONTOLOGIA ESPECIALIZADA Odontología general Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890404 CUPS":
+              - generic: "890404"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ODONTOLOGIA ESPECIALIZADA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890417 CUPS INTERCONSULTA POR ESPECIALISTA EN CIRUGIA ORAL Odontología general, Cirugía oral Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890417 CUPS":
+              - generic: "890417"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN CIRUGIA ORAL"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890418 CUPS INTERCONSULTA POR ESPECIALISTA EN ENDODONCIA Odontología general, Endodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890418 CUPS":
+              - generic: "890418"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN ENDODONCIA"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890419 CUPS INTERCONSULTA POR ESPECIALISTA EN ESTOMATOLOGIA Y CIRUGIA ORAL Odontología general, Cirugía oral, Estomatología Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890419 CUPS":
+              - generic: "890419"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN ESTOMATOLOGIA Y CIRUGIA ORAL"
+            - cell "Odontología general, Cirugía oral, Estomatología"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890420 CUPS INTERCONSULTA POR ESPECIALISTA EN ODONTOPEDIATRIA Odontología general, Odontopediatría Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890420 CUPS":
+              - generic: "890420"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN ODONTOPEDIATRIA"
+            - cell "Odontología general, Odontopediatría"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890421 CUPS INTERCONSULTA POR ESPECIALISTA EN PERIODONCIA Odontología general, Periodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890421 CUPS":
+              - generic: "890421"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN PERIODONCIA"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890422 CUPS INTERCONSULTA POR ESPECIALISTA EN ORTODONCIA Odontología general, Ortodoncia Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890422 CUPS":
+              - generic: "890422"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN ORTODONCIA"
+            - cell "Odontología general, Ortodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890423 CUPS INTERCONSULTA POR ESPECIALISTA EN RADIOLOGIA ORAL Y MAXILOFACIAL Odontología general, Cirugía maxilofacial Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890423 CUPS":
+              - generic: "890423"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN RADIOLOGIA ORAL Y MAXILOFACIAL"
+            - cell "Odontología general, Cirugía maxilofacial"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890424 CUPS INTERCONSULTA POR ESPECIALISTA EN REHABILITACION ORAL Odontología general, Rehabilitación oral Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890424 CUPS":
+              - generic: "890424"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN REHABILITACION ORAL"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890436 CUPS INTERCONSULTA POR ESPECIALISTA EN CIRUGIA MAXILOFACIAL Odontología general, Cirugía maxilofacial Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890436 CUPS":
+              - generic: "890436"
+              - generic: CUPS
+            - cell "INTERCONSULTA POR ESPECIALISTA EN CIRUGIA MAXILOFACIAL"
+            - cell "Odontología general, Cirugía maxilofacial"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890703 CUPS CONSULTA DE URGENCIAS POR ODONTOLOGIA GENERAL Odontología general Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890703 CUPS":
+              - generic: "890703"
+              - generic: CUPS
+            - cell "CONSULTA DE URGENCIAS POR ODONTOLOGIA GENERAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "890704 CUPS CONSULTA DE URGENCIAS POR ODONTOLOGIA ESPECIALIZADA Odontología general Ninguno Boca CONSULTA Agregar servicio con precio":
+            - cell "890704 CUPS":
+              - generic: "890704"
+              - generic: CUPS
+            - cell "CONSULTA DE URGENCIAS POR ODONTOLOGIA ESPECIALIZADA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "CONSULTA"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "893101 CUPS IMPRESION DE ARCO DENTARIO SUPERIOR O INFERIOR CON MODELO DE ESTUDIO Y CONCEPTO Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "893101 CUPS":
+              - generic: "893101"
+              - generic: CUPS
+            - cell "IMPRESION DE ARCO DENTARIO SUPERIOR O INFERIOR CON MODELO DE ESTUDIO Y CONCEPTO"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "990103 CUPS EDUCACION GRUPAL EN SALUD POR ODONTOLOGIA Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "990103 CUPS":
+              - generic: "990103"
+              - generic: CUPS
+            - cell "EDUCACION GRUPAL EN SALUD POR ODONTOLOGIA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "990112 CUPS EDUCACION GRUPAL EN SALUD POR HIGIENE ORAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "990112 CUPS":
+              - generic: "990112"
+              - generic: CUPS
+            - cell "EDUCACION GRUPAL EN SALUD POR HIGIENE ORAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "990203 CUPS EDUCACION INDIVIDUAL EN SALUD POR ODONTOLOGIA Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "990203 CUPS":
+              - generic: "990203"
+              - generic: CUPS
+            - cell "EDUCACION INDIVIDUAL EN SALUD POR ODONTOLOGIA"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "990212 CUPS EDUCACION INDIVIDUAL EN SALUD POR HIGIENE ORAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "990212 CUPS":
+              - generic: "990212"
+              - generic: CUPS
+            - cell "EDUCACION INDIVIDUAL EN SALUD POR HIGIENE ORAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997001 CUPS PROFILAXIS DENTAL O PULIDO CORONAL Odontología general, Rehabilitación oral Corona (clara) Diente PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997001 CUPS":
+              - generic: "997001"
+              - generic: CUPS
+            - cell "PROFILAXIS DENTAL O PULIDO CORONAL"
+            - cell "Odontología general, Rehabilitación oral"
+            - cell "Corona (clara)"
+            - cell "Diente"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997002 CUPS CONTROL DE PLACA DENTAL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997002 CUPS":
+              - generic: "997002"
+              - generic: CUPS
+            - cell "CONTROL DE PLACA DENTAL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997101 CUPS APLICACION DE SELLANTES DE AUTOCURADO Odontología general Sellante Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997101 CUPS":
+              - generic: "997101"
+              - generic: CUPS
+            - cell "APLICACION DE SELLANTES DE AUTOCURADO"
+            - cell "Odontología general"
+            - cell "Sellante"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997102 CUPS APLICACION DE SELLANTES DE FOTOCURADO Odontología general Sellante Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997102 CUPS":
+              - generic: "997102"
+              - generic: CUPS
+            - cell "APLICACION DE SELLANTES DE FOTOCURADO"
+            - cell "Odontología general"
+            - cell "Sellante"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997103 CUPS TOPICACION DE FLUOR EN GEL Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997103 CUPS":
+              - generic: "997103"
+              - generic: CUPS
+            - cell "TOPICACION DE FLUOR EN GEL"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997104 CUPS TOPICACION DE FLUOR EN SOLUCION Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997104 CUPS":
+              - generic: "997104"
+              - generic: CUPS
+            - cell "TOPICACION DE FLUOR EN SOLUCION"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997106 CUPS TOPICACION DE FLUOR EN BARNIZ Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997106 CUPS":
+              - generic: "997106"
+              - generic: CUPS
+            - cell "TOPICACION DE FLUOR EN BARNIZ"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997107 CUPS APLICACION DE SELLANTES Odontología general Sellante Superficie PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997107 CUPS":
+              - generic: "997107"
+              - generic: CUPS
+            - cell "APLICACION DE SELLANTES"
+            - cell "Odontología general"
+            - cell "Sellante"
+            - cell "Superficie"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997301 CUPS DETARTRAJE SUPRAGINGIVAL Odontología general, Periodoncia Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997301 CUPS":
+              - generic: "997301"
+              - generic: CUPS
+            - cell "DETARTRAJE SUPRAGINGIVAL"
+            - cell "Odontología general, Periodoncia"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "997310 CUPS CONTROL DE PLACA DENTAL NCOC Odontología general Ninguno Boca PROCEDIMIENTO Agregar servicio con precio":
+            - cell "997310 CUPS":
+              - generic: "997310"
+              - generic: CUPS
+            - cell "CONTROL DE PLACA DENTAL NCOC"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "PROCEDIMIENTO"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-ABUTMENT_TITANIO AVANCE Pilar / abutment definitivo de titanio Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-ABUTMENT_TITANIO AVANCE":
+              - generic: AV-ABUTMENT_TITANIO
+              - generic: AVANCE
+            - cell "Pilar / abutment definitivo de titanio"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-ALINEADORES_INVISIBLES AVANCE Alineadores invisibles (25 o más) Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-ALINEADORES_INVISIBLES AVANCE":
+              - generic: AV-ALINEADORES_INVISIBLES
+              - generic: AVANCE
+            - cell "Alineadores invisibles (25 o más)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-BIO_OSS_0_5 AVANCE Injerto Bio-Oss 0,5 cc Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-BIO_OSS_0_5 AVANCE":
+              - generic: AV-BIO_OSS_0_5
+              - generic: AVANCE
+            - cell "Injerto Bio-Oss 0,5 cc"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-BIO_OSS_1_0 AVANCE Injerto Bio-Oss 1,0 g Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-BIO_OSS_1_0 AVANCE":
+              - generic: AV-BIO_OSS_1_0
+              - generic: AVANCE
+            - cell "Injerto Bio-Oss 1,0 g"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-ESTRUCTURA_PEEK AVANCE Estructura en PEEK Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-ESTRUCTURA_PEEK AVANCE":
+              - generic: AV-ESTRUCTURA_PEEK
+              - generic: AVANCE
+            - cell "Estructura en PEEK"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-GUIA_CIRUGIA AVANCE Guía quirúrgica Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-GUIA_CIRUGIA AVANCE":
+              - generic: AV-GUIA_CIRUGIA
+              - generic: AVANCE
+            - cell "Guía quirúrgica"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-IMPLANTE_OSEO AVANCE Implante de oseointegración (dispositivo) Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-IMPLANTE_OSEO AVANCE":
+              - generic: AV-IMPLANTE_OSEO
+              - generic: AVANCE
+            - cell "Implante de oseointegración (dispositivo)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-INSUMOS_CIRUGIA AVANCE Insumos de cirugía Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-INSUMOS_CIRUGIA AVANCE":
+              - generic: AV-INSUMOS_CIRUGIA
+              - generic: AVANCE
+            - cell "Insumos de cirugía"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-INSUMOS_FASE_PROTESICA AVANCE Insumos de fase protésica Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-INSUMOS_FASE_PROTESICA AVANCE":
+              - generic: AV-INSUMOS_FASE_PROTESICA
+              - generic: AVANCE
+            - cell "Insumos de fase protésica"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-KIT_BLANQUEAMIENTO_CASA AVANCE Kit de blanqueamiento en casa (fundas y gel) Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-KIT_BLANQUEAMIENTO_CASA AVANCE":
+              - generic: AV-KIT_BLANQUEAMIENTO_CASA
+              - generic: AVANCE
+            - cell "Kit de blanqueamiento en casa (fundas y gel)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-MEMBRANA_CYTOPLAST_12X20_TI AVANCE Membrana Cytoplast TXT 12x20 con titanio Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-MEMBRANA_CYTOPLAST_12X20_TI AVANCE":
+              - generic: AV-MEMBRANA_CYTOPLAST_12X20_TI
+              - generic: AVANCE
+            - cell "Membrana Cytoplast TXT 12x20 con titanio"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-MEMBRANA_CYTOPLAST_12X24 AVANCE Membrana Cytoplast TXT 12x24 Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-MEMBRANA_CYTOPLAST_12X24 AVANCE":
+              - generic: AV-MEMBRANA_CYTOPLAST_12X24
+              - generic: AVANCE
+            - cell "Membrana Cytoplast TXT 12x24"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-MEMBRANA_OSTEOLIFE_15X22 AVANCE Membrana de colágeno Osteolife 15x22 Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-MEMBRANA_OSTEOLIFE_15X22 AVANCE":
+              - generic: AV-MEMBRANA_OSTEOLIFE_15X22
+              - generic: AVANCE
+            - cell "Membrana de colágeno Osteolife 15x22"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-MEMBRANA_OSTEOLIFE_20X30 AVANCE Membrana de colágeno Osteolife 20x30 Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-MEMBRANA_OSTEOLIFE_20X30 AVANCE":
+              - generic: AV-MEMBRANA_OSTEOLIFE_20X30
+              - generic: AVANCE
+            - cell "Membrana de colágeno Osteolife 20x30"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-PORCELANA_ROSADA AVANCE Adición de porcelana rosada (por diente) Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-PORCELANA_ROSADA AVANCE":
+              - generic: AV-PORCELANA_ROSADA
+              - generic: AVANCE
+            - cell "Adición de porcelana rosada (por diente)"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-SEDACION_NITROSO AVANCE Hora de sedación inhalada con óxido nitroso Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-SEDACION_NITROSO AVANCE":
+              - generic: AV-SEDACION_NITROSO
+              - generic: AVANCE
+            - cell "Hora de sedación inhalada con óxido nitroso"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-TACHUELAS_MEMBRANA AVANCE Tachuelas de fijación para membrana Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-TACHUELAS_MEMBRANA AVANCE":
+              - generic: AV-TACHUELAS_MEMBRANA
+              - generic: AVANCE
+            - cell "Tachuelas de fijación para membrana"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "AV-TAPA_CICATRIZACION AVANCE Tapa de cicatrización Odontología general Ninguno Boca OTROS_SERVICIOS Agregar servicio con precio":
+            - cell "AV-TAPA_CICATRIZACION AVANCE":
+              - generic: AV-TAPA_CICATRIZACION
+              - generic: AVANCE
+            - cell "Tapa de cicatrización"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Boca"
+            - cell "OTROS_SERVICIOS"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_ACUTE_ABSCESS AVANCE Condición Absceso apical agudo Endodoncia, Odontología general Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_ACUTE_ABSCESS AVANCE Condición":
+              - generic: COND_ACUTE_ABSCESS
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Absceso apical agudo"
+            - cell "Endodoncia, Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_APICAL_ASYMPT AVANCE Condición Periodontitis apical asintomática Odontología general, Endodoncia Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_APICAL_ASYMPT AVANCE Condición":
+              - generic: COND_APICAL_ASYMPT
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Periodontitis apical asintomática"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_APICAL_NORMAL AVANCE Condición Ápice normal Odontología general, Endodoncia Texto Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_APICAL_NORMAL AVANCE Condición":
+              - generic: COND_APICAL_NORMAL
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Ápice normal"
+            - cell "Odontología general, Endodoncia"
+            - cell "Texto"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_APICAL_SYMPT AVANCE Condición Periodontitis apical sintomática Odontología general, Endodoncia Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_APICAL_SYMPT AVANCE Condición":
+              - generic: COND_APICAL_SYMPT
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Periodontitis apical sintomática"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_CARIES AVANCE Condición Caries Odontología general Ninguno Superficie NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_CARIES AVANCE Condición":
+              - generic: COND_CARIES
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Caries"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Superficie"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_CHRONIC_ABSCESS AVANCE Condición Absceso apical crónico Endodoncia, Odontología general Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_CHRONIC_ABSCESS AVANCE Condición":
+              - generic: COND_CHRONIC_ABSCESS
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Absceso apical crónico"
+            - cell "Endodoncia, Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_DEFECTIVE_RESTORATION AVANCE Condición Restauración defectuosa Odontología general Ninguno Superficie NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_DEFECTIVE_RESTORATION AVANCE Condición":
+              - generic: COND_DEFECTIVE_RESTORATION
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Restauración defectuosa"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Superficie"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_DISCOLORATION AVANCE Condición Discromía Odontología general Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_DISCOLORATION AVANCE Condición":
+              - generic: COND_DISCOLORATION
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Discromía"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_FRACTURE AVANCE Condición Fractura Odontología general Ninguno Superficie NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_FRACTURE AVANCE Condición":
+              - generic: COND_FRACTURE
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Fractura"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Superficie"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_IMPACTED AVANCE Condición Diente impactado Odontología general, Cirugía oral Texto Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_IMPACTED AVANCE Condición":
+              - generic: COND_IMPACTED
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Diente impactado"
+            - cell "Odontología general, Cirugía oral"
+            - cell "Texto"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_MOBILITY AVANCE Condición Movilidad Periodoncia, Odontología general Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_MOBILITY AVANCE Condición":
+              - generic: COND_MOBILITY
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Movilidad"
+            - cell "Periodoncia, Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_PULP_ASYMPT_IRREVERSIBLE AVANCE Condición Pulpitis irreversible asintomática Odontología general, Endodoncia Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_PULP_ASYMPT_IRREVERSIBLE AVANCE Condición":
+              - generic: COND_PULP_ASYMPT_IRREVERSIBLE
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Pulpitis irreversible asintomática"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_PULP_NECROSIS AVANCE Condición Necrosis pulpar Endodoncia, Odontología general Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_PULP_NECROSIS AVANCE Condición":
+              - generic: COND_PULP_NECROSIS
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Necrosis pulpar"
+            - cell "Endodoncia, Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_PULP_NORMAL AVANCE Condición Pulpa normal Endodoncia, Odontología general Texto Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_PULP_NORMAL AVANCE Condición":
+              - generic: COND_PULP_NORMAL
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Pulpa normal"
+            - cell "Endodoncia, Odontología general"
+            - cell "Texto"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_PULP_PREV_INITIATED AVANCE Condición Terapia pulpar iniciada Endodoncia, Odontología general Texto Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_PULP_PREV_INITIATED AVANCE Condición":
+              - generic: COND_PULP_PREV_INITIATED
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Terapia pulpar iniciada"
+            - cell "Endodoncia, Odontología general"
+            - cell "Texto"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_PULP_PREV_TREATED AVANCE Condición Pulpa previamente tratada Endodoncia, Odontología general Texto Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_PULP_PREV_TREATED AVANCE Condición":
+              - generic: COND_PULP_PREV_TREATED
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Pulpa previamente tratada"
+            - cell "Endodoncia, Odontología general"
+            - cell "Texto"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_PULP_REVERSIBLE AVANCE Condición Pulpitis reversible Odontología general, Endodoncia Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_PULP_REVERSIBLE AVANCE Condición":
+              - generic: COND_PULP_REVERSIBLE
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Pulpitis reversible"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_PULP_SYMPT_IRREVERSIBLE AVANCE Condición Pulpitis irreversible sintomática Odontología general, Endodoncia Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_PULP_SYMPT_IRREVERSIBLE AVANCE Condición":
+              - generic: COND_PULP_SYMPT_IRREVERSIBLE
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Pulpitis irreversible sintomática"
+            - cell "Odontología general, Endodoncia"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_RETAINED_ROOT AVANCE Condición Raíz retenida Cirugía oral, Odontología general Raíz retenida Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_RETAINED_ROOT AVANCE Condición":
+              - generic: COND_RETAINED_ROOT
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Raíz retenida"
+            - cell "Cirugía oral, Odontología general"
+            - cell "Raíz retenida"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_ROOT_CARIES AVANCE Condición Caries de raíz Odontología general Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_ROOT_CARIES AVANCE Condición":
+              - generic: COND_ROOT_CARIES
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Caries de raíz"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_WATCH AVANCE Condición En observación Odontología general Texto Superficie NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_WATCH AVANCE Condición":
+              - generic: COND_WATCH
+              - generic: AVANCE
+              - generic: Condición
+            - cell "En observación"
+            - cell "Odontología general"
+            - cell "Texto"
+            - cell "Superficie"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+          - row "COND_WEAR AVANCE Condición Desgaste Odontología general Ninguno Diente NOT_HEALTH_TECHNOLOGY Agregar servicio con precio":
+            - cell "COND_WEAR AVANCE Condición":
+              - generic: COND_WEAR
+              - generic: AVANCE
+              - generic: Condición
+            - cell "Desgaste"
+            - cell "Odontología general"
+            - cell "Ninguno"
+            - cell "Diente"
+            - cell "NOT_HEALTH_TECHNOLOGY"
+            - cell "Agregar servicio con precio":
+              - button "Agregar servicio con precio"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Avance

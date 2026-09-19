@@ -1,0 +1,30 @@
+import { params } from "../routes.js";
+import { adminPage, adminTable, action, heading, input, select, status } from "../widgets/clinical-admin/primitives.js";
+import { providers, appointmentRows, chartColors } from "../data/clinical-admin/captured.js";
+
+const days = [["Lun", "Lunes"], ["Mar", "Martes"], ["Mié", "Miércoles"], ["Jue", "Jueves"], ["Vie", "Viernes"], ["Sáb", "Sábado"], ["Dom", "Domingo"]];
+function hours() {
+  return `<section class="ca-card ca-office-hours"><h3>Horario de oficina</h3><p>Horario semanal de esta ubicación. Las métricas y los mensajes fuera de horario usan este calendario.</p><div class="ca-quick-fill"><span>Relleno rápido:</span>${action("Días laborables 8–5")}${action("Todos los días 8–5")}${action("Borrar todo")}</div>${days.map(([short, full], i) => `<div class="ca-hours-row"><strong>${short}</strong><label><input type="checkbox" aria-label="Marcar ${full} como abierto" ${i < 6 ? "checked" : ""}></label>${i === 6 ? '<span class="ca-closed">Cerrado</span>' : `<input type="time" aria-label="Hora de apertura del ${full}" value="${i === 5 ? "09:00" : "08:00"}"><span>–</span><input type="time" aria-label="Hora de cierre del ${full}" value="${i === 5 ? "14:00" : "17:00"}">${action("Copiar horario a otros días")}`}</div>`).join("")}<p class="ca-help">Horarios mostrados en America/New_York · El botón de copiar aplica el horario de un día a los otros días seleccionados</p><div class="ca-align-right">${action("Guardar horario", true, true)}</div></section>`;
+}
+function clinic() {
+  return hours() + `<section class="ca-card">${heading("Reporte RIPS", "", action("Recargar") + action("Guardar", true))}<div class="ca-form-grid">${input("Código de prestador RIPS")}${input("Modalidad RIPS", "01")}</div></section><section class="ca-card">${heading("Google Calendar", "Conecta una cuenta de Google para asignar calendarios a los profesionales de este consultorio.")}<div class="ca-note"><p>No hay una cuenta de Google conectada.</p><p>Al conectar, Avance puede leer y escribir eventos en los calendarios de esta cuenta. <a href="https://avance.ai/privacy">Política de privacidad</a></p></div>${action("Conectar Google Calendar")}</section>`;
+}
+function providersContent() {
+  const sub = params().get("sub") === "exceptions" ? "exceptions" : "weekly";
+  const staff = providers.map((name, i) => `<a href="#page=setup&tab=Providers&sub=${sub}&provider=${i}" class="${Number(params().get("provider") || 0) === i ? "active" : ""}"><strong>${name}</strong><small>${i === 0 ? "admin" : "user"}</small></a>`).join("");
+  const selected = providers[Number(params().get("provider") || 0)] || providers[0];
+  const nested = `<nav class="ca-nested-tabs"><a class="${sub === "weekly" ? "active" : ""}" href="#page=setup&tab=Providers&sub=weekly">Horas semanales</a><a class="${sub === "exceptions" ? "active" : ""}" href="#page=setup&tab=Providers&sub=exceptions">Excepciones del día</a></nav>`;
+  const weekly = `<div class="ca-switch-row"><span>Usar el horario de la ubicación</span><label class="ca-switch"><input type="checkbox" aria-label="Usar el horario de la ubicación" checked><span></span></label></div><p>Este empleado sigue el horario de la ubicación.</p><p class="ca-help">Los horarios se interpretan en la zona horaria de la ubicación · El botón de copiar aplica el horario de un día a los otros días seleccionados</p><div class="ca-align-right">${action("Guardar", true)}</div>`;
+  const exceptions = `<p>Excepciones para los próximos 30 días (tiempo libre u horas personalizadas para una fecha).</p><div class="ca-form-grid ca-exceptions-grid">${input("Fecha", "", "date")}${select("Tipo", ["Tiempo libre", "Horas personalizadas"])}${input("Notas (opcional)")}${action("Agregar excepción", true, true)}</div><ul class="ca-empty-list"><li>No hay excepciones en los próximos 30 días</li></ul>`;
+  return `<section class="ca-card">${heading("Identificación de profesionales", "Documento de identidad de cada profesional tratante para RIPS.")}<div class="ca-provider-layout"><aside class="ca-provider-list">${staff}</aside><div class="ca-provider-detail"><h3>${selected}</h3><div class="ca-fields-stack">${select("Especialidad", ["Ninguna"])}${select("Tipo de documento", [""])}${input("Número")}${input("Registro profesional")}</div><div class="ca-full-button">${action("Guardar", true, true)}</div><p>Conecta una cuenta de Google en la pestaña Consultorio para asignar calendarios.</p><p>Elige si este empleado sigue el horario de la ubicación o usa una semana personalizada.</p>${nested}<div class="ca-provider-subpanel">${sub === "weekly" ? weekly : exceptions}</div></div></div></section>`;
+}
+function appointmentTypes() {
+  return `<section class="ca-card">${heading("Tipos de reunión", "Gestiona los tipos de reunión, duraciones y enlaces de cita para tu equipo.", action("Agregar Tipo de Reunión", true))}${adminTable(["Nombre", "Duración", "Tiempo de Margen", "Anfitriones", "Estado", "Acciones"], appointmentRows.map((row) => [...row, '<span class="ca-state">Activo</span>', `${action("Enlaces de cita")}${action("Desactivar")}${action("Editar Tipo de Reunión")}${action("Eliminar")}`]))}</section>`;
+}
+function chartPreferences() {
+  return `<section class="ca-card">${heading("Preferencias del odontograma", "", action("Recargar") + action("Guardar", true))}<div class="ca-form-grid">${select("Catálogo principal de procedimientos", ["CUPS"])}${select("Catálogo principal de diagnósticos", ["CIE10"])}</div><label class="ca-check ca-chart-check"><input type="checkbox"> Usar otro color para el trabajo de este consultorio</label><div class="ca-color-grid">${chartColors.map(([name, hex]) => `<label class="ca-color-field"><span>${name}</span><span><input type="color" aria-label="${name}" value="${hex}"><input aria-label="Valor de ${name}" value="${hex.toUpperCase()}"></span></label>`).join("")}</div></section>`;
+}
+export function setup(tab = "Clinic") {
+  const content = { Clinic: clinic, Providers: providersContent, "Appointment types": appointmentTypes, "Chart preferences": chartPreferences }[tab]?.() ?? clinic();
+  return adminPage("setup", "Configuración clínica", tab, content);
+}

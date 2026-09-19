@@ -1,0 +1,627 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Inicio" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Resumen":
+          - /url: /es/dashboard
+          - generic: Resumen
+        - button "Más opciones para Resumen":
+      - list:
+        - link "Contactos" [active]:
+          - /url: /es/contacts
+          - generic: Contactos
+        - button "Más opciones para Contactos":
+      - heading "Fijados" [level=3]:
+        - generic: Fijados
+      - list:
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Bandeja 3":
+          - /url: /es/communication/inbox
+          - generic: Bandeja
+          - generic: "3"
+        - button "Más opciones para Bandeja":
+        - link "WhatsApp":
+          - /url: /es/communication/whatsapp
+          - generic: WhatsApp
+        - button "Más opciones para WhatsApp":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - button "Buscar":
+      - text: Buscar
+    - button "Columnas":
+      - text: Columnas
+    - button "Filtros":
+      - text: Filtros
+    - combobox:
+      - generic: Orden predeterminado
+    - button "Mostrar contactos archivados"
+    - button "Restablecer"
+    - table:
+      - rowgroup:
+        - row "Seleccionar todas las filas Nombre Apellido Tipo Prioridad Teléfono Correo electrónico Pago Asignado a Fecha de creación Última revisión Último mensaje País Tamaño del grupo Destacado Archivados":
+          - columnheader "Seleccionar todas las filas":
+            - checkbox "Seleccionar todas las filas"
+          - columnheader "Nombre":
+            - generic: Nombre
+          - columnheader "Apellido":
+            - generic: Apellido
+          - columnheader "Tipo":
+            - generic: Tipo
+          - columnheader "Prioridad":
+            - generic: Prioridad
+          - columnheader "Teléfono":
+            - generic: Teléfono
+          - columnheader "Correo electrónico":
+            - generic: Correo electrónico
+          - columnheader "Pago":
+            - generic: Pago
+          - columnheader "Asignado a":
+            - generic: Asignado a
+          - columnheader "Fecha de creación":
+            - generic: Fecha de creación
+          - columnheader "Última revisión":
+            - generic: Última revisión
+          - columnheader "Último mensaje":
+            - generic: Último mensaje
+          - columnheader "País":
+            - generic: País
+          - columnheader "Tamaño del grupo":
+            - generic: Tamaño del grupo
+          - columnheader "Destacado":
+            - generic: Destacado
+          - columnheader "Archivados":
+            - generic: Archivados
+          - columnheader
+      - rowgroup:
+        - row "Seleccionar fila Andrés Flores CLIENT — 573000200011 andres.flores@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Andrés"
+          - cell "Flores"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200011"
+          - cell "andres.flores@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Nicolás Gutierrez CLIENT — 573000200019 nicolas.gutierrez@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Nicolás"
+          - cell "Gutierrez"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200019"
+          - cell "nicolas.gutierrez@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Felipe Ramírez CLIENT — 573000200009 felipe.ramirez@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Felipe"
+          - cell "Ramírez"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200009"
+          - cell "felipe.ramirez@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Mariana Morales CLIENT — 573000200016 mariana.morales@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Mariana"
+          - cell "Morales"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200016"
+          - cell "mariana.morales@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Adriana Mora CLIENT — 573000200028 adriana.mora@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Adriana"
+          - cell "Mora"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200028"
+          - cell "adriana.mora@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Sebastián Gómez CLIENT — 573000200013 sebastian.gomez@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Sebastián"
+          - cell "Gómez"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200013"
+          - cell "sebastian.gomez@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Óscar Peña CLIENT — 573000200027 oscar.pena@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Óscar"
+          - cell "Peña"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200027"
+          - cell "oscar.pena@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Ricardo Navarro CLIENT — 573000200025 ricardo.navarro@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Ricardo"
+          - cell "Navarro"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200025"
+          - cell "ricardo.navarro@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Carlos Rodríguez CLIENT — 573000200002 carlos.rodriguez@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Carlos"
+          - cell "Rodríguez"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200002"
+          - cell "carlos.rodriguez@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Isabella Díaz CLIENT — 573000200014 isabella.diaz@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Isabella"
+          - cell "Díaz"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200014"
+          - cell "isabella.diaz@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Natalia Reyes CLIENT — 573000200018 natalia.reyes@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Natalia"
+          - cell "Reyes"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200018"
+          - cell "natalia.reyes@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Carolina Silva CLIENT — 573000200026 carolina.silva@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Carolina"
+          - cell "Silva"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200026"
+          - cell "carolina.silva@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Daniela Torres CLIENT — 573000200010 daniela.torres@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Daniela"
+          - cell "Torres"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200010"
+          - cell "daniela.torres@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Diego González CLIENT — 573000200006 diego.gonzalez@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Diego"
+          - cell "González"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200006"
+          - cell "diego.gonzalez@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Paula Vargas CLIENT — 573000200022 paula.vargas@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Paula"
+          - cell "Vargas"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200022"
+          - cell "paula.vargas@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Elena Cortés CLIENT — 573000200024 elena.cortes@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Elena"
+          - cell "Cortés"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200024"
+          - cell "elena.cortes@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Santiago Ortiz CLIENT — 573000200017 santiago.ortiz@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Santiago"
+          - cell "Ortiz"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200017"
+          - cell "santiago.ortiz@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Emma Cárdenas CLIENT — 573000200030 emma.cardenas@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Emma"
+          - cell "Cárdenas"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200030"
+          - cell "emma.cardenas@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Valeria Sánchez CLIENT — 573000200008 valeria.sanchez@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Valeria"
+          - cell "Sánchez"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200008"
+          - cell "valeria.sanchez@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Lucía López CLIENT — 573000200005 lucia.lopez@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Lucía"
+          - cell "López"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200005"
+          - cell "lucia.lopez@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Juan Martínez CLIENT — 573000200004 juan.martinez@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Juan"
+          - cell "Martínez"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200004"
+          - cell "juan.martinez@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Tomás Castro CLIENT — 573000200021 tomas.castro@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Tomás"
+          - cell "Castro"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200021"
+          - cell "tomas.castro@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Gabriel Mendoza CLIENT — 573000200023 gabriel.mendoza@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Gabriel"
+          - cell "Mendoza"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200023"
+          - cell "gabriel.mendoza@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Hugo Salazar CLIENT — 573000200029 hugo.salazar@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Hugo"
+          - cell "Salazar"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200029"
+          - cell "hugo.salazar@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+        - row "Seleccionar fila Juliana Rojas CLIENT — 573000200020 juliana.rojas@demo-dental.local UNKNOWN 19/09/2026, 10:06 false":
+          - cell "Seleccionar fila":
+            - checkbox "Seleccionar fila"
+          - cell "Juliana"
+          - cell "Rojas"
+          - cell "CLIENT"
+          - cell "—"
+          - cell "573000200020"
+          - cell "juliana.rojas@demo-dental.local"
+          - cell "UNKNOWN"
+          - cell
+          - cell "19/09/2026, 10:06"
+          - cell
+          - cell
+          - cell
+          - cell
+          - cell "false"
+          - cell
+          - cell:
+            - button:
+    - generic: 0 de 36 fila(s) seleccionada(s).
+    - combobox:
+      - generic: 25 filas
+    - button "Anterior" [disabled]
+    - button "Siguiente"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- alert

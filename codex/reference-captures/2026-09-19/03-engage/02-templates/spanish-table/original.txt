@@ -1,0 +1,66 @@
+- main:
+  - button "Expandir barra lateral" [pressed]:
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - complementary "Navegación de la aplicación":
+    - heading "Conecta" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Bandeja 3":
+          - /url: /es/communication/inbox
+          - generic: Bandeja
+          - generic: "3"
+        - button "Más opciones para Bandeja":
+        - link "Plantillas":
+          - /url: /es/communication/templates
+          - generic: Plantillas
+        - button "Más opciones para Plantillas":
+        - link "WhatsApp":
+          - /url: /es/communication/whatsapp
+          - generic: WhatsApp
+        - button "Más opciones para WhatsApp":
+        - link "Formularios":
+          - /url: /es/settings/forms
+          - generic: Formularios
+        - button "Más opciones para Formularios":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+      - link "Integraciones":
+        - /url: /es/settings/integrations
+        - generic: Integraciones
+  - main:
+    - heading "Plantillas de WhatsApp" [level=2]
+    - paragraph: Crea, organiza y administra las plantillas utilizadas para mensajes de WhatsApp.
+    - button "Sincronizar":
+      - text: Sincronizar
+    - button "Crear plantilla":
+      - text: Crear plantilla
+    - tablist:
+      - tab "Inglés"
+      - tab "Español" [selected]
+    - button "Tarjetas":
+      - text: Tarjetas
+    - button "Tabla" [active]:
+      - text: Tabla
+    - status: No hay plantillas disponibles para el idioma seleccionado.
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Avance

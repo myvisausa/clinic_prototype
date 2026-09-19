@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" id="premolar_x5F_tooth" version="1.1" viewBox="0 0 48.8 41.5">
+  <style>
+    [data-active="0"] { display: none; }
+  </style>
+  <defs>
+    <linearGradient id="linear-gradient-14-occl-0" x1="15" y1="2119.6" x2="37.5" y2="2119.6" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0eff0" data-active="1" />
+      <stop offset="1" stop-color="#cfcece" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-1" x1="13.4" y1="2119.6" x2="37.5" y2="2119.6" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0eff0" data-active="1" />
+      <stop offset="1" stop-color="#cfcece" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-2" x1="14.9" y1="2119.7" x2="38.1" y2="2119.7" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0eff0" data-active="1" />
+      <stop offset="1" stop-color="#cfcece" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-3" x1="11.7" y1="2119.7" x2="38.1" y2="2119.7" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0eff0" data-active="1" />
+      <stop offset="1" stop-color="#cfcece" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-4" x1="11.1" y1="2119.7" x2="38.1" y2="2119.7" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0eff0" data-active="1" />
+      <stop offset="1" stop-color="#dcdcdc" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-5" x1="39.6" y1="2127.4" x2="29.5" y2="2109.6" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0eff0" data-active="1" />
+      <stop offset="1" stop-color="#e2d4c8" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-6" x1="8.8" y1="2113.2" x2="22.7" y2="2126.9" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0eff0" data-active="1" />
+      <stop offset="1" stop-color="#e2d4c8" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-7" x1="-875.9" y1="3230.3" x2="-875.9" y2="3246" gradientTransform="translate(-216.6865 -3335.1796) rotate(-19.3)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0f0f0" data-active="1" />
+      <stop offset="1" stop-color="#e2d4c8" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-8" x1="28" y1="2137" x2="17.8" y2="2119.1" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#f0eff0" data-active="1" />
+      <stop offset="1" stop-color="#e2d4c8" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-9" x1="24.5" y1="-4082.2" x2="24.5" y2="-4103.4" gradientTransform="translate(0 -4072.468) scale(1 -1)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#c8c9c9" data-active="1" />
+      <stop offset="1" stop-color="#828282" data-active="1" />
+      </linearGradient>
+    <linearGradient id="linear-gradient-14-occl-10" x1="16.3" y1="2118.9" x2="32.7" y2="2118.9" gradientTransform="translate(0 -2098.7732)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset=".3" stop-color="#cf0" stop-opacity=".5" data-active="1" />
+      <stop offset="1" stop-color="#b4c500" data-active="1" />
+      </linearGradient>
+    <radialGradient id="radial-gradient-14-occl-0" cx="24.4" cy="23.7" fx="24.4" fy="23.7" r="17.4" gradientTransform="translate(0 42.6) scale(1 -1)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#feff5f" data-active="1" />
+      <stop offset="0" stop-color="#f9fc60" data-active="1" />
+      <stop offset=".2" stop-color="#edf564" data-active="1" />
+      <stop offset=".4" stop-color="#d8ea6b" data-active="1" />
+      <stop offset=".5" stop-color="#bbd975" data-active="1" />
+      <stop offset=".6" stop-color="#95c482" data-active="1" />
+      <stop offset=".8" stop-color="#68ab91" data-active="1" />
+      <stop offset=".9" stop-color="#328da3" data-active="1" />
+      <stop offset="1" stop-color="#0071b5" data-active="1" />
+      </radialGradient>
+    <radialGradient id="radial-gradient-14-occl-1" cx="24.5" cy="21.8" fx="24.5" fy="21.8" r="16" gradientTransform="translate(0 42.6) scale(1 -1)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#feff5f" data-active="1" />
+      <stop offset="0" stop-color="#f9fc60" data-active="1" />
+      <stop offset=".2" stop-color="#edf564" data-active="1" />
+      <stop offset=".4" stop-color="#d8ea6b" data-active="1" />
+      <stop offset=".5" stop-color="#bbd975" data-active="1" />
+      <stop offset=".6" stop-color="#95c482" data-active="1" />
+      <stop offset=".8" stop-color="#68ab91" data-active="1" />
+      <stop offset=".9" stop-color="#328da3" data-active="1" />
+      <stop offset="1" stop-color="#0071b5" data-active="1" />
+      </radialGradient>
+    <radialGradient id="radial-gradient-14-occl-2" cx="24.5" cy="23.6" fx="24.5" fy="23.6" r="17.7" gradientTransform="translate(0 42.6) scale(1 -1)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#fff" data-active="1" />
+      <stop offset="0" stop-color="#fdf3ea" data-active="1" />
+      <stop offset=".2" stop-color="#f9d8b9" data-active="1" />
+      <stop offset=".3" stop-color="#f5c18f" data-active="1" />
+      <stop offset=".4" stop-color="#f2ae6c" data-active="1" />
+      <stop offset=".6" stop-color="#f09f52" data-active="1" />
+      <stop offset=".7" stop-color="#ef953f" data-active="1" />
+      <stop offset=".9" stop-color="#ee8f33" data-active="1" />
+      <stop offset="1" stop-color="#ee8d30" data-active="1" />
+      </radialGradient>
+    <radialGradient id="radial-gradient-14-occl-3" cx="24.9" cy="-1029.2" fx="24.9" fy="-1029.2" r="15.9" gradientTransform="translate(0 -1008.4804) scale(1 -1)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#fff" data-active="1" />
+      <stop offset="0" stop-color="#fdf3ea" data-active="1" />
+      <stop offset=".2" stop-color="#f9d8b9" data-active="1" />
+      <stop offset=".3" stop-color="#f5c18f" data-active="1" />
+      <stop offset=".4" stop-color="#f2ae6c" data-active="1" />
+      <stop offset=".6" stop-color="#f09f52" data-active="1" />
+      <stop offset=".7" stop-color="#ef953f" data-active="1" />
+      <stop offset=".9" stop-color="#ee8f33" data-active="1" />
+      <stop offset="1" stop-color="#ee8d30" data-active="1" />
+      </radialGradient>
+    <radialGradient id="radial-gradient-14-occl-4" cx="25.1" cy="22.4" fx="25.1" fy="22.4" r="15.1" gradientTransform="translate(0 42.6) scale(1 -1)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#fff" data-active="1" />
+      <stop offset="0" stop-color="#fdf3ea" data-active="1" />
+      <stop offset=".2" stop-color="#f9d8b9" data-active="1" />
+      <stop offset=".3" stop-color="#f5c18f" data-active="1" />
+      <stop offset=".4" stop-color="#f2ae6c" data-active="1" />
+      <stop offset=".6" stop-color="#f09f52" data-active="1" />
+      <stop offset=".7" stop-color="#ef953f" data-active="1" />
+      <stop offset=".9" stop-color="#ee8f33" data-active="1" />
+      <stop offset="1" stop-color="#ee8d30" data-active="1" />
+      </radialGradient>
+    <radialGradient id="radial-gradient-14-occl-5" cx="25" cy="23.1" fx="25" fy="23.1" r="14.7" gradientTransform="translate(0 42.6) scale(1 -1)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#fff" data-active="1" />
+      <stop offset="0" stop-color="#fdf3ea" data-active="1" />
+      <stop offset=".2" stop-color="#f9d8b9" data-active="1" />
+      <stop offset=".3" stop-color="#f5c18f" data-active="1" />
+      <stop offset=".4" stop-color="#f2ae6c" data-active="1" />
+      <stop offset=".6" stop-color="#f09f52" data-active="1" />
+      <stop offset=".7" stop-color="#ef953f" data-active="1" />
+      <stop offset=".9" stop-color="#ee8f33" data-active="1" />
+      <stop offset="1" stop-color="#ee8d30" data-active="1" />
+      </radialGradient>
+    <radialGradient id="radial-gradient-14-occl-6" cx="25.3" cy="33.9" fx="25.3" fy="33.9" r="9.8" gradientTransform="translate(0 42.6) scale(1 -1)" gradientUnits="userSpaceOnUse" data-active="1">
+      <stop offset="0" stop-color="#fff" data-active="1" />
+      <stop offset="0" stop-color="#fdf3ea" data-active="1" />
+      <stop offset=".2" stop-color="#f9d8b9" data-active="1" />
+      <stop offset=".3" stop-color="#f5c18f" data-active="1" />
+      <stop offset=".4" stop-color="#f2ae6c" data-active="1" />
+      <stop offset=".6" stop-color="#f09f52" data-active="1" />
+      <stop offset=".7" stop-color="#ef953f" data-active="1" />
+      <stop offset=".9" stop-color="#ee8f33" data-active="1" />
+      <stop offset="1" stop-color="#ee8d30" data-active="1" />
+      </radialGradient>
+    </defs>
+  <g id="base" data-active="1">
+    <path id="bone-base" d="M48.3,39.5s-3.2.7-6.3.5-5.1,0-5.9,0c-2.3-.2-5.9-.3-9.4-.2-3.9,0-8.2.9-11.1.9s-3.3,0-4.9-.2c-4-.3-5.8-.7-5.8-.7-1.8-.3-4.5.7-4.5-.6V2.7l5.5-.5,15.8-1.1h19.1l7.7.4v40h0v-2h-.1Z" data-active="1" style="fill: #fdecc5;" />
+    <g id="gum-base" data-active="1">
+      <path id="gum-line-2" d="M11.3,2.4c7.9-.2,31-1.1,33.5-.6,2.5.5,2.1.4,3.2,0s1.2-1.2,0-1.5-3.6-.3-6.4-.2c-5.3.2-11.1.6-13.4.8-6.1.5-6.7.5-13.2.5s-7.7-.5-12.6-.1c-5,.4-.9,1.4.2,1.4,4.9,0,5.3,0,8.7-.3Z" data-active="1" style="fill: #f79f9a;" />
+      <path id="gum-line-1" d="M37.5,39.2c-7.9,0-30.7.6-33.2,0s-2-.4-3.1,0-1.2,1.2,0,1.5c1.3.3,3.6.4,6.4.3,5.3,0,11-.4,13.4-.6,6-.4,6.7-.4,13.1-.3,4.6,0,7.7.6,12.5.3s.9-1.4-.3-1.5c-4.9-.2-5.3,0-8.6,0h0s0,.3,0,.3Z" data-active="1" style="fill: #f79f9a;" />
+      </g>
+    </g>
+  <g id="tooth-variants" data-active="1">
+    </g>
+  <g id="tooth" data-active="1">
+    <g id="tooth-base" data-active="1">
+      <path id="background-cusp" d="M21.9,2.9c1.6,0,3.5.3,5.2.5,1.2,0,2.4.2,3.5.7.7.3,1.3.6,2,1,1.1.6,2.2,1.4,3,2.6.8,1.1,1.5,2.4,1.9,3.9.2.6.2,1.3.4,2,.2,1.7.4,3.2.4,4.8s0,2.4-.2,3.6c0,1.6-.2,3.1-.4,4.6-.4,2-.8,4.2-1.5,6-1.1,2.4-3.2,3.8-5.2,4.4-.8.2-1.6.4-2.4.6-1.2.3-2.3.8-3.5,1.2-1,.3-2,.2-2.9,0-.8,0-1.7-.3-2.5-.3-1.5-.2-3-.3-4.2-1.4-1-.9-1.8-2.2-2.4-3.6-.8-1.5-1.3-3.2-1.5-5-.2-1.3-.2-2.7-.2-4s.4-3.5.5-5.3c.3-2.1.4-4.3.8-6.4.4-2.1,1.2-4,2.2-5.6,1.1-1.6,2.5-3,4.1-3.6,1-.3,2.1-.5,3.1-.5h0v-.2s-.2,0-.2,0Z" data-active="1" style="fill: url(#linear-gradient-14-occl-4); stroke: #c8c8c8; stroke-miterlimit: 10;" />
+      <g id="cusps" data-active="1">
+        <path d="M33.5,27.9c.7.6,1.4,2.7,2.3,2.7,1.1-1.1,1.1-3.5,1.4-5,.4-4.8,0-9.8-.5-14.5-.3-1.9-1.8-5.3-3.4-2.1-.6,1.2-1.2,2.5-2,3.6-1.4,2.1-3.9,4-4.2,6.8,0,1.4,1.5,2.9,2.6,4,1.6,1.3,2.3,2.9,3.7,4.4h.1Z" data-active="1" style="fill: url(#linear-gradient-14-occl-5);" />
+        <path d="M18.9,26c1.7-2.7,4-5.5,4-8.9-.1-1.4-1.4-3.1-2.3-4.5-1.7-2-2.2-4.2-3.6-6.2-.6-.5-.9,0-1.4.6-1.1,1.9-2.4,4-2.7,6.3-.2,3.2-.6,6.5-1.2,9.6,0,2.5-.3,5.1.4,7.5.4,1.4,1.5,3.8,1.9,5,.2.5.3.8.4.7,1-1.4,3-7.7,4.4-10.2h.1Z" data-active="1" style="fill: url(#linear-gradient-14-occl-6);" />
+        <path d="M29.1,15.1c.8-.9,2.1-1.7,2.7-2.8.8-1.1,1.3-2.7,2.1-3.8.3-.4.6-.8.4-1.3-2.6-4-11.2-4.5-15-2-.5.5-1.4.2-1.7.8-.7,3.5,2,6.2,3.3,9.2.8,1.7,1.4,4.5,3.8,4.5,2.1-.3,3.2-2.7,4.2-4.4h0s.2-.2.2-.2Z" data-active="1" style="fill: url(#linear-gradient-14-occl-7);" />
+        <path d="M27.1,19.5c1.6,1.8,3.5,5,5.2,7.1.9,1.1,2.3,2.3,3.3,3.5.4.5.5,1,.4,1.6-1.1,3.8-5,4.4-8.3,5.9-3.8,1.5-6.2,1.5-11.1,0-1.1-.5-2.6-1.1-2.1-2.6.4-1.2,1.5-3.4,2-4.8,1.4-3.6,3.3-7.1,4.8-10.9,1.3-3.1,3.7-1.5,5.7,0h.1s0,.2,0,.2Z" data-active="1" style="fill: url(#linear-gradient-14-occl-8);" />
+        </g>
+      <g id="fissure" data-active="1">
+        <path d="M26.5,19.6c.3-.1.9,1,1.2,1.3.8,1.1,3,3.6,3.4,5.1.4,1.3,3.9,4.3,3.5,4.1" data-active="1" style="fill: none; stroke: #9f9f9f; stroke-miterlimit: 10;" />
+        <path d="M16.6,31c-1,2.3,1.9-5.9,2.8-7.2.8-1,.4-1.2,1.3-2.2.5-.7,2.2-2.7,2.3-3.7s-.3-1.3-1-2.6c-.5-.5-1.1-2-1.6-2.9s-.3-.8-.3-1.3c-.2-2-3.3-5-2.1-3.8" data-active="1" style="fill: none; stroke: #9f9f9f; stroke-miterlimit: 10;" />
+        <path d="M33.7,8.6c.8-1.1-2.8,4.2-5,6.6-.5.7-1.7,3.8-2.3,4.4s-.8.9-1.2.9-.7,0-1-.2c-.6-.2-1.2-.7-1.5-1.5" data-active="1" style="fill: none; stroke: #9f9f9f; stroke-miterlimit: 10;" />
+        </g>
+      </g>
+    </g>
+  <g id="surfaces" data-active="1">
+    <g id="subcaries" data-active="1">
+      </g>
+    <g id="caries" data-active="1">
+      </g>
+    <g id="fillings" data-active="1">
+      <g id="amalgam" data-active="1">
+        </g>
+      <g id="composite" data-active="1">
+        </g>
+      <g id="gic" data-active="1">
+        </g>
+      <g id="temporary" data-active="1">
+        </g>
+      <g id="defect" data-active="1">
+        </g>
+      </g>
+    <g id="contact-point" data-active="1">
+      </g>
+    </g>
+  <g id="restorations" data-active="1">
+    <g id="prosthesis-implant" data-active="1">
+      </g>
+    <g id="prosthesis" data-active="1">
+      </g>
+    <g id="telescope" data-active="1">
+      </g>
+    <g id="zircon" data-active="1">
+      </g>
+    <g id="metal" data-active="1">
+      </g>
+    <g id="metal-ceramic" data-active="1">
+      </g>
+    <g id="gold" data-active="1">
+      </g>
+    <g id="emax" data-active="1">
+      </g>
+    <g id="gradia" data-active="1">
+      </g>
+    <g id="temporary-restorations" data-active="1">
+      </g>
+    </g>
+  <g id="ortho" data-active="1">
+    <g id="arrows" data-active="1">
+      </g>
+    </g>
+  <g id="plan" data-active="1">
+    </g>
+  </svg>

@@ -1,0 +1,137 @@
+- main:
+  - button "Contraer barra lateral":
+  - button "Atrás":
+  - button "Adelante" [disabled]:
+  - button "Historial":
+  - generic "Dental Implant Clinic Demo"
+  - button "Buscar una página…":
+    - generic: Buscar una página…
+    - generic: ⌘/Ctrl K
+  - button "Abrir ayuda":
+  - button "Notificaciones":
+  - status "No hay advertencias":
+    - generic: No hay advertencias
+  - 'status "Conexión del navegador: en línea"':
+    - generic: "Conexión del navegador: en línea"
+  - navigation "Navegación de la aplicación":
+    - link "Logo de Dental Implant Clinic Demo":
+      - /url: /es/settings/organization
+      - img "Logo de Dental Implant Clinic Demo"
+    - link "Inicio":
+      - /url: /es/dashboard
+      - generic: "3"
+      - generic: Inicio
+    - link "Clínica":
+      - /url: /es/clinical/schedule
+      - generic: Clínica
+    - link "Conecta":
+      - /url: /es/communication/inbox
+      - generic: "3"
+      - generic: Conecta
+    - button "Más":
+      - generic: Más
+    - link "Ajustes":
+      - /url: /es/settings/getting-started
+      - generic: Ajustes
+    - 'button "Perfil: Perfil de usuario"':
+      - img "Imagen de perfil de usuario"
+      - generic: Perfil
+  - complementary "Navegación de la aplicación":
+    - heading "Clínica" [level=2]
+    - button "Contraer barra" [pressed]:
+    - navigation:
+      - list:
+        - link "Agenda":
+          - /url: /es/clinical/schedule
+          - generic: Agenda
+        - button "Más opciones para Agenda":
+        - link "Pacientes":
+          - /url: /es/clinical/pacientes
+          - generic: Pacientes
+        - button "Más opciones para Pacientes":
+        - link "Referencia clínica":
+          - /url: /es/clinical/catalogos
+          - generic: Referencia clínica
+        - button "Más opciones para Referencia clínica":
+        - link "Configuración clínica":
+          - /url: /es/clinical/configuracion
+          - generic: Configuración clínica
+        - button "Más opciones para Configuración clínica":
+        - link "Servicios y precios":
+          - /url: /es/clinical/servicios
+          - generic: Servicios y precios
+        - button "Más opciones para Servicios y precios":
+        - link "Facturas":
+          - /url: /es/clinical/facturas
+          - generic: Facturas
+        - button "Más opciones para Facturas":
+        - link "Aseguradoras":
+          - /url: /es/clinical/payers
+          - generic: Aseguradoras
+        - button "Más opciones para Aseguradoras":
+      - button "Ver todas las páginas":
+        - generic: Ver todas las páginas
+  - main:
+    - heading "Referencia clínica" [level=1]
+    - tablist:
+      - tab "Códigos"
+      - tab "Fórmulas" [active] [selected]
+      - tab "Documentos"
+      - tab "Prioridades"
+      - tab "Pronósticos"
+    - tabpanel "Fórmulas":
+      - heading "Productos de fórmulas" [level=2]
+      - textbox "Buscar producto, categoría o indicación..."
+      - checkbox "Incluir inactivos"
+      - generic: Incluir inactivos
+      - button "Recargar":
+      - button "Categoría":
+        - text: Categoría
+      - button "Producto":
+        - text: Producto
+      - paragraph: 2 registros
+      - table:
+        - rowgroup:
+          - row "Producto Categoría Presentación Indicación Estado Acciones":
+            - columnheader "Producto"
+            - columnheader "Categoría"
+            - columnheader "Presentación"
+            - columnheader "Indicación"
+            - columnheader "Estado"
+            - columnheader "Acciones"
+        - rowgroup:
+          - row "DEMO · Producto ficticio A DEMO · Productos ficticios Presentación de ejemplo sin principio activo DEMOSTRACIÓN. Producto ficticio; no dispensar ni administrar. Texto de ejemplo sin dosis ni pauta terapéutica. Activo Editar producto Desactivar producto":
+            - cell "DEMO · Producto ficticio A"
+            - cell "DEMO · Productos ficticios"
+            - cell "Presentación de ejemplo sin principio activo"
+            - cell "DEMOSTRACIÓN. Producto ficticio; no dispensar ni administrar. Texto de ejemplo sin dosis ni pauta terapéutica."
+            - cell "Activo":
+              - generic: Activo
+            - cell "Editar producto Desactivar producto":
+              - button "Editar producto"
+              - button "Desactivar producto"
+          - row "DEMO · Producto ficticio B DEMO · Productos ficticios Presentación de ejemplo sin principio activo DEMOSTRACIÓN. Producto ficticio; no dispensar ni administrar. Texto de ejemplo sin dosis ni pauta terapéutica. Activo Editar producto Desactivar producto":
+            - cell "DEMO · Producto ficticio B"
+            - cell "DEMO · Productos ficticios"
+            - cell "Presentación de ejemplo sin principio activo"
+            - cell "DEMOSTRACIÓN. Producto ficticio; no dispensar ni administrar. Texto de ejemplo sin dosis ni pauta terapéutica."
+            - cell "Activo":
+              - generic: Activo
+            - cell "Editar producto Desactivar producto":
+              - button "Editar producto"
+              - button "Desactivar producto"
+      - heading "Categorías de fórmula" [level=2]
+      - paragraph: 1 registro
+      - paragraph: DEMO · Productos ficticios
+      - generic: Activa
+      - button "Editar categoría"
+      - button "Desactivar categoría"
+  - region "Notifications (F8)":
+    - list
+- button "Open Next.js Dev Tools":
+- button "Open issues overlay":
+  - generic: "0"
+  - generic: "1"
+  - generic: Issue
+- button "Collapse issues badge":
+- alert: Referencia clínica

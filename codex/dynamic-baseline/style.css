@@ -1,0 +1,605 @@
+@import url("../shared/styles/patient.css");
+@import url("../shared/styles/schedule.css");
+@import url("../shared/styles/clinical-admin.css");
+@import url("../shared/styles/workspaces.css");
+@import url("../shared/styles/settings.css");
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: #0a0a0a;
+  background: #fff;
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.shell {
+  display: grid;
+  grid-template-rows: 40px minmax(0, 1fr);
+  height: 100vh;
+  min-height: 480px;
+}
+.top {
+  background: #ecedef;
+  border-bottom: 1px solid #dadee2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  color: #1a1d2b;
+  white-space: nowrap;
+}
+.top button {
+  border: 0;
+  background: none;
+  padding: 4px;
+  color: #444;
+}
+.top .search {
+  margin-left: auto;
+  background: #dfe2e6;
+  border-radius: 5px;
+  padding: 4px 10px;
+  color: #616161;
+  font-size: 12px;
+}
+.frame {
+  display: grid;
+  grid-template-columns: 48px 157px minmax(0, 1fr);
+  min-height: 0;
+}
+.rail {
+  background: #ecedef;
+  border-right: 1px solid #dadee2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 6px;
+}
+.rail a,
+.rail button {
+  border: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  padding: 9px 2px;
+  position: relative;
+}
+.rail .active {
+  border-left: 3px solid #2e5b9b;
+  background: #e8edf5;
+  color: #2e5b9b;
+}
+.rail .bottom {
+  margin-top: auto;
+}
+.logo {
+  display: block;
+  text-align: center;
+  height: 36px;
+  padding: 5px;
+}
+.logo img {
+  width: 32px;
+  height: 27px;
+  object-fit: contain;
+}
+.ico {
+  font-size: 18px;
+  line-height: 19px;
+}
+.badge {
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  color: #fff;
+  background: #2e5b9b;
+  border-radius: 9px;
+  font-size: 10px;
+  padding: 0 4px;
+}
+.side {
+  background: #f4f5f6;
+  border-right: 1px solid #e2e4e7;
+  overflow: auto;
+}
+.sidehead {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.side nav {
+  padding: 6px 4px 13px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.side nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 7px;
+  margin: 1px 0;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.side nav a.active {
+  background: #2e5b9b;
+  color: #fff;
+}
+.side .browse {
+  border: 0;
+  background: none;
+  color: #616161;
+  font-size: 11px;
+  padding: 10px;
+}
+.main {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  background: white;
+}
+.page {
+  padding: 22px 26px 50px;
+}
+.page h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+.page h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.page h3 {
+  font-size: 15px;
+  margin: 0 0 7px;
+}
+.muted {
+  color: #616161;
+}
+.small {
+  font-size: 12px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.between {
+  justify-content: space-between;
+}
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow-x: auto;
+  margin: 10px 0 20px;
+}
+.tabs a {
+  padding: 9px 16px;
+  white-space: nowrap;
+  color: #616161;
+}
+.tabs a.active {
+  border-bottom: 2px solid #2e5b9b;
+  color: #2e5b9b;
+}
+.subtabs {
+  margin-top: 0;
+}
+.btn,
+input,
+select,
+textarea {
+  border: 1px solid #d7dadd;
+  border-radius: 6px;
+  background: #fff;
+  padding: 8px 12px;
+  color: #0a0a0a;
+}
+.btn {
+  display: inline-block;
+  box-shadow: 0 1px 2px #0001;
+}
+.primary {
+  background: #2e5b9b;
+  border-color: #2e5b9b;
+  color: #fff;
+}
+.input {
+  min-width: 210px;
+}
+.panel {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 14px 0;
+  background: #fff;
+}
+.soft {
+  background: #f5f5f5;
+}
+.notice {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 9px;
+  margin: 12px 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.field {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 9px 12px;
+}
+.field b {
+  display: block;
+  color: #616161;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.field span {
+  display: block;
+  line-height: 20px;
+}
+.formgrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+.formgrid label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.formgrid .wide {
+  grid-column: 1/-1;
+}
+.formgrid textarea {
+  min-height: 64px;
+}
+.record {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 9px;
+  margin: 7px 0;
+}
+.record .row {
+  margin-top: 7px;
+}
+.tablewrap {
+  overflow: auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 650px;
+  font-size: 13px;
+}
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 12px;
+  white-space: nowrap;
+}
+th {
+  background: #f7f8f9;
+  color: #555;
+  font-weight: 600;
+}
+tr:last-child td {
+  border-bottom: 0;
+}
+.patienttop {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.patientbody {
+  margin: 10px 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 15px;
+}
+.patientbody h2 {
+  font-size: 16px;
+}
+.daylayout {
+  display: grid;
+  grid-template-columns: 235px minmax(0, 1fr);
+  gap: 18px;
+}
+.minical {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.minical span {
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+.minical .today {
+  background: #e8edf5;
+  border-radius: 5px;
+  color: #2e5b9b;
+}
+.times {
+  display: grid;
+  grid-template-columns: 70px repeat(4, minmax(90px, 1fr));
+  border: 1px solid #e5e5e5;
+  overflow: auto;
+}
+.times > * {
+  padding: 9px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 55px;
+}
+.toothchart {
+  overflow: auto;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+.toothrow {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  min-width: 740px;
+  margin: 6px 0;
+}
+.tooth {
+  width: 42px;
+  text-align: center;
+  font-size: 11px;
+}
+.tooth img {
+  width: 38px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+.toothrow.lower img {
+  transform: rotate(180deg);
+}
+.footnote {
+  color: #616161;
+  font-size: 12px;
+  padding: 15px 26px;
+  border-top: 1px solid #e5e5e5;
+}
+.scope {
+  position: fixed;
+  right: 12px;
+  bottom: 10px;
+  background: #fff;
+  border: 1px solid #d7dadd;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 11px;
+  color: #616161;
+  box-shadow: 0 1px 4px #0002;
+  z-index: 5;
+}
+@media (max-width: 1050px) {
+  .page {
+    padding: 16px;
+  }
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .daylayout {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .frame {
+    grid-template-columns: 48px 120px minmax(0, 1fr);
+  }
+  .side nav a {
+    font-size: 11px;
+    gap: 4px;
+  }
+  .top .search {
+    display: none;
+  }
+  .grid,
+  .grid3,
+  .formgrid {
+    grid-template-columns: 1fr;
+  }
+  .formgrid .wide {
+    grid-column: auto;
+  }
+  .daylayout {
+    grid-template-columns: 1fr;
+  }
+  .patientbody {
+    margin: 6px;
+    padding: 10px;
+  }
+  .tabs a {
+    padding: 7px 10px;
+  }
+  .page h1 {
+    font-size: 20px;
+  }
+}
+.week-grid {
+  display: grid;
+  grid-template-columns: 75px repeat(7, minmax(85px, 1fr));
+  border: 1px solid #e5e5e5;
+  overflow: auto;
+  min-width: 680px;
+}
+.week-grid > * {
+  padding: 8px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 55px;
+}
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(75px, 1fr));
+  border: 1px solid #e5e5e5;
+  overflow: auto;
+}
+.month-grid > * {
+  padding: 10px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.month-grid > .date {
+  min-height: 85px;
+}
+.chart-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid #e5e5e5;
+  flex-wrap: wrap;
+}
+.chart-filter .row {
+  margin-left: auto;
+}
+.chart-filter input[type="date"] {
+  padding: 5px;
+}
+.chart-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 10px;
+  margin-top: 8px;
+}
+.chart-rail {
+  border: 1px solid #e5e5e5;
+  padding: 8px;
+  max-height: 650px;
+  overflow: auto;
+}
+.chart-rail .tabs a {
+  font-size: 12px;
+  padding: 7px;
+}
+.chart-rail label {
+  display: block;
+  margin: 9px 0;
+}
+.chart-rail label input,
+.chart-rail label select {
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+}
+@media (max-width: 900px) {
+  .chart-workspace {
+    grid-template-columns: 1fr;
+  }
+  .chart-rail {
+    max-height: none;
+  }
+}
+.compare {
+  position: fixed;
+  right: 12px;
+  bottom: 38px;
+  z-index: 5;
+  background: #fff;
+  border: 1px solid #d7dadd;
+  border-radius: 6px;
+  padding: 6px 9px;
+  color: #2e5b9b;
+  font-size: 12px;
+  box-shadow: 0 1px 4px #0002;
+}
+
+
+/* Navigation shared by the current baseline and the Care draft. */
+.sidehead h2 { font-size: 12px; margin: 0; }
+.side-collapse { border: 0; background: transparent; color: #68717d; }
+.side-row { display: flex; align-items: center; padding-right: 3px; }
+.side-row > a { flex: 1; min-width: 0; }
+.side-row .pin { flex: 0 0 17px; border: 0; background: transparent; color: #adb4be; font-size: 11px; padding: 4px 0; }
+.side-row .pin.is-pinned { color: #2e5b9b; }
+.side nav .side-row a.active { background: #2e5b9b; color: #fff; }
+.side-icon { width: 17px; text-align: center; flex: 0 0 17px; }
+.side .browse { width: 100%; text-align: left; padding: 12px; cursor: pointer; }
+.all-pages-backdrop { display: none; position: fixed; inset: 0; background: #0007; z-index: 20; align-items: center; justify-content: center; padding: 18px; }
+.all-pages-backdrop.open { display: flex; }
+.all-pages { width: min(560px, 100%); max-height: min(700px, 92vh); overflow: hidden; display: flex; flex-direction: column; background: #fff; border-radius: 9px; box-shadow: 0 20px 70px #0004; padding: 20px; }
+.all-pages-title { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+.all-pages-title h2 { margin: 0 0 5px; font-size: 20px; }
+.all-pages-title p { margin: 0 0 15px; color: #616161; font-size: 13px; }
+.all-pages-title button { border: 0; background: transparent; font-size: 17px; }
+.all-pages-search { width: 100%; margin-bottom: 8px; }
+.all-pages-list { overflow: auto; flex: 1; }
+.all-pages-group h3 { margin: 15px 0 4px; color: #555; font-size: 13px; }
+.all-pages-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; min-height: 34px; }
+.all-pages-row[hidden] { display: none; }
+.all-pages-row a { flex: 1; padding: 8px 3px; }
+.all-pages-row button { border: 0; background: transparent; color: #2e5b9b; padding: 7px 12px; }
+.all-pages > .btn { align-self: end; margin-top: 12px; }
+@media (max-width: 720px) { .all-pages { max-height: 94vh; } }
+
+.side-options { border: 0; background: transparent; color: #818a96; font-size: 15px; padding: 3px 5px; }
+.side-section { border-top: 1px solid #e2e4e7; padding-top: 5px; margin-top: 6px; }
+.side-section h3 { margin: 7px 7px 2px; color: #65707c; font-size: 11px; font-weight: 700; }
+.side-pinned h3 { font-size: 12px; color: #333; }
+.side-badge { margin-left: auto; border-radius: 10px; background: #2e5b9b; color: #fff; padding: 0 5px; font-size: 10px; }
