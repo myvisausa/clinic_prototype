@@ -1,0 +1,18 @@
+{
+  "title": "Recorrido piloto — AP Estudio Odontológico",
+  "capturedAt": "2026-09-20",
+  "environment": "localhost:3000",
+  "account": "AP Estudio Odontológico",
+  "constraints": [
+    "Only clearly fake test patients were created.",
+    "No outbound WhatsApp, email, reminder, notification, MUV, or DIAN action was sent or submitted.",
+    "Blocked flows are documented as failures, not successes."
+  ],
+  "images": [
+    "01-clinica-01.png", "02-nueva-cita-01.png", "02-nueva-cita-02.png", "02-profesional-vacio-03.png", "02-tipo-cita-04.png",
+    "04-nuevo-paciente-02.png", "04-resumen-paciente-03.png", "04-notas-04.png", "04-historia-05.png", "04-historia-guardada-06.png",
+    "04-odontograma-07.png", "04-odontograma-antes-08.png", "04-odontograma-guardado-09.png", "04-plan-activo-10.png", "04-plan-nuevo-11.png", "04-plan-guardado-12.png",
+    "02-calendario-sin-cita-05.png", "03-hoja-dia-columnas-01.png", "05-cuenta-01.png", "05-factura-catalogo-02.png", "05-catalogo-cups-03.png", "05-factura-linea-04.png", "05-factura-borrador-05.png", "05-facturas-lista-06.png", "06-codigos-cups-01.png", "06-documento-demografia-02.png",
+    "06-profesionales-rips-03.png", "07-equipo-vacio-01.png", "07-whatsapp-error-04.png", "08-horarios-vacio-01.png", "08-bloquear-sin-anfitrion-02.png", "08-disponibilidad-vacia-03.png"
+  ]
+}
