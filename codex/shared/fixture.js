@@ -17,6 +17,6 @@ export const insurers = [
   "SURA",
 ];
 export const asset = (name) =>
-  location.pathname.includes("/care-draft/") || location.pathname.includes("/care-dense/")
+  location.pathname.includes("/care-draft/") || location.pathname.includes("/care-dense/") || location.pathname.includes("/care-grouped/") || location.pathname.includes("/patient-workspace/") || location.pathname.includes("/contextual-clinic/")
     ? `../dynamic-baseline/assets/${name}`
     : `assets/${name}`;

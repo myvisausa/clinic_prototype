@@ -233,6 +233,15 @@
           <button type="button" data-variant="care-dense" aria-pressed="false">
             Care dense
           </button>
+          <button type="button" data-variant="care-grouped" aria-pressed="false">
+            Care grouped
+          </button>
+          <button type="button" data-variant="patient-workspace" aria-pressed="false">
+            Patient workspace
+          </button>
+          <button type="button" data-variant="contextual-clinic" aria-pressed="false">
+            Contextual Clinic
+          </button>
           <span class="group-label">Static Summary</span>
           <button
             type="button"
@@ -326,6 +335,33 @@
               "Pages and tabs navigate in this preview. Clinical data controls are visual only; they do not save or submit.",
             dynamic: true,
           },
+          "care-grouped": {
+            file: "care-grouped/",
+            note: "Care keeps Schedule and Patients. The patient record groups existing content into Summary, Clinical, Documentation, and Account.",
+            membership:
+              "Care: Schedule · Patients. Clinic: Clinical reference · Clinic setup · Services and prices · Invoices · Insurers",
+            interaction:
+              "Patient groups and section links navigate; clinical data controls are visual only and do not save.",
+            dynamic: true,
+          },
+          "patient-workspace": {
+            file: "patient-workspace/",
+            note: "Care keeps Schedule and the patient directory. A selected patient opens a separate Patient workspace with four grouped destinations.",
+            membership:
+              "Care: Schedule · Patients directory. Patient: Summary · Clinical · Documentation · Account. Clinic: five clinical administration pages",
+            interaction:
+              "Select the fictional Ana record from the directory to open Patient. Clinical data controls remain visual only.",
+            dynamic: true,
+          },
+          "contextual-clinic": {
+            file: "contextual-clinic/",
+            note: "Clinic keeps its outer workspace and changes the inner sidebar from practice pages to Ana García's record after selection.",
+            membership:
+              "Clinic: Day sheet · Calendar · Patients · Invoices; Team; Catalogs; Clinical settings. Selected patient: Summary · Chart · Plans · Notes · Perio · Prescriptions · Documents · Estimates · Account",
+            interaction:
+              "The patient directory selects the fictional Ana record. Navigation is local; clinical controls do not save or submit.",
+            dynamic: true,
+          },
           "static-baseline": {
             file: "clinic-live-baseline-browser.html",
             note: "Approved light Summary sketch with current Clinic navigation and original section order.",
@@ -375,6 +411,24 @@
             return "";
           }
         };
+        const hashFor = (key, hash) => {
+          if (!hash || !["navigable", "care-draft", "care-dense", "contextual-clinic"].includes(key)) return hash;
+          const query = new URLSearchParams(hash.slice(1));
+          if (query.get("page") !== "patients" || !query.has("patient")) return hash;
+          const tab = query.get("tab");
+          const sub = query.get("sub");
+          const mapped = tab === "Clinical"
+            ? ({ Plans: ["Treatments", "Plans"], Perio: ["Perio", ""], Notes: ["Notes", ""] }[sub] || ["Dental chart", "Enter"])
+            : tab === "Documentation"
+              ? (sub === "Documents" ? ["Documents", ""] : ["Prescriptions", ""])
+              : tab === "Account" && sub === "Estimates"
+                ? ["Treatments", "Estimates"]
+                : null;
+          if (!mapped) return hash;
+          query.set("tab", mapped[0]);
+          if (mapped[1]) query.set("sub", mapped[1]); else query.delete("sub");
+          return `#${query.toString()}`;
+        };
         function layout() {
           const availableWidth = stage.clientWidth,
             availableHeight = stage.clientHeight;
@@ -405,7 +459,7 @@
           note.textContent = v.note;
           membership.textContent = v.membership;
           interaction.textContent = v.interaction;
-          standalone.href = v.file + (v.dynamic ? currentHash() : "");
+          standalone.href = v.file + (v.dynamic ? hashFor(key, currentHash()) : "");
           status.textContent = `${buttons.find((b) => b.dataset.variant === key).textContent.trim()} selected. ${v.dynamic ? "Clinical controls do not save." : "Static sketch; page navigation is inert."}`;
         };
         buttons.forEach((button) =>
@@ -413,7 +467,7 @@
             const key = button.dataset.variant;
             const hash =
               variants[key].dynamic && variants[selected].dynamic
-                ? currentHash()
+                ? hashFor(key, currentHash())
                 : "";
             setInfo(key);
             frame.src = variants[key].file + hash;
@@ -442,7 +496,7 @@
         standalone.addEventListener("click", () => {
           standalone.href =
             variants[selected].file +
-            (variants[selected].dynamic ? currentHash() : "");
+            (variants[selected].dynamic ? hashFor(selected, currentHash()) : "");
         });
         new ResizeObserver(layout).observe(stage);
         layout();

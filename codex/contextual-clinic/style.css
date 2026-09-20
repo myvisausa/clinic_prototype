@@ -1,0 +1,29 @@
+@import url("../care-dense/style.css");
+
+.contextual-variant .contextual-side nav { padding-top: 0; }
+.contextual-variant .contextual-side .sidehead h2 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.contextual-variant .contextual-nav-group { border-bottom: 1px solid #e2e4e7; padding: 5px 0; }
+.contextual-variant .contextual-nav-group h3 { margin: 7px 10px 4px; color: #69727e; font-size: 11px; text-transform: uppercase; }
+.contextual-variant .contextual-side .side-row a { border-radius: 5px; margin: 0 3px; padding: 8px 6px; white-space: normal; line-height: 1.2; }
+.contextual-variant .contextual-surface { min-width: 0; padding: 12px; }
+.contextual-variant .contextual-heading { margin-bottom: 10px; }
+.contextual-variant .contextual-heading h1 { font-size: 21px; margin: 0 0 8px; }
+.contextual-variant .contextual-tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid #e5e5e5; }
+.contextual-variant .contextual-tabs a { padding: 7px 10px; color: #616161; }
+.contextual-variant .contextual-tabs a.active { color: #2e5b9b; border-bottom: 2px solid #2e5b9b; }
+.contextual-variant .contextual-surface > .clinical-admin { padding: 0; }
+.contextual-variant .contextual-surface .clinical-admin .ca-page-head { display: none; }
+.contextual-variant .contextual-surface .schedule-page { padding: 0; }
+.contextual-variant .contextual-surface .schedule-tabs { display: none; }
+.contextual-variant .contextual-patient .dense-patient-header { position: sticky; top: 0; z-index: 4; background: #fff; }
+.contextual-variant .contextual-patient .patientbody { border: 0; margin: 0; padding: 12px; }
+@media (max-width: 1050px) { .contextual-variant .contextual-surface { padding: 10px; } }
+
+/* The source schedule link is absolutely positioned for the old tab strip.
+   This variant gives it a full flow row ahead of each schedule widget. */
+.contextual-variant .contextual-surface .schedule-page { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.contextual-variant .contextual-surface .schedule-availability { position: static; align-self: flex-end; display: inline-flex; align-items: center; min-height: 32px; margin: 0 0 8px; }
+.contextual-variant .contextual-surface .schedule-day-layout { min-width: 0; height: calc(100vh - 180px); min-height: 350px; }
+.contextual-variant .contextual-surface .schedule-day-main { min-width: 0; }
+.contextual-variant .contextual-surface .schedule-team-grid,
+.contextual-variant .contextual-surface .schedule-calendar { min-width: 0; max-width: 100%; }

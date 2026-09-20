@@ -1,0 +1,13 @@
+.organization-variant .grouped-patient .dense-patient-header { position: sticky; top: 0; z-index: 4; background: #fff; border-bottom: 1px solid #e5e5e5; }
+.organization-variant .grouped-patient .patientbody { border: 0; margin: 0; padding: 12px; }
+.organization-variant .grouped-tabs { margin: 0; padding: 0 12px; }
+.organization-variant .grouped-jumps { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 7px 0; position: sticky; top: var(--group-header-height, 150px); z-index: 3; background: #fff; border-bottom: 1px solid #e5e5e5; }
+.organization-variant .grouped-jumps a { border: 1px solid #d7dadd; border-radius: 5px; padding: 6px 9px; color: #2e5b9b; }
+.organization-variant .grouped-section { border-top: 1px solid #e5e5e5; padding: 12px 0 16px; scroll-margin-top: calc(var(--group-header-height, 150px) + 50px); min-width: 0; }
+.organization-variant .grouped-section-label { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 7px; }
+.organization-variant .grouped-section-label h2 { margin: 0; font-size: 17px; }
+.organization-variant .grouped-return { font-size: 12px; color: #2e5b9b; }
+.organization-variant .grouped-section .patient-section { border: 0; padding: 0; margin: 0; }
+.organization-variant .grouped-section .patient-section h2 { font-size: 15px; }
+.organization-variant .grouped-section .chart-workspace { min-width: 0; }
+
