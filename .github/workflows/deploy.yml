@@ -166,14 +166,35 @@ jobs:
           curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/reference/index-en.html"
 
       - name: Summary
-        env:
-          WALKTHROUGH_RELEASE_TAG: ${{ inputs.walkthrough_release_tag }}
         run: |
-          echo "Website: ${WEBSITE_URL}/"
-          echo "Storybook: ${WEBSITE_URL}/storybook/"
-          if [[ -n "$WALKTHROUGH_RELEASE_TAG" ]]; then
-            echo "Clinical walkthrough (ES): ${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=es"
-            echo "Clinical walkthrough (EN): ${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=en"
-          fi
-          echo "Staff walkthrough (ES): ${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=es"
-          echo "Staff walkthrough (EN): ${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=en"
+          set -euo pipefail
+          log_page() {
+            local label="$1"
+            local http_path="$2"
+            local https_path="$3"
+            echo "${label}"
+            echo "  HTTP:  ${WEBSITE_URL}${http_path}"
+            echo "  HTTPS: ${SITE_HTTPS_URL}${https_path}"
+            {
+              echo "### ${label}"
+              echo ""
+              echo "- HTTP: ${WEBSITE_URL}${http_path}"
+              echo "- HTTPS: ${SITE_HTTPS_URL}${https_path}"
+              echo ""
+            } >> "$GITHUB_STEP_SUMMARY"
+          }
+
+          echo "HTTP is the website endpoint. HTTPS names the object; a directory URL is not valid there."
+          echo ""
+          log_page "Website" "/" "/index.html"
+          log_page "Components" "/components/" "/components/index.html"
+          log_page "Storybook" "/storybook/" "/storybook/index.html"
+          log_page "Staff Storybook" "/clinical-walkthrough-staff/" "/clinical-walkthrough-staff/index.html"
+          log_page "Staff walkthrough (ES)" "/clinical-walkthrough-staff/walkthrough/staff/?lang=es" "/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=es"
+          log_page "Staff walkthrough (EN)" "/clinical-walkthrough-staff/walkthrough/staff/?lang=en" "/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=en"
+          log_page "Admin walkthrough (ES)" "/clinical-walkthrough-staff/walkthrough/admin/?lang=es" "/clinical-walkthrough-staff/walkthrough/admin/index.html?lang=es"
+          log_page "Admin walkthrough (EN)" "/clinical-walkthrough-staff/walkthrough/admin/?lang=en" "/clinical-walkthrough-staff/walkthrough/admin/index.html?lang=en"
+          log_page "Staff reference (ES)" "/clinical-walkthrough-staff/reference/" "/clinical-walkthrough-staff/reference/index.html"
+          log_page "Staff reference (EN)" "/clinical-walkthrough-staff/reference/index-en.html" "/clinical-walkthrough-staff/reference/index-en.html"
+          log_page "Clinical walkthrough (ES)" "/clinical-walkthrough/walkthrough/?lang=es" "/clinical-walkthrough/walkthrough/index.html?lang=es"
+          log_page "Clinical walkthrough (EN)" "/clinical-walkthrough/walkthrough/?lang=en" "/clinical-walkthrough/walkthrough/index.html?lang=en"
