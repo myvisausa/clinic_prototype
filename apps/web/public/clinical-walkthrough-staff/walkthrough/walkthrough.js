@@ -1,8 +1,15 @@
 const lang =
   new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'es';
-const isStaffWalkthrough = location.pathname.includes('/walkthrough/staff/');
+// Task guides share one shell: daily work for staff, clinic setup for owners.
+const guide = location.pathname.includes('/walkthrough/admin/')
+  ? 'admin'
+  : location.pathname.includes('/walkthrough/staff/')
+    ? 'staff'
+    : 'general';
+const otherGuide = guide === 'admin' ? 'staff' : 'admin';
+const isStaffWalkthrough = guide !== 'general';
 const lessonPath = isStaffWalkthrough
-  ? '../staff-chapters.json'
+  ? `../${guide}-chapters.json`
   : 'chapters.json';
 const iframePath = isStaffWalkthrough ? '../../iframe.html' : '../iframe.html';
 const buildPath = isStaffWalkthrough ? '../build.json' : 'build.json';
@@ -10,7 +17,13 @@ const developerMode =
   new URLSearchParams(location.search).get('developer') === '1';
 const copy = {
   en: {
-    title: isStaffWalkthrough ? 'Staff task guide' : 'A guided clinical visit',
+    title:
+      guide === 'admin'
+        ? 'Set up your clinic'
+        : isStaffWalkthrough
+          ? 'Staff task guide'
+          : 'A guided clinical visit',
+    otherGuide: guide === 'admin' ? 'Daily work' : 'Clinic setup',
     previous: 'Previous chapter',
     next: 'Next chapter',
     reset: isStaffWalkthrough ? 'Start over' : 'Reset this demonstration',
@@ -42,9 +55,13 @@ const copy = {
     loadError: 'The lesson could not load. Reload this page to try again.',
   },
   es: {
-    title: isStaffWalkthrough
-      ? 'Guía de tareas del personal'
-      : 'Una visita clínica guiada',
+    title:
+      guide === 'admin'
+        ? 'Configure su clínica'
+        : isStaffWalkthrough
+          ? 'Guía de tareas del personal'
+          : 'Una visita clínica guiada',
+    otherGuide: guide === 'admin' ? 'Trabajo diario' : 'Configuración',
     previous: 'Capítulo anterior',
     next: 'Capítulo siguiente',
     reset: isStaffWalkthrough
@@ -90,6 +107,11 @@ archive.href = isStaffWalkthrough
   : `https://myvisausa.github.io/clinic_prototype/codex/reference-captures/2026-09-20-walkthrough/index${lang === 'en' ? '-en' : ''}.html`;
 if (isStaffWalkthrough && !developerMode)
   document.getElementById('storybook').hidden = true;
+const guideSwitch = document.getElementById('guide-switch');
+if (guideSwitch) {
+  guideSwitch.textContent = copy.otherGuide;
+  guideSwitch.href = `../${otherGuide}/index.html?lang=${lang}`;
+}
 
 async function loadLessons() {
   const response = await fetch(lessonPath);
@@ -112,6 +134,54 @@ async function loadLessons() {
     return button;
   });
   const panelsByRoute = new Map();
+  // Routes taught in the other task guide: a sidebar click there changes guide.
+  const otherGuideRoutes = new Map();
+  if (isStaffWalkthrough)
+    await fetch(`../${otherGuide}-chapters.json`)
+      .then((other) => (other.ok ? other.json() : []))
+      .then((otherChapters) =>
+        otherChapters.forEach((lesson, chapterIndex) =>
+          lesson.sections.forEach((panel) => {
+            if (panel.route && !otherGuideRoutes.has(panel.route))
+              otherGuideRoutes.set(panel.route, { chapterIndex, id: panel.id });
+          })
+        )
+      )
+      .catch(() => undefined);
+  // The declared route that best matches an application URL: same path, no
+  // query value in conflict, most shared values first. A patient section never
+  // falls back to the patient list.
+  const matchRoute = (routes, target) => {
+    let best;
+    let bestScore = -1;
+    for (const declared of routes.keys()) {
+      const candidate = new URL(declared, location.origin);
+      if (candidate.pathname !== target.pathname) continue;
+      if (
+        target.searchParams.has('section') &&
+        !candidate.searchParams.has('section')
+      )
+        continue;
+      let score = 0;
+      let conflict = false;
+      for (const [key, value] of candidate.searchParams) {
+        if (!target.searchParams.has(key)) continue;
+        if (target.searchParams.get(key) === value) score += 1;
+        else conflict = true;
+      }
+      if (!conflict && score > bestScore) {
+        best = declared;
+        bestScore = score;
+      }
+    }
+    return best;
+  };
+  const focusPanel = (id) =>
+    requestAnimationFrame(() => {
+      const panel = document.getElementById(`panel-${id}`);
+      panel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      panel?.focus({ preventScroll: true });
+    });
   const sectionsById = new Map();
   chapters.forEach((lesson, chapterIndex) =>
     (isStaffWalkthrough ? lesson.sections : lesson.panels).forEach(
@@ -384,48 +454,29 @@ async function loadLessons() {
       return;
     }
     if (route.origin !== location.origin) return;
-    const pathname = route.pathname.replace(/^\/(en|es)(?=\/)/, '');
-    let canonical;
-    if (pathname === '/dashboard') canonical = '/dashboard';
-    else if (pathname === '/clinical/schedule') {
-      const view = route.searchParams.get('view');
-      canonical =
-        view === 'grid' && route.searchParams.get('calendarView') === 'day'
-          ? '/clinical/schedule?view=grid&calendarView=day'
-          : view === 'day'
-            ? '/clinical/schedule?view=day'
-            : undefined;
-    } else if (pathname === '/clinical/pacientes') {
-      const section = route.searchParams.get('section');
-      const hasContact = route.searchParams.has('contactId');
-      const declared = `${pathname}${route.search}`;
-      canonical = panelsByRoute.has(declared)
-        ? declared
-        : !hasContact
-          ? undefined
-          : section === 'treatments' &&
-              route.searchParams.get('view') === 'plans'
-            ? '/clinical/pacientes?section=treatments&view=plans'
-            : section === 'chart'
-              ? '/clinical/pacientes?section=chart'
-              : section === 'evolutions'
-                ? '/clinical/pacientes?section=evolutions'
-                : section === 'summary'
-                  ? '/clinical/pacientes?section=summary'
-                  : undefined;
-    }
-    const destination = panelsByRoute.get(canonical);
-    if (!destination) return;
-    show(destination.chapterIndex);
-    requestAnimationFrame(() => {
-      const panel = document.getElementById(
-        `panel-${(isStaffWalkthrough ? chapters[destination.chapterIndex].sections : chapters[destination.chapterIndex].panels)[destination.panelIndex].id}`
+    route.pathname = route.pathname.replace(/^\/(en|es)(?=\/)/, '');
+    const here = matchRoute(panelsByRoute, route);
+    if (here) {
+      const destination = panelsByRoute.get(here);
+      show(destination.chapterIndex);
+      focusPanel(
+        (isStaffWalkthrough
+          ? chapters[destination.chapterIndex].sections
+          : chapters[destination.chapterIndex].panels)[destination.panelIndex].id
       );
-      panel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      panel?.focus({ preventScroll: true });
-    });
+      return;
+    }
+    const elsewhere = matchRoute(otherGuideRoutes, route);
+    if (elsewhere) {
+      const destination = otherGuideRoutes.get(elsewhere);
+      location.href = `../${otherGuide}/index.html?lang=${lang}&panel=${encodeURIComponent(destination.id)}#${destination.chapterIndex}`;
+      return;
+    }
+    event.source.postMessage({ type: 'walkthrough:no-lesson' }, location.origin);
   });
   show(chapter);
+  const requestedPanel = new URLSearchParams(location.search).get('panel');
+  if (requestedPanel && sectionsById.has(requestedPanel)) focusPanel(requestedPanel);
 }
 loadLessons().catch(() => {
   document.getElementById('description').textContent = copy.loadError;

@@ -1,0 +1,1 @@
+import{r,j as a}from"./iframe-_Qq2oHDl.js";function c(n){const e=r.createContext(null);function o(t){return a.jsx(e.Provider,{value:{locale:t.locale,text:t.text},children:t.children})}function i(){const t=r.useContext(e);if(!t)throw new Error(`Missing ${n}TranslationProvider`);return t.text}return{Provider:o,useTranslations:i}}export{c};

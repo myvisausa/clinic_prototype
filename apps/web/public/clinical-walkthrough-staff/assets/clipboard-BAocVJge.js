@@ -1,0 +1,1 @@
+import{t as n}from"./use-toast-C8Dh0jNQ.js";async function o(t){try{if(typeof navigator<"u"&&navigator.clipboard?.writeText)return await navigator.clipboard.writeText(t),!0}catch{}return!1}async function c(t,i,a){try{const r=await o(t);return r&&n({description:i,variant:a?.variant,duration:a?.duration}),r}catch{return!1}}export{c as a,o as c};

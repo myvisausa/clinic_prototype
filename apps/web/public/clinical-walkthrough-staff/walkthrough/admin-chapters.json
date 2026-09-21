@@ -1,0 +1,1494 @@
+[
+  {
+    "title": {
+      "es": "Su equipo",
+      "en": "Your team"
+    },
+    "intro": {
+      "es": "Cada persona del consultorio entra con su propio acceso y con un rol que decide qué puede ver y hacer. Aquí agrega a una auxiliar nueva y aprende a distinguir los tres roles antes de repartirlos.",
+      "en": "Everyone in the office signs in with their own access and a role that decides what they can see and do. Here you add a new assistant and learn to tell the three roles apart before handing them out."
+    },
+    "sections": [
+      {
+        "id": "admin-add-team-member",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Agregue a una persona a su equipo",
+          "en": "Add someone to your team"
+        },
+        "scenario": {
+          "es": "Laura Gómez empieza esta semana como auxiliar en la recepción de la clínica. Déle su propio acceso con el rol que corresponde a su trabajo, sin darle más de lo necesario.",
+          "en": "Laura Gómez starts this week as an assistant at the clinic's front desk. Give her access of her own with the role that matches her job, without giving her more than she needs."
+        },
+        "story": {
+          "es": "walkthrough-practice-team--manage-team-spanish",
+          "en": "walkthrough-practice-team--manage-team-english"
+        },
+        "route": "/settings/team",
+        "sidebarRoute": "/settings/team",
+        "steps": [
+          {
+            "id": "review-team",
+            "text": {
+              "es": "En «Miembros del equipo» revise primero quién ya tiene acceso: «Alex Demo» con el rol «Propietario / Gerente de oficina» y «Carolina Ruiz» con «Líder de equipo». Así evita crear un acceso repetido.",
+              "en": "In “Team members”, first review who already has access: “Alex Demo” with the “Owner / Office manager” role and “Carolina Ruiz” with “Team lead”. That way you avoid creating a duplicate."
+            },
+            "completion": {
+              "es": "La tabla muestra las dos filas, cada una con su rol.",
+              "en": "The table shows the two rows, each with its role."
+            }
+          },
+          {
+            "id": "open-invite",
+            "text": {
+              "es": "Haga clic en «Invitar miembro», en la parte superior del recuadro «Miembros del equipo».",
+              "en": "Click “Invite team member” at the top of “Team members”."
+            },
+            "completion": {
+              "es": "Se abre la ventana «Invitar miembro».",
+              "en": "The “Invite team member” window opens."
+            }
+          },
+          {
+            "id": "type-email",
+            "text": {
+              "es": "En «Correo electrónico» escriba la dirección de Laura: laura.gomez@clinicasonrisa.co. Ese correo es lo que identifica a cada persona del equipo, así que use uno que solo ella use.",
+              "en": "In “Email”, type Laura's address: laura.gomez@clinicasonrisa.co. That email is what identifies each person on the team, so use one only she uses."
+            },
+            "completion": {
+              "es": "El campo «Correo electrónico» muestra la dirección de Laura.",
+              "en": "The “Email” field shows Laura's address."
+            }
+          },
+          {
+            "id": "choose-role",
+            "text": {
+              "es": "Abra «Rol» y elija «Recepción / Personal clínico». Es el rol indicado para una auxiliar: cubre la agenda, los pacientes y los cobros del día, y deja por fuera la configuración del consultorio que trae «Propietario / Gerente de oficina».",
+              "en": "Open “Role” and choose “Front desk / Clinical staff”. That is the right role for an assistant: it covers the calendar, patients, and the day's payments, and leaves out the office setup that comes with “Owner / Office manager”."
+            },
+            "completion": {
+              "es": "«Rol» muestra «Recepción / Personal clínico».",
+              "en": "“Role” shows “Front desk / Clinical staff”."
+            }
+          },
+          {
+            "id": "send-invite",
+            "text": {
+              "es": "Haga clic en «Enviar invitación». La aplicación responde «Invitación enviada a laura.gomez@clinicasonrisa.co.» y le ofrece «Invitar a otro» o «Listo».",
+              "en": "Click “Send invite”. The application answers “Invitation sent to laura.gomez@clinicasonrisa.co.” and offers you “Invite another” or “Done”."
+            },
+            "completion": {
+              "es": "Aparece el mensaje con el correo de Laura.",
+              "en": "The message with Laura's email appears."
+            }
+          },
+          {
+            "id": "close-and-check",
+            "text": {
+              "es": "Haga clic en «Listo» y mire el recuadro «Invitaciones»: ahí queda la fila de Laura, con su correo, el rol «Recepción / Personal clínico» y «Enviado el» con la fecha de hoy.",
+              "en": "Click “Done” and look at “Invitations”: Laura's row is there, with her email, the “Front desk / Clinical staff” role, and “Sent on” with today's date."
+            },
+            "completion": {
+              "es": "La fila de Laura aparece en «Invitaciones».",
+              "en": "Laura's row appears under “Invitations”."
+            }
+          }
+        ],
+        "result": {
+          "es": "«Invitaciones» pasa de «No hay invitaciones.» a una fila con laura.gomez@clinicasonrisa.co y el rol «Recepción / Personal clínico». Laura todavía no aparece en «Miembros del equipo»: por ahora su acceso está registrado como invitación.",
+          "en": "“Invitations” goes from “No invitations.” to one row with laura.gomez@clinicasonrisa.co and the “Front desk / Clinical staff” role. Laura does not appear under “Team members” yet: for now her access is recorded as an invitation."
+        },
+        "tips": [
+          {
+            "es": "En modo práctica no se envía ninguna invitación.",
+            "en": "No invitation is sent in practice mode."
+          },
+          {
+            "es": "En modo práctica, «Editar miembro» no hace nada aquí, y el nombre de una persona tampoco abre nada.",
+            "en": "In practice mode, “Edit team member” does nothing here, and a person's name does not open anything either."
+          },
+          {
+            "es": "En modo práctica, «Reenviar» y «Revocar» no hacen nada aquí.",
+            "en": "In practice mode, “Resend” and “Revoke” do nothing here."
+          },
+          {
+            "es": "En modo práctica, «Cambiar estado» y «Desactivar» no hacen nada aquí.",
+            "en": "In practice mode, “Change status” and “Deactivate” do nothing here."
+          }
+        ]
+      },
+      {
+        "id": "admin-roles-overview",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Entienda qué puede hacer cada rol",
+          "en": "Understand what each role can do"
+        },
+        "scenario": {
+          "es": "Antes de repartir accesos entre su gente, compare los tres roles que ofrece la aplicación y lea en pantalla las capacidades que hoy tiene Carolina Ruiz.",
+          "en": "Before handing out access to your people, compare the three roles the application offers and read on screen the capabilities Carolina Ruiz has today."
+        },
+        "story": {
+          "es": "walkthrough-practice-team--manage-team-spanish",
+          "en": "walkthrough-practice-team--manage-team-english"
+        },
+        "sidebarRoute": "/settings/team",
+        "steps": [
+          {
+            "id": "read-role-column",
+            "text": {
+              "es": "En «Miembros del equipo» mire la columna «Rol»: «Alex Demo» tiene «Propietario / Gerente de oficina» y «Carolina Ruiz» tiene «Líder de equipo».",
+              "en": "In “Team members”, look at the “Role” column: “Alex Demo” has “Owner / Office manager” and “Carolina Ruiz” has “Team lead”."
+            },
+            "completion": {
+              "es": "Cada fila muestra un rol distinto.",
+              "en": "Each row shows a different role."
+            }
+          },
+          {
+            "id": "open-role-list",
+            "text": {
+              "es": "Abra la lista «Rol» de la fila de «Carolina Ruiz». La aplicación ofrece tres roles: «Propietario / Gerente de oficina», «Líder de equipo» y «Recepción / Personal clínico». Cierre la lista con la tecla Esc, sin elegir otro.",
+              "en": "Open the “Role” list on the “Carolina Ruiz” row. The application offers three roles: “Owner / Office manager”, “Team lead”, and “Front desk / Clinical staff”. Close the list with the Esc key, without choosing another one."
+            },
+            "completion": {
+              "es": "La lista muestra los tres roles y se cierra sin cambiar nada.",
+              "en": "The list shows the three roles and closes without changing anything."
+            }
+          },
+          {
+            "id": "open-access",
+            "text": {
+              "es": "En esa misma fila haga clic en «Acceso». Se abre «Acceso de Carolina Ruiz» con la lista «Capacidades».",
+              "en": "On that same row, click “Access”. “Access for Carolina Ruiz” opens with the “Capabilities” list."
+            },
+            "completion": {
+              "es": "La ventana «Acceso de Carolina Ruiz» muestra «Capacidades».",
+              "en": "The “Access for Carolina Ruiz” window shows “Capabilities”."
+            }
+          },
+          {
+            "id": "read-capabilities",
+            "text": {
+              "es": "Recorra «Capacidades»: los interruptores encendidos son lo que trae su rol. «Supervisar al equipo» está encendido, mientras que «Administración del equipo» y «Configuración de la organización» están apagados, porque esas dos pertenecen a «Propietario / Gerente de oficina».",
+              "en": "Go through “Capabilities”: the switches that are on are what her role brings. “Supervise the team” is on, while “Team administration” and “Organization settings” are off, because those two belong to “Owner / Office manager”."
+            },
+            "completion": {
+              "es": "Ve «Supervisar al equipo» encendido y «Administración del equipo» apagado.",
+              "en": "You see “Supervise the team” on and “Team administration” off."
+            }
+          },
+          {
+            "id": "close-access",
+            "text": {
+              "es": "Haga clic en «Cancelar» para cerrar la ventana sin cambiar nada. Esta revisión es solo para leer.",
+              "en": "Click “Cancel” to close the window without changing anything. This review is for reading only."
+            },
+            "completion": {
+              "es": "La ventana se cierra y la tabla queda igual.",
+              "en": "The window closes and the table stays the same."
+            }
+          }
+        ],
+        "result": {
+          "es": "Nada cambia en pantalla: queda claro qué trae cada rol antes de que usted lo asigne a alguien.",
+          "en": "Nothing changes on screen: it is now clear what each role brings before you assign it to anyone."
+        },
+        "check": {
+          "question": {
+            "es": "¿Qué rol le da a una persona «Administración del equipo» y «Configuración de la organización»?",
+            "en": "Which role gives a person “Team administration” and “Organization settings”?"
+          },
+          "answer": {
+            "es": "«Propietario / Gerente de oficina». «Líder de equipo» agrega «Supervisar al equipo», y «Recepción / Personal clínico» trabaja el día a día sin esas capacidades de administración.",
+            "en": "“Owner / Office manager”. “Team lead” adds “Supervise the team”, and “Front desk / Clinical staff” works the day to day without those administration capabilities."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Horarios",
+      "en": "Working hours"
+    },
+    "intro": {
+      "es": "El horario de cada profesional decide qué espacios ofrece la agenda. Aquí define la semana de trabajo de una odontóloga y marca un día en que no atiende.",
+      "en": "Each provider's hours decide which slots the calendar offers. Here you set a dentist's working week and mark a day when she is not seeing patients."
+    },
+    "sections": [
+      {
+        "id": "admin-provider-hours",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Defina las horas de trabajo de una profesional",
+          "en": "Set a provider's working hours"
+        },
+        "scenario": {
+          "es": "Carolina Ruiz entra al equipo con un horario propio: atiende de lunes a viernes de 8:00 a 5:00 y los sábados solo en la mañana, aunque la clínica cierre más tarde. Déjelo registrado antes de que recepción empiece a agendarle pacientes.",
+          "en": "Carolina Ruiz joins the team with hours of her own: Monday to Friday from 8:00 to 5:00 and Saturday mornings only, even though the clinic closes later. Record that before the front desk starts booking patients with her."
+        },
+        "story": {
+          "es": "walkthrough-practice-hours--weekly-hours-spanish",
+          "en": "walkthrough-practice-hours--weekly-hours-english"
+        },
+        "route": "/clinical/schedule?view=team&teamPanel=availability",
+        "sidebarRoute": "/clinical/schedule?view=team&teamPanel=availability",
+        "steps": [
+          {
+            "id": "read-current-hours",
+            "text": {
+              "es": "Mire la etiqueta gris debajo del nombre de Carolina Ruiz: dice «Sigue el horario de la oficina», es decir que hoy la agenda le ofrece las mismas horas que la clínica.",
+              "en": "Look at the grey label under Carolina Ruiz's name: it reads “Follows office hours”, meaning the calendar currently offers her the same hours as the clinic."
+            },
+            "target": "[data-testid=\"hours-mode-badge-dr-ruiz\"]",
+            "completion": {
+              "es": "La etiqueta dice «Sigue el horario de la oficina».",
+              "en": "The label reads “Follows office hours”."
+            }
+          },
+          {
+            "id": "turn-off-inherit",
+            "text": {
+              "es": "Apague el interruptor «Usar el horario de la ubicación». Aparecen los siete días de la semana, de «Lun» a «Dom», cada uno con una casilla y dos horas.",
+              "en": "Turn off the “Use location office hours” switch. The seven days of the week appear, from “Mon” to “Sun”, each with a checkbox and two times."
+            },
+            "target": "[data-testid=\"work-hours-inherit-switch\"]",
+            "completion": {
+              "es": "Aparece la lista de días de «Lun» a «Dom».",
+              "en": "The list of days from “Mon” to “Sun” appears."
+            }
+          },
+          {
+            "id": "weekday-preset",
+            "text": {
+              "es": "Haga clic en «Lunes a viernes 8–5»: llena de lunes a viernes de 08:00 a 17:00 y deja sábado y domingo sin marcar. Los días sin marcar dicen «No trabaja».",
+              "en": "Click “Weekdays 8–5”: it fills Monday to Friday with 08:00 to 17:00 and leaves Saturday and Sunday unchecked. Unchecked days read “Not working”."
+            },
+            "target": "[data-testid=\"work-hours-preset-weekdays\"]",
+            "completion": {
+              "es": "«Sáb» y «Dom» muestran «No trabaja».",
+              "en": "“Sat” and “Sun” show “Not working”."
+            }
+          },
+          {
+            "id": "saturday-morning",
+            "text": {
+              "es": "Marque la casilla de la fila «Sáb» y escriba 08:00 en la primera hora y 12:00 en la segunda. Cada día admite un solo bloque de inicio y fin, así que media jornada de sábado se escribe como 08:00 a 12:00.",
+              "en": "Tick the checkbox on the “Sat” row and type 08:00 in the first time and 12:00 in the second. Each day takes a single start and end, so a Saturday half day is written as 08:00 to 12:00."
+            },
+            "target": "[data-testid=\"work-hours-day-6\"]",
+            "completion": {
+              "es": "La fila «Sáb» muestra 08:00 y 12:00.",
+              "en": "The “Sat” row shows 08:00 and 12:00."
+            }
+          },
+          {
+            "id": "save-hours",
+            "text": {
+              "es": "Revise la semana y haga clic en «Guardar». Vale la pena mirarla dos veces: la agenda solo ofrece citas dentro de estas horas.",
+              "en": "Check the week and click “Save”. It is worth a second look: the calendar only offers appointments inside these hours."
+            },
+            "target": "[data-testid=\"work-hours-save\"]",
+            "completion": {
+              "es": "La etiqueta debajo del nombre cambia a «Horas personalizadas».",
+              "en": "The label under the name changes to “Custom hours”."
+            }
+          }
+        ],
+        "result": {
+          "es": "Debajo del nombre de Carolina Ruiz la etiqueta pasa de «Sigue el horario de la oficina» a «Horas personalizadas» y aparece el resumen «Lun–Vie 8:00 AM–5:00 PM · Sáb 8:00 AM–12:00 PM · Dom libre».",
+          "en": "Under Carolina Ruiz's name the label changes from “Follows office hours” to “Custom hours” and the summary “Mon–Fri 8:00 AM–5:00 PM · Sat 8:00 AM–12:00 PM · Sun off” appears."
+        },
+        "check": {
+          "question": {
+            "es": "¿Por qué importa dejar estas horas bien puestas?",
+            "en": "Why does getting these hours right matter?"
+          },
+          "answer": {
+            "es": "Porque la agenda solo ofrece espacios dentro de las horas de cada profesional: fuera de ellas no aparece disponibilidad para citas con ella.",
+            "en": "Because the calendar only offers slots inside each provider's hours: outside them no availability appears for appointments with her."
+          }
+        },
+        "tips": [
+          {
+            "es": "El botón de copiar al final de una fila aplica el horario de ese día a los demás días que usted marque.",
+            "en": "The copy button at the end of a row applies that day's hours to the other days you tick."
+          },
+          {
+            "es": "«Igualar horario de la oficina» vuelve a traer el horario de la clínica a los siete días, por si prefiere empezar desde ahí.",
+            "en": "“Match office hours” brings the clinic's hours back into all seven days, in case you prefer to start from there."
+          }
+        ]
+      },
+      {
+        "id": "admin-time-off",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Bloquee un día libre o festivo",
+          "en": "Block a day off or holiday"
+        },
+        "scenario": {
+          "es": "Carolina Ruiz avisa que el lunes 5 de octubre de 2026 no atiende. Déjelo marcado para que ese día nadie le agende pacientes.",
+          "en": "Carolina Ruiz says she is not seeing patients on Monday 5 October 2026. Mark it so nobody books patients with her that day."
+        },
+        "story": {
+          "es": "walkthrough-practice-hours--time-off-spanish",
+          "en": "walkthrough-practice-hours--time-off-english"
+        },
+        "sidebarRoute": "/clinical/schedule?view=team&teamPanel=availability",
+        "steps": [
+          {
+            "id": "read-empty-list",
+            "text": {
+              "es": "La pestaña «Excepciones del día» ya está abierta. Debajo dice «No hay excepciones en los próximos 30 días»: Carolina Ruiz trabaja toda su semana normal.",
+              "en": "The “Day overrides” tab is already open. Below it reads “No overrides in the next 30 days”: Carolina Ruiz works her whole normal week."
+            },
+            "target": "[data-testid=\"override-list\"]",
+            "completion": {
+              "es": "Se lee «No hay excepciones en los próximos 30 días».",
+              "en": "You can read “No overrides in the next 30 days”."
+            }
+          },
+          {
+            "id": "pick-date",
+            "text": {
+              "es": "En «Fecha» elija el 5 de octubre de 2026. La lista de abajo reúne las excepciones de los próximos 30 días.",
+              "en": "In “Date” choose 5 October 2026. The list below gathers the overrides for the next 30 days."
+            },
+            "target": "[data-testid=\"override-date\"]",
+            "completion": {
+              "es": "«Fecha» muestra el 5 de octubre de 2026.",
+              "en": "“Date” shows 5 October 2026."
+            }
+          },
+          {
+            "id": "choose-kind",
+            "text": {
+              "es": "En «Tipo» deje «Tiempo libre». La otra opción, «Horas personalizadas», es para un día en que sí atiende pero en otro horario.",
+              "en": "In “Kind” leave “Time off”. The other option, “Custom hours”, is for a day when she does work but at different times."
+            },
+            "target": "[data-testid=\"override-kind\"]",
+            "completion": {
+              "es": "«Tipo» muestra «Tiempo libre».",
+              "en": "“Kind” shows “Time off”."
+            }
+          },
+          {
+            "id": "write-note",
+            "text": {
+              "es": "En el campo «Notas (opcional)» escriba Festivo, para que quien mire la lista después sepa por qué está bloqueado ese día.",
+              "en": "In the “Notes (optional)” field type Holiday, so whoever reads the list later knows why that day is blocked."
+            },
+            "target": "[data-testid=\"override-notes\"]",
+            "completion": {
+              "es": "El campo de notas dice Festivo.",
+              "en": "The notes field reads Holiday."
+            }
+          },
+          {
+            "id": "add-override",
+            "text": {
+              "es": "Haga clic en «Agregar excepción».",
+              "en": "Click “Add override”."
+            },
+            "target": "[data-testid=\"override-add\"]",
+            "completion": {
+              "es": "Aparece una fila con la fecha y «Tiempo libre».",
+              "en": "A row with the date and “Time off” appears."
+            }
+          }
+        ],
+        "result": {
+          "es": "La lista deja de decir «No hay excepciones en los próximos 30 días» y muestra la fila «2026-10-05 · Tiempo libre» con un botón «Eliminar»; el nombre de la pestaña pasa a «Excepciones del día (1)».",
+          "en": "The list stops saying “No overrides in the next 30 days” and shows the row “2026-10-05 · Time off” with a “Remove” button; the tab name becomes “Day overrides (1)”."
+        },
+        "check": {
+          "question": {
+            "es": "Ese lunes Carolina Ruiz trabaja según su semana. ¿Qué ofrece la agenda ese día?",
+            "en": "Carolina Ruiz's week says she works that Monday. What does the calendar offer that day?"
+          },
+          "answer": {
+            "es": "Nada: un día marcado como «Tiempo libre» manda sobre la semana, así que la agenda no ofrece ningún espacio para citas con ella ese 5 de octubre.",
+            "en": "Nothing: a day marked “Time off” overrides the week, so the calendar offers no slots for appointments with her on 5 October."
+          }
+        },
+        "tips": [
+          {
+            "es": "«Eliminar» quita la excepción de la lista si el día libre se cae o cambia de fecha.",
+            "en": "“Remove” takes the override off the list if the day off is cancelled or moves."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Tipos de cita",
+      "en": "Appointment types"
+    },
+    "intro": {
+      "es": "Cada tipo de cita le dice al calendario cuánto tiempo apartar y de qué color pintar la visita. Cree los tipos que su clínica atiende y ajuste la duración cuando la realidad del consultorio cambie.",
+      "en": "Each appointment type tells the calendar how much time to hold and what color to paint the visit. Create the types your clinic offers and adjust the duration when the reality of the chair changes."
+    },
+    "sections": [
+      {
+        "id": "admin-appointment-type",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Cree un tipo de cita y ajuste la duración de otro",
+          "en": "Create an appointment type and adjust another one's duration"
+        },
+        "scenario": {
+          "es": "Su clínica empieza a ofrecer limpiezas y necesita que el calendario aparte 45 minutos cada vez que se agende una. Además, las consultas iniciales se están alargando: 30 minutos ya no alcanzan y hay que subirlas a 40.",
+          "en": "Your clinic is starting to offer cleanings and the calendar needs to hold 45 minutes every time one is booked. On top of that, initial consultations are running long: 30 minutes is no longer enough and they need to go up to 40."
+        },
+        "story": {
+          "es": "walkthrough-practice-appointment-types--admin-appointment-type-spanish",
+          "en": "walkthrough-practice-appointment-types--admin-appointment-type-english"
+        },
+        "route": "/clinical/configuracion?tab=appointment-types",
+        "sidebarRoute": "/clinical/configuracion?tab=appointment-types",
+        "steps": [
+          {
+            "id": "open-create",
+            "text": {
+              "es": "En «Tipos de reunión» revise la lista: cada fila muestra el nombre, la «Duración» y el «Estado». Haga clic en «Agregar Tipo de Reunión» para abrir el formulario.",
+              "en": "In “Meeting types” look over the list: each row shows the name, the “Duration” and the “Status”. Click “Add Meeting Type” to open the form."
+            },
+            "target": "[data-testid=\"mt-add\"]",
+            "completion": {
+              "es": "Se abre el formulario «Agregar Tipo de Reunión» al lado derecho.",
+              "en": "The “Add Meeting Type” form opens on the right."
+            }
+          },
+          {
+            "id": "name-it",
+            "text": {
+              "es": "En «Nombre» escriba «Limpieza / Cleaning». Es el nombre que verá el equipo al agendar, así que use el que todos usan en la clínica. Mientras escribe, «Nombre en el enlace» se completa solo; déjelo como está.",
+              "en": "In “Name” type “Limpieza / Cleaning”. This is the name the team sees when booking, so use the one everybody says at the clinic. As you type, “URL name” fills itself in; leave it as it is."
+            },
+            "target": "[data-testid=\"mt-name\"]",
+            "completion": {
+              "es": "«Nombre» dice «Limpieza / Cleaning» y «Nombre en el enlace» ya no está vacío.",
+              "en": "“Name” reads “Limpieza / Cleaning” and “URL name” is no longer empty."
+            }
+          },
+          {
+            "id": "set-duration",
+            "text": {
+              "es": "En «Duración (minutos)» ponga 45. Este número es el tiempo que el calendario aparta cada vez que se agenda una limpieza: si lo deja corto, la siguiente cita le queda encima.",
+              "en": "In “Duration (minutes)” enter 45. This number is the time the calendar holds every time a cleaning is booked: if you leave it short, the next appointment lands on top of it."
+            },
+            "target": "[data-testid=\"mt-duration\"]",
+            "completion": {
+              "es": "«Duración (minutos)» muestra 45.",
+              "en": "“Duration (minutes)” shows 45."
+            }
+          },
+          {
+            "id": "pick-color",
+            "text": {
+              "es": "Debajo de «Color» haga clic en uno de los círculos de color, por ejemplo el verde. Ese es el color con el que la visita se pinta en el calendario del día, y es lo que le permite reconocer de un vistazo qué tipo de cita es cada bloque.",
+              "en": "Under “Color” click one of the color circles, for example the green one. That is the color the visit is painted with on the day's calendar, and it is what lets you recognize at a glance what kind of appointment each block is."
+            },
+            "target": "[data-testid=\"mt-color-presets\"]",
+            "completion": {
+              "es": "El círculo que eligió queda marcado con un borde.",
+              "en": "The circle you chose is marked with a border."
+            }
+          },
+          {
+            "id": "save-new",
+            "text": {
+              "es": "Haga clic en «Guardar». El formulario se cierra y la lista se vuelve a leer.",
+              "en": "Click “Save”. The form closes and the list is read again."
+            },
+            "target": "[data-testid=\"mt-save\"]",
+            "completion": {
+              "es": "Aparece una fila nueva «Limpieza / Cleaning» con «45 min» en la columna «Duración».",
+              "en": "A new row “Limpieza / Cleaning” appears with “45 min” in the “Duration” column."
+            }
+          },
+          {
+            "id": "edit-existing",
+            "text": {
+              "es": "Ahora ajuste la consulta inicial: en la fila «Consulta inicial» haga clic en el botón del lápiz «Editar Tipo de Reunión», cambie «Duración (minutos)» de 30 a 40 y haga clic en «Guardar».",
+              "en": "Now adjust the initial consultation: in the “Consulta inicial” row click the pencil button “Edit Meeting Type”, change “Duration (minutes)” from 30 to 40, and click “Save”."
+            },
+            "completion": {
+              "es": "La fila «Consulta inicial» pasa de «30 min» a «40 min».",
+              "en": "The “Consulta inicial” row goes from “30 min” to “40 min”."
+            }
+          }
+        ],
+        "result": {
+          "es": "La lista queda con una fila nueva «Limpieza / Cleaning» en «45 min» y con su punto de color al lado del nombre, y «Consulta inicial» ahora dice «40 min» en vez de «30 min».",
+          "en": "The list now has a new “Limpieza / Cleaning” row at “45 min” with its color dot next to the name, and “Consulta inicial” now reads “40 min” instead of “30 min”."
+        },
+        "check": {
+          "question": {
+            "es": "¿Por qué importa el número de «Duración (minutos)» que escriba aquí?",
+            "en": "Why does the “Duration (minutes)” number you type here matter?"
+          },
+          "answer": {
+            "es": "Porque es el tiempo que el calendario aparta para cada cita de ese tipo. Si dice 45, el bloque en el calendario dura 45 minutos y la siguiente cita empieza después.",
+            "en": "Because it is the time the calendar holds for every appointment of that type. If it says 45, the block on the calendar lasts 45 minutes and the next appointment starts after it."
+          }
+        },
+        "tips": [
+          {
+            "es": "«Tiempo de Margen (minutos)» es aparte de la duración: son los minutos que quedan libres después de la cita para alistar el consultorio. La lista los muestra en la columna «Tiempo de Margen».",
+            "en": "“Buffer Time (minutes)” is separate from the duration: it is the minutes left free after the appointment to get the room ready. The list shows them in the “Buffer Time” column."
+          },
+          {
+            "es": "En «Seleccionar anfitriones» marque los profesionales que atienden ese tipo de cita; la columna «Anfitriones» dice «Sin anfitriones asignados» mientras no marque a nadie.",
+            "en": "Under “Select hosts” check the professionals who handle that appointment type; the “Hosts” column reads “No hosts assigned” until you check somebody."
+          },
+          {
+            "es": "En modo práctica, «Desactivar» no hace nada aquí.",
+            "en": "In practice mode, “Deactivate” does nothing here."
+          },
+          {
+            "es": "En modo práctica, «Eliminar» no hace nada aquí.",
+            "en": "In practice mode, “Delete” does nothing here."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Servicios y precios",
+      "en": "Services and prices"
+    },
+    "intro": {
+      "es": "La lista de servicios es donde vive el precio de cada tratamiento. Es la misma cifra que aparece cuando recepción arma un plan de tratamiento o una factura, así que mantenerla al día evita cobros disparejos entre una silla y otra. Aquí usted aprende a cambiar el precio de un servicio que ya existe y a agregar uno nuevo.",
+      "en": "The services list is where each treatment's price lives. It is the same figure that shows up when reception builds a treatment plan or an invoice, so keeping it current prevents uneven charges from one chair to the next. Here you learn to change the price of a service that already exists and to add a new one."
+    },
+    "sections": [
+      {
+        "id": "admin-change-price",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Actualice el precio de un servicio",
+          "en": "Update the price of a service"
+        },
+        "scenario": {
+          "es": "Desde octubre la clínica cobra 135.000 por la restauración en resina, no 120.000. Usted, como dueño, ajusta la lista de precios antes de que recepción cotice el próximo plan de tratamiento.",
+          "en": "From October the clinic charges 135,000 for the resin restoration instead of 120,000. As the owner, you update the price list before reception quotes the next treatment plan."
+        },
+        "story": {
+          "es": "walkthrough-practice-services--change-price-spanish",
+          "en": "walkthrough-practice-services--change-price-english"
+        },
+        "sidebarRoute": "/clinical/servicios?tab=services",
+        "route": "/clinical/servicios?tab=services",
+        "steps": [
+          {
+            "id": "open-services-tab",
+            "text": {
+              "es": "En «Servicios y paquetes», quédese en la pestaña «Servicios». Como dice la pantalla, son los «Ítems con precio que agregas a facturas y planes de tratamiento»: el precio que usted escriba aquí es el que recepción cotiza.",
+              "en": "In «Services & Packages», stay on the «Services» tab. As the screen says, these are the «Priced items you add to invoices and treatment plans»: the price you type here is the one reception quotes."
+            },
+            "completion": {
+              "es": "Ve la tabla con las columnas «Nombre», «Código de procedimiento (CUPS)», «Categoría» y «Precio».",
+              "en": "You can see the table with the «Name», «Procedure code (CUPS)», «Category» and «Price» columns."
+            }
+          },
+          {
+            "id": "find-service",
+            "text": {
+              "es": "Escriba «resina» en «Buscar servicios…» para dejar a la vista solo la fila «Composite restoration / Restauración en resina».",
+              "en": "Type «resina» in «Search services…» so only the «Composite restoration / Restauración en resina» row is left in view."
+            },
+            "completion": {
+              "es": "La tabla muestra una sola fila, con el código 2391.",
+              "en": "The table shows a single row, with code 2391."
+            }
+          },
+          {
+            "id": "open-edit-dialog",
+            "text": {
+              "es": "Pulse «Editar» al final de esa fila.",
+              "en": "Click «Edit» at the end of that row."
+            },
+            "completion": {
+              "es": "Se abre la ventana «Editar servicio» con los datos del servicio.",
+              "en": "The «Edit service» window opens with the service's details."
+            }
+          },
+          {
+            "id": "change-price",
+            "text": {
+              "es": "En «Precio» borre 120000 y escriba 135000. Deje «Moneda» en COP: el precio se guarda en pesos y así se muestra en la tabla.",
+              "en": "In «Price» delete 120000 and type 135000. Leave «Currency» on COP: the price is kept in pesos and that is how the table shows it."
+            },
+            "target": "#svc-price",
+            "completion": {
+              "es": "El campo «Precio» dice 135000 y «Moneda» sigue en COP.",
+              "en": "The «Price» field reads 135000 and «Currency» still reads COP."
+            }
+          },
+          {
+            "id": "save-price",
+            "text": {
+              "es": "Pulse «Guardar». No toque «Código de procedimiento (CUPS)»: ese código es el que identifica el tratamiento y no cambia porque suba la tarifa.",
+              "en": "Click «Save». Leave «Procedure code (CUPS)» alone: that code identifies the treatment and does not change just because the fee goes up."
+            },
+            "completion": {
+              "es": "La ventana se cierra y la tabla vuelve a cargarse.",
+              "en": "The window closes and the table loads again."
+            }
+          }
+        ],
+        "result": {
+          "es": "La fila «Composite restoration / Restauración en resina» muestra ahora 135.000,00 en la columna «Precio», en lugar de 120.000,00.",
+          "en": "The «Composite restoration / Restauración en resina» row now shows 135,000.00 in the «Price» column instead of 120,000.00."
+        },
+        "check": {
+          "question": {
+            "es": "¿Dónde vuelve a aparecer el precio que usted acaba de cambiar?",
+            "en": "Where does the price you just changed show up again?"
+          },
+          "answer": {
+            "es": "En los planes de tratamiento y en las facturas: la propia pantalla describe estos ítems como los que se agregan a facturas y planes de tratamiento, así que recepción cotiza con esta cifra.",
+            "en": "In treatment plans and invoices: the screen itself describes these items as the ones you add to invoices and treatment plans, so reception quotes with this figure."
+          }
+        },
+        "tips": [
+          {
+            "es": "En modo práctica, «Exportar hoja de cálculo» no hace nada aquí.",
+            "en": "In practice mode, «Export spreadsheet» does nothing here."
+          },
+          {
+            "es": "En modo práctica, las pestañas «Categorías» y «Paquetes» no hacen nada aquí.",
+            "en": "In practice mode, the «Categories» and «Packages» tabs do nothing here."
+          }
+        ]
+      },
+      {
+        "id": "admin-add-service",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Agregue un servicio nuevo a la lista de precios",
+          "en": "Add a new service to the price list"
+        },
+        "scenario": {
+          "es": "La clínica empieza a ofrecer limpieza dental por 90.000 y recepción necesita poder cobrarla. Usted la agrega a la lista de servicios.",
+          "en": "The clinic starts offering a dental cleaning for 90,000 and reception needs to be able to charge for it. You add it to the services list."
+        },
+        "story": {
+          "es": "walkthrough-practice-services--add-service-spanish",
+          "en": "walkthrough-practice-services--add-service-english"
+        },
+        "sidebarRoute": "/clinical/servicios?tab=services",
+        "steps": [
+          {
+            "id": "open-new-service",
+            "text": {
+              "es": "En la pestaña «Servicios», pulse «Nuevo servicio», arriba a la derecha.",
+              "en": "On the «Services» tab, click «New service» at the top right."
+            },
+            "completion": {
+              "es": "Se abre la ventana «Nuevo servicio», con los campos en blanco.",
+              "en": "The «New service» window opens with empty fields."
+            }
+          },
+          {
+            "id": "name-service",
+            "text": {
+              "es": "En «Nombre» escriba «Limpieza dental / Dental cleaning». Este es el texto que verá recepción al buscar el servicio.",
+              "en": "In «Name» type «Limpieza dental / Dental cleaning». This is the text reception will see when looking the service up."
+            },
+            "target": "#svc-name",
+            "completion": {
+              "es": "«Nombre» dice «Limpieza dental / Dental cleaning».",
+              "en": "«Name» reads «Limpieza dental / Dental cleaning»."
+            }
+          },
+          {
+            "id": "price-service",
+            "text": {
+              "es": "En «Precio» escriba 90000 y deje «Moneda» en COP.",
+              "en": "In «Price» type 90000 and leave «Currency» on COP."
+            },
+            "target": "#svc-price",
+            "completion": {
+              "es": "«Precio» dice 90000 y «Moneda» dice COP.",
+              "en": "«Price» reads 90000 and «Currency» reads COP."
+            }
+          },
+          {
+            "id": "category-service",
+            "text": {
+              "es": "En «Categoría» elija «Preventive / Preventiva», para que la limpieza quede junto a los demás tratamientos de prevención.",
+              "en": "In «Category» pick «Preventive / Preventiva», so the cleaning sits with the other preventive treatments."
+            },
+            "target": "#svc-cat",
+            "completion": {
+              "es": "«Categoría» muestra «Preventive / Preventiva».",
+              "en": "«Category» shows «Preventive / Preventiva»."
+            }
+          },
+          {
+            "id": "procedure-code",
+            "text": {
+              "es": "Abra «Código de procedimiento (CUPS)», escriba «profilaxis» y elija «997101 — Dental prophylaxis / Profilaxis dental». Sin código no se puede guardar el servicio; al elegirlo aparecen «Servicio REPS» y «Finalidad RIPS» ya diligenciados, y puede dejarlos como están.",
+              "en": "Open «Procedure code (CUPS)», type «profilaxis» and pick «997101 — Dental prophylaxis / Profilaxis dental». Without a code the service cannot be saved; picking it brings up «REPS service» and «RIPS purpose» already filled in, and you can leave them as they are."
+            },
+            "completion": {
+              "es": "El botón del código muestra «997101 — Dental prophylaxis / Profilaxis dental» y «Guardar» queda disponible.",
+              "en": "The code button shows «997101 — Dental prophylaxis / Profilaxis dental» and «Save» becomes available."
+            }
+          },
+          {
+            "id": "save-service",
+            "text": {
+              "es": "Pulse «Guardar».",
+              "en": "Click «Save»."
+            },
+            "completion": {
+              "es": "La ventana se cierra y la tabla vuelve a cargarse.",
+              "en": "The window closes and the table loads again."
+            }
+          }
+        ],
+        "result": {
+          "es": "La tabla de «Servicios» tiene ahora una fila «Limpieza dental / Dental cleaning», con el código 997101, la categoría «Preventive / Preventiva» y 90.000,00 en «Precio».",
+          "en": "The «Services» table now has a «Limpieza dental / Dental cleaning» row, with code 997101, category «Preventive / Preventiva» and 90,000.00 in «Price»."
+        },
+        "tips": [
+          {
+            "es": "En modo práctica, «Importar» y «Agregar desde plantillas» no hacen nada aquí.",
+            "en": "In practice mode, «Import» and «Add from templates» do nothing here."
+          },
+          {
+            "es": "En modo práctica, las pestañas «Categorías» y «Paquetes» no hacen nada aquí.",
+            "en": "In practice mode, the «Categories» and «Packages» tabs do nothing here."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Entidades y plantillas",
+      "en": "Payers and templates"
+    },
+    "intro": {
+      "es": "Deje lista la lista de quién paga y los documentos que la clínica hace firmar, antes de que recepción los necesite.",
+      "en": "Set up who pays and the documents the clinic asks patients to sign, before reception needs them."
+    },
+    "sections": [
+      {
+        "id": "admin-add-payer",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Agregue una aseguradora a la clínica",
+          "en": "Add an insurer to the clinic"
+        },
+        "scenario": {
+          "es": "La clínica acaba de firmar convenio con Seguros Andina. Hasta ahora recepción solo podía elegir Clínica Salud o Particular, así que debe dejar la nueva entidad disponible antes de la primera cita del convenio.",
+          "en": "The clinic has just signed an agreement with Seguros Andina. Until now reception could only choose Clínica Salud or Particular, so you need to make the new payer available before the first appointment under that agreement."
+        },
+        "story": {
+          "es": "walkthrough-practice-payers-templates--add-payer-spanish",
+          "en": "walkthrough-practice-payers-templates--add-payer-english"
+        },
+        "sidebarRoute": "/clinical/payers",
+        "route": "/clinical/payers",
+        "steps": [
+          {
+            "id": "read-directory",
+            "text": {
+              "es": "Lea primero el “Directorio”: “Clínica Salud” aparece con el tipo “Aseguradora” y “Particular” con el tipo “Particular”. Esas son, hoy, las únicas opciones que recepción puede elegir.",
+              "en": "Read the “Directory” first: “Clínica Salud” shows the type “Insurance” and “Particular” shows the type “Self-pay”. Today those are the only options reception can choose."
+            },
+            "target": "[data-testid=\"payers-table\"]",
+            "completion": {
+              "es": "Ve las dos filas, cada una con su color y su estado “Activo”.",
+              "en": "You can see both rows, each with its colour and its “Active” state."
+            }
+          },
+          {
+            "id": "type-name",
+            "text": {
+              "es": "En “Agregar aseguradora”, escriba Seguros Andina en “Nombre”. Escríbalo tal como quiere leerlo después: es el nombre que recepción elige al registrar a la paciente y el que sale impreso en la factura.",
+              "en": "Under “Add an insurance company”, type Seguros Andina in “Name”. Write it exactly as you want to read it later: this is the name reception picks when registering the patient, and the one printed on the invoice."
+            },
+            "target": "[data-testid=\"payer-name-input\"]",
+            "completion": {
+              "es": "“Nombre” muestra Seguros Andina.",
+              "en": "“Name” shows Seguros Andina."
+            }
+          },
+          {
+            "id": "identification",
+            "text": {
+              "es": "Elija “NIT” en “Tipo de identificación” y escriba 900487112 en “Número de identificación”. Es la identificación de la entidad, no la de la paciente.",
+              "en": "Choose “NIT” in “Identification type” and type 900487112 in “Identification number”. This is the company's identification, not the patient's."
+            },
+            "target": "[data-testid=\"payer-id-type-select\"]",
+            "completion": {
+              "es": "“Tipo de identificación” muestra “NIT” y el número queda escrito.",
+              "en": "“Identification type” shows “NIT” and the number is filled in."
+            }
+          },
+          {
+            "id": "confirm-kind",
+            "text": {
+              "es": "Confirme que “Tipo” diga “Aseguradora”. Deje “Particular” únicamente para quienes pagan de su propio bolsillo, porque ese tipo distingue las dos formas de cobro.",
+              "en": "Confirm that “Type” says “Insurance”. Leave “Self-pay” only for people who pay out of their own pocket, because that type separates the two ways of charging."
+            },
+            "target": "[data-testid=\"payer-kind-select\"]",
+            "completion": {
+              "es": "“Tipo” muestra “Aseguradora”.",
+              "en": "“Type” shows “Insurance”."
+            }
+          },
+          {
+            "id": "pick-colour",
+            "text": {
+              "es": "En “Color”, elija “Naranja”. El color acompaña a la entidad en las listas, y así se distingue de un vistazo de “Clínica Salud”, que está en azul.",
+              "en": "In “Color”, choose “Orange”. The colour travels with the payer in the lists, so it is told apart at a glance from “Clínica Salud”, which is blue."
+            },
+            "target": "[data-testid=\"payer-color-presets\"]",
+            "completion": {
+              "es": "El círculo naranja queda resaltado.",
+              "en": "The orange circle is highlighted."
+            }
+          },
+          {
+            "id": "submit",
+            "text": {
+              "es": "Haga clic en “Agregar aseguradora”.",
+              "en": "Click “Add insurance company”."
+            },
+            "target": "[data-testid=\"payer-add-submit\"]",
+            "completion": {
+              "es": "El formulario queda vacío otra vez, listo para la siguiente entidad.",
+              "en": "The form empties again, ready for the next payer."
+            }
+          }
+        ],
+        "result": {
+          "es": "“Seguros Andina” se suma al “Directorio” como una tercera fila, con su círculo naranja, el tipo “Aseguradora” y el interruptor de “Activo” encendido.",
+          "en": "“Seguros Andina” joins the “Directory” as a third row, with its orange dot, the type “Insurance”, and the “Active” switch on."
+        },
+        "check": {
+          "question": {
+            "es": "¿Qué diferencia hay entre el tipo “Aseguradora” y el tipo “Particular”?",
+            "en": "What is the difference between the “Insurance” type and the “Self-pay” type?"
+          },
+          "answer": {
+            "es": "“Particular” es la opción de quien paga de su propio bolsillo y “Aseguradora” es una entidad que la clínica factura. Se asigna una sola por paciente y por cita.",
+            "en": "“Self-pay” is the option for someone paying out of pocket, and “Insurance” is a company the clinic bills. Exactly one is assigned per patient and per appointment."
+          }
+        },
+        "tips": [
+          {
+            "es": "Si se equivocó en el nombre, el número o el color, use “Renombrar” en la fila: allí puede corregir los cuatro datos y guardar.",
+            "en": "If you got the name, number or colour wrong, use “Rename” on the row: you can fix all four details there and save."
+          }
+        ]
+      },
+      {
+        "id": "admin-document-template",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Cree una plantilla de consentimiento",
+          "en": "Create a consent template"
+        },
+        "scenario": {
+          "es": "La clínica ya hace firmar el consentimiento de exodoncia, pero para las resinas cada odontólogo escribe el suyo a mano. Deje una plantilla única para que todos usen el mismo texto y la misma firma.",
+          "en": "The clinic already has patients sign the extraction consent, but for resin fillings each dentist writes their own by hand. Leave a single template so everyone uses the same text and the same signature."
+        },
+        "story": {
+          "es": "walkthrough-practice-payers-templates--document-template-spanish",
+          "en": "walkthrough-practice-payers-templates--document-template-english"
+        },
+        "sidebarRoute": "/clinical/catalogos?tab=documents",
+        "route": "/clinical/catalogos?tab=documents",
+        "steps": [
+          {
+            "id": "open-new",
+            "text": {
+              "es": "Revise las dos plantillas que ya existen y haga clic en “Nueva plantilla”.",
+              "en": "Review the two templates that already exist and click “New template”."
+            },
+            "completion": {
+              "es": "Se abre “Nueva plantilla” con el aviso de que debe definir título, categoría y campos.",
+              "en": "“New template” opens, telling you to define the title, category and fields."
+            }
+          },
+          {
+            "id": "title-and-family",
+            "text": {
+              "es": "Escriba Consentimiento informado para resina en “Título de la plantilla”. En “Categoría de documento” escriba Consentimientos, la misma categoría del consentimiento de exodoncia, para que los dos queden agrupados.",
+              "en": "Type Consentimiento informado para resina in “Template title”. In “Document category” type Consentimientos, the same category as the extraction consent, so the two stay grouped together."
+            },
+            "target": "[data-testid=\"template-form-body\"]",
+            "completion": {
+              "es": "“Título de la plantilla” y “Categoría de documento” quedan escritos.",
+              "en": "“Template title” and “Document category” are filled in."
+            }
+          },
+          {
+            "id": "first-field",
+            "text": {
+              "es": "Baje a “Campos del documento”. En “Campo 1”, escriba Procedimiento y riesgos explicados en “Etiqueta del campo” y deje “Tipo de campo” en “Texto largo”: ahí el odontólogo redacta el texto para cada paciente. Marque “Obligatorio”.",
+              "en": "Scroll to “Document fields”. In “Field 1”, type Procedimiento y riesgos explicados in “Field label” and leave “Field type” as “Long text”: that is where the dentist writes the text for each patient. Tick “Required”."
+            },
+            "completion": {
+              "es": "“Campo 1” muestra la etiqueta escrita, el tipo “Texto largo” y “Obligatorio” marcado.",
+              "en": "“Field 1” shows the label you typed, the type “Long text”, and “Required” ticked."
+            }
+          },
+          {
+            "id": "signature-field",
+            "text": {
+              "es": "Haga clic en “Agregar campo”. En “Campo 2”, escriba Firma del paciente en “Etiqueta del campo”, elija “Firma” en “Tipo de campo” y marque “Obligatorio”, para que el documento no quede sin firmar.",
+              "en": "Click “Add field”. In “Field 2”, type Firma del paciente in “Field label”, choose “Signature” in “Field type”, and tick “Required”, so the document cannot be left unsigned."
+            },
+            "completion": {
+              "es": "Aparece “Campo 2” con el tipo “Firma”.",
+              "en": "“Field 2” appears with the type “Signature”."
+            }
+          },
+          {
+            "id": "save",
+            "text": {
+              "es": "Haga clic en “Guardar”.",
+              "en": "Click “Save”."
+            },
+            "completion": {
+              "es": "La ventana se cierra y la lista se actualiza.",
+              "en": "The window closes and the list refreshes."
+            }
+          }
+        ],
+        "result": {
+          "es": "Aparece el aviso “Plantilla creada” y la lista pasa de “2 registros” a “3 registros”: la fila “Consentimiento informado para resina” se suma con la categoría “Consentimientos” y el estado “Activa”.",
+          "en": "A “Template created” message appears and the list goes from “2 records” to “3 records”: the row “Consentimiento informado para resina” joins it with the category “Consentimientos” and the status “Active”."
+        },
+        "check": {
+          "question": {
+            "es": "¿Tiene que llenar el “Código de plantilla” que está bajo “Opciones avanzadas: código”?",
+            "en": "Do you have to fill in the “Template code” under “Advanced options: code”?"
+          },
+          "answer": {
+            "es": "No. Se genera a partir del título; solo se ajusta si necesita distinguir dos plantillas que se llaman igual.",
+            "en": "No. It is generated from the title; you only change it to tell apart two templates with the same name."
+          }
+        },
+        "tips": [
+          {
+            "es": "Al abrir “Editar” sobre una plantilla ya guardada, “Categoría de documento”, el código y el tipo de los campos guardados quedan fijos para no dañar los documentos existentes; sí puede corregir el título, corregir etiquetas y agregar campos nuevos.",
+            "en": "When you open “Edit” on a template that is already saved, “Document category”, the codes and the types of the saved fields stay fixed so existing documents are not broken; you can still fix the title, fix labels and add new fields."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Facturación electrónica",
+      "en": "E-invoicing setup"
+    },
+    "intro": {
+      "es": "La facturación electrónica se configura una sola vez y de ella dependen las facturas de toda la clínica. En este capítulo registra la clínica como emisor, confirma el código REPS de la sede, guarda la numeración autorizada por la DIAN y el usuario de SISPRO, y revisa qué quedó con el proveedor de facturación anterior.",
+      "en": "E-invoicing is set up once, and every invoice the clinic issues depends on it. In this chapter you register the clinic as an issuer, confirm the location's REPS code, store the numbering DIAN authorized and the SISPRO login, and review what was left open with the previous invoicing provider."
+    },
+    "sections": [
+      {
+        "id": "admin-fiscal-issuer",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Registre su clínica como emisor de facturas electrónicas",
+          "en": "Register your clinic as an electronic invoice issuer"
+        },
+        "scenario": {
+          "es": "Clínica Dental Sonrisa Andina S.A.S. va a empezar a facturar electrónicamente. Antes de cualquier otra cosa hay que decirle a Avance quién factura: el representante legal y los datos de la empresa.",
+          "en": "Clínica Dental Sonrisa Andina S.A.S. is about to start invoicing electronically. Before anything else you tell Avance who issues the invoices: the legal representative and the company details."
+        },
+        "story": {
+          "es": "walkthrough-practice-fiscal-setup--register-issuer-spanish",
+          "en": "walkthrough-practice-fiscal-setup--register-issuer-english"
+        },
+        "route": "/clinical/fiscal",
+        "sidebarRoute": "/clinical/fiscal",
+        "steps": [
+          {
+            "id": "legal-representative",
+            "text": {
+              "es": "Llene los cuatro datos de «Representante legal»: «Nombre completo» Marcela Ospina Duarte, «Tipo de identificación» «Cédula de ciudadanía (CC)», «Número de documento» 52418773 y «Correo electrónico» marcela.ospina@sonrisa.example.co. Deje «Modo de envío» en «Observación — preparar facturas sin enviarlas a la DIAN».",
+              "en": "Fill in the four “Legal representative” fields: “Full name” Marcela Ospina Duarte, “Identification type” “Cédula de ciudadanía (CC)”, “Document number” 52418773 and “Email” marcela.ospina@sonrisa.example.co. Leave “Dispatch mode” on “Observation — prepare invoices without sending them to DIAN”."
+            },
+            "target": "[data-testid=\"fiscal-representative-fields\"]",
+            "completion": {
+              "es": "Los cuatro campos del representante legal quedan llenos.",
+              "en": "The four legal-representative fields are filled in."
+            }
+          },
+          {
+            "id": "go-to-entity",
+            "text": {
+              "es": "Pulse «Continuar». La lista de arriba marca «2. Datos de la entidad» y aparece el formulario del emisor.",
+              "en": "Click “Continue”. The list at the top marks “2. Clinic entity” and the issuer form appears."
+            },
+            "target": "[data-testid=\"fiscal-wizard-next\"]",
+            "completion": {
+              "es": "Se ve el formulario de «Emisor de la clínica».",
+              "en": "The “Clinic issuer” form is visible."
+            }
+          },
+          {
+            "id": "clinic-identity",
+            "text": {
+              "es": "Escriba el «NIT» 900123456, el «Dígito de verificación» 8, la «Razón social» Clínica Dental Sonrisa Andina S.A.S. y repita 900123456 en «NIT de SISPRO». Estos datos identifican a su clínica en las facturas electrónicas, así que deben coincidir con el RUT.",
+              "en": "Enter the “NIT” 900123456, the “Check digit” 8, the “Legal name” Clínica Dental Sonrisa Andina S.A.S., and repeat 900123456 in “SISPRO NIT”. These details identify your clinic on electronic invoices, so they must match the RUT."
+            },
+            "target": "[data-testid=\"fiscal-issuer-nit\"]",
+            "completion": {
+              "es": "«NIT» muestra 900123456 y «Razón social» el nombre de la clínica.",
+              "en": "“NIT” shows 900123456 and “Legal name” shows the clinic's name."
+            }
+          },
+          {
+            "id": "tax-profile",
+            "text": {
+              "es": "Complete el resto del formulario con los datos del RUT: «Tipo de persona» «Persona jurídica», marque la responsabilidad fiscal «O-13», «Régimen tributario» «01», «Código de municipio» 11001, «Dirección» Carrera 15 # 88-64, oficina 302, deje «País» en CO y escriba el «Correo fiscal» contabilidad@sonrisa.example.co.",
+              "en": "Complete the rest of the form with the details from the RUT: “Party type” “Legal person”, tick fiscal responsibility “O-13”, “Tax scheme” “01”, “Municipality code” 11001, “Address” Carrera 15 # 88-64, oficina 302, leave “Country” as CO, and enter the “Fiscal email” contabilidad@sonrisa.example.co."
+            },
+            "target": "[data-testid=\"fiscal-issuer-form\"]",
+            "completion": {
+              "es": "«Régimen tributario» muestra «01» y «Código de municipio» 11001.",
+              "en": "“Tax scheme” shows “01” and “Municipality code” shows 11001."
+            }
+          },
+          {
+            "id": "save-issuer",
+            "text": {
+              "es": "Pulse «Guardar emisor» y espere el aviso «Guardado».",
+              "en": "Click “Save issuer” and wait for the “Saved” notice."
+            },
+            "target": "[data-testid=\"fiscal-issuer-save\"]",
+            "completion": {
+              "es": "Aparece el aviso «Guardado».",
+              "en": "The “Saved” notice appears."
+            }
+          },
+          {
+            "id": "accept-mandate",
+            "text": {
+              "es": "Pulse «Atrás». El primer paso ahora muestra la «Versión del mandato» y el «Texto del mandato»: léalo y pulse «Aceptar mandato».",
+              "en": "Click “Back”. The first step now shows the “Mandate version” and the “Mandate text”: read it and click “Accept mandate”."
+            },
+            "target": "[data-testid=\"fiscal-mandate-accept\"]",
+            "completion": {
+              "es": "Donde decía «Aún no se ha aceptado un mandato.» ahora dice «Versión aceptada: v3-2026».",
+              "en": "Where it said “No mandate accepted yet.” it now reads “Accepted version: v3-2026”."
+            }
+          }
+        ],
+        "result": {
+          "es": "La clínica queda registrada como emisor con el NIT 900123456-8 y con el mandato aceptado en la versión v3-2026.",
+          "en": "The clinic is registered as an issuer with NIT 900123456-8 and the mandate accepted at version v3-2026."
+        },
+        "check": {
+          "question": {
+            "es": "Con «Observación — preparar facturas sin enviarlas a la DIAN», ¿qué pasa con las facturas que prepare la clínica?",
+            "en": "With “Observation — prepare invoices without sending them to DIAN”, what happens to the invoices the clinic prepares?"
+          },
+          "answer": {
+            "es": "Se preparan, pero no se envían a la DIAN. Ese modo se cambia en el mismo campo «Modo de envío».",
+            "en": "They are prepared, but not sent to DIAN. You change that in the same “Dispatch mode” field."
+          }
+        }
+      },
+      {
+        "id": "admin-fiscal-reps-code",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Confirme el código REPS de la sede",
+          "en": "Confirm the location's REPS code"
+        },
+        "scenario": {
+          "es": "El emisor ya está guardado. Ahora confirme el código REPS que usará esta sede en las facturas electrónicas.",
+          "en": "The issuer is saved. Now confirm the REPS code this location will use on its electronic invoices."
+        },
+        "story": {
+          "es": "walkthrough-practice-fiscal-setup--numbering-and-credentials-spanish",
+          "en": "walkthrough-practice-fiscal-setup--numbering-and-credentials-english"
+        },
+        "sidebarRoute": "/clinical/fiscal",
+        "steps": [
+          {
+            "id": "open-prefix-step",
+            "text": {
+              "es": "Pulse «Continuar» tres veces, hasta que la lista de arriba marque «4. Asociar prefijos». Los pasos 3, 4 y 5 llevan la nota «Pendiente hasta activar envío» porque la clínica sigue en «Observación».",
+              "en": "Click “Continue” three times, until the list at the top marks “4. Associate prefixes”. Steps 3, 4 and 5 carry the note “Pending until live dispatch is enabled” because the clinic is still in “Observation”."
+            },
+            "target": "[data-testid=\"fiscal-wizard-next\"]",
+            "completion": {
+              "es": "Se ve el campo «Código REPS».",
+              "en": "The “REPS code” field is visible."
+            }
+          },
+          {
+            "id": "type-reps-code",
+            "text": {
+              "es": "En «Código REPS» escriba 1100112345, el código con el que está inscrita la sede.",
+              "en": "In “REPS code” enter 1100112345, the code this location is registered under."
+            },
+            "target": "[data-testid=\"fiscal-reps-code\"]",
+            "completion": {
+              "es": "«Código REPS» muestra 1100112345.",
+              "en": "“REPS code” shows 1100112345."
+            }
+          },
+          {
+            "id": "confirm-reps-code",
+            "text": {
+              "es": "Pulse «Confirmar código REPS».",
+              "en": "Click “Confirm REPS code”."
+            },
+            "target": "[data-testid=\"fiscal-reps-confirm\"]",
+            "completion": {
+              "es": "El botón queda inactivo.",
+              "en": "The button becomes inactive."
+            }
+          },
+          {
+            "id": "read-confirmation",
+            "text": {
+              "es": "Debajo del campo aparece «Código REPS confirmado.».",
+              "en": "Below the field, “REPS code confirmed.” appears."
+            },
+            "target": "[data-testid=\"fiscal-reps-confirmed\"]",
+            "completion": {
+              "es": "Se lee «Código REPS confirmado.».",
+              "en": "You can read “REPS code confirmed.”."
+            }
+          }
+        ],
+        "result": {
+          "es": "La sede queda con el código REPS 1100112345 confirmado en la configuración de facturación electrónica.",
+          "en": "The location now has REPS code 1100112345 confirmed in the e-invoicing setup."
+        }
+      },
+      {
+        "id": "admin-fiscal-resolution",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Registre la resolución de numeración de la DIAN",
+          "en": "Register the DIAN numbering resolution"
+        },
+        "scenario": {
+          "es": "La DIAN autorizó a la clínica un rango de facturas con el prefijo FEV. Regístrelo para que Avance sepa con qué número empieza a numerar.",
+          "en": "DIAN authorized the clinic a range of invoices with the prefix FEV. Register it so Avance knows which number to start from."
+        },
+        "story": {
+          "es": "walkthrough-practice-fiscal-setup--numbering-and-credentials-spanish",
+          "en": "walkthrough-practice-fiscal-setup--numbering-and-credentials-english"
+        },
+        "sidebarRoute": "/clinical/fiscal",
+        "steps": [
+          {
+            "id": "open-resolutions-step",
+            "text": {
+              "es": "Pulse «Continuar» cuatro veces, hasta que la lista de arriba marque «5. Resoluciones y numeración».",
+              "en": "Click “Continue” four times, until the list at the top marks “5. Numbering and next numbers”."
+            },
+            "target": "[data-testid=\"fiscal-wizard-next\"]",
+            "completion": {
+              "es": "Se lee «Aún no hay rangos de numeración.».",
+              "en": "You can read “No numbering ranges yet.”."
+            }
+          },
+          {
+            "id": "open-form",
+            "text": {
+              "es": "Pulse «Agregar numeración». Se abre el formulario con «Serie» en «Factura».",
+              "en": "Click “Add numbering”. The form opens with “Series” set to “Invoice”."
+            },
+            "target": "[data-testid=\"fiscal-resolutions\"]",
+            "completion": {
+              "es": "«Serie» muestra «Factura».",
+              "en": "“Series” shows “Invoice”."
+            }
+          },
+          {
+            "id": "resolution-number",
+            "text": {
+              "es": "Copie de la resolución de la DIAN el «Número de resolución» 18760000001234 y el «Prefijo» FEV; en «Desde» escriba 1 y en «Hasta» 5000.",
+              "en": "Copy from the DIAN resolution the “Resolution number” 18760000001234 and the “Prefix” FEV; in “From” enter 1 and in “To” enter 5000."
+            },
+            "target": "[data-testid=\"fiscal-resolution-number\"]",
+            "completion": {
+              "es": "«Desde» dice 1 y «Hasta» dice 5000.",
+              "en": "“From” reads 1 and “To” reads 5000."
+            }
+          },
+          {
+            "id": "validity-dates",
+            "text": {
+              "es": "En «Válida desde» ponga el 1 de octubre de 2026 y en «Válida hasta» el 30 de septiembre de 2028, las fechas de vigencia de la resolución. En «Nota» escriba Resolución de numeración de la DIAN.",
+              "en": "In “Valid from” set 1 October 2026 and in “Valid to” 30 September 2028, the resolution's validity dates. In “Note” write DIAN numbering resolution."
+            },
+            "target": "#fiscal-valid-from",
+            "completion": {
+              "es": "Las dos fechas y la nota quedan escritas.",
+              "en": "Both dates and the note are filled in."
+            }
+          },
+          {
+            "id": "technical-key",
+            "text": {
+              "es": "En «Clave técnica» escriba clave-de-practica. Debajo, Avance advierte «Ingresa una clave técnica nueva para guardarla. Avance no vuelve a mostrar la clave.».",
+              "en": "In “Technical key” enter clave-de-practica. Below it, Avance warns “Enter a new technical key to store it. Avance never shows the key again.”."
+            },
+            "target": "[data-testid=\"fiscal-resolution-technical-key\"]",
+            "completion": {
+              "es": "«Clave técnica» queda con un valor escrito.",
+              "en": "“Technical key” has a value in it."
+            }
+          },
+          {
+            "id": "save-resolution",
+            "text": {
+              "es": "Pulse «Guardar numeración».",
+              "en": "Click “Save numbering”."
+            },
+            "target": "[data-testid=\"fiscal-resolution-save\"]",
+            "completion": {
+              "es": "En la lista aparece «Factura FEV1–5000».",
+              "en": "“Invoice FEV1–5000” appears in the list."
+            }
+          }
+        ],
+        "result": {
+          "es": "La numeración queda registrada: la lista muestra «Factura FEV1–5000» con «Siguiente número 1» y «Hay una clave técnica guardada.», y arriba «Siguiente número de factura: 1».",
+          "en": "The numbering is registered: the list shows “Invoice FEV1–5000” with “Next number 1” and “A technical key is stored.”, and above it “Next invoice number: 1”."
+        },
+        "tips": [
+          {
+            "es": "En modo práctica no escriba sus credenciales reales.",
+            "en": "In practice mode, do not type your real credentials."
+          },
+          {
+            "es": "En modo práctica, «Traer numeración de la DIAN» no hace nada aquí.",
+            "en": "In practice mode, “Fetch numbering from DIAN” does nothing here."
+          }
+        ]
+      },
+      {
+        "id": "admin-fiscal-sispro",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Guarde el usuario de SISPRO de la clínica",
+          "en": "Store the clinic's SISPRO login"
+        },
+        "scenario": {
+          "es": "Para la validación de RIPS, Avance necesita el usuario con el que la clínica entra a SISPRO. Guárdelo una sola vez aquí.",
+          "en": "For RIPS validation, Avance needs the login the clinic uses for SISPRO. You store it here once."
+        },
+        "story": {
+          "es": "walkthrough-practice-fiscal-setup--numbering-and-credentials-spanish",
+          "en": "walkthrough-practice-fiscal-setup--numbering-and-credentials-english"
+        },
+        "sidebarRoute": "/clinical/fiscal",
+        "steps": [
+          {
+            "id": "open-finish-step",
+            "text": {
+              "es": "Pulse «Continuar» hasta el último paso, «Finalizar». Ahí aparece «Identidad SISPRO».",
+              "en": "Click “Continue” until the last step, “Finish”. “SISPRO identity” appears there."
+            },
+            "target": "[data-testid=\"fiscal-sispro-setup\"]",
+            "completion": {
+              "es": "Se lee «Aún no hay identidad SISPRO guardada.».",
+              "en": "You can read “No SISPRO identity stored yet.”."
+            }
+          },
+          {
+            "id": "sispro-document",
+            "text": {
+              "es": "En «Tipo de documento» elija «NIT (NI)» y en «Número de documento» escriba 900123456.",
+              "en": "In “ID type” choose “Tax ID (NI)” and in “ID number” enter 900123456."
+            },
+            "target": "[data-testid=\"fiscal-sispro-tipo\"]",
+            "completion": {
+              "es": "«Tipo de documento» muestra «NIT (NI)».",
+              "en": "“ID type” shows “Tax ID (NI)”."
+            }
+          },
+          {
+            "id": "sispro-entity",
+            "text": {
+              "es": "En «NIT de la entidad» escriba 900123456 y en «Tipo de usuario (opcional)» elija «Representante de entidad».",
+              "en": "In “Entity NIT” enter 900123456 and in “User type (optional)” choose “Entity representative”."
+            },
+            "target": "[data-testid=\"fiscal-sispro-identity-nit\"]",
+            "completion": {
+              "es": "«Tipo de usuario (opcional)» muestra «Representante de entidad».",
+              "en": "“User type (optional)” shows “Entity representative”."
+            }
+          },
+          {
+            "id": "sispro-credentials",
+            "text": {
+              "es": "En «Etiqueta» escriba sonrisa.andina, el nombre del usuario de SISPRO, y en «Contraseña» escriba clave-de-practica. Avance avisa que «Ingresa una contraseña nueva para guardarla. Avance no la vuelve a mostrar.».",
+              "en": "In “Label” enter sonrisa.andina, the name of the SISPRO user, and in “Password” enter clave-de-practica. Avance warns that “Enter a new password to store it. Avance never shows it again.”."
+            },
+            "target": "[data-testid=\"fiscal-sispro-clave\"]",
+            "completion": {
+              "es": "«Etiqueta» dice sonrisa.andina y «Contraseña» queda con un valor escrito.",
+              "en": "“Label” reads sonrisa.andina and “Password” has a value in it."
+            }
+          },
+          {
+            "id": "save-sispro",
+            "text": {
+              "es": "Pulse «Guardar identidad SISPRO».",
+              "en": "Click “Save SISPRO identity”."
+            },
+            "target": "[data-testid=\"fiscal-sispro-save\"]",
+            "completion": {
+              "es": "Arriba, el texto cambia a «Guardada: NI …3456 / NIT …3456».",
+              "en": "Above, the text changes to “Stored: NI …3456 / NIT …3456”."
+            }
+          }
+        ],
+        "result": {
+          "es": "La identidad de SISPRO queda guardada: se lee «Guardada: NI …3456 / NIT …3456» y debajo su «Huella».",
+          "en": "The SISPRO identity is stored: you can read “Stored: NI …3456 / NIT …3456” and its “Fingerprint” below."
+        },
+        "check": {
+          "question": {
+            "es": "¿Queda la clínica lista para enviar la validación de RIPS apenas guarda la identidad?",
+            "en": "Is the clinic ready to submit RIPS validation as soon as the identity is stored?"
+          },
+          "answer": {
+            "es": "No. En «Preparación de validación RIPS» sigue apareciendo un motivo pendiente: «La conexión de validación RIPS no está en vivo.».",
+            "en": "No. Under “RIPS validation readiness” a reason is still listed: “The RIPS validation connection is not live.”."
+          }
+        },
+        "tips": [
+          {
+            "es": "En modo práctica no escriba sus credenciales reales.",
+            "en": "In practice mode, do not type your real credentials."
+          }
+        ]
+      },
+      {
+        "id": "admin-fiscal-prior-provider",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Revise qué quedó con el proveedor de facturación anterior",
+          "en": "Review what the previous invoicing provider left open"
+        },
+        "scenario": {
+          "es": "La clínica venía facturando con otro proveedor. Antes de que Avance emita facturas para la sede, lea lo que quedó registrado de esa etapa.",
+          "en": "The clinic used to invoice with another provider. Before Avance issues invoices for this location, read what was recorded from that period."
+        },
+        "story": {
+          "es": "walkthrough-practice-fiscal-setup--numbering-and-credentials-spanish",
+          "en": "walkthrough-practice-fiscal-setup--numbering-and-credentials-english"
+        },
+        "sidebarRoute": "/clinical/fiscal",
+        "steps": [
+          {
+            "id": "find-cutover",
+            "text": {
+              "es": "Busque «Proveedor anterior de facturación», la sección que acompaña al asistente.",
+              "en": "Find “Previous invoicing provider”, the section that sits alongside the wizard."
+            },
+            "target": "[data-testid=\"fiscal-cutover-panel\"]",
+            "completion": {
+              "es": "Se ve «Proveedor anterior de facturación».",
+              "en": "“Previous invoicing provider” is visible."
+            }
+          },
+          {
+            "id": "read-status",
+            "text": {
+              "es": "«Estado de la evaluación» dice «Borrador»: todavía no está aprobada.",
+              "en": "“Assessment status” reads “Draft”: it is not approved yet."
+            },
+            "target": "[data-testid=\"fiscal-cutover-assessment-status\"]",
+            "completion": {
+              "es": "Se lee «Estado de la evaluación: Borrador».",
+              "en": "You can read “Assessment status: Draft”."
+            }
+          },
+          {
+            "id": "read-provider",
+            "text": {
+              "es": "«Proveedor anterior» muestra «Proveedor Facturador Ejemplo S.A.S. · Cuenta CTA-4471», y debajo quién corrige las facturas anteriores.",
+              "en": "“Previous provider” shows “Provider Facturador Ejemplo S.A.S. · Account CTA-4471”, and below it who corrects the previous invoices."
+            },
+            "target": "[data-testid=\"fiscal-cutover-prior-provider\"]",
+            "completion": {
+              "es": "Se lee el nombre del proveedor anterior y la cuenta.",
+              "en": "The previous provider's name and account are readable."
+            }
+          },
+          {
+            "id": "read-pending",
+            "text": {
+              "es": "«Facturas pendientes en el proveedor anterior» dice 2 y «Notas pendientes en el proveedor anterior» dice 1; debajo aparecen los pendientes revisados: FEV-4187 y FEV-4188.",
+              "en": "“Pending invoices at previous provider” reads 2 and “Pending notes at previous provider” reads 1; the reviewed pending items appear below: FEV-4187 and FEV-4188."
+            },
+            "target": "[data-testid=\"fiscal-cutover-pending-counts\"]",
+            "completion": {
+              "es": "Se leen los dos conteos y los dos pendientes.",
+              "en": "Both counts and both pending items are readable."
+            }
+          },
+          {
+            "id": "read-series",
+            "text": {
+              "es": "En «Conciliación de numeración», la fila termina en «Sin verificar»: el «Último número usado» fue 4188 y el «Siguiente número en Avance» es 1.",
+              "en": "Under “Numbering series reconciliation”, the row ends in “Not verified”: the “Last used number” was 4188 and the “Next number in Avance” is 1."
+            },
+            "target": "[data-testid=\"fiscal-cutover-series\"]",
+            "completion": {
+              "es": "La fila de conciliación termina en «Sin verificar».",
+              "en": "The reconciliation row ends in “Not verified”."
+            }
+          }
+        ],
+        "result": {
+          "es": "Usted sabe qué quedó abierto con el proveedor anterior: 2 facturas y 1 nota pendientes, y una conciliación de numeración «Sin verificar».",
+          "en": "You know what is still open with the previous provider: 2 pending invoices, 1 pending note, and a numbering reconciliation that is “Not verified”."
+        },
+        "check": {
+          "question": {
+            "es": "¿Con qué número volvería a empezar la numeración en Avance, según esta conciliación?",
+            "en": "According to this reconciliation, which number would Avance start from?"
+          },
+          "answer": {
+            "es": "Con el 1: «Siguiente número en Avance» dice 1, mientras el proveedor anterior reporta el 4189.",
+            "en": "From 1: “Next number in Avance” reads 1, while the previous provider reports 4189."
+          }
+        }
+      }
+    ]
+  }
+]

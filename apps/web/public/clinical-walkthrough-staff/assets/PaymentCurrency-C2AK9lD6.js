@@ -1,0 +1,1 @@
+var U=(function(B){return B.COP="COP",B.USD="USD",B.EUR="EUR",B.PEN="PEN",B.UYU="UYU",B.PYG="PYG",B.BRL="BRL",B.CLP="CLP",B.ARS="ARS",B.MXN="MXN",B.GTQ="GTQ",B.BOB="BOB",B.CRC="CRC",B.HNL="HNL",B.PAB="PAB",B.XCD="XCD",B.DOP="DOP",B.CUP="CUP",B.NIO="NIO",B.BZD="BZD",B})({});export{U as P};

@@ -1,0 +1,1 @@
+const c=["summary","chart","perio","evolutions","artifacts","treatments","prescriptions","documents","account"];function o(t,n,r){return t==="account"&&r?"account":n&&c.includes(t)&&t!=="account"?t:"summary"}export{c as P,o as r};
