@@ -1,1 +1,0 @@
-import"./booking-0kekz-0K.js";import{a as e}from"./money-DxxJ7lyk.js";function s(t,o,r){return new Intl.NumberFormat(r,{style:"currency",currency:o}).format(e(t,o))}function i(t){const o=t.firstName?.trim()??"",r=t.lastName?.trim()??"",a=t.secondLastName?.trim()??"";return[o,r,a].filter(Boolean).join(" ")}export{s as f,i as g};

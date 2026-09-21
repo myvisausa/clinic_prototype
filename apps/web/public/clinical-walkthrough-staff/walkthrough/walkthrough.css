@@ -181,6 +181,92 @@ blockquote {
   margin-top: 14px;
   object-fit: contain;
 }
+.task-copy {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(320px, 1.4fr) minmax(
+      220px,
+      1fr
+    );
+  gap: 18px;
+  padding: 14px 16px;
+  border: 1px solid #cbd8dd;
+  border-top: 0;
+  background: #fff;
+}
+.task-copy h4 {
+  margin-top: 0;
+}
+.task-copy p,
+.task-copy ul {
+  margin-bottom: 0;
+}
+.task-steps {
+  margin: 0;
+  padding-left: 24px;
+  list-style: decimal;
+}
+.task-steps li {
+  margin: 0 0 8px;
+  padding-left: 4px;
+}
+.task-result {
+  padding: 10px 12px;
+  border-left: 3px solid #12657c;
+  background: #f5f8f9;
+}
+.task-tips {
+  grid-column: 1 / -1;
+  padding-top: 10px;
+  border-top: 1px solid #d5dfe3;
+}
+.task-tips ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.guide-orientation {
+  max-width: 1080px;
+}
+.orientation-details {
+  border: 1px solid #cbd8dd;
+  border-top: 0;
+  background: #fff;
+}
+.orientation-details > summary {
+  cursor: pointer;
+  padding: 12px 16px;
+  color: #12657c;
+  font-weight: 650;
+}
+.orientation-details .task-copy {
+  border-right: 0;
+  border-left: 0;
+}
+.guide-orientation .task-copy {
+  grid-template-columns: minmax(220px, 0.8fr) minmax(380px, 1.4fr) minmax(
+      220px,
+      0.8fr
+    );
+}
+.guide-orientation iframe {
+  height: 400px;
+}
+.guide-task iframe {
+  height: 860px;
+}
+.preview-expanded {
+  position: fixed;
+  inset: 12px;
+  z-index: 100;
+  margin: 0;
+  overflow: auto;
+  border-radius: 8px;
+  background: #f5f8f9;
+  box-shadow: 0 20px 70px rgb(23 46 56 / 35%);
+}
+.preview-expanded iframe {
+  height: calc(100dvh - 300px);
+  min-height: 520px;
+}
 .demonstration {
   min-width: 0;
 }
@@ -210,6 +296,27 @@ iframe {
   gap: 12px;
   padding: 12px 0 32px;
 }
+.task-check {
+  grid-column: 1 / -1;
+  padding: 10px 12px;
+  border: 1px solid #d5dfe3;
+  border-radius: 6px;
+  background: #fbfcfc;
+}
+.task-check summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+.task-check p {
+  margin: 8px 0 0;
+}
+.practice-stage {
+  display: grid;
+  grid-template-columns: 216px minmax(0, 1fr);
+}
+.practice-stage .practice-menu {
+  border-right: 1px solid #d5dfe3;
+}
 @media (max-width: 1200px) {
   .lesson-pair {
     grid-template-columns: 1fr;
@@ -228,6 +335,13 @@ iframe {
     border-right: 0;
     border-bottom: 1px solid #d5dfe3;
   }
+  .task-copy,
+  .guide-orientation .task-copy {
+    grid-template-columns: 1fr 1.4fr;
+  }
+  .task-result {
+    grid-column: 1 / -1;
+  }
   .instruction {
     margin: 0;
   }
@@ -245,14 +359,22 @@ iframe {
     border: 0;
     padding: 8px 12px;
   }
-  ol {
+  #chapters {
     display: flex;
     overflow: auto;
     margin: 0;
     gap: 6px;
   }
-  li {
+  #chapters li {
     flex: 0 0 175px;
+  }
+  .practice-stage {
+    grid-template-columns: 1fr;
+  }
+  .practice-stage .practice-menu {
+    height: 260px;
+    border-right: 0;
+    border-bottom: 1px solid #d5dfe3;
   }
   aside > p,
   aside > #storybook {
@@ -266,6 +388,17 @@ iframe {
   }
   .guide-pair .guide-content {
     display: block;
+  }
+  .task-copy,
+  .guide-orientation .task-copy {
+    display: block;
+  }
+  .task-copy > * {
+    margin-bottom: 16px;
+  }
+  .guide-orientation iframe,
+  .guide-task iframe {
+    height: 700px;
   }
   .instruction {
     margin: 0 0 16px;

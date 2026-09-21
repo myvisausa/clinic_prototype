@@ -1,0 +1,1035 @@
+[
+  {
+    "title": {
+      "es": "Recepción: orientación e inicio del día",
+      "en": "Reception: orientation and start of day"
+    },
+    "intro": {
+      "es": "Ubique el espacio correcto y complete el primer seguimiento del día.",
+      "en": "Find the right workspace and complete the first follow-up of the day."
+    },
+    "sections": [
+      {
+        "id": "staff-clinic-navigation",
+        "type": "interactive",
+        "layout": "orientation",
+        "title": {
+          "es": "Ubíquese en el sistema",
+          "en": "Find your way around"
+        },
+        "scenario": {
+          "es": "Antes de comenzar, distinga el trabajo compartido de Clínica, la configuración y el registro de cada paciente.",
+          "en": "Before you begin, distinguish shared Clinic work, setup, and each patient record."
+        },
+        "story": {
+          "es": "navigation-contextual-clinic--training-spanish",
+          "en": "navigation-contextual-clinic--training-english"
+        },
+        "steps": [
+          {
+            "id": "select-patient",
+            "text": {
+              "es": "Comience aquí: haga clic en “Seleccionar paciente de demostración”.",
+              "en": "Start here: click “Select demonstration patient”."
+            }
+          },
+          {
+            "id": "compare-menus",
+            "text": {
+              "es": "Observe que Clínica separa el trabajo diario compartido, como “Agenda diaria”, de las áreas de configuración. Compare ese menú con “Resumen”, “Odontograma”, “Planes de tratamiento” y “Notas” en el registro de la paciente. “Agenda diaria” abre el siguiente capítulo de recepción; use “Capítulo anterior” para volver.",
+              "en": "Notice that Clinic separates shared daily work, such as “Day Sheet”, from setup areas. Compare that menu with “Summary”, “Dental Chart”, “Treatment Plans”, and “Notes” in the patient record. “Day Sheet” opens the next reception chapter; use “Previous chapter” to return."
+            }
+          }
+        ],
+        "result": {
+          "es": "El nombre de la paciente y su menú aparecen. “Agenda diaria” permanece en Clínica para el trabajo compartido del día.",
+          "en": "The patient's name and menu appear. “Day Sheet” remains in Clinic for the day's shared work."
+        }
+      },
+      {
+        "id": "staff-daily-overview",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Comience el día en recepción",
+          "en": "Start your day at reception"
+        },
+        "scenario": {
+          "es": "Es el inicio del día, lunes 21 de septiembre de 2026. Revise la actividad de recepción, atienda una solicitud de confirmación y registre la llegada de Valeria.",
+          "en": "It is the start of the day, Monday, September 21, 2026. Review reception activity, handle a confirmation request, and check Valeria in."
+        },
+        "story": {
+          "es": "clinical-dashboard-and-day-sheet--training-spanish",
+          "en": "clinical-dashboard-and-day-sheet--training-english"
+        },
+        "steps": [
+          {
+            "id": "read-totals",
+            "text": {
+              "es": "Lea los totales: “Citas hoy” muestra las 3 citas del día; “Sin confirmar” muestra 1 cita programada que aún requiere confirmación; “En consultorio” muestra 0 pacientes que ya llegaron; y “Mensajes” muestra 2 mensajes no leídos, no dos conversaciones.",
+              "en": "Read the totals: “Appointments today” shows the day’s 3 appointments; “Unconfirmed” shows 1 scheduled appointment that still needs confirmation; “In office” shows 0 patients who have arrived; and “Messages” shows 2 unread messages, not two conversations."
+            }
+          },
+          {
+            "id": "open-message",
+            "text": {
+              "es": "Abra el mensaje de María López. Su solicitud “¿Puedo confirmar para mañana?” identifica el seguimiento que recepción debe atender fuera de esta práctica.",
+              "en": "Open María López’s message. Her request, “Can I confirm tomorrow?”, identifies the follow-up reception needs to handle outside this practice."
+            }
+          },
+          {
+            "id": "inspect-appointment",
+            "text": {
+              "es": "Seleccione la fila de Valeria Torres y revise su teléfono, número de historia y estado “Programada”.",
+              "en": "Select the Valeria Torres row and review her phone, chart number, and “Scheduled” status."
+            }
+          },
+          {
+            "id": "open-check-in",
+            "text": {
+              "es": "Haga clic en “Marcar llegada” y elija a Valeria Torres en la lista.",
+              "en": "Click “Check-in” and choose Valeria Torres from the list."
+            }
+          }
+        ],
+        "result": {
+          "es": "Valeria cambia de “Programada” a “Llegó”. “Sin confirmar” baja de 1 a 0 y “En consultorio” sube de 0 a 1.",
+          "en": "Valeria changes from “Scheduled” to “Arrived”. “Unconfirmed” decreases from 1 to 0 and “In office” increases from 0 to 1."
+        },
+        "tips": [
+          {
+            "es": "Use los filtros de profesional y estado para reducir la agenda diaria.",
+            "en": "Use the provider and status filters to narrow the day sheet."
+          },
+          {
+            "es": "“Cita”, “Bloquear”, “Cobrar”, “Hoja” y “Reprogramar” muestran orientación en modo práctica; no completan esas acciones.",
+            "en": "“Appointment”, “Block time”, “Take payment”, “Day sheet”, and “Reschedule” provide practice-mode guidance; they do not complete those actions."
+          }
+        ],
+        "sidebarRoute": "/dashboard",
+        "route": "/dashboard"
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Recepción: la cita del día y la llegada de la paciente",
+      "en": "Reception: the day's appointment and the patient's arrival"
+    },
+    "intro": {
+      "es": "Ubique la cita de la paciente, registre que llegó y revise la hoja del día antes de pasarla al consultorio.",
+      "en": "Find the patient's appointment, record that she arrived, and read the day sheet before sending her in."
+    },
+    "sections": [
+      {
+        "id": "staff-calendar-agenda",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Confirme la cita y registre la llegada",
+          "en": "Confirm the appointment and record the arrival"
+        },
+        "scenario": {
+          "es": "Valeria Torres llega a recepción para su consulta inicial de las 10:00 de la mañana con Alex Demo. Confirme que la cita en pantalla es la suya y déjela marcada como presente.",
+          "en": "Valeria Torres arrives at reception for her 10:00 a.m. initial consultation with Alex Demo. Confirm the appointment on screen is hers and mark her as present."
+        },
+        "story": {
+          "es": "scheduling-calendar--training-spanish",
+          "en": "scheduling-calendar--training-english"
+        },
+        "route": "/clinical/schedule?view=grid&calendarView=day",
+        "sidebarRoute": "/clinical/schedule?view=grid&calendarView=day",
+        "steps": [
+          {
+            "id": "find-appointment",
+            "text": {
+              "es": "En la lista «Agenda», ubique la tarjeta de Valeria Torres: muestra la hora y «30 min», el profesional «Alex Demo» y el teléfono +57 300 555 0184.",
+              "en": "In the “Agenda” list, find Valeria Torres's card: it shows the time and “30 min”, the professional “Alex Demo”, and the phone +57 300 555 0184."
+            },
+            "completion": {
+              "es": "La tarjeta muestra «Valeria Torres» y debajo «Alex Demo».",
+              "en": "The card shows “Valeria Torres” with “Alex Demo” underneath."
+            }
+          },
+          {
+            "id": "check-status",
+            "text": {
+              "es": "Mire la etiqueta de estado al lado derecho de la tarjeta: dice «Programada», es decir que todavía nadie registró la llegada.",
+              "en": "Look at the status label on the right of the card: it reads “Scheduled”, meaning nobody has recorded the arrival yet."
+            },
+            "completion": {
+              "es": "La etiqueta dice «Programada».",
+              "en": "The label reads “Scheduled”."
+            }
+          },
+          {
+            "id": "open-event",
+            "text": {
+              "es": "Haga clic en «Abrir evento» para ver los mismos datos en la ventana «Detalle de la cita»; así confirma paciente, hora y entidad «Clínica Salud» antes de seguir. Cierre la ventana cuando termine.",
+              "en": "Click “Open event” to see the same details in the “Appointment details” window; that is where you confirm patient, time, and the “Clínica Salud” insurer before continuing. Close the window when you are done."
+            },
+            "completion": {
+              "es": "Se abre la ventana «Detalle de la cita» con el nombre de la paciente.",
+              "en": "The “Appointment details” window opens with the patient's name."
+            }
+          },
+          {
+            "id": "mark-arrived",
+            "text": {
+              "es": "Valeria ya está en recepción: haga clic en «Registrar llegada» en la tarjeta de la cita.",
+              "en": "Valeria is at the front desk: click “Mark arrived” on the appointment card."
+            },
+            "completion": {
+              "es": "El botón «Registrar llegada» desaparece de la tarjeta.",
+              "en": "The “Mark arrived” button disappears from the card."
+            }
+          }
+        ],
+        "result": {
+          "es": "La etiqueta de la cita cambia de «Programada» a «Llegó» y el botón «Registrar llegada» ya no aparece.",
+          "en": "The appointment label changes from “Scheduled” to “Arrived” and the “Mark arrived” button is gone."
+        },
+        "tips": [
+          {
+            "es": "«Abrir día» cambia de la lista «Agenda» a la vista «Día», la cuadrícula por horas del mismo día; los botones «Día», «Semana», «Mes» y «Agenda» arriba a la derecha hacen lo mismo.",
+            "en": "“Open day” switches from the “Agenda” list to the “Day” view, the hour grid for the same day; the “Day”, “Week”, “Month”, and “Agenda” buttons at the top right do the same."
+          },
+          {
+            "es": "Si hace clic en el nombre de otro profesional, la lista queda en «Sin eventos» porque esta cita es de «Mi calendario»; vuelva a «Mi calendario» para verla otra vez.",
+            "en": "If you click another professional's name, the list shows “No appointments” because this visit belongs to “My calendar”; go back to “My calendar” to see it again."
+          },
+          {
+            "es": "En modo práctica, «Nuevo evento» y «Bloquear tiempo» no crean nada aquí: solo muestran un aviso en la esquina de la pantalla.",
+            "en": "In practice mode, “New event” and “Block time” create nothing here: they only show a notice in the corner of the screen."
+          }
+        ]
+      },
+      {
+        "id": "staff-day-sheet",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Lea la hoja del día antes de pasar a la paciente",
+          "en": "Read the day sheet before sending the patient in"
+        },
+        "scenario": {
+          "es": "Antes de pasar a Valeria al consultorio, use «Hoja del día», la lista de trabajo del día, para confirmar de un vistazo hora, historia, entidad y estado.",
+          "en": "Before you send Valeria in, use the “Day sheet”, the day's work list, to confirm time, chart, insurer, and status at a glance."
+        },
+        "story": {
+          "es": "clinical-dashboard-and-day-sheet--training-day-sheet-spanish",
+          "en": "clinical-dashboard-and-day-sheet--training-day-sheet-english"
+        },
+        "route": "/clinical/schedule?view=day",
+        "sidebarRoute": "/clinical/schedule?view=day",
+        "steps": [
+          {
+            "id": "filter-provider",
+            "text": {
+              "es": "Arriba, abra el selector que dice «Todos los doctores» y elija «Alex Demo» para quedarse solo con sus citas.",
+              "en": "At the top, open the selector that reads “All doctors” and choose “Alex Demo” to keep only her appointments."
+            },
+            "target": "[data-tour=\"day-sheet-toolbar\"]",
+            "completion": {
+              "es": "El selector muestra «Alex Demo» y la fila de Valeria Torres sigue en la lista.",
+              "en": "The selector shows “Alex Demo” and the Valeria Torres row stays in the list."
+            }
+          },
+          {
+            "id": "read-row",
+            "text": {
+              "es": "Ubique la fila de las 10:00 de la mañana (aparece como «10:00a») y lea de izquierda a derecha: «Hist.» H-1042, «Paciente» Valeria Torres, «Teléfono» +57 300 555 0184 y «Entidad» CLÍNICA SALUD.",
+              "en": "Find the 10:00 a.m. row (shown as “10:00a”) and read it left to right: “Chart” H-1042, “Patient” Valeria Torres, “Phone” +57 300 555 0184, and “Insurer” CLÍNICA SALUD."
+            },
+            "target": "[data-tour=\"day-sheet-table\"]",
+            "completion": {
+              "es": "La fila muestra H-1042 y Valeria Torres.",
+              "en": "The row shows H-1042 and Valeria Torres."
+            }
+          },
+          {
+            "id": "read-status",
+            "text": {
+              "es": "Mire la columna «Est»: la cita está «Programada». Las columnas «Llega», «Entra» y «Sale» están vacías porque todavía no se ha registrado ninguna hora.",
+              "en": "Look at the “St” column: the appointment is “Scheduled”. The “Arr.”, “In”, and “Out” columns are empty because no time has been recorded yet."
+            },
+            "completion": {
+              "es": "«Est» dice «Programada» y «Llega», «Entra» y «Sale» están vacías.",
+              "en": "“St” reads “Scheduled” and “Arr.”, “In”, and “Out” are empty."
+            }
+          },
+          {
+            "id": "find-free-slot",
+            "text": {
+              "es": "Busque la fila de las 11:00 de la mañana que no tiene paciente: es un espacio libre, el primero que puede ofrecer si alguien pide cita para hoy.",
+              "en": "Find the 11:00 a.m. row with no patient: it is an open slot, the first one you can offer if someone asks for an appointment today."
+            }
+          }
+        ],
+        "result": {
+          "es": "Con el selector en «Alex Demo», la fila de las 10:00 muestra a Valeria Torres con historia H-1042 y estado «Programada», y debajo queda un espacio libre a las 11:00.",
+          "en": "With the selector on “Alex Demo”, the 10:00 row shows Valeria Torres with chart H-1042 and status “Scheduled”, and an open slot remains below at 11:00."
+        },
+        "check": {
+          "question": {
+            "es": "¿Qué número de historia tiene la paciente de las 10:00 y en qué estado está su cita?",
+            "en": "What chart number does the 10:00 patient have, and what status is her appointment in?"
+          },
+          "answer": {
+            "es": "Historia H-1042, cita en estado «Programada».",
+            "en": "Chart H-1042, appointment in “Scheduled” status."
+          }
+        },
+        "tips": [
+          {
+            "es": "El calendario muestra las horas del día para planear; la hoja del día es la misma información en forma de lista, para seguir el trabajo de la jornada.",
+            "en": "The calendar shows the day by hour for planning; the day sheet is the same information as a list, for following the day's work."
+          },
+          {
+            "es": "En modo práctica, «Nueva cita» no hace nada aquí.",
+            "en": "In practice mode, “New appointment” does nothing here."
+          },
+          {
+            "es": "La X al final de cada fila es «Cancelar cita»; en modo práctica solo selecciona la fila.",
+            "en": "The X at the end of each row is “Cancel appointment”; in practice mode it only selects the row."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Relevo clínico: identidad y antecedentes",
+      "en": "Clinical handoff: identity and history"
+    },
+    "intro": {
+      "es": "Confirme quién es la paciente y qué antecedentes tiene antes de que pase al consultorio.",
+      "en": "Confirm who the patient is and what history she has before she goes into the office."
+    },
+    "sections": [
+      {
+        "id": "staff-patient-summary",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Revise antecedentes y agregue una alergia nueva",
+          "en": "Review the history and add a new allergy"
+        },
+        "scenario": {
+          "es": "Valeria Torres espera para su consulta. Revise su resumen antes de sentarla en el sillón; mientras confirma sus datos, ella le cuenta que es alérgica a la amoxicilina.",
+          "en": "Valeria Torres is waiting for her visit. Review her summary before seating her; while you confirm her details, she tells you she is allergic to amoxicillin."
+        },
+        "story": {
+          "es": "clinical-patients-summary--training-spanish",
+          "en": "clinical-patients-summary--training-english"
+        },
+        "route": "/clinical/pacientes?section=summary",
+        "sidebarRoute": "/clinical/pacientes?section=summary",
+        "steps": [
+          {
+            "id": "read-alerts",
+            "text": {
+              "es": "Lea los tres recuadros de arriba antes de tocar nada: «Alergias» dice «Penicilina · Brote · Activo», «Condiciones» dice «Hipertensión · Activo» y «Medicamentos» dice «Ibuprofeno · 400 mg · Activo».",
+              "en": "Read the three boxes at the top before doing anything: “Allergies” reads “Penicillin · Rash · Active”, “Conditions” reads “Hypertension · Active”, and “Medications” reads “Ibuprofen · 400 mg · Active”."
+            },
+            "completion": {
+              "es": "Ve tres antecedentes, todos con estado «Activo».",
+              "en": "You see three history items, all with “Active” status."
+            }
+          },
+          {
+            "id": "check-identity",
+            "text": {
+              "es": "En «Información general», confirme la identidad con la paciente en voz alta: documento 1032456789, teléfono +57 300 555 0184 y dirección Carrera 7 # 72-41, Bogotá.",
+              "en": "In “General information”, confirm her identity out loud with the patient: document 1032456789, phone +57 300 555 0184, and address Carrera 7 # 72-41, Bogotá."
+            },
+            "completion": {
+              "es": "Los datos de la pantalla coinciden con lo que dice la paciente.",
+              "en": "What is on screen matches what the patient says."
+            }
+          },
+          {
+            "id": "read-appointments",
+            "text": {
+              "es": "En «Citas», ubique la tarjeta marcada «Próxima cita»: «Seguimiento confirmado», con «Estado: Confirmada» y «Registrado: 2», los dos procedimientos que ya quedaron asociados a esa visita.",
+              "en": "In “Appointments”, find the card marked “Next visit”: “Confirmed follow-up”, with “Status: Confirmed” and “Recorded: 2”, the two procedures already linked to that visit."
+            },
+            "completion": {
+              "es": "La tarjeta «Seguimiento confirmado» aparece con la etiqueta «Próxima cita».",
+              "en": "The “Confirmed follow-up” card appears with the “Next visit” label."
+            }
+          },
+          {
+            "id": "add-allergy",
+            "text": {
+              "es": "En el recuadro «Alergias», haga clic en «Agregar alergia», escriba «Amoxicilina» donde dice «Alérgeno» y «Brote» donde dice «Reacción», y vuelva a hacer clic en «Agregar alergia».",
+              "en": "In the “Allergies” box, click “Add allergy”, type “Amoxicillin” where it says “Allergen” and “Rash” where it says “Reaction”, then click “Add allergy” again."
+            },
+            "target": "[data-tour=\"patient-medical-background\"]",
+            "completion": {
+              "es": "Los dos campos quedan vacíos otra vez.",
+              "en": "Both fields clear again."
+            }
+          }
+        ],
+        "result": {
+          "es": "«Alergias» pasa de una línea a dos: debajo de «Penicilina · Brote · Activo» aparece «Amoxicilina · Brote · Activo».",
+          "en": "“Allergies” goes from one line to two: below “Penicillin · Rash · Active” you now see “Amoxicillin · Rash · Active”."
+        },
+        "tips": [
+          {
+            "es": "«Marcar inactivo» y «Marcar resuelto» cambian el estado de una línea sin borrarla: el antecedente sigue a la vista con su nuevo estado.",
+            "en": "“Mark inactive” and “Mark resolved” change a line's status without deleting it: the item stays visible with its new status."
+          },
+          {
+            "es": "En «Antecedentes» puede corregir «Tabaquismo», «Embarazo», «Antecedentes odontológicos» y «Notas», y dejarlo con «Guardar».",
+            "en": "In “Medical background” you can correct “Smoking status”, “Pregnancy”, “Dental history”, and “Notes”, and confirm with “Save”."
+          },
+          {
+            "es": "Los botones «Registrar evolución» y «Registrar trabajo realizado» de cada cita lo llevan a otros capítulos de esta guía: la evolución y el odontograma.",
+            "en": "The “Record encounter note” and “Record performed work” buttons on each appointment take you to other chapters of this guide: the progress note and the dental chart."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Odontología: odontograma y plan propuesto",
+      "en": "Dentistry: chart and proposed plan"
+    },
+    "intro": {
+      "es": "Encuentre en el odontograma el trabajo que está planificado y explíquele a la paciente en qué consiste y cuánto cuesta.",
+      "en": "Find the planned work on the dental chart and explain to the patient what it involves and what it costs."
+    },
+    "sections": [
+      {
+        "id": "staff-odontogram",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Encuentre el trabajo planificado",
+          "en": "Find the planned work"
+        },
+        "scenario": {
+          "es": "Valeria Torres llegó por sensibilidad. Antes de hablar con ella, revise su odontograma para saber qué trabajo quedó registrado y en qué diente.",
+          "en": "Valeria Torres has come in for sensitivity. Before you talk to her, review her dental chart to see what work is recorded and on which tooth."
+        },
+        "story": {
+          "es": "walkthrough-clinical--chart-spanish",
+          "en": "walkthrough-clinical--chart-english"
+        },
+        "route": "/clinical/pacientes?section=chart",
+        "sidebarRoute": "/clinical/pacientes?section=chart",
+        "steps": [
+          {
+            "id": "find-tooth",
+            "text": {
+              "es": "En el odontograma, ubique el diente 16 (primer molar superior derecho): sus superficies mesial y oclusal están pintadas con el color del trabajo planificado.",
+              "en": "On the dental chart, find tooth 16 (upper right first molar): its mesial and occlusal surfaces are painted in the planned-treatment colour."
+            },
+            "target": "[data-tour=\"odontogram-chart\"]",
+            "completion": {
+              "es": "El diente 16 se ve marcado y el resto de la arcada no.",
+              "en": "Tooth 16 is marked and the rest of the arch is not."
+            }
+          },
+          {
+            "id": "select-tooth",
+            "text": {
+              "es": "Haga clic en el diente 16. A la derecha, en la pestaña «Registrar», el campo «Diente» deja de decir «Seleccione un diente en el odontograma» y muestra 16.",
+              "en": "Click tooth 16. On the right, in the “Enter” tab, the “Tooth” field stops saying “Select a tooth in the chart” and shows 16."
+            },
+            "target": "[data-tour=\"odontogram-entry-rail\"]",
+            "completion": {
+              "es": "«Diente» muestra 16.",
+              "en": "“Tooth” shows 16."
+            }
+          },
+          {
+            "id": "read-row",
+            "text": {
+              "es": "Baje a «Evolución de procedimientos» y lea la fila del diente 16: la fecha, las superficies «MO», el procedimiento «Composite restoration / Restauración en resina» con el código 2391, el estado «Planificado», el profesional Alex Demo y el precio.",
+              "en": "Scroll down to “Progress notes” and read the tooth 16 row: the date, surfaces “MO”, the procedure “Composite restoration / Restauración en resina” with code 2391, status “Treatment planned”, provider Alex Demo, and the price."
+            }
+          },
+          {
+            "id": "filter-planned",
+            "text": {
+              "es": "Abra «Estados» y desmarque «Planificado»: la fila desaparece y queda el aviso «Ningún procedimiento coincide con los filtros.». Vuelva a marcar «Planificado» para recuperarla. Así se revisa un historial largo sin perder de vista lo pendiente.",
+              "en": "Open “Statuses” and uncheck “Treatment planned”: the row disappears and leaves the message “No procedures match the current filters.”. Check “Treatment planned” again to bring it back. This is how you read a long history without losing sight of pending work."
+            },
+            "completion": {
+              "es": "La fila del diente 16 desaparece y vuelve a aparecer.",
+              "en": "The tooth 16 row disappears and comes back."
+            }
+          }
+        ],
+        "result": {
+          "es": "El diente 16 tiene una resina en estado «Planificado» sobre las superficies M y O: es trabajo propuesto, todavía no realizado.",
+          "en": "Tooth 16 has a composite restoration with status “Treatment planned” on surfaces M and O: proposed work, not yet done."
+        },
+        "check": {
+          "question": {
+            "es": "¿Qué diente tiene trabajo planificado y en qué superficies?",
+            "en": "Which tooth has planned work, and on which surfaces?"
+          },
+          "answer": {
+            "es": "El diente 16, superficies M y O (mesial y oclusal).",
+            "en": "Tooth 16, surfaces M and O (mesial and occlusal)."
+          }
+        },
+        "tips": [
+          {
+            "es": "«A la fecha» oculta los procedimientos posteriores a la fecha que escriba; sirve para ver cómo estaba el odontograma antes de una atención.",
+            "en": "“As of” hides procedures later than the date you type; use it to see how the chart looked before a visit."
+          },
+          {
+            "es": "En modo práctica, «Agregar al odontograma» no hace nada aquí.",
+            "en": "In practice mode, “Add to chart” does nothing here."
+          }
+        ]
+      },
+      {
+        "id": "staff-treatment-plan",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Explique el plan y su precio",
+          "en": "Explain the plan and its price"
+        },
+        "scenario": {
+          "es": "Valeria pregunta qué le van a hacer y cuánto cuesta. Abra su plan de tratamiento, revíselo con ella y deje anotado lo que acordaron.",
+          "en": "Valeria asks what will be done and what it costs. Open her treatment plan, go through it with her, and write down what you agreed."
+        },
+        "story": {
+          "es": "walkthrough-clinical--plan-spanish",
+          "en": "walkthrough-clinical--plan-english"
+        },
+        "route": "/clinical/pacientes?section=treatments&view=plans",
+        "sidebarRoute": "/clinical/pacientes?section=treatments&view=plans",
+        "steps": [
+          {
+            "id": "open-plan",
+            "text": {
+              "es": "En la lista «Activo», haga clic en el plan «Restorative care / Atención restauradora».",
+              "en": "In the “Active” list, click the plan “Restorative care / Atención restauradora”."
+            },
+            "target": "[data-tour=\"treatment-plans\"]",
+            "completion": {
+              "es": "Se abre «Editar plan».",
+              "en": "“Edit treatment plan” opens."
+            }
+          },
+          {
+            "id": "read-total",
+            "text": {
+              "es": "En «Procedimientos adjuntos» lea el «Total» y la única línea que lo compone: la resina del diente 16, superficies MO. Eso es lo que usted le explica a la paciente: un procedimiento y su precio en pesos.",
+              "en": "Under “Attached procedures”, read the “Total” and the single line behind it: the composite restoration on tooth 16, surfaces MO. That is what you explain to the patient: one procedure and its price in pesos."
+            }
+          },
+          {
+            "id": "write-note",
+            "text": {
+              "es": "En «Notas» escriba lo que acordaron, por ejemplo: «La paciente acepta; se programa para la próxima semana.»",
+              "en": "In “Notes”, write what you agreed, for example: “Patient accepts; to be scheduled for next week.”"
+            }
+          },
+          {
+            "id": "save-plan",
+            "text": {
+              "es": "Haga clic en «Guardar plan».",
+              "en": "Click “Save treatment plan”."
+            },
+            "completion": {
+              "es": "No aparece ningún mensaje de error.",
+              "en": "No error message appears."
+            }
+          },
+          {
+            "id": "reopen-plan",
+            "text": {
+              "es": "Haga clic en «Cancelar» y vuelva a abrir el mismo plan desde la lista para comprobar su anotación.",
+              "en": "Click “Cancel” and open the same plan again from the list to check your note."
+            },
+            "completion": {
+              "es": "«Notas» muestra el texto que usted escribió.",
+              "en": "“Notes” shows the text you wrote."
+            }
+          }
+        ],
+        "result": {
+          "es": "El plan sigue en «Activo», con un solo procedimiento y el mismo «Total», y su anotación aparece al reabrirlo.",
+          "en": "The plan stays under “Active”, with one procedure and the same “Total”, and your note is there when you reopen it."
+        },
+        "tips": [
+          {
+            "es": "El «Total» suma únicamente los procedimientos adjuntos al plan: si un procedimiento no aparece en esa lista, no está incluido en el precio que usted le da a la paciente.",
+            "en": "The “Total” adds up only the procedures attached to the plan: if a procedure is not in that list, it is not included in the price you quote."
+          },
+          {
+            "es": "En modo práctica, «Quitar» y «Guardar copia» no hacen nada aquí.",
+            "en": "In practice mode, “Detach” and “Save copy” do nothing here."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Odontología: documente y verifique",
+      "en": "Dentistry: document and verify"
+    },
+    "intro": {
+      "es": "Deje por escrito la evolución de la consulta y confirme en el odontograma qué quedó realizado y qué sigue pendiente.",
+      "en": "Write up the visit and then confirm on the dental chart what was completed and what is still pending."
+    },
+    "sections": [
+      {
+        "id": "staff-clinical-note",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Escriba la evolución de la consulta",
+          "en": "Write up the visit"
+        },
+        "scenario": {
+          "es": "Terminó de atender a Valeria. Debe dejar por escrito qué encontró y qué sigue, para que cualquiera que abra su historia lo entienda.",
+          "en": "You have finished treating Valeria. Write down what you found and what comes next, so anyone who opens her record understands it."
+        },
+        "story": {
+          "es": "walkthrough-clinical--note-spanish",
+          "en": "walkthrough-clinical--note-english"
+        },
+        "route": "/clinical/pacientes?section=evolutions",
+        "sidebarRoute": "/clinical/pacientes?section=evolutions",
+        "steps": [
+          {
+            "id": "open-note",
+            "text": {
+              "es": "En «Evoluciones» busque la del 21 de septiembre de 2026, «Initial consultation / Consulta inicial»: la columna «Contenido» muestra «Sensitivity / Sensibilidad», el motivo con el que llegó la paciente. Ábrala con el lápiz «Editar evolución».",
+              "en": "In “Progress notes”, find the 20 September 2126 entry, “Initial consultation / Consulta inicial”: the “Content” column shows “Sensitivity / Sensibilidad”, the reason the patient came in. Open it with the “Edit progress note” pencil."
+            },
+            "target": "[data-tour=\"patient-encounters\"]",
+            "completion": {
+              "es": "Se abre «Editar control».",
+              "en": "“Edit encounter” opens."
+            }
+          },
+          {
+            "id": "use-outline",
+            "text": {
+              "es": "Haga clic en «Usar esquema de evolución dental»: el campo «Plan» se llena con el esquema de la clínica (Hallazgos, Procedimientos realizados, Anestesia y materiales, Indicaciones, Próxima cita).",
+              "en": "Click “Use dental progress-note outline”: the “Plan” field fills with the clinic outline (Findings, Procedures performed, Anesthesia and materials, Instructions, Next appointment)."
+            },
+            "completion": {
+              "es": "«Plan» deja de estar vacío.",
+              "en": "“Plan” is no longer empty."
+            }
+          },
+          {
+            "id": "fill-narrative",
+            "text": {
+              "es": "Complete «Examen físico» e «Impresión diagnóstica» con lo que observó y reemplace cada línea del esquema en «Plan» por lo que hizo y lo que sigue.",
+              "en": "Fill “Physical exam” and “Clinical impression” with what you observed, and replace each line of the outline in “Plan” with what you did and what comes next."
+            }
+          },
+          {
+            "id": "save-note",
+            "text": {
+              "es": "Haga clic en «Guardar control».",
+              "en": "Click “Save encounter”."
+            }
+          },
+          {
+            "id": "verify-list",
+            "text": {
+              "es": "Cierre la ventana y mire otra vez la fila en «Evoluciones».",
+              "en": "Close the window and look at the row in “Progress notes” again."
+            },
+            "completion": {
+              "es": "La columna «Contenido» ya no muestra «Sensitivity / Sensibilidad», sino el texto de su «Plan».",
+              "en": "The “Content” column no longer shows “Sensitivity / Sensibilidad” but the text of your “Plan”."
+            }
+          }
+        ],
+        "result": {
+          "es": "La evolución del 21 de septiembre queda con su examen, su impresión diagnóstica y su plan, y la lista muestra ese plan como contenido de la evolución.",
+          "en": "The 20 September note now carries your exam, your impression and your plan, and the list shows that plan as the note's content."
+        },
+        "tips": [
+          {
+            "es": "«Motivo de consulta» es lo que dice la paciente; «Impresión diagnóstica» es su criterio clínico. No los mezcle.",
+            "en": "“Chief complaint” is what the patient says; “Clinical impression” is your clinical judgement. Keep them separate."
+          },
+          {
+            "es": "En modo práctica, «Finalizar» y «Marcar historia como revisada» no hacen nada aquí.",
+            "en": "In practice mode, “Finalize” and “Mark history reviewed” do nothing here."
+          }
+        ]
+      },
+      {
+        "id": "staff-procedure-cross-check",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Verifique qué queda pendiente",
+          "en": "Check what is still pending"
+        },
+        "scenario": {
+          "es": "Antes de cerrar la historia de Valeria, contraste lo que acaba de escribir con el odontograma: en el consultorio solo se cobra lo realizado.",
+          "en": "Before you close Valeria's record, compare what you just wrote with the dental chart: the clinic only charges for work that was done."
+        },
+        "story": {
+          "es": "walkthrough-clinical--chart-spanish",
+          "en": "walkthrough-clinical--chart-english"
+        },
+        "sidebarRoute": "/clinical/pacientes?section=chart",
+        "steps": [
+          {
+            "id": "read-status",
+            "text": {
+              "es": "En «Evolución de procedimientos», lea la columna «Estado» de la fila del diente 16: dice «Planificado».",
+              "en": "In “Progress notes”, the procedure list under the chart, read the “Status” column of the tooth 16 row: it says “Treatment planned”."
+            }
+          },
+          {
+            "id": "compare-note",
+            "text": {
+              "es": "Compárelo con lo que escribió en la evolución: si usted anotó que hizo la resina, el odontograma debería decir «Realizado». Mientras diga «Planificado», ese trabajo sigue pendiente.",
+              "en": "Compare it with what you wrote in the note: if you recorded doing the restoration, the chart should say “Completed”. While it says “Treatment planned”, that work is still pending."
+            }
+          },
+          {
+            "id": "open-procedure-notes",
+            "text": {
+              "es": "Haga clic en «Notas» en esa fila para ver si el procedimiento tiene notas propias. Cierre la ventana cuando termine.",
+              "en": "Click “Notes” on that row to see whether the procedure has notes of its own. Close the window when you are done."
+            },
+            "completion": {
+              "es": "Se abre «Notas del procedimiento» y dice «Aún no hay notas.».",
+              "en": "“Procedure notes” opens and says “No notes yet.”."
+            }
+          },
+          {
+            "id": "no-bill",
+            "text": {
+              "es": "Fíjese en que la fila no ofrece «Facturar»: ese botón aparece únicamente cuando el procedimiento está «Realizado».",
+              "en": "Notice that the row offers no “Bill” button: it appears only when the procedure is “Completed”."
+            }
+          }
+        ],
+        "result": {
+          "es": "El diente 16 sigue «Planificado», sin notas propias y sin «Facturar»: todavía no hay nada que cobrar por ese procedimiento.",
+          "en": "Tooth 16 is still “Treatment planned”, with no notes of its own and no “Bill” button: there is nothing to charge for yet."
+        },
+        "check": {
+          "question": {
+            "es": "¿Por qué la fila del diente 16 no ofrece «Facturar»?",
+            "en": "Why does the tooth 16 row offer no “Bill” button?"
+          },
+          "answer": {
+            "es": "Porque el procedimiento está «Planificado», no «Realizado»; «Facturar» solo aparece en los procedimientos realizados.",
+            "en": "Because the procedure is “Treatment planned”, not “Completed”; “Bill” only appears on completed procedures."
+          }
+        },
+        "tips": [
+          {
+            "es": "En modo práctica, «Marcar realizado», «Cambiar estado» y «Eliminar» no hacen nada aquí.",
+            "en": "In practice mode, “Set complete”, “Set status” and “Delete” do nothing here."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Recepción: prepare el cobro de la visita",
+      "en": "Reception: prepare the charge for the visit"
+    },
+    "intro": {
+      "es": "Deje listo el cobro de la visita: la línea, la cantidad, el precio y las condiciones de pago.",
+      "en": "Get the charge for the visit ready: the line, the quantity, the price, and the payment terms."
+    },
+    "sections": [
+      {
+        "id": "staff-invoice-draft",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Arme el cobro de la visita",
+          "en": "Build the charge for the visit"
+        },
+        "scenario": {
+          "es": "Valeria pasa por recepción y pregunta cuánto le va a costar la resina del diente 16. Arme el cobro para darle una cifra exacta.",
+          "en": "Valeria stops at the front desk and asks what the filling on tooth 16 will cost her. Build the charge so you can give her an exact figure."
+        },
+        "story": {
+          "es": "walkthrough-clinical--invoice-spanish",
+          "en": "walkthrough-clinical--invoice-english"
+        },
+        "sidebarRoute": "/clinical/pacientes?section=chart",
+        "steps": [
+          {
+            "id": "read-candidate",
+            "text": {
+              "es": "Bajo «Procedimientos sin facturar» lea la línea que ya viene cargada: «Composite restoration / Restauración en resina», con el código «2391» encima. Es el trabajo que todavía no se le ha cobrado a la paciente.",
+              "en": "Under “Unbilled procedures”, read the line that is already loaded: “Composite restoration / Restauración en resina”, with the code “2391” above it. It is the work the patient has not been charged for yet."
+            },
+            "completion": {
+              "es": "La tabla muestra una sola línea con ese nombre.",
+              "en": "The table shows a single line with that name."
+            }
+          },
+          {
+            "id": "check-quantity-price",
+            "text": {
+              "es": "Confirme «Cantidad» en 1 y «Precio unitario» en 120000. De esos dos campos sale el «Total línea».",
+              "en": "Confirm “Quantity” is 1 and “Unit price” is 120000. Those two fields are what produce the “Line total”."
+            }
+          },
+          {
+            "id": "test-quantity",
+            "text": {
+              "es": "Escriba 2 en «Cantidad» y mire el «Total» al pie de la tabla. Haga esto una vez para entender de dónde sale la cifra, y vuelva a escribir 1.",
+              "en": "Type 2 in “Quantity” and watch the “Total” under the table. Do this once so you understand where the figure comes from, then type 1 again."
+            },
+            "completion": {
+              "es": "El «Total» sube al doble y vuelve a bajar cuando escribe 1.",
+              "en": "The “Total” doubles and comes back down when you type 1 again."
+            }
+          },
+          {
+            "id": "set-terms",
+            "text": {
+              "es": "En «Condiciones de pago» elija «Pago inmediato», porque Valeria paga hoy en el mostrador.",
+              "en": "In “Payment terms” choose “Due on receipt”, because Valeria is paying today at the front desk."
+            },
+            "target": "#clinical-invoice-payment-terms",
+            "completion": {
+              "es": "El campo «Fecha de vencimiento» desaparece: no queda nada pendiente para después.",
+              "en": "The “Due date” field disappears: nothing is left owing for later."
+            }
+          },
+          {
+            "id": "quote-patient",
+            "text": {
+              "es": "Dígale a Valeria la cifra del «Total», no la del «Precio unitario»: el total es lo que ella paga.",
+              "en": "Tell Valeria the “Total” figure, not the “Unit price”: the total is what she pays."
+            }
+          }
+        ],
+        "result": {
+          "es": "Con «Cantidad» en 1, «Subtotal», «Impuesto» y «Total» muestran 120.000,00 COP, 0,00 COP y 120.000,00 COP, y «Fecha de vencimiento» ya no aparece.",
+          "en": "With “Quantity” at 1, “Subtotal”, “Tax”, and “Total” show COP 120,000.00, COP 0.00, and COP 120,000.00, and “Due date” is no longer shown."
+        },
+        "check": {
+          "question": {
+            "es": "¿Qué pasa con el «Total» si pone «Cantidad» en 2?",
+            "en": "What happens to the “Total” if you set “Quantity” to 2?"
+          },
+          "answer": {
+            "es": "Se duplica: 240.000,00 COP.",
+            "en": "It doubles: COP 240,000.00."
+          }
+        },
+        "tips": [
+          {
+            "es": "«Agregar del catálogo» busca los servicios de la clínica por nombre o por código; aquí el catálogo trae un solo servicio.",
+            "en": "“Add from catalog” searches the clinic's services by name or code; here the catalog holds a single service."
+          },
+          {
+            "es": "«Línea libre» agrega una línea en blanco, para cobros que no están en el catálogo.",
+            "en": "“Free-form line” adds a blank line, for charges that are not in the catalog."
+          },
+          {
+            "es": "En modo práctica, «Guardar borrador» y «Emitir factura» no hacen nada aquí.",
+            "en": "In practice mode, “Save draft” and “Issue invoice” do nothing here."
+          },
+          {
+            "es": "«Cancelar» cierra la factura; para volver a abrirla use «Reabrir factura».",
+            "en": "“Cancel” closes the invoice; to open it again use “Reopen invoice”."
+          }
+        ]
+      },
+      {
+        "id": "staff-plan-invoice",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Confirme qué del plan se puede cobrar",
+          "en": "Confirm what in the plan can be charged"
+        },
+        "scenario": {
+          "es": "Valeria quiere saber cuánto le va a costar todo su tratamiento, no solo la visita de hoy. Abra el plan de tratamiento y confirme qué trae antes de darle una cifra.",
+          "en": "Valeria wants to know what her whole treatment will cost, not just today's visit. Open the treatment plan and confirm what is in it before you quote a figure."
+        },
+        "story": {
+          "es": "walkthrough-clinical--plan-spanish",
+          "en": "walkthrough-clinical--plan-english"
+        },
+        "sidebarRoute": "/clinical/pacientes?section=treatments&view=plans",
+        "steps": [
+          {
+            "id": "open-plan",
+            "text": {
+              "es": "En el grupo «Activo» haga clic en «Restorative care / Atención restauradora».",
+              "en": "In the “Active” group, click “Restorative care / Atención restauradora”."
+            },
+            "completion": {
+              "es": "Se abre el plan por el costado de la pantalla.",
+              "en": "The plan opens from the side of the screen."
+            }
+          },
+          {
+            "id": "read-plan-total",
+            "text": {
+              "es": "Lea «Total». Esa es la suma de los procedimientos adjuntos al plan, y es la cifra que puede decirle a la paciente.",
+              "en": "Read “Total”. That is the sum of the procedures attached to the plan, and it is the figure you can quote to the patient."
+            }
+          },
+          {
+            "id": "read-attached",
+            "text": {
+              "es": "Bajo «Procedimientos adjuntos» lea la línea completa: el nombre del procedimiento, el diente 16, las superficies MO y el precio.",
+              "en": "Under “Attached procedures”, read the whole line: the procedure name, tooth 16, surfaces MO, and the price."
+            }
+          },
+          {
+            "id": "compare-with-charge",
+            "text": {
+              "es": "Compare esa cifra con el «Total» del cobro que armó antes. Si no coinciden, pregunte al odontólogo antes de cobrar: el plan es lo propuesto, el cobro es lo que ya se puede cobrar.",
+              "en": "Compare that figure with the “Total” of the charge you built earlier. If they do not match, ask the dentist before charging: the plan is what was proposed, the charge is what can be billed now."
+            }
+          },
+          {
+            "id": "read-planned-work",
+            "text": {
+              "es": "Cierre el plan con «Cancelar» y lea «Trabajo planificado» en la lista de abajo: ahí está el mismo procedimiento con su fecha.",
+              "en": "Close the plan with “Cancel” and read “Planned work” in the list below: the same procedure is there with its date."
+            }
+          }
+        ],
+        "result": {
+          "es": "El plan y el cobro de la visita coinciden: un solo procedimiento por 120.000,00 COP.",
+          "en": "The plan and the visit's charge match: a single procedure for COP 120,000.00."
+        },
+        "check": {
+          "question": {
+            "es": "¿Cuántos procedimientos trae el plan y por cuánto?",
+            "en": "How many procedures does the plan contain, and for how much?"
+          },
+          "answer": {
+            "es": "Uno: «Composite restoration / Restauración en resina», diente 16, superficies MO, por 120.000,00 COP.",
+            "en": "One: “Composite restoration / Restauración en resina”, tooth 16, surfaces MO, for COP 120,000.00."
+          }
+        },
+        "tips": [
+          {
+            "es": "«Total» solo suma los procedimientos que tienen precio. Si falta alguno, el plan avisa: «Hay procedimientos sin precio; el total es parcial.»",
+            "en": "“Total” only adds up procedures that have a price. If one is missing, the plan warns: “Some procedures have no price; this total is partial.”"
+          },
+          {
+            "es": "El nombre del plan y el del procedimiento vienen del catálogo de la clínica; por eso aparecen en los dos idiomas.",
+            "en": "The plan name and the procedure name come from the clinic's catalog; that is why they appear in both languages."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Relevo: entregue la paciente a odontología",
+      "en": "Hand-off: hand the patient to the dentist"
+    },
+    "intro": {
+      "es": "Antes de pasar la paciente al consultorio, reúna en una sola mirada lo que odontología necesita saber.",
+      "en": "Before you send the patient in, gather in one look what the dentist needs to know."
+    },
+    "sections": [
+      {
+        "id": "staff-front-desk-handoff",
+        "type": "interactive",
+        "layout": "task",
+        "title": {
+          "es": "Entregue la paciente a odontología",
+          "en": "Hand the patient to the dentist"
+        },
+        "scenario": {
+          "es": "Valeria ya llegó y el consultorio está libre. En un minuto usted debe decirle al odontólogo quién entra, a qué viene y qué debe tener en cuenta.",
+          "en": "Valeria has arrived and the operatory is free. In one minute you have to tell the dentist who is coming in, why, and what to watch out for."
+        },
+        "story": {
+          "es": "clinical-patients-summary--training-spanish",
+          "en": "clinical-patients-summary--training-english"
+        },
+        "sidebarRoute": "/clinical/pacientes?section=summary",
+        "steps": [
+          {
+            "id": "confirm-identity",
+            "text": {
+              "es": "En «Información general» confirme con la paciente el «Documento» 1032456789 y el «Teléfono» +57 300 555 0184. Confirmar antes evita corregir después.",
+              "en": "In “General information”, confirm with the patient the “Document” 1032456789 and the “Phone” +57 300 555 0184. Confirming now saves correcting later."
+            }
+          },
+          {
+            "id": "read-next-visit",
+            "text": {
+              "es": "En «Citas» ubique la cita marcada «Próxima cita»: «Seguimiento confirmado», con «Estado: Confirmada». Ese es el motivo que le dice al odontólogo.",
+              "en": "In “Appointments”, find the appointment marked “Next visit”: “Confirmed follow-up”, with “Status: Confirmed”. That is the reason you give the dentist."
+            }
+          },
+          {
+            "id": "read-alerts",
+            "text": {
+              "es": "Lea las tres tarjetas de arriba: «Alergias» («Penicilina · Brote · Activo»), «Condiciones» («Hipertensión») y «Medicamentos» («Ibuprofeno · 400 mg»). Eso es lo que odontología debe saber antes de atenderla.",
+              "en": "Read the three cards at the top: “Allergies” (“Penicillin · Rash · Active”), “Conditions” (“Hypertension”), and “Medications” (“Ibuprofen · 400 mg”). That is what the dentist must know before treating her."
+            }
+          },
+          {
+            "id": "update-medication",
+            "text": {
+              "es": "Pregúntele a Valeria si sigue tomando el ibuprofeno. Ella dice que lo suspendió la semana pasada: use «Marcar inactivo» en esa línea para que el odontólogo no la lea como vigente.",
+              "en": "Ask Valeria whether she is still taking the ibuprofen. She says she stopped last week: use “Mark inactive” on that line so the dentist does not read it as current."
+            },
+            "completion": {
+              "es": "La línea pasa de «Activo» a «Inactivo» y sus dos botones desaparecen.",
+              "en": "The line changes from “Active” to “Inactive” and its two buttons disappear."
+            }
+          },
+          {
+            "id": "say-handoff",
+            "text": {
+              "es": "Entregue el relevo en una frase: quién entra, a qué viene y qué sigue activo en alergias, condiciones y medicamentos.",
+              "en": "Give the hand-off in one sentence: who is coming in, why, and what is still active in allergies, conditions, and medications."
+            }
+          }
+        ],
+        "result": {
+          "es": "Odontología recibe cuatro datos comprobables en pantalla: Valeria Torres, «Seguimiento confirmado», alergia «Penicilina» activa y condición «Hipertensión» activa. «Ibuprofeno» queda «Inactivo».",
+          "en": "The dentist gets four things you can check on screen: Valeria Torres, “Confirmed follow-up”, active allergy “Penicillin”, and active condition “Hypertension”. “Ibuprofen” is left “Inactive”."
+        },
+        "check": {
+          "question": {
+            "es": "¿Qué alergia debe conocer odontología antes de atender a Valeria, y con qué reacción?",
+            "en": "Which allergy must the dentist know before treating Valeria, and with what reaction?"
+          },
+          "answer": {
+            "es": "«Penicilina», con reacción «Brote», marcada «Activo».",
+            "en": "“Penicillin”, with reaction “Rash”, marked “Active”."
+          }
+        },
+        "tips": [
+          {
+            "es": "«Marcar resuelto» es para algo que ya terminó; «Marcar inactivo» es para algo que la paciente dejó de tener o de tomar.",
+            "en": "“Mark resolved” is for something that has ended; “Mark inactive” is for something the patient no longer has or takes."
+          },
+          {
+            "es": "En la cita, «Registrar evolución» y «Registrar trabajo realizado» lo llevan a otros capítulos de esta guía; use «Capítulo anterior» para volver.",
+            "en": "On the appointment, “Record encounter note” and “Record performed work” take you to other chapters of this guide; use “Previous chapter” to come back."
+          }
+        ]
+      }
+    ]
+  }
+]

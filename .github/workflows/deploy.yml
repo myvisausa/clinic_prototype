@@ -76,7 +76,7 @@ jobs:
           test -f "$staff_root/index.json"
           test -f "$staff_root/walkthrough/build.json"
           test -f "$staff_root/walkthrough/staff/index.html"
-          test -f "$staff_root/walkthrough/staff/staff-chapters.json"
+          test -f "$staff_root/walkthrough/staff-chapters.json"
           test -f "$staff_root/reference/index.html"
           test -f "$staff_root/reference/index-en.html"
           test "$(find "$staff_root/reference/images" -type f | wc -l | tr -d ' ')" = 32
@@ -157,7 +157,7 @@ jobs:
           set -euo pipefail
           curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=es"
           curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=en"
-          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/staff-chapters.json"
+          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff-chapters.json"
           curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/build.json"
           curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/iframe.html"
           curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/reference/index.html"
