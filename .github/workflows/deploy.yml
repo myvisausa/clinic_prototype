@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      walkthrough_release_tag:
+        description: Immutable clinical walkthrough release tag to publish
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -73,8 +78,49 @@ jobs:
           mkdir -p deploy/site/storybook
           cp -R packages/ui/storybook-static/. deploy/site/storybook/
 
+      - name: Download and verify clinical walkthrough
+        if: inputs.walkthrough_release_tag != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WALKTHROUGH_RELEASE_TAG: ${{ inputs.walkthrough_release_tag }}
+        run: |
+          set -euo pipefail
+          case "$WALKTHROUGH_RELEASE_TAG" in
+            clinical-walkthrough-*) ;;
+            *)
+              echo "Unexpected walkthrough release tag: $WALKTHROUGH_RELEASE_TAG" >&2
+              exit 1
+              ;;
+          esac
+          mkdir -p deploy/walkthrough-download deploy/site/clinical-walkthrough
+          gh release download "$WALKTHROUGH_RELEASE_TAG" \
+            --pattern clinical-walkthrough.tar.gz \
+            --pattern clinical-walkthrough.tar.gz.sha256 \
+            --dir deploy/walkthrough-download
+          (
+            cd deploy/walkthrough-download
+            sha256sum --check clinical-walkthrough.tar.gz.sha256
+          )
+          tar -xzf deploy/walkthrough-download/clinical-walkthrough.tar.gz \
+            --directory deploy/site/clinical-walkthrough \
+            --no-same-owner
+          test -f deploy/site/clinical-walkthrough/iframe.html
+          test -f deploy/site/clinical-walkthrough/walkthrough/index.html
+
+      - name: Sync clinical walkthrough to S3
+        if: inputs.walkthrough_release_tag != ''
+        run: |
+          aws s3 sync deploy/site/clinical-walkthrough/ \
+            "s3://${SITE_BUCKET}/clinical-walkthrough/" \
+            --delete \
+            --cache-control "no-cache"
+
       - name: Sync to S3
-        run: aws s3 sync deploy/site/ "s3://${SITE_BUCKET}/" --delete --cache-control "no-cache"
+        run: |
+          aws s3 sync deploy/site/ "s3://${SITE_BUCKET}/" \
+            --delete \
+            --exclude "clinical-walkthrough/*" \
+            --cache-control "no-cache"
 
       - name: Smoke test
         run: |
@@ -84,7 +130,21 @@ jobs:
           curl --fail -sS -o /dev/null "${WEBSITE_URL}/storybook/"
           curl --fail -sS -o /dev/null "${WEBSITE_URL}/storybook/iframe.html"
 
+      - name: Smoke test clinical walkthrough
+        if: inputs.walkthrough_release_tag != ''
+        run: |
+          set -euo pipefail
+          curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=es"
+          curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=en"
+          curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/iframe.html"
+
       - name: Summary
+        env:
+          WALKTHROUGH_RELEASE_TAG: ${{ inputs.walkthrough_release_tag }}
         run: |
           echo "Website: ${WEBSITE_URL}/"
           echo "Storybook: ${WEBSITE_URL}/storybook/"
+          if [[ -n "$WALKTHROUGH_RELEASE_TAG" ]]; then
+            echo "Clinical walkthrough (ES): ${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=es"
+            echo "Clinical walkthrough (EN): ${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=en"
+          fi
