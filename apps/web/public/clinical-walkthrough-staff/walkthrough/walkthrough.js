@@ -7,20 +7,22 @@ const buildPath = isStaffWalkthrough ? '../build.json' : 'build.json';
 const copy = {
   en: {
     title: isStaffWalkthrough
-      ? 'A guided clinical visit for staff'
+      ? 'Clinical workspace guide'
       : 'A guided clinical visit',
     previous: 'Previous chapter',
     next: 'Next chapter',
-    reset: 'Reset this demonstration',
-    full: 'Open full screen',
+    reset: isStaffWalkthrough ? 'Reset preview' : 'Reset this demonstration',
+    full: isStaffWalkthrough ? 'Expand preview' : 'Open full screen',
     build: 'Built',
     click: 'Where to click',
     say: 'What to say',
     result: 'What to look for',
     live: 'Interactive application view',
+    section: 'Guide section',
     step: 'Step',
-    simulation:
-      'Training with fictional data. Each panel is independent. Follow the instructions below; supported edits are simulated in memory. No clinic records are changed.',
+    simulation: isStaffWalkthrough
+      ? 'Interactive previews use sample data. Changes are temporary and reset separately in each preview.'
+      : 'Training with fictional data. Each panel is independent. Follow the instructions below; supported edits are simulated in memory. No clinic records are changed.',
     archive: isStaffWalkthrough
       ? 'Staff reference guide'
       : 'Original pilot walkthrough and dated findings',
@@ -28,20 +30,26 @@ const copy = {
   },
   es: {
     title: isStaffWalkthrough
-      ? 'Una visita clínica guiada para el personal'
+      ? 'Guía del espacio clínico'
       : 'Una visita clínica guiada',
     previous: 'Capítulo anterior',
     next: 'Capítulo siguiente',
-    reset: 'Reiniciar esta demostración',
-    full: 'Abrir pantalla completa',
+    reset: isStaffWalkthrough
+      ? 'Reiniciar vista previa'
+      : 'Reiniciar esta demostración',
+    full: isStaffWalkthrough
+      ? 'Ampliar vista previa'
+      : 'Abrir pantalla completa',
     build: 'Compilado',
     click: 'Dónde hacer clic',
     say: 'Qué decir',
     result: 'Qué observar',
     live: 'Vista interactiva de la aplicación',
+    section: 'Sección de la guía',
     step: 'Paso',
-    simulation:
-      'Capacitación con datos ficticios. Cada panel es independiente. Siga las instrucciones; las ediciones compatibles se simulan en memoria. No se modifican registros de la clínica.',
+    simulation: isStaffWalkthrough
+      ? 'Las vistas previas interactivas usan datos de muestra. Los cambios son temporales y se reinician por separado en cada vista previa.'
+      : 'Capacitación con datos ficticios. Cada panel es independiente. Siga las instrucciones; las ediciones compatibles se simulan en memoria. No se modifican registros de la clínica.',
     archive: isStaffWalkthrough
       ? 'Guía de referencia para el personal'
       : 'Recorrido piloto original y hallazgos de esa fecha',
@@ -80,11 +88,15 @@ async function loadLessons() {
     return button;
   });
   const panelsByRoute = new Map();
+  const sectionsById = new Map();
   chapters.forEach((lesson, chapterIndex) =>
-    lesson.panels.forEach((panel, panelIndex) => {
-      if (panel.route)
-        panelsByRoute.set(panel.route, { chapterIndex, panelIndex });
-    })
+    (isStaffWalkthrough ? lesson.sections : lesson.panels).forEach(
+      (panel, panelIndex) => {
+        sectionsById.set(panel.id, { chapterIndex, panelIndex });
+        if (panel.route)
+          panelsByRoute.set(panel.route, { chapterIndex, panelIndex });
+      }
+    )
   );
   function show(index) {
     chapter = index;
@@ -94,14 +106,73 @@ async function loadLessons() {
     document.getElementById('description').textContent = lesson.intro[lang];
     const panels = document.getElementById('panels');
     panels.replaceChildren();
-    lesson.panels.forEach((panel, step) => {
+    const lessonSections = isStaffWalkthrough ? lesson.sections : lesson.panels;
+    lessonSections.forEach((panel, step) => {
       const article = document.createElement('article');
       article.id = `panel-${panel.id}`;
       article.tabIndex = -1;
       article.className = 'lesson-step';
       const heading = document.createElement('h3');
-      heading.textContent = `${copy.step} ${index + 1}.${step + 1} — ${panel.title[lang]}`;
+      heading.textContent = `${isStaffWalkthrough ? copy.section : copy.step} ${index + 1}.${step + 1} — ${panel.title[lang]}`;
       article.append(heading);
+      if (isStaffWalkthrough) {
+        article.classList.add(`section-${panel.type}`);
+        const content = document.createElement('div');
+        content.className = 'guide-content';
+        for (const item of panel.content ?? []) {
+          const section = document.createElement('section');
+          section.className = 'guide-detail';
+          const label = document.createElement('h4');
+          label.textContent = item.heading[lang];
+          const paragraph = document.createElement('p');
+          paragraph.textContent = item.body[lang];
+          section.append(label, paragraph);
+          content.append(section);
+        }
+        if (panel.type === 'checklist') {
+          const list = document.createElement('ul');
+          for (const item of panel.items) {
+            const entry = document.createElement('li');
+            entry.textContent = item[lang];
+            list.append(entry);
+          }
+          content.append(list);
+        } else if (panel.type === 'illustrated') {
+          const image = document.createElement('img');
+          image.src = panel.image;
+          image.alt = panel.alt[lang];
+          content.append(image);
+        } else if (panel.type === 'link') {
+          const link = document.createElement('a');
+          link.href = `#section-${panel.targetId}`;
+          link.textContent = panel.label[lang];
+          link.onclick = (event) => {
+            event.preventDefault();
+            const destination = sectionsById.get(panel.targetId);
+            if (!destination) return;
+            show(destination.chapterIndex);
+            requestAnimationFrame(() => {
+              const target = document.getElementById(`panel-${panel.targetId}`);
+              target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              target?.focus({ preventScroll: true });
+            });
+          };
+          content.append(link);
+        }
+        if (panel.type !== 'interactive') {
+          article.append(content);
+          panels.append(article);
+          return;
+        }
+        const pair = document.createElement('div');
+        pair.className = 'lesson-pair guide-pair';
+        content.classList.add('narration');
+        const demonstration = createDemonstration(panel, step);
+        pair.append(content, demonstration);
+        article.append(pair);
+        panels.append(article);
+        return;
+      }
       const pair = document.createElement('div');
       pair.className = 'lesson-pair';
       const script = document.createElement('div');
@@ -118,6 +189,12 @@ async function loadLessons() {
         section.append(label, paragraph);
         script.append(section);
       }
+      const demonstration = createDemonstration(panel, step);
+      pair.append(script, demonstration);
+      article.append(pair);
+      panels.append(article);
+    });
+    function createDemonstration(panel, step) {
       const demonstration = document.createElement('div');
       demonstration.className = 'demonstration';
       const actions = document.createElement('div');
@@ -144,10 +221,8 @@ async function loadLessons() {
       };
       actions.append(badge, reset, full);
       demonstration.append(actions, frame);
-      pair.append(script, demonstration);
-      article.append(pair);
-      panels.append(article);
-    });
+      return demonstration;
+    }
     document.getElementById('previous').disabled = index === 0;
     document.getElementById('next').disabled = index === chapters.length - 1;
     buttons.forEach((button, i) => {
@@ -215,7 +290,7 @@ async function loadLessons() {
     show(destination.chapterIndex);
     requestAnimationFrame(() => {
       const panel = document.getElementById(
-        `panel-${chapters[destination.chapterIndex].panels[destination.panelIndex].id}`
+        `panel-${(isStaffWalkthrough ? chapters[destination.chapterIndex].sections : chapters[destination.chapterIndex].panels)[destination.panelIndex].id}`
       );
       panel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       panel?.focus({ preventScroll: true });
