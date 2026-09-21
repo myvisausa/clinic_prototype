@@ -1,0 +1,22 @@
+import{j as a,r as g}from"./iframe-C812RI-m.js";import{C as c,c as S}from"./booking-7zhlFmS_.js";import{R as l,e as m,a as C}from"./es-BHrqGQBX.js";import"./preload-helper-PPVm8Dsz.js";import"./dialog-B5kVYiLC.js";import"./index-DgQannX7.js";import"./index-BuQDuk1U.js";import"./dropdown-menu-B6N2dSZs.js";import"./index-eDkfWtVo.js";import"./index-DyvXwP9k.js";import"./chevron-right-Uw5L8IR1.js";import"./table-DLcuSxqO.js";import"./table-interactions-hs2i6Ebe.js";import"./popover-CX7CPsoe.js";import"./tooltip-DRTEg52c.js";import"./ellipsis-zTr69LpC.js";import"./SettingsResourceList-mInCkFw8.js";import"./select-qJPDq8VG.js";import"./AppointmentStatusPath-Hy0uairs.js";import"./locationsSlice-Bn9t594l.js";import"./languageUtils-Dq1C--pt.js";import"./settingsFeaturePermissions-MppGhFxl.js";import"./badge-z79zfrWY.js";import"./tabs-gpLEBDFu.js";import"./appointmentStatusUi-DKu3PjPD.js";import"./circle-check-LFVRckeQ.js";import"./switch-D_1n5raa.js";import"./index-3L2etSw5.js";import"./providerBadgeColor-CTTbZdZb.js";import"./UnsavedNavigationGuard-S9Juta3R.js";import"./ConfirmDialog-DYjNjMrh.js";import"./enums-spLnuVm3.js";const p={statusScheduled:"Scheduled",statusConfirmed:"Confirmed",statusArrived:"Arrived",statusInProgress:"In progress",statusCompleted:"Completed",statusNoShow:"No show",statusCancelled:"Cancelled"},h={statusScheduled:"Programada",statusConfirmed:"Confirmada",statusArrived:"Llegó",statusInProgress:"En atención",statusCompleted:"Completada",statusNoShow:"No asistió",statusCancelled:"Cancelada"},u=Array.from({length:10},(r,e)=>({kind:"row",row:{kind:c.APPOINTMENT,eventId:`fixture-${e}`,startTime:`2026-09-15T${String(13+e).padStart(2,"0")}:00:00.000Z`,endTime:`2026-09-15T${String(13+e).padStart(2,"0")}:30:00.000Z`,timezone:"America/Bogota",durationMinutes:30,status:S.SCHEDULED,patientName:e===0?"Alexandria Longitudinal Patient Name That Needs Inspection":`Fixture patient ${e+1}`,hostUserId:"dr-ruiz",providerName:"Carlos Ruiz",providerInitials:"CR",title:"Consulta",event:{eventId:`fixture-${e}`,eventKind:c.APPOINTMENT},isLate:!1}}));function f({variant:r="dashboard",locale:e="en"}){const t=e==="es"?C:m;return a.jsx(l,{variant:r,lines:u,selectedEventId:null,onSelect:()=>{},onCancel:()=>{},onCreateAt:()=>{},loading:!1,translations:t,statusLabels:e==="es"?h:p,timeZone:"America/Bogota"})}const Y={title:"Clinical/Agenda table",component:f},s={},o={args:{variant:"schedule"}},n={render:()=>a.jsx(l,{variant:"dashboard",lines:[],selectedEventId:null,onSelect:()=>{},onCancel:()=>{},onCreateAt:()=>{},loading:!1,translations:m,statusLabels:p,timeZone:"America/Bogota"})},i={args:{locale:"es"},parameters:{layout:"fullscreen"},globals:{viewport:{value:"iphone5",isRotated:!1}}},d={render:()=>a.jsx(E,{})};function E(){const[r,e]=g.useState("fixture-0");return a.jsx(l,{variant:"dashboard",lines:u,selectedEventId:r,onSelect:t=>e(t.eventId),onCancel:()=>{},onCreateAt:()=>{},loading:!1,translations:m,statusLabels:p,timeZone:"America/Bogota",inlineDetail:{content:a.jsx("div",{className:"p-3",children:"Fixture appointment detail"}),onToggle:t=>e(v=>v===t.eventId?null:t.eventId)}})}s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:"{}",...s.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  args: {
+    variant: 'schedule'
+  }
+}`,...o.parameters?.docs?.source}}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
+  render: () => <RunSheetTable variant="dashboard" lines={[]} selectedEventId={null} onSelect={() => undefined} onCancel={() => undefined} onCreateAt={() => undefined} loading={false} translations={en} statusLabels={statusLabels} timeZone="America/Bogota" />
+}`,...n.parameters?.docs?.source}}};i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`{
+  args: {
+    locale: 'es'
+  },
+  parameters: {
+    layout: 'fullscreen'
+  },
+  globals: {
+    viewport: {
+      value: 'iphone5',
+      isRotated: false
+    }
+  }
+}`,...i.parameters?.docs?.source}}};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+  render: () => <ExpandableFixture />
+}`,...d.parameters?.docs?.source}}};const ee=["CompactLongList","ScheduleVariant","Empty","SpanishNarrowShort","ExpandedDetails"];export{s as CompactLongList,n as Empty,d as ExpandedDetails,o as ScheduleVariant,i as SpanishNarrowShort,ee as __namedExportsOrder,Y as default};
