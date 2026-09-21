@@ -1,0 +1,245 @@
+:root {
+  font:
+    14px/1.5 system-ui,
+    sans-serif;
+  color: #172e38;
+  background: #f5f8f9;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #fff;
+  border-bottom: 1px solid #d5dfe3;
+}
+h1 {
+  font-size: 21px;
+  margin: 0;
+}
+nav {
+  display: flex;
+  gap: 12px;
+}
+a {
+  color: #12657c;
+}
+main {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+}
+aside {
+  padding: 16px;
+  border-right: 1px solid #d5dfe3;
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow: auto;
+}
+ol {
+  padding: 0;
+  list-style: none;
+}
+li {
+  margin: 5px 0;
+}
+li button {
+  width: 100%;
+  text-align: left;
+  height: auto;
+  min-height: 36px;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #b7cbd2;
+  border-radius: 5px;
+  background: #fff;
+  color: inherit;
+  min-height: 32px;
+  padding: 4px 10px;
+}
+button[aria-current='step'] {
+  background: #12657c;
+  color: #fff;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.lesson {
+  min-width: 0;
+  padding: 20px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+#description {
+  max-width: 100ch;
+  font-size: 16px;
+}
+p {
+  margin: 4px 0 10px;
+}
+#simulation,
+#build {
+  font-size: 12px;
+  color: #526975;
+}
+#simulation {
+  padding: 10px;
+  border: 1px solid #d5dfe3;
+  border-radius: 5px;
+}
+#build {
+  overflow-wrap: anywhere;
+  margin-top: 16px;
+}
+.lesson-step {
+  margin: 24px 0 32px;
+}
+h3 {
+  font-size: 19px;
+  margin: 0;
+  padding: 12px 14px;
+  background: #e8f0f3;
+  border: 1px solid #cbd8dd;
+  border-radius: 6px 6px 0 0;
+}
+.lesson-pair {
+  display: grid;
+  grid-template-columns: minmax(240px, 290px) minmax(0, 1fr);
+  border: 1px solid #cbd8dd;
+  border-top: 0;
+  background: #fff;
+}
+.narration {
+  padding: 16px;
+  border-right: 1px solid #d5dfe3;
+}
+.instruction {
+  margin-bottom: 20px;
+}
+h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #12657c;
+  margin: 0 0 7px;
+}
+blockquote {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+}
+.instruction-say {
+  border-left: 3px solid #12657c;
+  padding-left: 12px;
+}
+.instruction-result {
+  font-size: 13px;
+  color: #526975;
+}
+.demonstration {
+  min-width: 0;
+}
+.demo-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px 10px;
+  border-bottom: 1px solid #d5dfe3;
+  font-size: 12px;
+}
+.demo-actions span {
+  margin-right: auto;
+  color: #526975;
+}
+iframe {
+  display: block;
+  width: 100%;
+  height: 660px;
+  border: 0;
+  background: #fff;
+}
+.chapter-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0 32px;
+}
+@media (max-width: 1200px) {
+  .lesson-pair {
+    grid-template-columns: 1fr;
+  }
+  .narration {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 18px;
+    border-right: 0;
+    border-bottom: 1px solid #d5dfe3;
+  }
+  .instruction {
+    margin: 0;
+  }
+  iframe {
+    height: 620px;
+  }
+}
+@media (max-width: 800px) {
+  main {
+    display: block;
+  }
+  aside {
+    position: static;
+    height: auto;
+    border: 0;
+    padding: 8px 12px;
+  }
+  ol {
+    display: flex;
+    overflow: auto;
+    margin: 0;
+    gap: 6px;
+  }
+  li {
+    flex: 0 0 175px;
+  }
+  aside > p,
+  aside > #storybook {
+    display: none;
+  }
+  .lesson {
+    padding: 12px;
+  }
+  .narration {
+    display: block;
+  }
+  .instruction {
+    margin: 0 0 16px;
+  }
+  iframe {
+    height: 580px;
+  }
+  header {
+    padding: 10px 12px;
+  }
+  h1 {
+    font-size: 17px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .demo-actions span {
+    width: 100%;
+  }
+}

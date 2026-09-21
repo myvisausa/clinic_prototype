@@ -1,0 +1,1 @@
+const n=["#be185d","#b45309","#4338ca","#57534e","#a21caf","#155e75"];function o(e){let r=0;for(let t=0;t<e.length;t+=1)r=r*31+e.charCodeAt(t)>>>0;return r}function a(e){return n[o(e)%n.length]}export{a as p};

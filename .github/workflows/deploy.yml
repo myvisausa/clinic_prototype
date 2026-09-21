@@ -23,6 +23,7 @@ env:
   AWS_REGION: us-east-1
   SITE_BUCKET: myvisausa-clinic-prototype-dev
   WEBSITE_URL: http://myvisausa-clinic-prototype-dev.s3-website-us-east-1.amazonaws.com
+  SITE_HTTPS_URL: https://myvisausa-clinic-prototype-dev.s3.us-east-1.amazonaws.com
 
 jobs:
   terraform:
@@ -65,7 +66,20 @@ jobs:
         run: npm ci
 
       - name: Build Next export
-        run: npm run build --workspace=web
+        run: npm run build --workspace=web -- --webpack
+
+      - name: Verify staff walkthrough export
+        run: |
+          set -euo pipefail
+          staff_root=apps/web/out/clinical-walkthrough-staff
+          test -f "$staff_root/iframe.html"
+          test -f "$staff_root/index.json"
+          test -f "$staff_root/walkthrough/build.json"
+          test -f "$staff_root/walkthrough/staff/index.html"
+          test -f "$staff_root/walkthrough/staff/staff-chapters.json"
+          test -f "$staff_root/reference/index.html"
+          test -f "$staff_root/reference/index-en.html"
+          test "$(find "$staff_root/reference/images" -type f | wc -l | tr -d ' ')" = 32
 
       - name: Build Storybook
         run: npm run build-storybook
@@ -138,6 +152,17 @@ jobs:
           curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=en"
           curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/iframe.html"
 
+      - name: Smoke test staff walkthrough
+        run: |
+          set -euo pipefail
+          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=es"
+          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=en"
+          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/staff-chapters.json"
+          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/build.json"
+          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/iframe.html"
+          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/reference/index.html"
+          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/reference/index-en.html"
+
       - name: Summary
         env:
           WALKTHROUGH_RELEASE_TAG: ${{ inputs.walkthrough_release_tag }}
@@ -148,3 +173,5 @@ jobs:
             echo "Clinical walkthrough (ES): ${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=es"
             echo "Clinical walkthrough (EN): ${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=en"
           fi
+          echo "Staff walkthrough (ES): ${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=es"
+          echo "Staff walkthrough (EN): ${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=en"

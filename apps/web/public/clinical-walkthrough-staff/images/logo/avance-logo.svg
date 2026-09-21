@@ -1,0 +1,8 @@
+<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Avance logo</title>
+  <desc id="desc">Avance wordmark on a rounded rectangle.</desc>
+  <rect x="2" y="2" width="236" height="76" rx="14" fill="#0F172A"/>
+  <rect x="10" y="10" width="60" height="60" rx="12" fill="#2F9E44"/>
+  <path d="M24 46C24 36.6112 31.6112 29 41 29C50.3888 29 58 36.6112 58 46C58 55.3888 50.3888 63 41 63C31.6112 63 24 55.3888 24 46Z" fill="#ffffff" fill-opacity="0.18"/>
+  <text x="82" y="50" fill="#ffffff" font-size="34" font-family="Inter, Arial, sans-serif" font-weight="700" letter-spacing="0.2">Avance</text>
+</svg>
