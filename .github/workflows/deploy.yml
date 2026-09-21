@@ -77,6 +77,8 @@ jobs:
           test -f "$staff_root/walkthrough/build.json"
           test -f "$staff_root/walkthrough/staff/index.html"
           test -f "$staff_root/walkthrough/staff-chapters.json"
+          test -f "$staff_root/walkthrough/admin-chapters.json"
+          test -f "$staff_root/walkthrough/admin/index.html"
           test -f "$staff_root/reference/index.html"
           test -f "$staff_root/reference/index-en.html"
           test "$(find "$staff_root/reference/images" -type f | wc -l | tr -d ' ')" = 32
