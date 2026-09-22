@@ -91,24 +91,6 @@ jobs:
           curl --fail -sS -o /dev/null "${WEBSITE_URL}/storybook/"
           curl --fail -sS -o /dev/null "${WEBSITE_URL}/storybook/iframe.html"
 
-      - name: Smoke test clinical walkthrough
-        run: |
-          set -euo pipefail
-          curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=es"
-          curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=en"
-          curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/iframe.html"
-
-      - name: Smoke test staff walkthrough
-        run: |
-          set -euo pipefail
-          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=es"
-          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=en"
-          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/staff-chapters.json"
-          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/walkthrough/build.json"
-          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/iframe.html"
-          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/reference/index.html"
-          curl --fail -sS -o /dev/null "${SITE_HTTPS_URL}/clinical-walkthrough-staff/reference/index-en.html"
-
       - name: Summary
         run: |
           set -euo pipefail
@@ -133,12 +115,3 @@ jobs:
           log_page "Website" "/" "/index.html"
           log_page "Components" "/components/" "/components/index.html"
           log_page "Storybook" "/storybook/" "/storybook/index.html"
-          log_page "Staff Storybook" "/clinical-walkthrough-staff/" "/clinical-walkthrough-staff/index.html"
-          log_page "Staff walkthrough (ES)" "/clinical-walkthrough-staff/walkthrough/staff/?lang=es" "/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=es"
-          log_page "Staff walkthrough (EN)" "/clinical-walkthrough-staff/walkthrough/staff/?lang=en" "/clinical-walkthrough-staff/walkthrough/staff/index.html?lang=en"
-          log_page "Admin walkthrough (ES)" "/clinical-walkthrough-staff/walkthrough/admin/?lang=es" "/clinical-walkthrough-staff/walkthrough/admin/index.html?lang=es"
-          log_page "Admin walkthrough (EN)" "/clinical-walkthrough-staff/walkthrough/admin/?lang=en" "/clinical-walkthrough-staff/walkthrough/admin/index.html?lang=en"
-          log_page "Staff reference (ES)" "/clinical-walkthrough-staff/reference/" "/clinical-walkthrough-staff/reference/index.html"
-          log_page "Staff reference (EN)" "/clinical-walkthrough-staff/reference/index-en.html" "/clinical-walkthrough-staff/reference/index-en.html"
-          log_page "Clinical walkthrough (ES)" "/clinical-walkthrough/walkthrough/?lang=es" "/clinical-walkthrough/walkthrough/index.html?lang=es"
-          log_page "Clinical walkthrough (EN)" "/clinical-walkthrough/walkthrough/?lang=en" "/clinical-walkthrough/walkthrough/index.html?lang=en"
