@@ -1,1 +1,0 @@
-import{J as t,H as r,Z as s,Y as o,G as a,E as n}from"./x-sx8FvuPz.js";import{v as f,t as T}from"./iframe-_Qq2oHDl.js";import{a as e}from"./languageUtils-Bv66PAM8.js";function m(){return e()==="es"?t:r}function u(){return e()==="es"?s:o}function g(){return e()==="es"?a:n}function c(){return e()==="es"?f:T}export{m as a,u as b,c,g};

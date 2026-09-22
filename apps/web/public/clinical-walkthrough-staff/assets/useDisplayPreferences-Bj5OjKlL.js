@@ -1,1 +1,0 @@
-import{a0 as o}from"./x-sx8FvuPz.js";import{a as s}from"./useViewerTimeZone-BpucxFoB.js";const a={en:"en-US",es:"es-ES"};function i(){const e=o(),n=s();return{locale:a[e]??e,timeZone:n}}export{i as u};

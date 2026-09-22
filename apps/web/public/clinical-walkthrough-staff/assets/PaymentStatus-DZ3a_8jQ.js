@@ -1,1 +1,0 @@
-var D=(function(N){return N.LEAD="LEAD",N.CLIENT="CLIENT",N})({}),A=(function(N){return N.NOT_PAID="NOT_PAID",N.PENDING="PENDING",N.PARTIALLY_PAID="PARTIALLY_PAID",N.PAID="PAID",N.REFUNDED="REFUNDED",N.UNKNOWN="UNKNOWN",N})({});export{D as C,A as P};

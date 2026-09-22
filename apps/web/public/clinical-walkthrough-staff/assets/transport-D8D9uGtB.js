@@ -1,1 +1,0 @@
-import{p as o,a as s,m as i}from"./display-BDu_xnd1.js";function m(t){if(!i(t))throw new Error("serializeDateToIsoTimestamp received an invalid Date");return t.toISOString()}function D(t){const a=o(t);if(!a)return s;const e=a.getUTCFullYear(),r=String(a.getUTCMonth()+1).padStart(2,"0"),n=String(a.getUTCDate()).padStart(2,"0");return`${e}-${r}-${n}`}export{D as f,m as s};

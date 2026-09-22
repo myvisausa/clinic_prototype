@@ -4,11 +4,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      walkthrough_release_tag:
-        description: Immutable clinical walkthrough release tag to publish
-        required: false
-        type: string
 
 permissions:
   contents: read
@@ -68,21 +63,6 @@ jobs:
       - name: Build Next export
         run: npm run build --workspace=web -- --webpack
 
-      - name: Verify staff walkthrough export
-        run: |
-          set -euo pipefail
-          staff_root=apps/web/out/clinical-walkthrough-staff
-          test -f "$staff_root/iframe.html"
-          test -f "$staff_root/index.json"
-          test -f "$staff_root/walkthrough/build.json"
-          test -f "$staff_root/walkthrough/staff/index.html"
-          test -f "$staff_root/walkthrough/staff-chapters.json"
-          test -f "$staff_root/walkthrough/admin-chapters.json"
-          test -f "$staff_root/walkthrough/admin/index.html"
-          test -f "$staff_root/reference/index.html"
-          test -f "$staff_root/reference/index-en.html"
-          test "$(find "$staff_root/reference/images" -type f | wc -l | tr -d ' ')" = 32
-
       - name: Build Storybook
         run: npm run build-storybook
 
@@ -94,48 +74,13 @@ jobs:
           mkdir -p deploy/site/storybook
           cp -R packages/ui/storybook-static/. deploy/site/storybook/
 
-      - name: Download and verify clinical walkthrough
-        if: inputs.walkthrough_release_tag != ''
-        env:
-          GH_TOKEN: ${{ github.token }}
-          WALKTHROUGH_RELEASE_TAG: ${{ inputs.walkthrough_release_tag }}
-        run: |
-          set -euo pipefail
-          case "$WALKTHROUGH_RELEASE_TAG" in
-            clinical-walkthrough-*) ;;
-            *)
-              echo "Unexpected walkthrough release tag: $WALKTHROUGH_RELEASE_TAG" >&2
-              exit 1
-              ;;
-          esac
-          mkdir -p deploy/walkthrough-download deploy/site/clinical-walkthrough
-          gh release download "$WALKTHROUGH_RELEASE_TAG" \
-            --pattern clinical-walkthrough.tar.gz \
-            --pattern clinical-walkthrough.tar.gz.sha256 \
-            --dir deploy/walkthrough-download
-          (
-            cd deploy/walkthrough-download
-            sha256sum --check clinical-walkthrough.tar.gz.sha256
-          )
-          tar -xzf deploy/walkthrough-download/clinical-walkthrough.tar.gz \
-            --directory deploy/site/clinical-walkthrough \
-            --no-same-owner
-          test -f deploy/site/clinical-walkthrough/iframe.html
-          test -f deploy/site/clinical-walkthrough/walkthrough/index.html
-
-      - name: Sync clinical walkthrough to S3
-        if: inputs.walkthrough_release_tag != ''
-        run: |
-          aws s3 sync deploy/site/clinical-walkthrough/ \
-            "s3://${SITE_BUCKET}/clinical-walkthrough/" \
-            --delete \
-            --cache-control "no-cache"
-
+      # Walkthrough prefixes are published by CRM CI. This sync must not delete them.
       - name: Sync to S3
         run: |
           aws s3 sync deploy/site/ "s3://${SITE_BUCKET}/" \
             --delete \
             --exclude "clinical-walkthrough/*" \
+            --exclude "clinical-walkthrough-staff/*" \
             --cache-control "no-cache"
 
       - name: Smoke test
@@ -147,7 +92,6 @@ jobs:
           curl --fail -sS -o /dev/null "${WEBSITE_URL}/storybook/iframe.html"
 
       - name: Smoke test clinical walkthrough
-        if: inputs.walkthrough_release_tag != ''
         run: |
           set -euo pipefail
           curl --fail -sS -o /dev/null "${WEBSITE_URL}/clinical-walkthrough/walkthrough/?lang=es"

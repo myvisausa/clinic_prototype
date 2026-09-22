@@ -1,1 +1,0 @@
-const t={inbox:"communication/inbox",contactCenterV2:"communication/contact-center-v2",templates:"communication/templates",whatsapp:"communication/whatsapp",whatsappServers:"communication/whatsapp-servers"};export{t as C};

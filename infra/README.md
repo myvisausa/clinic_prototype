@@ -10,7 +10,7 @@ Storybook is the `/storybook/` prefix of that same site.
 
 ## CI ownership
 
-GitHub Actions (`.github/workflows/deploy.yml`) applies this stack and syncs `deploy/site/`. Local Terraform is `terraform fmt` / `terraform fmt -check -diff` only — do not `init`, `validate`, `plan`, or `apply`.
+GitHub Actions (`.github/workflows/deploy.yml`) applies this stack and syncs `deploy/site/`. The `clinical-walkthrough/` and `clinical-walkthrough-staff/` prefixes are published by the CRM walkthrough workflow and are excluded from this sync. Local Terraform is `terraform fmt` / `terraform fmt -check -diff` only — do not `init`, `validate`, `plan`, or `apply`.
 
 Required GitHub repository variable: `DEV_AWS_ACCOUNT_ID=349514606126`. Deploy uses GitHub OIDC roles `github-ci-clinic-prototype-terraform-dev` and `github-ci-clinic-prototype-deploy-dev` (issued from `infra-oidc`). No long-lived AWS keys.
 
