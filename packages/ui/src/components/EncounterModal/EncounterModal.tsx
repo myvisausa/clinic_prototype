@@ -57,7 +57,11 @@ export function EncounterModal({
   const isEditing = Boolean(encounter);
 
   function handleSubmit(form: HTMLFormElement) {
-    const values = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+    const values: Record<string, string> = {};
+    for (const [key, value] of new FormData(form)) {
+      if (typeof value !== "string") throw invalid("El formulario contiene un archivo inesperado.", key);
+      values[key] = value;
+    }
 
     for (const [field, message] of REQUIRED_FIELDS) {
       if (!String(values[field] ?? "").trim()) throw invalid(message, field);
